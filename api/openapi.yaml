@@ -11883,9 +11883,9 @@ components:
             marketSegment: marketSegment
           introPreamble: introPreamble
           extendedMsrpTotal: 7
-          lastModifiedDate: ""
+          lastModifiedDate: lastModifiedDate
           legalTerms: legalTerms
-          specialBidExpirationDate: ""
+          specialBidExpirationDate: specialBidExpirationDate
           eventType: eventType
           quoteNumber: quoteNumber
           revision: revision
@@ -11947,8 +11947,8 @@ components:
           proposedSolution: proposedSolution
           productsCount: 2
           quoteName: quoteName
-          ingramQuoteDate: ""
-          status: ""
+          ingramQuoteDate: ingramQuoteDate
+          status: status
           additionalAttributes:
           - attributeValue: attributeValue
             attributeName: attributeName
@@ -19995,9 +19995,9 @@ components:
           marketSegment: marketSegment
         introPreamble: introPreamble
         extendedMsrpTotal: 7
-        lastModifiedDate: ""
+        lastModifiedDate: lastModifiedDate
         legalTerms: legalTerms
-        specialBidExpirationDate: ""
+        specialBidExpirationDate: specialBidExpirationDate
         eventType: eventType
         quoteNumber: quoteNumber
         revision: revision
@@ -20059,8 +20059,8 @@ components:
         proposedSolution: proposedSolution
         productsCount: 2
         quoteName: quoteName
-        ingramQuoteDate: ""
-        status: ""
+        ingramQuoteDate: ingramQuoteDate
+        status: status
         additionalAttributes:
         - attributeValue: attributeValue
           attributeName: attributeName
@@ -20089,21 +20089,21 @@ components:
           type: string
         ingramQuoteDate:
           description: Date the Quote was initially Created.
-          type: date
+          type: string
         lastModifiedDate:
           description: Date the Quote was last updated or modified.
-          type: date
+          type: string
         ingramQuoteExpiryDate:
           description: Date when the Quote Expires.
           type: string
         specialBidExpirationDate:
           description: If a price discount has been applied to the quote - The date
             the discount expires and will no longer be applicable.
-          type: date
+          type: string
         status:
           description: This refers to the primary status of the quote.  API responses
             will return
-          type: date
+          type: string
         customerNeed:
           description: Details related to the customer's request for the quote entered
             by the sales representative or system generated.

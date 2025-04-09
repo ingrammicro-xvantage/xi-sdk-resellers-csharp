@@ -57,7 +57,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantityTotal">Total quantity of all items in the quote..</param>
         /// <param name="extendedQuotePriceTotal">Total amount of quoted price for all products in the quote including both solution products and suggested products..</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        public QuoteCreateWebhookResponseResource(string eventType = default(string), string quoteName = default(string), string quoteNumber = default(string), string revision = default(string), DateOnly ingramQuoteDate = default(DateOnly), DateOnly lastModifiedDate = default(DateOnly), string ingramQuoteExpiryDate = default(string), DateOnly specialBidExpirationDate = default(DateOnly), DateOnly status = default(DateOnly), string customerNeed = default(string), string proposedSolution = default(string), string introPreamble = default(string), string purchaseInstructions = default(string), string legalTerms = default(string), QuoteDetailsResponseResellerInfo resellerInfo = default(QuoteDetailsResponseResellerInfo), QuoteDetailsResponseEndUserInfo endUserInfo = default(QuoteDetailsResponseEndUserInfo), List<QuoteCreateWebhookResponseResourceProductsInner> products = default(List<QuoteCreateWebhookResponseResourceProductsInner>), int productsCount = default(int), int extendedMsrpTotal = default(int), int quantityTotal = default(int), int extendedQuotePriceTotal = default(int), List<QuoteCreateWebhookResponseResourceAdditionalAttributesInner> additionalAttributes = default(List<QuoteCreateWebhookResponseResourceAdditionalAttributesInner>))
+        public QuoteCreateWebhookResponseResource(string eventType = default(string), string quoteName = default(string), string quoteNumber = default(string), string revision = default(string), string ingramQuoteDate = default(string), string lastModifiedDate = default(string), string ingramQuoteExpiryDate = default(string), string specialBidExpirationDate = default(string), string status = default(string), string customerNeed = default(string), string proposedSolution = default(string), string introPreamble = default(string), string purchaseInstructions = default(string), string legalTerms = default(string), QuoteDetailsResponseResellerInfo resellerInfo = default(QuoteDetailsResponseResellerInfo), QuoteDetailsResponseEndUserInfo endUserInfo = default(QuoteDetailsResponseEndUserInfo), List<QuoteCreateWebhookResponseResourceProductsInner> products = default(List<QuoteCreateWebhookResponseResourceProductsInner>), int productsCount = default(int), int extendedMsrpTotal = default(int), int quantityTotal = default(int), int extendedQuotePriceTotal = default(int), List<QuoteCreateWebhookResponseResourceAdditionalAttributesInner> additionalAttributes = default(List<QuoteCreateWebhookResponseResourceAdditionalAttributesInner>))
         {
             this.EventType = eventType;
             this.QuoteName = quoteName;
@@ -116,14 +116,14 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Date the Quote was initially Created.</value>
         [DataMember(Name = "ingramQuoteDate", EmitDefaultValue = false)]
-        public DateOnly IngramQuoteDate { get; set; }
+        public string IngramQuoteDate { get; set; }
 
         /// <summary>
         /// Date the Quote was last updated or modified.
         /// </summary>
         /// <value>Date the Quote was last updated or modified.</value>
         [DataMember(Name = "lastModifiedDate", EmitDefaultValue = false)]
-        public DateOnly LastModifiedDate { get; set; }
+        public string LastModifiedDate { get; set; }
 
         /// <summary>
         /// Date when the Quote Expires.
@@ -137,14 +137,14 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>If a price discount has been applied to the quote - The date the discount expires and will no longer be applicable.</value>
         [DataMember(Name = "specialBidExpirationDate", EmitDefaultValue = false)]
-        public DateOnly SpecialBidExpirationDate { get; set; }
+        public string SpecialBidExpirationDate { get; set; }
 
         /// <summary>
         /// This refers to the primary status of the quote.  API responses will return
         /// </summary>
         /// <value>This refers to the primary status of the quote.  API responses will return</value>
         [DataMember(Name = "status", EmitDefaultValue = false)]
-        public DateOnly Status { get; set; }
+        public string Status { get; set; }
 
         /// <summary>
         /// Details related to the customer&#39;s request for the quote entered by the sales representative or system generated.
