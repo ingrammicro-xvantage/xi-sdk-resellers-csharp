@@ -7,6 +7,7 @@ All URIs are relative to *https://api.ingrammicro.com:443*
 | [**GetQuotessearchV6**](QuotesApi.md#getquotessearchv6) | **GET** /resellers/v6/quotes/search | Quote Search |
 | [**GetResellerV6ValidateQuote**](QuotesApi.md#getresellerv6validatequote) | **GET** /resellers/v6/q2o/validatequote | Validate Quote |
 | [**GetResellersV6Quotes**](QuotesApi.md#getresellersv6quotes) | **GET** /resellers/v6/quotes/{quoteNumber} | Get Quote Details |
+| [**QuoteCreate**](QuotesApi.md#quotecreate) | **POST** /resellers/v6/quotes/create | Quote Create |
 
 <a id="getquotessearchv6"></a>
 # **GetQuotessearchV6**
@@ -355,6 +356,113 @@ catch (ApiException e)
 | **200** | OK |  -  |
 | **400** | Bad Request |  -  |
 | **500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="quotecreate"></a>
+# **QuoteCreate**
+> QuoteCreateResponse QuoteCreate (string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = null)
+
+Quote Create
+
+The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a 'Ready To Order' status.<ul><li>For CTO quote creation, we only support Cisco as a vendor at the moment.</li></ul>   Once the quote is created and activated, you will receive an immediate 'confirmation'.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using xi.sdk.resellers.Api;
+using xi.sdk.resellers.Client;
+using xi.sdk.resellers.Model;
+
+namespace Example
+{
+    public class QuoteCreateExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.ingrammicro.com:443";
+            // Configure OAuth2 access token for authorization: application
+            config.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new QuotesApi(httpClient, config, httpClientHandler);
+            var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
+            var iMCountryCode = US;  // string | Two-character ISO country code.
+            var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction across all the systems.
+            var quoteCreateRequest = new QuoteCreateRequest(); // QuoteCreateRequest | 
+            var iMSenderID = MyCompany;  // string? | Unique value used to identify the sender of the transaction. Example: MyCompany (optional) 
+
+            try
+            {
+                // Quote Create
+                QuoteCreateResponse result = apiInstance.QuoteCreate(iMCustomerNumber, iMCountryCode, iMCorrelationID, quoteCreateRequest, iMSenderID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling QuotesApi.QuoteCreate: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the QuoteCreateWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Quote Create
+    ApiResponse<QuoteCreateResponse> response = apiInstance.QuoteCreateWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, quoteCreateRequest, iMSenderID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling QuotesApi.QuoteCreateWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **iMCustomerNumber** | **string** | Your unique Ingram Micro customer number. |  |
+| **iMCountryCode** | **string** | Two-character ISO country code. |  |
+| **iMCorrelationID** | **string** | Unique transaction number to identify each transaction across all the systems. |  |
+| **quoteCreateRequest** | [**QuoteCreateRequest**](QuoteCreateRequest.md) |  |  |
+| **iMSenderID** | **string?** | Unique value used to identify the sender of the transaction. Example: MyCompany | [optional]  |
+
+### Return type
+
+[**QuoteCreateResponse**](QuoteCreateResponse.md)
+
+### Authorization
+
+[application](../README.md#application)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **201** | Webhook Success Response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

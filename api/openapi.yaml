@@ -6214,6 +6214,151 @@ paths:
       summary: Get Quote Details
       tags:
       - Quotes
+  /resellers/v6/quotes/create:
+    post:
+      description: |-
+        The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a 'Ready To Order' status.<ul><li>For CTO quote creation, we only support Cisco as a vendor at the moment.</li></ul>
+
+         Once the quote is created and activated, you will receive an immediate 'confirmation'.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
+      operationId: quote_Create
+      parameters:
+      - description: Your unique Ingram Micro customer number.
+        explode: false
+        in: header
+        name: IM-CustomerNumber
+        required: true
+        schema:
+          example: 20-222222
+          maxLength: 10
+          type: string
+        style: simple
+      - description: Two-character ISO country code.
+        explode: false
+        in: header
+        name: IM-CountryCode
+        required: true
+        schema:
+          example: US
+          maxLength: 2
+          type: string
+        style: simple
+      - description: Unique transaction number to identify each transaction across
+          all the systems.
+        explode: false
+        in: header
+        name: IM-CorrelationID
+        required: true
+        schema:
+          example: fbac82ba-cf0a-4bcf-fc03-0c5084
+          maxLength: 32
+          type: string
+        style: simple
+      - description: "Unique value used to identify the sender of the transaction.\
+          \ Example: MyCompany"
+        explode: false
+        in: header
+        name: IM-SenderID
+        required: false
+        schema:
+          example: MyCompany
+          maxLength: 32
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            examples:
+              Quote Create With Deal:
+                value:
+                  quoteName: QuoteTest
+                  quoteExpiryDate: 04/30/2024
+                  customerNeed: notes
+                  firstName: User1
+                  lastName: User name
+                  pricingType: ""
+                  sendQuoteCopy: ""
+                  customercontact: kalimuthu.im@com
+                  dealId: "7499800"
+                  endUserInfo:
+                    companyName: Ingram Micro
+                    contact: Test contact
+                    addressLine1: Ratibor street
+                    addressLine2: ""
+                    addressLine3: ""
+                    city: Ratibor
+                    state: MI
+                    postalCode: "48502"
+                    countryCode: US
+                    email: testcontact6@im.com
+                    phoneNumber: "64328753"
+                  products: []
+              Standard Quote Create(Without Deal):
+                value:
+                  quoteName: QuoteCreateNoDeal
+                  quoteExpiryDate: 04/30/2024
+                  customerNeed: Customers special requirements notes
+                  firstName: Jane
+                  lastName: Doe
+                  endUserInfo:
+                    companyName: Example Inc
+                    contact: John Doe
+                    addressLine1: 100 Marine Ln
+                    addressLine2: ""
+                    city: Flint
+                    state: MI
+                    postalCode: "48502"
+                    countryCode: US
+                    phoneNumber: "8767567560"
+                    email: jdoe@example.com
+                  pricingType: "y"
+                  sendQuoteCopy: "y"
+                  customercontact: jane.doe@im.com
+                  products:
+                  - ingramPartNumber: 03WK88
+                    quantity: "2"
+            schema:
+              $ref: '#/components/schemas/quote_create_request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              examples:
+                "200":
+                  description: ""
+                  value:
+                    quoteNumber: QUO-2081293-G9X1K5
+                    message: "Thank you for submitting the quote request, it’s currently\
+                      \ under process.We will notify you of the status via the Quote\
+                      \ Status webhook."
+                Quote Create With Deal:
+                  value:
+                    quoteNumber: QUO-19104665-K1B3Y6
+                    message: "Thank you for submitting the quote request, it’s currently\
+                      \ under process.We will notify you of the status via the Quote\
+                      \ Status webhook."
+                Standard Quote Create(Without Deal):
+                  value:
+                    quoteNumber: QUO-19108656-W8Q2M0
+                    message: "Thank you for submitting the quote request, it’s currently\
+                      \ under process.We will notify you of the status via the Quote\
+                      \ Status webhook."
+              schema:
+                $ref: '#/components/schemas/quote_create_response'
+          description: Success
+        "201":
+          content:
+            application/json:
+              examples: {}
+              schema:
+                $ref: '#/components/schemas/quote_create_webhook_response'
+          description: Webhook Success Response
+      security:
+      - application:
+        - read
+      summary: Quote Create
+      tags:
+      - Quotes
   /resellers/v6/q2o/validatequote:
     get:
       description: "The validate quote helps the customer validate the quote created\
@@ -11675,6 +11820,172 @@ components:
           type: string
         value:
           nullable: true
+          type: string
+      type: object
+    quote_create_request:
+      properties:
+        quoteName:
+          description: Quote Name given to quote by sales team or system generated.
+            Generally used as a reference to identify the quote.
+          type: string
+        firstname:
+          description: Logged in Users firstname
+          type: string
+        lastname:
+          description: Logged in Users Lastname
+          type: string
+        customerContact:
+          description: Logged in Users email address contact.
+          example: MyCompany
+          maxLength: 64
+          nullable: false
+          type: string
+        quoteExpiryDate:
+          description: The date on which a quote will expire.
+          type: string
+        customerNeed:
+          description: Any special need from the customer.
+          type: string
+        endUserInfo:
+          $ref: '#/components/schemas/quote_create_request_endUserInfo'
+        dealId:
+          description: Price discount identifyer to specify a pricing discount that
+            has been applied to the quote.
+          type: string
+        pricingType:
+          description: Pricing type of the quote.
+          type: string
+        sendQuoteCopy:
+          description: List of email addressed to whom the quote will be emailed after
+            it's created. (Max 10 email ids)
+          type: string
+        products:
+          items:
+            $ref: '#/components/schemas/quote_create_request_products_inner'
+          type: array
+      type: object
+    quote_create_webhook_response:
+      example:
+        eventId: eventId
+        resource:
+          quantityTotal: 9
+          endUserInfo:
+            phoneNumber: phoneNumber
+            city: city
+            contact: contact
+            companyName: companyName
+            postalCode: postalCode
+            addressLine1: addressLine1
+            addressLine2: addressLine2
+            addressLine3: addressLine3
+            state: state
+            email: email
+            marketSegment: marketSegment
+          introPreamble: introPreamble
+          extendedMsrpTotal: 7
+          lastModifiedDate: ""
+          legalTerms: legalTerms
+          specialBidExpirationDate: ""
+          eventType: eventType
+          quoteNumber: quoteNumber
+          revision: revision
+          products:
+          - ingramPartNumber: ingramPartNumber
+            coo: coo
+            vpnCategory: vpnCategory
+            quantity: quantity
+            notes: notes
+            description: description
+            weight: weight
+            vendorName: vendorName
+            ean: ean
+            terms: terms
+            price:
+              quotePrice: 0
+              msrp: 6
+              extendedQuotePrice: 5
+              extendedMsrp: 1
+              discountOffList: 5.637376656633329
+            quoteProductGuid: quoteProductGuid
+            vendorPartNumber: vendorPartNumber
+            lineNumber: lineNumber
+            weightUom: weightUom
+            quoteProductsSupplierPartAuxiliaryId: quoteProductsSupplierPartAuxiliaryId
+            isSuggestionProduct: isSuggestionProduct
+          - ingramPartNumber: ingramPartNumber
+            coo: coo
+            vpnCategory: vpnCategory
+            quantity: quantity
+            notes: notes
+            description: description
+            weight: weight
+            vendorName: vendorName
+            ean: ean
+            terms: terms
+            price:
+              quotePrice: 0
+              msrp: 6
+              extendedQuotePrice: 5
+              extendedMsrp: 1
+              discountOffList: 5.637376656633329
+            quoteProductGuid: quoteProductGuid
+            vendorPartNumber: vendorPartNumber
+            lineNumber: lineNumber
+            weightUom: weightUom
+            quoteProductsSupplierPartAuxiliaryId: quoteProductsSupplierPartAuxiliaryId
+            isSuggestionProduct: isSuggestionProduct
+          extendedQuotePriceTotal: 3
+          customerNeed: customerNeed
+          resellerInfo:
+            phoneNumber: phoneNumber
+            contact: contact
+            companyName: companyName
+            customerNumber: customerNumber
+            email: email
+          ingramQuoteExpiryDate: ingramQuoteExpiryDate
+          purchaseInstructions: purchaseInstructions
+          proposedSolution: proposedSolution
+          productsCount: 2
+          quoteName: quoteName
+          ingramQuoteDate: ""
+          status: ""
+          additionalAttributes:
+          - attributeValue: attributeValue
+            attributeName: attributeName
+          - attributeValue: attributeValue
+            attributeName: attributeName
+        topic: topic
+        event: event
+        eventTimeStamp: eventTimeStamp
+      properties:
+        topic:
+          description: "Field for identifying whether it is a reseller or vendor event.\
+            \ For eg, resellers/orders"
+          type: string
+        event:
+          description: "The event sent in the request. For eg, im::create."
+          type: string
+        eventTimeStamp:
+          description: The timestamp at which the event was sent.
+          type: string
+        eventId:
+          description: A unique id used as identifier for the sepcific event and used
+            for generating the x-hub signature.
+          type: string
+        resource:
+          $ref: '#/components/schemas/quote_create_webhook_response_resource'
+      type: object
+    quote_create_response:
+      example:
+        message: message
+        quoteNumber: quoteNumber
+      properties:
+        quoteNumber:
+          description: A unique identifier generated by Ingram Micro's CRM specific
+            to each quote.
+          type: string
+        message:
+          description: A confirmation message.
           type: string
       type: object
     OrderDetailB2B:
@@ -19469,6 +19780,373 @@ components:
           description: Order-level details.
           items:
             $ref: '#/components/schemas/OrderCreateV7Response_resource_orders_inner'
+          type: array
+      type: object
+    quote_create_request_endUserInfo:
+      properties:
+        companyName:
+          description: Name of the company associated with the quote.
+          type: string
+        contact:
+          description: Contact name of end user associated with the quote.
+          type: string
+        addressLine1:
+          description: Address line 1 for end user associated with the quote
+          type: string
+        addressLine2:
+          description: Address line 2 for end user associated with the quote
+          type: string
+        city:
+          description: City for end user associated with the quote
+          type: string
+        state:
+          description: Two letter state abbreviation for end user associated with
+            the quote.
+          type: string
+        postalCode:
+          description: Zip code of end user associated with the quote.
+          type: string
+        countryCode:
+          description: Two letter Country abbreviation for end user associated with
+            the quote.
+          type: string
+        email:
+          description: Email of end-user the quote associated with the quote.
+          type: string
+        phoneNumber:
+          description: Phone number of end user associated with the quote.
+          type: string
+      type: object
+    quote_create_request_products_inner:
+      properties:
+        customerLineNumber:
+          description: The reseller's line item number for reference in their system.
+          type: string
+        ingramPartNumber:
+          description: "Ingram Micro SKU (stock keeping unit). An identification,\
+            \ usually alphanumeric, of a particular product that allows it to be tracked\
+            \ for inventory purposes"
+          type: string
+        vendorPartNumber:
+          description: Vendor Part Number
+          type: string
+        quantity:
+          description: Quantity of product line item quoted.
+          type: string
+        specialBid:
+          description: Special bid associated with product line item
+          type: string
+        lineLevelNotes:
+          description: Product line-item comments.
+          type: string
+        pricingType:
+          description: Pricing type of the quote
+          type: string
+      type: object
+    quote_create_webhook_response_resource_products_inner_price:
+      description: ""
+      example:
+        quotePrice: 0
+        msrp: 6
+        extendedQuotePrice: 5
+        extendedMsrp: 1
+        discountOffList: 5.637376656633329
+      properties:
+        quotePrice:
+          description: Ingram Micro quoted price specific to the reseller and quote.
+          type: integer
+        msrp:
+          description: Manufacturer Suggested Retail Price
+          type: integer
+        extendedMsrp:
+          description: Extended MSRP - Manufacturer Suggested Retail Price X Quantity
+          type: integer
+        extendedQuotePrice:
+          description: Extended reseller quoted price (cost to reseller) X Quantity
+          type: integer
+        discountOffList:
+          description: Discount off list percentage
+          format: decimal
+          type: number
+      type: object
+    quote_create_webhook_response_resource_products_inner:
+      example:
+        ingramPartNumber: ingramPartNumber
+        coo: coo
+        vpnCategory: vpnCategory
+        quantity: quantity
+        notes: notes
+        description: description
+        weight: weight
+        vendorName: vendorName
+        ean: ean
+        terms: terms
+        price:
+          quotePrice: 0
+          msrp: 6
+          extendedQuotePrice: 5
+          extendedMsrp: 1
+          discountOffList: 5.637376656633329
+        quoteProductGuid: quoteProductGuid
+        vendorPartNumber: vendorPartNumber
+        lineNumber: lineNumber
+        weightUom: weightUom
+        quoteProductsSupplierPartAuxiliaryId: quoteProductsSupplierPartAuxiliaryId
+        isSuggestionProduct: isSuggestionProduct
+      properties:
+        quoteProductGuid:
+          description: Quote Product GUID  is the primary quote key in Ingram Micro's
+            CRM - needed to retrieve quote details.
+          type: string
+        lineNumber:
+          description: Line number which the product will appear in the quote.  Line
+            number is manditory when unique configurations are included in a quote
+            and mainting the item line order is required.
+          type: string
+        quantity:
+          description: Quantity of product line item quoted.
+          type: string
+        notes:
+          description: Product line item comments.
+          type: string
+        ean:
+          description: EANUPC
+          type: string
+        coo:
+          description: Country of Origin.
+          type: string
+        ingramPartNumber:
+          description: "Ingram Micro SKU (stock keeping unit). An identification,\
+            \ usually alphanumeric, of a particular product that allows it to be tracked\
+            \ for inventory purposes"
+          type: string
+        vendorPartNumber:
+          description: Vendor Part Number
+          type: string
+        description:
+          description: "Product description.  Note - The quote view api returns only\
+            \ the product short description as maintained in Ingram Micro's crm system.\
+            \  For long descriptions, please refer to alternative information sources."
+          type: string
+        weight:
+          description: "Weight is provided based on country standard.  For countries\
+            \ following Imperial standards - weight is presented as pounds with decimal.\
+            \  In countries following metric standards, weight is provided as kilograms\
+            \ with decimal."
+          type: string
+        weightUom:
+          description: Unit of measure
+          type: string
+        isSuggestionProduct:
+          description: Flag to indicate if a product line item is a suggested product.  The
+            suggested product is provided in addition to the requested quoted products
+            and a suggested option.  Suggested products are grouped together for subtotal
+            and total calculations.
+          type: string
+        vpnCategory:
+          description: Vendor product category specific to Cisco. HWDW (hardware)
+            or service.
+          type: string
+        quoteProductsSupplierPartAuxiliaryId:
+          description: Vendor product configuration ID specific to Cisco.
+          type: string
+        vendorName:
+          description: Vendor name of the product
+          type: string
+        terms:
+          description: Terms of the quote
+          type: string
+        price:
+          $ref: '#/components/schemas/quote_create_webhook_response_resource_products_inner_price'
+      type: object
+    quote_create_webhook_response_resource_additionalAttributes_inner:
+      example:
+        attributeValue: attributeValue
+        attributeName: attributeName
+      properties:
+        attributeName:
+          description: |-
+            **estimateId -** is the identification number for an estimate provided by Cisco for a quote.
+
+            **dealId -** is the identification number for the specific deal pricing related to a Cisco quote
+
+            **vendorName -** Name of Vendor associated with the quote.
+
+            **vendorMessage -** Vendor Message is associated with primary vendor in the quote.  In cases where a vendor requires a message be presented in the quote, the vendor name and message will be retreived and must be included in the quote vendor message fields.
+          type: string
+        attributeValue:
+          description: The attribute field data.
+          type: string
+      type: object
+    quote_create_webhook_response_resource:
+      example:
+        quantityTotal: 9
+        endUserInfo:
+          phoneNumber: phoneNumber
+          city: city
+          contact: contact
+          companyName: companyName
+          postalCode: postalCode
+          addressLine1: addressLine1
+          addressLine2: addressLine2
+          addressLine3: addressLine3
+          state: state
+          email: email
+          marketSegment: marketSegment
+        introPreamble: introPreamble
+        extendedMsrpTotal: 7
+        lastModifiedDate: ""
+        legalTerms: legalTerms
+        specialBidExpirationDate: ""
+        eventType: eventType
+        quoteNumber: quoteNumber
+        revision: revision
+        products:
+        - ingramPartNumber: ingramPartNumber
+          coo: coo
+          vpnCategory: vpnCategory
+          quantity: quantity
+          notes: notes
+          description: description
+          weight: weight
+          vendorName: vendorName
+          ean: ean
+          terms: terms
+          price:
+            quotePrice: 0
+            msrp: 6
+            extendedQuotePrice: 5
+            extendedMsrp: 1
+            discountOffList: 5.637376656633329
+          quoteProductGuid: quoteProductGuid
+          vendorPartNumber: vendorPartNumber
+          lineNumber: lineNumber
+          weightUom: weightUom
+          quoteProductsSupplierPartAuxiliaryId: quoteProductsSupplierPartAuxiliaryId
+          isSuggestionProduct: isSuggestionProduct
+        - ingramPartNumber: ingramPartNumber
+          coo: coo
+          vpnCategory: vpnCategory
+          quantity: quantity
+          notes: notes
+          description: description
+          weight: weight
+          vendorName: vendorName
+          ean: ean
+          terms: terms
+          price:
+            quotePrice: 0
+            msrp: 6
+            extendedQuotePrice: 5
+            extendedMsrp: 1
+            discountOffList: 5.637376656633329
+          quoteProductGuid: quoteProductGuid
+          vendorPartNumber: vendorPartNumber
+          lineNumber: lineNumber
+          weightUom: weightUom
+          quoteProductsSupplierPartAuxiliaryId: quoteProductsSupplierPartAuxiliaryId
+          isSuggestionProduct: isSuggestionProduct
+        extendedQuotePriceTotal: 3
+        customerNeed: customerNeed
+        resellerInfo:
+          phoneNumber: phoneNumber
+          contact: contact
+          companyName: companyName
+          customerNumber: customerNumber
+          email: email
+        ingramQuoteExpiryDate: ingramQuoteExpiryDate
+        purchaseInstructions: purchaseInstructions
+        proposedSolution: proposedSolution
+        productsCount: 2
+        quoteName: quoteName
+        ingramQuoteDate: ""
+        status: ""
+        additionalAttributes:
+        - attributeValue: attributeValue
+          attributeName: attributeName
+        - attributeValue: attributeValue
+          attributeName: attributeName
+      properties:
+        eventType:
+          description: The event name sent in the event request.
+          type: string
+        quoteName:
+          description: Quote Name given to quote by sales team or system generated.
+            Generally used as a reference to identify the quote.
+          type: string
+        quoteNumber:
+          description: "Unique identifier generated by Ingram Micros CRM specific\
+            \ to each quote. When applying a filter to the quoteNumber and including\
+            \ a partial quote number in the filter, all quotes containing any information\
+            \ included in the filter can be retrieved as a subset of all available\
+            \ customer quotes."
+          type: string
+        revision:
+          description: "When a quote has been revised and updated, the quote number\
+            \ remains the same throughout the lifecycle of the quote, however, a Revision\
+            \ number is updated for each revision of the quote.  The revision numbers\
+            \ is associated with the Unique Quote Number."
+          type: string
+        ingramQuoteDate:
+          description: Date the Quote was initially Created.
+          type: date
+        lastModifiedDate:
+          description: Date the Quote was last updated or modified.
+          type: date
+        ingramQuoteExpiryDate:
+          description: Date when the Quote Expires.
+          type: string
+        specialBidExpirationDate:
+          description: If a price discount has been applied to the quote - The date
+            the discount expires and will no longer be applicable.
+          type: date
+        status:
+          description: This refers to the primary status of the quote.  API responses
+            will return
+          type: date
+        customerNeed:
+          description: Details related to the customer's request for the quote entered
+            by the sales representative or system generated.
+          type: string
+        proposedSolution:
+          description: Ingram Micro proposed solution and summary of quote.
+          type: string
+        introPreamble:
+          description: Introductory paragraph included in each quote.  Legally required
+            - must be included when presenting the quote details.
+          type: string
+        purchaseInstructions:
+          description: Purchase instructions.  Legally required - must be included
+            when presenting the quote details.
+          type: string
+        legalTerms:
+          description: Legal terms -  Legally required - must be included when presenting
+            the quote details.
+          type: string
+        resellerInfo:
+          $ref: '#/components/schemas/QuoteDetailsResponse_resellerInfo'
+        endUserInfo:
+          $ref: '#/components/schemas/QuoteDetailsResponse_endUserInfo'
+        products:
+          items:
+            $ref: '#/components/schemas/quote_create_webhook_response_resource_products_inner'
+          type: array
+        productsCount:
+          description: Total number of products included in the quote
+          type: integer
+        extendedMsrpTotal:
+          description: Total extended MSRP for all products included in the quote
+          type: integer
+        quantityTotal:
+          description: Total quantity of all items in the quote.
+          type: integer
+        extendedQuotePriceTotal:
+          description: Total amount of quoted price for all products in the quote
+            including both solution products and suggested products.
+          type: integer
+        additionalAttributes:
+          items:
+            $ref: '#/components/schemas/quote_create_webhook_response_resource_additionalAttributes_inner'
           type: array
       type: object
     OrderDetailB2B_billToInfo:

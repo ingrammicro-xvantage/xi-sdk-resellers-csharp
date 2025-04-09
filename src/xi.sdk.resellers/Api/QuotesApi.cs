@@ -138,6 +138,35 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <returns>ApiResponse of QuoteDetailsResponse</returns>
         ApiResponse<QuoteDetailsResponse> GetResellersV6QuotesWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?));
+        /// <summary>
+        /// Quote Create
+        /// </summary>
+        /// <remarks>
+        /// The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a &#39;Ready To Order&#39; status.&lt;ul&gt;&lt;li&gt;For CTO quote creation, we only support Cisco as a vendor at the moment.&lt;/li&gt;&lt;/ul&gt;   Once the quote is created and activated, you will receive an immediate &#39;confirmation&#39;.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
+        /// </remarks>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
+        /// <param name="quoteCreateRequest"></param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
+        /// <returns>QuoteCreateResponse</returns>
+        QuoteCreateResponse QuoteCreate(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = default(string?));
+
+        /// <summary>
+        /// Quote Create
+        /// </summary>
+        /// <remarks>
+        /// The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a &#39;Ready To Order&#39; status.&lt;ul&gt;&lt;li&gt;For CTO quote creation, we only support Cisco as a vendor at the moment.&lt;/li&gt;&lt;/ul&gt;   Once the quote is created and activated, you will receive an immediate &#39;confirmation&#39;.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
+        /// </remarks>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
+        /// <param name="quoteCreateRequest"></param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
+        /// <returns>ApiResponse of QuoteCreateResponse</returns>
+        ApiResponse<QuoteCreateResponse> QuoteCreateWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = default(string?));
         #endregion Synchronous Operations
     }
 
@@ -264,6 +293,37 @@ namespace xi.sdk.resellers.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (QuoteDetailsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<QuoteDetailsResponse>> GetResellersV6QuotesWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <summary>
+        /// Quote Create
+        /// </summary>
+        /// <remarks>
+        /// The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a &#39;Ready To Order&#39; status.&lt;ul&gt;&lt;li&gt;For CTO quote creation, we only support Cisco as a vendor at the moment.&lt;/li&gt;&lt;/ul&gt;   Once the quote is created and activated, you will receive an immediate &#39;confirmation&#39;.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
+        /// </remarks>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
+        /// <param name="quoteCreateRequest"></param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of QuoteCreateResponse</returns>
+        System.Threading.Tasks.Task<QuoteCreateResponse> QuoteCreateAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Quote Create
+        /// </summary>
+        /// <remarks>
+        /// The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a &#39;Ready To Order&#39; status.&lt;ul&gt;&lt;li&gt;For CTO quote creation, we only support Cisco as a vendor at the moment.&lt;/li&gt;&lt;/ul&gt;   Once the quote is created and activated, you will receive an immediate &#39;confirmation&#39;.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
+        /// </remarks>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
+        /// <param name="quoteCreateRequest"></param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (QuoteCreateResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QuoteCreateResponse>> QuoteCreateWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1158,6 +1218,189 @@ namespace xi.sdk.resellers.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetResellersV6Quotes", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Quote Create The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a &#39;Ready To Order&#39; status.&lt;ul&gt;&lt;li&gt;For CTO quote creation, we only support Cisco as a vendor at the moment.&lt;/li&gt;&lt;/ul&gt;   Once the quote is created and activated, you will receive an immediate &#39;confirmation&#39;.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
+        /// </summary>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
+        /// <param name="quoteCreateRequest"></param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
+        /// <returns>QuoteCreateResponse</returns>
+        public QuoteCreateResponse QuoteCreate(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = default(string?))
+        {
+            xi.sdk.resellers.Client.ApiResponse<QuoteCreateResponse> localVarResponse = QuoteCreateWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, quoteCreateRequest, iMSenderID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Quote Create The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a &#39;Ready To Order&#39; status.&lt;ul&gt;&lt;li&gt;For CTO quote creation, we only support Cisco as a vendor at the moment.&lt;/li&gt;&lt;/ul&gt;   Once the quote is created and activated, you will receive an immediate &#39;confirmation&#39;.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
+        /// </summary>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
+        /// <param name="quoteCreateRequest"></param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
+        /// <returns>ApiResponse of QuoteCreateResponse</returns>
+        public xi.sdk.resellers.Client.ApiResponse<QuoteCreateResponse> QuoteCreateWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = default(string?))
+        {
+            // verify the required parameter 'iMCustomerNumber' is set
+            if (iMCustomerNumber == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCustomerNumber' when calling QuotesApi->QuoteCreate");
+
+            // verify the required parameter 'iMCountryCode' is set
+            if (iMCountryCode == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCountryCode' when calling QuotesApi->QuoteCreate");
+
+            // verify the required parameter 'iMCorrelationID' is set
+            if (iMCorrelationID == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling QuotesApi->QuoteCreate");
+
+            // verify the required parameter 'quoteCreateRequest' is set
+            if (quoteCreateRequest == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'quoteCreateRequest' when calling QuotesApi->QuoteCreate");
+
+            xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = xi.sdk.resellers.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = xi.sdk.resellers.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.HeaderParameters.Add("IM-CustomerNumber", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCustomerNumber)); // header parameter
+            localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
+            localVarRequestOptions.HeaderParameters.Add("IM-CorrelationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCorrelationID)); // header parameter
+            if (iMSenderID != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("IM-SenderID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMSenderID)); // header parameter
+            }
+            localVarRequestOptions.Data = quoteCreateRequest;
+
+            // authentication (application) required
+            // oauth required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<QuoteCreateResponse>("/resellers/v6/quotes/create", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("QuoteCreate", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Quote Create The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a &#39;Ready To Order&#39; status.&lt;ul&gt;&lt;li&gt;For CTO quote creation, we only support Cisco as a vendor at the moment.&lt;/li&gt;&lt;/ul&gt;   Once the quote is created and activated, you will receive an immediate &#39;confirmation&#39;.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
+        /// </summary>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
+        /// <param name="quoteCreateRequest"></param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of QuoteCreateResponse</returns>
+        public async System.Threading.Tasks.Task<QuoteCreateResponse> QuoteCreateAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            xi.sdk.resellers.Client.ApiResponse<QuoteCreateResponse> localVarResponse = await QuoteCreateWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, quoteCreateRequest, iMSenderID, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Quote Create The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a &#39;Ready To Order&#39; status.&lt;ul&gt;&lt;li&gt;For CTO quote creation, we only support Cisco as a vendor at the moment.&lt;/li&gt;&lt;/ul&gt;   Once the quote is created and activated, you will receive an immediate &#39;confirmation&#39;.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
+        /// </summary>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
+        /// <param name="quoteCreateRequest"></param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (QuoteCreateResponse)</returns>
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<QuoteCreateResponse>> QuoteCreateWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'iMCustomerNumber' is set
+            if (iMCustomerNumber == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCustomerNumber' when calling QuotesApi->QuoteCreate");
+
+            // verify the required parameter 'iMCountryCode' is set
+            if (iMCountryCode == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCountryCode' when calling QuotesApi->QuoteCreate");
+
+            // verify the required parameter 'iMCorrelationID' is set
+            if (iMCorrelationID == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling QuotesApi->QuoteCreate");
+
+            // verify the required parameter 'quoteCreateRequest' is set
+            if (quoteCreateRequest == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'quoteCreateRequest' when calling QuotesApi->QuoteCreate");
+
+
+            xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+
+            var localVarContentType = xi.sdk.resellers.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = xi.sdk.resellers.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.HeaderParameters.Add("IM-CustomerNumber", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCustomerNumber)); // header parameter
+            localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
+            localVarRequestOptions.HeaderParameters.Add("IM-CorrelationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCorrelationID)); // header parameter
+            if (iMSenderID != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("IM-SenderID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMSenderID)); // header parameter
+            }
+            localVarRequestOptions.Data = quoteCreateRequest;
+
+            // authentication (application) required
+            // oauth required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.PostAsync<QuoteCreateResponse>("/resellers/v6/quotes/create", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("QuoteCreate", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

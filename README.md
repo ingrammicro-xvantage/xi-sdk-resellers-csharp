@@ -161,6 +161,7 @@ Class | Method | HTTP request | Description
 *QuotesApi* | [**GetQuotessearchV6**](docs/QuotesApi.md#getquotessearchv6) | **GET** /resellers/v6/quotes/search | Quote Search
 *QuotesApi* | [**GetResellerV6ValidateQuote**](docs/QuotesApi.md#getresellerv6validatequote) | **GET** /resellers/v6/q2o/validatequote | Validate Quote
 *QuotesApi* | [**GetResellersV6Quotes**](docs/QuotesApi.md#getresellersv6quotes) | **GET** /resellers/v6/quotes/{quoteNumber} | Get Quote Details
+*QuotesApi* | [**QuoteCreate**](docs/QuotesApi.md#quotecreate) | **POST** /resellers/v6/quotes/create | Quote Create
 *RenewalsApi* | [**GetResellersV6Renewalsdetails**](docs/RenewalsApi.md#getresellersv6renewalsdetails) | **GET** /resellers/v6/renewals/{renewalId} | Renewals Details
 *RenewalsApi* | [**PostRenewalssearch**](docs/RenewalsApi.md#postrenewalssearch) | **POST** /resellers/v6/renewals/search | Renewals Search
 *ReturnsApi* | [**GetResellersV6Returnsdetails**](docs/ReturnsApi.md#getresellersv6returnsdetails) | **GET** /resellers/v6/returns/{caseRequestNumber} | Returns Details
@@ -347,6 +348,15 @@ Class | Method | HTTP request | Description
  - [Model.ProductSearchResponseSubscriptionCatalogInnerPlansInner](docs/ProductSearchResponseSubscriptionCatalogInnerPlansInner.md)
  - [Model.ProductSearchResponseSubscriptionCatalogInnerPlansInnerLinksInner](docs/ProductSearchResponseSubscriptionCatalogInnerPlansInnerLinksInner.md)
  - [Model.ProductSearchResponseSubscriptionCatalogInnerPlansInnerSubscriptionPeriodSummaryInner](docs/ProductSearchResponseSubscriptionCatalogInnerPlansInnerSubscriptionPeriodSummaryInner.md)
+ - [Model.QuoteCreateRequest](docs/QuoteCreateRequest.md)
+ - [Model.QuoteCreateRequestEndUserInfo](docs/QuoteCreateRequestEndUserInfo.md)
+ - [Model.QuoteCreateRequestProductsInner](docs/QuoteCreateRequestProductsInner.md)
+ - [Model.QuoteCreateResponse](docs/QuoteCreateResponse.md)
+ - [Model.QuoteCreateWebhookResponse](docs/QuoteCreateWebhookResponse.md)
+ - [Model.QuoteCreateWebhookResponseResource](docs/QuoteCreateWebhookResponseResource.md)
+ - [Model.QuoteCreateWebhookResponseResourceAdditionalAttributesInner](docs/QuoteCreateWebhookResponseResourceAdditionalAttributesInner.md)
+ - [Model.QuoteCreateWebhookResponseResourceProductsInner](docs/QuoteCreateWebhookResponseResourceProductsInner.md)
+ - [Model.QuoteCreateWebhookResponseResourceProductsInnerPrice](docs/QuoteCreateWebhookResponseResourceProductsInnerPrice.md)
  - [Model.QuoteDetailsResponse](docs/QuoteDetailsResponse.md)
  - [Model.QuoteDetailsResponseAdditionalAttributesInner](docs/QuoteDetailsResponseAdditionalAttributesInner.md)
  - [Model.QuoteDetailsResponseEndUserInfo](docs/QuoteDetailsResponseEndUserInfo.md)
