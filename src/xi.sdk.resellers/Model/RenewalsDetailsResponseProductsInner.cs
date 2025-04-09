@@ -43,7 +43,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantity">The quantity of the line item..</param>
         /// <param name="unitPrice">The unit price of the line item..</param>
         /// <param name="isConsolidated">Is the line item consolidated? Yes or No..</param>
-        public RenewalsDetailsResponseProductsInner(string ingramLineNumber = default(string), string productDescription = default(string), string vendorPartNumber = default(string), string ingramPartNumber = default(string), string manufacturerPartNumber = default(string), string quantity = default(string), decimal unitPrice = default(decimal), string isConsolidated = default(string))
+        public RenewalsDetailsResponseProductsInner(string ingramLineNumber = default(string), string productDescription = default(string), string vendorPartNumber = default(string), string ingramPartNumber = default(string), string manufacturerPartNumber = default(string), int quantity = default(int), decimal unitPrice = default(decimal), string isConsolidated = default(string))
         {
             this.IngramLineNumber = ingramLineNumber;
             this.ProductDescription = productDescription;
@@ -95,7 +95,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The quantity of the line item.</value>
         [DataMember(Name = "quantity", EmitDefaultValue = false)]
-        public string Quantity { get; set; }
+        public int Quantity { get; set; }
 
         /// <summary>
         /// The unit price of the line item.

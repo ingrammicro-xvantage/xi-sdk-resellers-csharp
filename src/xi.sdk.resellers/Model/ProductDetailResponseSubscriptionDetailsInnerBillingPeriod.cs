@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="billingPeriodUnit">Billing unit period of the subscription. Example, Years, Months.</param>
         /// <param name="billingPeriod">Billing period of the subscription. Example 1, 3.</param>
-        public ProductDetailResponseSubscriptionDetailsInnerBillingPeriod(string billingPeriodUnit = default(string), int billingPeriod = default(int))
+        public ProductDetailResponseSubscriptionDetailsInnerBillingPeriod(string billingPeriodUnit = default(string), string billingPeriod = default(string))
         {
             this.BillingPeriodUnit = billingPeriodUnit;
             this.BillingPeriod = billingPeriod;
@@ -55,7 +55,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Billing period of the subscription. Example 1, 3</value>
         [DataMember(Name = "billingPeriod", EmitDefaultValue = false)]
-        public int BillingPeriod { get; set; }
+        public string BillingPeriod { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

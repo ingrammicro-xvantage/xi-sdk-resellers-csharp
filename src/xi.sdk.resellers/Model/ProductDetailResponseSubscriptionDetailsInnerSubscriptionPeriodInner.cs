@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="subscriptionPeriodUnit">Unit period of the subscription. Example, Years, Months.</param>
         /// <param name="subscriptionPeriod">Length of the subscription. Example 1, 3.</param>
-        public ProductDetailResponseSubscriptionDetailsInnerSubscriptionPeriodInner(string subscriptionPeriodUnit = default(string), int subscriptionPeriod = default(int))
+        public ProductDetailResponseSubscriptionDetailsInnerSubscriptionPeriodInner(string subscriptionPeriodUnit = default(string), string subscriptionPeriod = default(string))
         {
             this.SubscriptionPeriodUnit = subscriptionPeriodUnit;
             this.SubscriptionPeriod = subscriptionPeriod;
@@ -55,7 +55,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Length of the subscription. Example 1, 3</value>
         [DataMember(Name = "subscriptionPeriod", EmitDefaultValue = false)]
-        public int SubscriptionPeriod { get; set; }
+        public string SubscriptionPeriod { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

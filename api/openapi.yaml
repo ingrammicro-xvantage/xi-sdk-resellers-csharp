@@ -9633,7 +9633,7 @@ components:
         warrantyInformation:
         - "{}"
         - "{}"
-        productAuthorized: true
+        productAuthorized: productAuthorized
         vendorName: vendorName
         indicators:
           isHeavyWeight: true
@@ -9679,26 +9679,26 @@ components:
           itemCatalogCategory: itemCatalogCategory
         subscriptionDetails:
         - subscriptionPeriod:
-          - subscriptionPeriod: 6
+          - subscriptionPeriod: subscriptionPeriod
             subscriptionPeriodUnit: subscriptionPeriodUnit
-          - subscriptionPeriod: 6
+          - subscriptionPeriod: subscriptionPeriod
             subscriptionPeriodUnit: subscriptionPeriodUnit
           previousPage: previousPage
           billingPeriod:
-            billingPeriod: 1
+            billingPeriod: billingPeriod
             billingPeriodUnit: billingPeriodUnit
           nextPage: nextPage
           options:
           - resourceId: resourceId
             dependsOn: dependsOn
-            maxUnits: 5
-            minUnits: 5
+            maxUnits: maxUnits
+            minUnits: minUnits
             resourceName: resourceName
             vendorPartNumber: vendorPartNumber
           - resourceId: resourceId
             dependsOn: dependsOn
-            maxUnits: 5
-            minUnits: 5
+            maxUnits: maxUnits
+            minUnits: minUnits
             resourceName: resourceName
             vendorPartNumber: vendorPartNumber
           planName: planName
@@ -9717,26 +9717,26 @@ components:
             href: href
             type: type
         - subscriptionPeriod:
-          - subscriptionPeriod: 6
+          - subscriptionPeriod: subscriptionPeriod
             subscriptionPeriodUnit: subscriptionPeriodUnit
-          - subscriptionPeriod: 6
+          - subscriptionPeriod: subscriptionPeriod
             subscriptionPeriodUnit: subscriptionPeriodUnit
           previousPage: previousPage
           billingPeriod:
-            billingPeriod: 1
+            billingPeriod: billingPeriod
             billingPeriodUnit: billingPeriodUnit
           nextPage: nextPage
           options:
           - resourceId: resourceId
             dependsOn: dependsOn
-            maxUnits: 5
-            minUnits: 5
+            maxUnits: maxUnits
+            minUnits: minUnits
             resourceName: resourceName
             vendorPartNumber: vendorPartNumber
           - resourceId: resourceId
             dependsOn: dependsOn
-            maxUnits: 5
-            minUnits: 5
+            maxUnits: maxUnits
+            minUnits: minUnits
             resourceName: resourceName
             vendorPartNumber: vendorPartNumber
           planName: planName
@@ -9769,7 +9769,7 @@ components:
         productAuthorized:
           description: Boolean that indicates whether a product is authorized.
           nullable: true
-          type: boolean
+          type: string
         description:
           description: The description given for the product.
           nullable: true
@@ -9931,18 +9931,18 @@ components:
         customerOrderNumber: customerOrderNumber
         products:
         - ingramPartNumber: ingramPartNumber
-          unitPrice: 0.8008281904610115
+          unitPrice: 6.027456183070403
           manufacturerPartNumber: manufacturerPartNumber
           isConsolidated: isConsolidated
-          quantity: quantity
+          quantity: 0
           ingramLineNumber: ingramLineNumber
           vendorPartNumber: vendorPartNumber
           productDescription: productDescription
         - ingramPartNumber: ingramPartNumber
-          unitPrice: 0.8008281904610115
+          unitPrice: 6.027456183070403
           manufacturerPartNumber: manufacturerPartNumber
           isConsolidated: isConsolidated
-          quantity: quantity
+          quantity: 0
           ingramLineNumber: ingramLineNumber
           vendorPartNumber: vendorPartNumber
           productDescription: productDescription
@@ -16623,7 +16623,7 @@ components:
       type: object
     ProductDetailResponse_subscriptionDetails_inner_subscriptionPeriod_inner:
       example:
-        subscriptionPeriod: 6
+        subscriptionPeriod: subscriptionPeriod
         subscriptionPeriodUnit: subscriptionPeriodUnit
       properties:
         subscriptionPeriodUnit:
@@ -16631,12 +16631,12 @@ components:
           type: string
         subscriptionPeriod:
           description: "Length of the subscription. Example 1, 3"
-          type: integer
+          type: string
       type: object
     ProductDetailResponse_subscriptionDetails_inner_billingPeriod:
       description: 'Details of the subscription billing period. '
       example:
-        billingPeriod: 1
+        billingPeriod: billingPeriod
         billingPeriodUnit: billingPeriodUnit
       properties:
         billingPeriodUnit:
@@ -16644,14 +16644,14 @@ components:
           type: string
         billingPeriod:
           description: "Billing period of the subscription. Example 1, 3"
-          type: integer
+          type: string
       type: object
     ProductDetailResponse_subscriptionDetails_inner_options_inner:
       example:
         resourceId: resourceId
         dependsOn: dependsOn
-        maxUnits: 5
-        minUnits: 5
+        maxUnits: maxUnits
+        minUnits: minUnits
         resourceName: resourceName
         vendorPartNumber: vendorPartNumber
       properties:
@@ -16666,10 +16666,10 @@ components:
           type: string
         minUnits:
           description: Minimum units must be purchased.
-          type: integer
+          type: string
         maxUnits:
           description: Maximum units are available for purchase.
-          type: integer
+          type: string
         dependsOn:
           description: The name of the product must be purchased to purchase this
             product.
@@ -16678,26 +16678,26 @@ components:
     ProductDetailResponse_subscriptionDetails_inner:
       example:
         subscriptionPeriod:
-        - subscriptionPeriod: 6
+        - subscriptionPeriod: subscriptionPeriod
           subscriptionPeriodUnit: subscriptionPeriodUnit
-        - subscriptionPeriod: 6
+        - subscriptionPeriod: subscriptionPeriod
           subscriptionPeriodUnit: subscriptionPeriodUnit
         previousPage: previousPage
         billingPeriod:
-          billingPeriod: 1
+          billingPeriod: billingPeriod
           billingPeriodUnit: billingPeriodUnit
         nextPage: nextPage
         options:
         - resourceId: resourceId
           dependsOn: dependsOn
-          maxUnits: 5
-          minUnits: 5
+          maxUnits: maxUnits
+          minUnits: minUnits
           resourceName: resourceName
           vendorPartNumber: vendorPartNumber
         - resourceId: resourceId
           dependsOn: dependsOn
-          maxUnits: 5
-          minUnits: 5
+          maxUnits: maxUnits
+          minUnits: minUnits
           resourceName: resourceName
           vendorPartNumber: vendorPartNumber
         planName: planName
@@ -16961,10 +16961,10 @@ components:
     renewalsDetailsResponse_products_inner:
       example:
         ingramPartNumber: ingramPartNumber
-        unitPrice: 0.8008281904610115
+        unitPrice: 6.027456183070403
         manufacturerPartNumber: manufacturerPartNumber
         isConsolidated: isConsolidated
-        quantity: quantity
+        quantity: 0
         ingramLineNumber: ingramLineNumber
         vendorPartNumber: vendorPartNumber
         productDescription: productDescription
@@ -16986,7 +16986,7 @@ components:
           type: string
         quantity:
           description: The quantity of the line item.
-          type: string
+          type: integer
         unitPrice:
           description: The unit price of the line item.
           format: decimal

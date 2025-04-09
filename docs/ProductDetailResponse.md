@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **IngramPartNumber** | **string** | Ingram Micro unique part number for the product. | [optional] 
 **VendorPartNumber** | **string** | Vendor’s part number for the product. | [optional] 
-**ProductAuthorized** | **bool?** | Boolean that indicates whether a product is authorized. | [optional] 
+**ProductAuthorized** | **string** | Boolean that indicates whether a product is authorized. | [optional] 
 **Description** | **string** | The description given for the product. | [optional] 
 **Upc** | **string** | The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item. | [optional] 
 **ProductCategory** | **string** | The category of the product. | [optional] 

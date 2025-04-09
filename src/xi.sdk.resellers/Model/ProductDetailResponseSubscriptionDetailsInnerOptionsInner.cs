@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="minUnits">Minimum units must be purchased..</param>
         /// <param name="maxUnits">Maximum units are available for purchase..</param>
         /// <param name="dependsOn">The name of the product must be purchased to purchase this product..</param>
-        public ProductDetailResponseSubscriptionDetailsInnerOptionsInner(string resourceId = default(string), string resourceName = default(string), string vendorPartNumber = default(string), int minUnits = default(int), int maxUnits = default(int), string dependsOn = default(string))
+        public ProductDetailResponseSubscriptionDetailsInnerOptionsInner(string resourceId = default(string), string resourceName = default(string), string vendorPartNumber = default(string), string minUnits = default(string), string maxUnits = default(string), string dependsOn = default(string))
         {
             this.ResourceId = resourceId;
             this.ResourceName = resourceName;
@@ -77,14 +77,14 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Minimum units must be purchased.</value>
         [DataMember(Name = "minUnits", EmitDefaultValue = false)]
-        public int MinUnits { get; set; }
+        public string MinUnits { get; set; }
 
         /// <summary>
         /// Maximum units are available for purchase.
         /// </summary>
         /// <value>Maximum units are available for purchase.</value>
         [DataMember(Name = "maxUnits", EmitDefaultValue = false)]
-        public int MaxUnits { get; set; }
+        public string MaxUnits { get; set; }
 
         /// <summary>
         /// The name of the product must be purchased to purchase this product.
