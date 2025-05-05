@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantity">The requested quantity of the line item..</param>
         /// <param name="unitPrice">The unit price for the line item..</param>
         /// <param name="netAmount">The net amount (unit price X quantity) for the line item..</param>
-        public FreightResponseFreightEstimateResponseLinesInner(string ingramPartNumber = default(string), string vendorPartNumber = default(string), string warehouseId = default(string), int quantity = default(int), decimal unitPrice = default(decimal), decimal netAmount = default(decimal))
+        public FreightResponseFreightEstimateResponseLinesInner(string ingramPartNumber = default, string vendorPartNumber = default, string warehouseId = default, int quantity = default, decimal unitPrice = default, decimal netAmount = default)
         {
             this.IngramPartNumber = ingramPartNumber;
             this.VendorPartNumber = vendorPartNumber;

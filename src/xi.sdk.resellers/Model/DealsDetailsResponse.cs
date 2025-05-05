@@ -46,7 +46,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="currencyCode">Country specific currency code..</param>
         /// <param name="endUserInfo">endUserInfo.</param>
         /// <param name="products">products.</param>
-        public DealsDetailsResponse(string dealId = default(string), string varVersion = default(string), string endUser = default(string), decimal extendedMsrp = default(decimal), string vendor = default(string), string dealReceivedOn = default(string), string dealExpiryDate = default(string), string priceProtectionEndDate = default(string), string currencyCode = default(string), RenewalsDetailsResponseEndUserInfo endUserInfo = default(RenewalsDetailsResponseEndUserInfo), List<DealsDetailsResponseProductsInner> products = default(List<DealsDetailsResponseProductsInner>))
+        public DealsDetailsResponse(string dealId = default, string varVersion = default, string endUser = default, decimal extendedMsrp = default, string vendor = default, string dealReceivedOn = default, string dealExpiryDate = default, string priceProtectionEndDate = default, string currencyCode = default, RenewalsDetailsResponseEndUserInfo endUserInfo = default, List<DealsDetailsResponseProductsInner> products = default)
         {
             this.DealId = dealId;
             this.VarVersion = varVersion;

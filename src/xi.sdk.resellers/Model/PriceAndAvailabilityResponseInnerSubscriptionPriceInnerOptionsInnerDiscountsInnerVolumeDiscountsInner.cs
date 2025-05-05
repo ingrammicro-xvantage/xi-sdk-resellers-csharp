@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="msrp">Manufacturer Suggested Retail Price..</param>
         /// <param name="unitPrice">The unit price of the line item..</param>
         /// <param name="margin">Reseller’s margin percentage.</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerVolumeDiscountsInner(string currencyCode = default(string), string quantity = default(string), decimal? msrp = default(decimal?), decimal? unitPrice = default(decimal?), decimal? margin = default(decimal?))
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerVolumeDiscountsInner(string currencyCode = default, string quantity = default, decimal? msrp = default, decimal? unitPrice = default, decimal? margin = default)
         {
             this.CurrencyCode = currencyCode;
             this.Quantity = quantity;

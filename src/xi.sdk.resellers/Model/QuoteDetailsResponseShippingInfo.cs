@@ -45,7 +45,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="phoneNumber">Phone number of shipping info associated with the quote..</param>
         /// <param name="postalCode">Zip code of shipping info associated with the quote..</param>
         /// <param name="shpToGstinNumber">shpToGstinNumber.</param>
-        public QuoteDetailsResponseShippingInfo(string companyName = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string addressLine3 = default(string), string city = default(string), string state = default(string), string email = default(string), string phoneNumber = default(string), string postalCode = default(string), string shpToGstinNumber = default(string))
+        public QuoteDetailsResponseShippingInfo(string companyName = default, string addressLine1 = default, string addressLine2 = default, string addressLine3 = default, string city = default, string state = default, string email = default, string phoneNumber = default, string postalCode = default, string shpToGstinNumber = default)
         {
             this.CompanyName = companyName;
             this.AddressLine1 = addressLine1;

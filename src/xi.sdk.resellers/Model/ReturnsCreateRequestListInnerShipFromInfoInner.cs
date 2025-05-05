@@ -51,7 +51,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="countryCode">ship from country code. (required).</param>
         /// <param name="email">Ship from email. (required).</param>
         /// <param name="phoneNumber">Ship from phone number..</param>
-        public ReturnsCreateRequestListInnerShipFromInfoInner(string companyName = default(string), string contact = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string addressLine3 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string), string email = default(string), string phoneNumber = default(string))
+        public ReturnsCreateRequestListInnerShipFromInfoInner(string companyName = default, string contact = default, string addressLine1 = default, string addressLine2 = default, string addressLine3 = default, string city = default, string state = default, string postalCode = default, string countryCode = default, string email = default, string phoneNumber = default)
         {
             // to ensure "companyName" is required (not null)
             if (companyName == null)

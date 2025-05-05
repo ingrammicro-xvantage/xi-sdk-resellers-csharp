@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="topic">For orders or invoices. For orders the link provides details of the order. For invoices the link provides details of the invoice..</param>
         /// <param name="href">The URL endpoint for accessing the relevant data..</param>
         /// <param name="type">The type of call that can be made to the href link (GET, POST, Etc.)..</param>
-        public OrderSearchResponseOrdersInnerSubOrdersInnerLinksInner(string topic = default(string), string href = default(string), string type = default(string))
+        public OrderSearchResponseOrdersInnerSubOrdersInnerLinksInner(string topic = default, string href = default, string type = default)
         {
             this.Topic = topic;
             this.Href = href;

@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="topic">Provides the details of the orders..</param>
         /// <param name="href">The URL endpoint for accessing the relevant data..</param>
         /// <param name="type">The type of call that can be made to the href link (GET, POST, Etc.).                    .</param>
-        public OrderStatusAsyncNotificationRequestResourceInnerLinksInner(string topic = default(string), string href = default(string), string type = default(string))
+        public OrderStatusAsyncNotificationRequestResourceInnerLinksInner(string topic = default, string href = default, string type = default)
         {
             this.Topic = topic;
             this.Href = href;

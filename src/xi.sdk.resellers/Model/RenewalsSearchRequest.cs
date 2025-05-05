@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="dateType">dateType.</param>
         /// <param name="vendor">The name of the Vendor..</param>
         /// <param name="endUser">The name of the enduser. .</param>
-        public RenewalsSearchRequest(RenewalsSearchRequestStatus status = default(RenewalsSearchRequestStatus), RenewalsSearchRequestDateType dateType = default(RenewalsSearchRequestDateType), string vendor = default(string), string endUser = default(string))
+        public RenewalsSearchRequest(RenewalsSearchRequestStatus status = default, RenewalsSearchRequestDateType dateType = default, string vendor = default, string endUser = default)
         {
             this.Status = status;
             this.DateType = dateType;

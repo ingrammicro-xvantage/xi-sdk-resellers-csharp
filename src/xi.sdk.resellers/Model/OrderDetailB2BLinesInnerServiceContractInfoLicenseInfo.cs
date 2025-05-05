@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="licenseEndDate">End Date of the license..</param>
         /// <param name="description">Description of the license..</param>
         /// <param name="quantity">Quantity of the license..</param>
-        public OrderDetailB2BLinesInnerServiceContractInfoLicenseInfo(List<string> licenseNumber = default(List<string>), string licenseStartDate = default(string), string licenseEndDate = default(string), string description = default(string), string quantity = default(string))
+        public OrderDetailB2BLinesInnerServiceContractInfoLicenseInfo(List<string> licenseNumber = default, string licenseStartDate = default, string licenseEndDate = default, string description = default, string quantity = default)
         {
             this.LicenseNumber = licenseNumber;
             this.LicenseStartDate = licenseStartDate;

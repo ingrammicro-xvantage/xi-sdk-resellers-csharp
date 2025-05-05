@@ -43,7 +43,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="grossAmount">Gross amount..</param>
         /// <param name="distribution">distribution.</param>
         /// <param name="lines">lines.</param>
-        public FreightResponseFreightEstimateResponse(string currencyCode = default(string), decimal totalFreightAmount = default(decimal), decimal totalTaxAmount = default(decimal), decimal totalFees = default(decimal), decimal totalNetAmount = default(decimal), decimal grossAmount = default(decimal), List<FreightResponseFreightEstimateResponseDistributionInner> distribution = default(List<FreightResponseFreightEstimateResponseDistributionInner>), List<FreightResponseFreightEstimateResponseLinesInner> lines = default(List<FreightResponseFreightEstimateResponseLinesInner>))
+        public FreightResponseFreightEstimateResponse(string currencyCode = default, decimal totalFreightAmount = default, decimal totalTaxAmount = default, decimal totalFees = default, decimal totalNetAmount = default, decimal grossAmount = default, List<FreightResponseFreightEstimateResponseDistributionInner> distribution = default, List<FreightResponseFreightEstimateResponseLinesInner> lines = default)
         {
             this.CurrencyCode = currencyCode;
             this.TotalFreightAmount = totalFreightAmount;

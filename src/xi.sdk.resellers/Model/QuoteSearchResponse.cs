@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quotes">The quote details for the requested criteria..</param>
         /// <param name="nextPage">nextPage.</param>
         /// <param name="prevPage">prevPage.</param>
-        public QuoteSearchResponse(int recordsFound = default(int), int pageSize = default(int), int pageNumber = default(int), List<QuoteSearchResponseQuotesInner> quotes = default(List<QuoteSearchResponseQuotesInner>), string nextPage = default(string), string prevPage = default(string))
+        public QuoteSearchResponse(int recordsFound = default, int pageSize = default, int pageNumber = default, List<QuoteSearchResponseQuotesInner> quotes = default, string nextPage = default, string prevPage = default)
         {
             this.RecordsFound = recordsFound;
             this.PageSize = pageSize;

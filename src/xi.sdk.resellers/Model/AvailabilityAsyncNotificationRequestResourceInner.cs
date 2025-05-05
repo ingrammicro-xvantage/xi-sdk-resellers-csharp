@@ -44,7 +44,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="backOrderFlag">Backordered Flag..</param>
         /// <param name="totalAvailability">totalAvailability..</param>
         /// <param name="links">Link to Order Details for the order(s)..</param>
-        public AvailabilityAsyncNotificationRequestResourceInner(string eventType = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string vendorName = default(string), string upcCode = default(string), string skuStatus = default(string), string backOrderFlag = default(string), string totalAvailability = default(string), List<AvailabilityAsyncNotificationRequestResourceInnerLinksInner> links = default(List<AvailabilityAsyncNotificationRequestResourceInnerLinksInner>))
+        public AvailabilityAsyncNotificationRequestResourceInner(string eventType = default, string ingramPartNumber = default, string vendorPartNumber = default, string vendorName = default, string upcCode = default, string skuStatus = default, string backOrderFlag = default, string totalAvailability = default, List<AvailabilityAsyncNotificationRequestResourceInnerLinksInner> links = default)
         {
             this.EventType = eventType;
             this.IngramPartNumber = ingramPartNumber;

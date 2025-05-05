@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="faultstring">faultstring.</param>
         /// <param name="detail">detail.</param>
-        public GetAccesstoken500ResponseFault(string faultstring = default(string), GetAccesstoken500ResponseFaultDetail detail = default(GetAccesstoken500ResponseFaultDetail))
+        public GetAccesstoken500ResponseFault(string faultstring = default, GetAccesstoken500ResponseFaultDetail detail = default)
         {
             this.Faultstring = faultstring;
             this.Detail = detail;

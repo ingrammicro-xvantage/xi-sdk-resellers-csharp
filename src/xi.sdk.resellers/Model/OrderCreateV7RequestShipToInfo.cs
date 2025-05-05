@@ -47,7 +47,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="email">The company contact email address..</param>
         /// <param name="shippingNotes">shippingNotes.</param>
         /// <param name="phoneNumber">The company contact phone number..</param>
-        public OrderCreateV7RequestShipToInfo(string addressId = default(string), string contact = default(string), string companyName = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string), string email = default(string), string shippingNotes = default(string), string phoneNumber = default(string))
+        public OrderCreateV7RequestShipToInfo(string addressId = default, string contact = default, string companyName = default, string addressLine1 = default, string addressLine2 = default, string city = default, string state = default, string postalCode = default, string countryCode = default, string email = default, string shippingNotes = default, string phoneNumber = default)
         {
             this.AddressId = addressId;
             this.Contact = contact;

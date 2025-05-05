@@ -36,7 +36,7 @@ namespace xi.sdk.resellers.Model
         /// Initializes a new instance of the <see cref="OrderStatusAsyncNotificationRequestResourceInnerLinesInnerSerialNumberDetailsInner" /> class.
         /// </summary>
         /// <param name="serialNumber">The serial number for the line item.                  .</param>
-        public OrderStatusAsyncNotificationRequestResourceInnerLinesInnerSerialNumberDetailsInner(string serialNumber = default(string))
+        public OrderStatusAsyncNotificationRequestResourceInnerLinesInnerSerialNumberDetailsInner(string serialNumber = default)
         {
             this.SerialNumber = serialNumber;
         }

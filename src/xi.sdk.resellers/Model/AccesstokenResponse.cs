@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="accessToken">accessToken.</param>
         /// <param name="tokenType">tokenType.</param>
         /// <param name="expiresIn">expiresIn.</param>
-        public AccesstokenResponse(string accessToken = default(string), string tokenType = default(string), string expiresIn = default(string))
+        public AccesstokenResponse(string accessToken = default, string tokenType = default, string expiresIn = default)
         {
             this.AccessToken = accessToken;
             this.TokenType = tokenType;

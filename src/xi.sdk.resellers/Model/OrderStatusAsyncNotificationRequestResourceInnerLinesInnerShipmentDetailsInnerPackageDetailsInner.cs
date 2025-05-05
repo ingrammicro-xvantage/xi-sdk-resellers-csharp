@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="cartonNumber">The shipment carton number that contains the line item..</param>
         /// <param name="quantityInbox">The quantity of line items in the box..</param>
         /// <param name="trackingNumber">The tracking number for the shipment containing the line item..</param>
-        public OrderStatusAsyncNotificationRequestResourceInnerLinesInnerShipmentDetailsInnerPackageDetailsInner(string cartonNumber = default(string), string quantityInbox = default(string), string trackingNumber = default(string))
+        public OrderStatusAsyncNotificationRequestResourceInnerLinesInnerShipmentDetailsInnerPackageDetailsInner(string cartonNumber = default, string quantityInbox = default, string trackingNumber = default)
         {
             this.CartonNumber = cartonNumber;
             this.QuantityInbox = quantityInbox;

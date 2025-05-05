@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="startDate">Start Date..</param>
         /// <param name="endDate">End Date..</param>
-        public OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange(string startDate = default(string), string endDate = default(string))
+        public OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange(string startDate = default, string endDate = default)
         {
             this.StartDate = startDate;
             this.EndDate = endDate;

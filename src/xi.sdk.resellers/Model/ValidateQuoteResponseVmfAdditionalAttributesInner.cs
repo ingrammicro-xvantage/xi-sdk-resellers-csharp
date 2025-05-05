@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="attributeName">The name of the header level field..</param>
         /// <param name="attributeValue">The value of the header level field..</param>
         /// <param name="attributeDescription">The description of the header level field..</param>
-        public ValidateQuoteResponseVmfAdditionalAttributesInner(string attributeName = default(string), string attributeValue = default(string), string attributeDescription = default(string))
+        public ValidateQuoteResponseVmfAdditionalAttributesInner(string attributeName = default, string attributeValue = default, string attributeDescription = default)
         {
             this.AttributeName = attributeName;
             this.AttributeValue = attributeValue;

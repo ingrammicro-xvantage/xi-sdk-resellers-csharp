@@ -54,7 +54,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="billToAddressId">Suffix used to identify billing address..</param>
         /// <param name="shipFromInfo">shipFromInfo (required).</param>
         /// <param name="numberOfBoxes">Number of boxes to return. (required).</param>
-        public ReturnsCreateRequestListInner(string invoiceNumber = default(string), DateOnly invoiceDate = default(DateOnly), string customerOrderNumber = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string serialNumber = default(string), int quantity = default(int), string primaryReason = default(string), string secondaryReason = default(string), string notes = default(string), string referenceNumber = default(string), string billToAddressId = default(string), List<ReturnsCreateRequestListInnerShipFromInfoInner> shipFromInfo = default(List<ReturnsCreateRequestListInnerShipFromInfoInner>), int numberOfBoxes = default(int))
+        public ReturnsCreateRequestListInner(string invoiceNumber = default, DateOnly invoiceDate = default, string customerOrderNumber = default, string ingramPartNumber = default, string vendorPartNumber = default, string serialNumber = default, int quantity = default, string primaryReason = default, string secondaryReason = default, string notes = default, string referenceNumber = default, string billToAddressId = default, List<ReturnsCreateRequestListInnerShipFromInfoInner> shipFromInfo = default, int numberOfBoxes = default)
         {
             // to ensure "invoiceNumber" is required (not null)
             if (invoiceNumber == null)

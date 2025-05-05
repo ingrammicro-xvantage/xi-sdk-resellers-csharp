@@ -50,7 +50,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="forgntotalamount">forgntotalamount.</param>
         /// <param name="gstInvoiceNumber">gstInvoiceNumber.</param>
         /// <param name="isfseccenabled">isfseccenabled.</param>
-        public InvoiceSearchResponseInvoicesInner(string paymentTermsDueDate = default(string), List<string> specialBidNumbers = default(List<string>), string erpOrderNumber = default(string), string invoiceNumber = default(string), string invoiceStatus = default(string), string invoiceDate = default(string), string invoiceDueDate = default(string), decimal invoicedAmountDue = default(decimal), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string orderCreateDate = default(string), decimal invoiceAmountInclTax = default(decimal), decimal forgntotalamount = default(decimal), string gstInvoiceNumber = default(string), bool isfseccenabled = default(bool))
+        public InvoiceSearchResponseInvoicesInner(string paymentTermsDueDate = default, List<string> specialBidNumbers = default, string erpOrderNumber = default, string invoiceNumber = default, string invoiceStatus = default, string invoiceDate = default, string invoiceDueDate = default, decimal invoicedAmountDue = default, string customerOrderNumber = default, string endCustomerOrderNumber = default, string orderCreateDate = default, decimal invoiceAmountInclTax = default, decimal forgntotalamount = default, string gstInvoiceNumber = default, bool isfseccenabled = default)
         {
             this.PaymentTermsDueDate = paymentTermsDueDate;
             this.SpecialBidNumbers = specialBidNumbers;

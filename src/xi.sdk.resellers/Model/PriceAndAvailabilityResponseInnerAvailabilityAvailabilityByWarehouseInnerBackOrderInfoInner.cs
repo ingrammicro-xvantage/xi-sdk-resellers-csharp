@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="quantity">Quantity backordered..</param>
         /// <param name="etaDate">Expected availability date..</param>
-        public PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner(int? quantity = default(int?), string etaDate = default(string))
+        public PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner(int? quantity = default, string etaDate = default)
         {
             this.Quantity = quantity;
             this.EtaDate = etaDate;

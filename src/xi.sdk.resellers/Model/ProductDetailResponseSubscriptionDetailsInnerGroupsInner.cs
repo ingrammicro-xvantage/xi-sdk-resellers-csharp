@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="groupName">Name of the group..</param>
         /// <param name="groupDescription">Name of the subscription group..</param>
-        public ProductDetailResponseSubscriptionDetailsInnerGroupsInner(string groupName = default(string), string groupDescription = default(string))
+        public ProductDetailResponseSubscriptionDetailsInnerGroupsInner(string groupName = default, string groupDescription = default)
         {
             this.GroupName = groupName;
             this.GroupDescription = groupDescription;

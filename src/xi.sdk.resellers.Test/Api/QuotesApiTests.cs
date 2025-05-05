@@ -112,21 +112,5 @@ namespace xi.sdk.resellers.Test.Api
             //var response = instance.GetResellersV6Quotes(iMCustomerNumber, iMCountryCode, iMCorrelationID, quoteNumber, iMSenderID);
             //Assert.IsType<QuoteDetailsResponse>(response);
         }
-
-        /// <summary>
-        /// Test QuoteCreate
-        /// </summary>
-        [Fact]
-        public void QuoteCreateTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string iMCustomerNumber = null;
-            //string iMCountryCode = null;
-            //string iMCorrelationID = null;
-            //QuoteCreateRequest quoteCreateRequest = null;
-            //string? iMSenderID = null;
-            //var response = instance.QuoteCreate(iMCustomerNumber, iMCountryCode, iMCorrelationID, quoteCreateRequest, iMSenderID);
-            //Assert.IsType<QuoteCreateResponse>(response);
-        }
     }
 }

@@ -44,7 +44,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="specialPricingMinQuantity">The minimum quantity of products that have to be purchased to ensure the discount is applied..</param>
         /// <param name="governmentDiscountType">Type of Government Discount. *Currently, this discount is only available in the USA..</param>
         /// <param name="governmentDiscountedCustomerPrice">Government Discounted Customer Price. *Currently, this discount is only available in the USA..</param>
-        public PriceAndAvailabilityResponseInnerDiscountsInnerSpecialPricingInner(string discountType = default(string), string specialBidNumer = default(string), decimal? specialPricingDiscount = default(decimal?), DateOnly? specialPricingEffectiveDate = default(DateOnly?), DateOnly? specialPricingExpirationDate = default(DateOnly?), int? specialPricingAvailableQuantity = default(int?), int? specialPricingMinQuantity = default(int?), string governmentDiscountType = default(string), decimal? governmentDiscountedCustomerPrice = default(decimal?))
+        public PriceAndAvailabilityResponseInnerDiscountsInnerSpecialPricingInner(string discountType = default, string specialBidNumer = default, decimal? specialPricingDiscount = default, DateOnly? specialPricingEffectiveDate = default, DateOnly? specialPricingExpirationDate = default, int? specialPricingAvailableQuantity = default, int? specialPricingMinQuantity = default, string governmentDiscountType = default, decimal? governmentDiscountedCustomerPrice = default)
         {
             this.DiscountType = discountType;
             this.SpecialBidNumer = specialBidNumer;

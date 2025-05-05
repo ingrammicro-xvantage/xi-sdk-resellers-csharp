@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="subscriptionPeriodUnit">Provides the details of the product..</param>
         /// <param name="subscriptionPeriod">The URL endpoint for accessing the relevant data...</param>
-        public ProductSearchResponseSubscriptionCatalogInnerPlansInnerSubscriptionPeriodSummaryInner(string subscriptionPeriodUnit = default(string), string subscriptionPeriod = default(string))
+        public ProductSearchResponseSubscriptionCatalogInnerPlansInnerSubscriptionPeriodSummaryInner(string subscriptionPeriodUnit = default, string subscriptionPeriod = default)
         {
             this.SubscriptionPeriodUnit = subscriptionPeriodUnit;
             this.SubscriptionPeriod = subscriptionPeriod;

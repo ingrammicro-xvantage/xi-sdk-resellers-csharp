@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="endDate">endDate.</param>
         /// <param name="invoiceDate">invoiceDate.</param>
         /// <param name="expirationDate">expirationDate.</param>
-        public RenewalsSearchRequestDateType(RenewalsSearchRequestDateTypeStartDate startDate = default(RenewalsSearchRequestDateTypeStartDate), RenewalsSearchRequestDateTypeEndDate endDate = default(RenewalsSearchRequestDateTypeEndDate), RenewalsSearchRequestDateTypeInvoiceDate invoiceDate = default(RenewalsSearchRequestDateTypeInvoiceDate), RenewalsSearchRequestDateTypeExpirationDate expirationDate = default(RenewalsSearchRequestDateTypeExpirationDate))
+        public RenewalsSearchRequestDateType(RenewalsSearchRequestDateTypeStartDate startDate = default, RenewalsSearchRequestDateTypeEndDate endDate = default, RenewalsSearchRequestDateTypeInvoiceDate invoiceDate = default, RenewalsSearchRequestDateTypeExpirationDate expirationDate = default)
         {
             this.StartDate = startDate;
             this.EndDate = endDate;

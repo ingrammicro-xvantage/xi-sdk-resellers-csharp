@@ -46,7 +46,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="modifiedOn">The date on which the return request was last updated..</param>
         /// <param name="status">The status of the request..</param>
         /// <param name="links">links.</param>
-        public ReturnsSearchResponseReturnsClaimsInner(string returnClaimId = default(string), string caseRequestNumber = default(string), string createdOn = default(string), string type = default(string), string returnReason = default(string), string referenceNumber = default(string), double estimatedTotalValue = default(double), decimal credit = default(decimal), string modifiedOn = default(string), string status = default(string), List<ReturnsSearchResponseReturnsClaimsInnerLinksInner> links = default(List<ReturnsSearchResponseReturnsClaimsInnerLinksInner>))
+        public ReturnsSearchResponseReturnsClaimsInner(string returnClaimId = default, string caseRequestNumber = default, string createdOn = default, string type = default, string returnReason = default, string referenceNumber = default, double estimatedTotalValue = default, decimal credit = default, string modifiedOn = default, string status = default, List<ReturnsSearchResponseReturnsClaimsInnerLinksInner> links = default)
         {
             this.ReturnClaimId = returnClaimId;
             this.CaseRequestNumber = caseRequestNumber;

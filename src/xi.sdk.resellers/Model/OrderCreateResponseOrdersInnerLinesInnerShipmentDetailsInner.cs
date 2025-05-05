@@ -42,7 +42,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="freightAccountNumber">The reseller&#39;s shipping account number with carrier. Used to bill the shipping carrier directly from the reseller&#39;s account with the carrier..</param>
         /// <param name="signatureRequired">Specifies whether a signature is required for delivery. Default is False..</param>
         /// <param name="shippingInstructions">The shipping instructions for the order..</param>
-        public OrderCreateResponseOrdersInnerLinesInnerShipmentDetailsInner(string carrierCode = default(string), string carrierName = default(string), string shipFromWarehouseId = default(string), string shipFromLocation = default(string), string freightAccountNumber = default(string), string signatureRequired = default(string), string shippingInstructions = default(string))
+        public OrderCreateResponseOrdersInnerLinesInnerShipmentDetailsInner(string carrierCode = default, string carrierName = default, string shipFromWarehouseId = default, string shipFromLocation = default, string freightAccountNumber = default, string signatureRequired = default, string shippingInstructions = default)
         {
             this.CarrierCode = carrierCode;
             this.CarrierName = carrierName;

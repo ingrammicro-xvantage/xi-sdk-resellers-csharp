@@ -36,7 +36,7 @@ namespace xi.sdk.resellers.Model
         /// Initializes a new instance of the <see cref="FreightResponse" /> class.
         /// </summary>
         /// <param name="freightEstimateResponse">freightEstimateResponse.</param>
-        public FreightResponse(FreightResponseFreightEstimateResponse freightEstimateResponse = default(FreightResponseFreightEstimateResponse))
+        public FreightResponse(FreightResponseFreightEstimateResponse freightEstimateResponse = default)
         {
             this.FreightEstimateResponse = freightEstimateResponse;
         }

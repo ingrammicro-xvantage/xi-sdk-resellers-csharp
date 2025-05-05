@@ -36,7 +36,7 @@ namespace xi.sdk.resellers.Model
         /// Initializes a new instance of the <see cref="RenewalsSearchRequestStatus" /> class.
         /// </summary>
         /// <param name="opporutinyStatus">opporutinyStatus.</param>
-        public RenewalsSearchRequestStatus(RenewalsSearchRequestStatusOpporutinyStatus opporutinyStatus = default(RenewalsSearchRequestStatusOpporutinyStatus))
+        public RenewalsSearchRequestStatus(RenewalsSearchRequestStatusOpporutinyStatus opporutinyStatus = default)
         {
             this.OpporutinyStatus = opporutinyStatus;
         }

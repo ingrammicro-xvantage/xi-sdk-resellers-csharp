@@ -45,7 +45,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="invoiceNumber">The Ingram Micro invoice number for the line item..</param>
         /// <param name="invoiceDate">The date the IngramMicro invoice was created for the line item..</param>
         /// <param name="carrierDetails">The shipment carrier details for the line item..</param>
-        public OrderDetailB2BLinesInnerShipmentDetailsInner(int? quantity = default(int?), string deliveryNumber = default(string), string estimatedShipDate = default(string), string shippedDate = default(string), string estimatedDeliveryDate = default(string), string shipFromWarehouseId = default(string), string shipFromLocation = default(string), string invoiceNumber = default(string), string invoiceDate = default(string), List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInner> carrierDetails = default(List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInner>))
+        public OrderDetailB2BLinesInnerShipmentDetailsInner(int? quantity = default, string deliveryNumber = default, string estimatedShipDate = default, string shippedDate = default, string estimatedDeliveryDate = default, string shipFromWarehouseId = default, string shipFromLocation = default, string invoiceNumber = default, string invoiceDate = default, List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInner> carrierDetails = default)
         {
             this.Quantity = quantity;
             this.DeliveryNumber = deliveryNumber;

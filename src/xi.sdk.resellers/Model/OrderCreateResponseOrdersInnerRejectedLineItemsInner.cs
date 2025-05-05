@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantityOrdered">The quantity ordered of the rejected line item..</param>
         /// <param name="rejectCode">The rejection code for the rejected line item. Ex: &#39;EN&#39; .</param>
         /// <param name="rejectReason">The rejection reason for the rejected line item. Ex: &#39;SKU-NOTFOUND    DF41281&#39; .</param>
-        public OrderCreateResponseOrdersInnerRejectedLineItemsInner(string customerLinenumber = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), int quantityOrdered = default(int), string rejectCode = default(string), string rejectReason = default(string))
+        public OrderCreateResponseOrdersInnerRejectedLineItemsInner(string customerLinenumber = default, string ingramPartNumber = default, string vendorPartNumber = default, int quantityOrdered = default, string rejectCode = default, string rejectReason = default)
         {
             this.CustomerLinenumber = customerLinenumber;
             this.IngramPartNumber = ingramPartNumber;

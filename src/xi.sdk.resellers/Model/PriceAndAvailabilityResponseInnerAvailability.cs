@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="available">Boolean that indicates if the product ordered is available.</param>
         /// <param name="totalAvailability">The total amount of available products.</param>
         /// <param name="availabilityByWarehouse">availabilityByWarehouse.</param>
-        public PriceAndAvailabilityResponseInnerAvailability(bool available = default(bool), int? totalAvailability = default(int?), List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner> availabilityByWarehouse = default(List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner>))
+        public PriceAndAvailabilityResponseInnerAvailability(bool available = default, int? totalAvailability = default, List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner> availabilityByWarehouse = default)
         {
             this.Available = available;
             this.TotalAvailability = totalAvailability;

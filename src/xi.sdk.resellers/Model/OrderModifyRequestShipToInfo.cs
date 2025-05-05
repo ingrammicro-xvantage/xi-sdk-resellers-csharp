@@ -49,7 +49,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="countryCode">The two-character ISO country code the order will be shipped to..</param>
         /// <param name="phoneNumber">The company contact phone number..</param>
         /// <param name="email">The company contact email address..</param>
-        public OrderModifyRequestShipToInfo(string addressId = default(string), string contact = default(string), string companyName = default(string), string name1 = default(string), string name2 = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string addressLine3 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string), string phoneNumber = default(string), string email = default(string))
+        public OrderModifyRequestShipToInfo(string addressId = default, string contact = default, string companyName = default, string name1 = default, string name2 = default, string addressLine1 = default, string addressLine2 = default, string addressLine3 = default, string city = default, string state = default, string postalCode = default, string countryCode = default, string phoneNumber = default, string email = default)
         {
             this.AddressId = addressId;
             this.Contact = contact;

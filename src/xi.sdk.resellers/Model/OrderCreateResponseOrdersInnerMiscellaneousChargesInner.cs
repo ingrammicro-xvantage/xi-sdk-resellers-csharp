@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="chargeLineReference">Impulse line number for the miscellaneous charge..</param>
         /// <param name="chargeDescription">Description of the miscellaneous charges for the order..</param>
         /// <param name="chargeAmount">The total amount of miscellaneous charges for the order..</param>
-        public OrderCreateResponseOrdersInnerMiscellaneousChargesInner(string subOrderNumber = default(string), string chargeLineReference = default(string), string chargeDescription = default(string), decimal chargeAmount = default(decimal))
+        public OrderCreateResponseOrdersInnerMiscellaneousChargesInner(string subOrderNumber = default, string chargeLineReference = default, string chargeDescription = default, decimal chargeAmount = default)
         {
             this.SubOrderNumber = subOrderNumber;
             this.ChargeLineReference = chargeLineReference;

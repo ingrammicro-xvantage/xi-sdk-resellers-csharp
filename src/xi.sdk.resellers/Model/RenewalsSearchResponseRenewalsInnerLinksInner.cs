@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="topic">The topic of the link..</param>
         /// <param name="href">The URL of the topic..</param>
         /// <param name="type">Type of a call..</param>
-        public RenewalsSearchResponseRenewalsInnerLinksInner(string topic = default(string), string href = default(string), string type = default(string))
+        public RenewalsSearchResponseRenewalsInnerLinksInner(string topic = default, string href = default, string type = default)
         {
             this.Topic = topic;
             this.Href = href;

@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="regionCode">Region code for sandbox testing - Not for use in production. (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns></returns>
-        void DeleteOrdercancel(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? regionCode = default(string?), string? iMSenderID = default(string?));
+        void DeleteOrdercancel(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? regionCode = default, string? iMSenderID = default);
 
         /// <summary>
         /// Cancel your Order
@@ -57,7 +57,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="regionCode">Region code for sandbox testing - Not for use in production. (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteOrdercancelWithHttpInfo(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? regionCode = default(string?), string? iMSenderID = default(string?));
+        ApiResponse<Object> DeleteOrdercancelWithHttpInfo(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? regionCode = default, string? iMSenderID = default);
         /// <summary>
         /// Get Order Details v6.1
         /// </summary>
@@ -76,7 +76,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="isIml">True/False only for IML customers. (optional)</param>
         /// <param name="regionCode">Region code for sandbox testing - Not for use in production. (optional)</param>
         /// <returns>OrderDetailB2B</returns>
-        OrderDetailB2B GetOrderdetailsV61(string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), DateOnly? ingramOrderDate = default(DateOnly?), string? vendorNumber = default(string?), string? simulateStatus = default(string?), bool? isIml = default(bool?), string? regionCode = default(string?));
+        OrderDetailB2B GetOrderdetailsV61(string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, DateOnly? ingramOrderDate = default, string? vendorNumber = default, string? simulateStatus = default, bool? isIml = default, string? regionCode = default);
 
         /// <summary>
         /// Get Order Details v6.1
@@ -96,7 +96,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="isIml">True/False only for IML customers. (optional)</param>
         /// <param name="regionCode">Region code for sandbox testing - Not for use in production. (optional)</param>
         /// <returns>ApiResponse of OrderDetailB2B</returns>
-        ApiResponse<OrderDetailB2B> GetOrderdetailsV61WithHttpInfo(string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), DateOnly? ingramOrderDate = default(DateOnly?), string? vendorNumber = default(string?), string? simulateStatus = default(string?), bool? isIml = default(bool?), string? regionCode = default(string?));
+        ApiResponse<OrderDetailB2B> GetOrderdetailsV61WithHttpInfo(string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, DateOnly? ingramOrderDate = default, string? vendorNumber = default, string? simulateStatus = default, bool? isIml = default, string? regionCode = default);
         /// <summary>
         /// Search your Orders
         /// </summary>
@@ -127,7 +127,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="vendorName">Name of the vendor. (optional)</param>
         /// <param name="specialBidNumber">The bid number provided to the reseller by the vendor for special pricing and discounts. Line-level bid numbers take precedence over header-level bid numbers.*Currently, this feature is not available in Australia (optional)</param>
         /// <returns>OrderSearchResponse</returns>
-        OrderSearchResponse GetResellersV6Ordersearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIn = default(List<string>?), string? ingramOrderDate = default(string?), List<string>? ingramOrderDateBt = default(List<string>?), string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? endCustomerOrderNumber = default(string?), List<string>? invoiceDateBt = default(List<string>?), List<string>? shipDateBt = default(List<string>?), List<string>? deliveryDateBt = default(List<string>?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? serialNumber = default(string?), string? trackingNumber = default(string?), string? vendorName = default(string?), string? specialBidNumber = default(string?));
+        OrderSearchResponse GetResellersV6Ordersearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default, string? orderStatus = default, List<string>? orderStatusIn = default, string? ingramOrderDate = default, List<string>? ingramOrderDateBt = default, string? iMSenderID = default, string? customerOrderNumber = default, int? pageSize = default, int? pageNumber = default, string? endCustomerOrderNumber = default, List<string>? invoiceDateBt = default, List<string>? shipDateBt = default, List<string>? deliveryDateBt = default, string? ingramPartNumber = default, string? vendorPartNumber = default, string? serialNumber = default, string? trackingNumber = default, string? vendorName = default, string? specialBidNumber = default);
 
         /// <summary>
         /// Search your Orders
@@ -159,7 +159,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="vendorName">Name of the vendor. (optional)</param>
         /// <param name="specialBidNumber">The bid number provided to the reseller by the vendor for special pricing and discounts. Line-level bid numbers take precedence over header-level bid numbers.*Currently, this feature is not available in Australia (optional)</param>
         /// <returns>ApiResponse of OrderSearchResponse</returns>
-        ApiResponse<OrderSearchResponse> GetResellersV6OrdersearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIn = default(List<string>?), string? ingramOrderDate = default(string?), List<string>? ingramOrderDateBt = default(List<string>?), string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? endCustomerOrderNumber = default(string?), List<string>? invoiceDateBt = default(List<string>?), List<string>? shipDateBt = default(List<string>?), List<string>? deliveryDateBt = default(List<string>?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? serialNumber = default(string?), string? trackingNumber = default(string?), string? vendorName = default(string?), string? specialBidNumber = default(string?));
+        ApiResponse<OrderSearchResponse> GetResellersV6OrdersearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default, string? orderStatus = default, List<string>? orderStatusIn = default, string? ingramOrderDate = default, List<string>? ingramOrderDateBt = default, string? iMSenderID = default, string? customerOrderNumber = default, int? pageSize = default, int? pageNumber = default, string? endCustomerOrderNumber = default, List<string>? invoiceDateBt = default, List<string>? shipDateBt = default, List<string>? deliveryDateBt = default, string? ingramPartNumber = default, string? vendorPartNumber = default, string? serialNumber = default, string? trackingNumber = default, string? vendorName = default, string? specialBidNumber = default);
         /// <summary>
         /// Create your Order
         /// </summary>
@@ -173,7 +173,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="orderCreateRequest"></param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>OrderCreateResponse</returns>
-        OrderCreateResponse PostCreateorderV6(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default(string?));
+        OrderCreateResponse PostCreateorderV6(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default);
 
         /// <summary>
         /// Create your Order
@@ -188,7 +188,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="orderCreateRequest"></param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>ApiResponse of OrderCreateResponse</returns>
-        ApiResponse<OrderCreateResponse> PostCreateorderV6WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default(string?));
+        ApiResponse<OrderCreateResponse> PostCreateorderV6WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default);
         /// <summary>
         /// Create your Order v7
         /// </summary>
@@ -202,7 +202,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="orderCreateV7Request"></param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>OrderCreateV7Response201</returns>
-        OrderCreateV7Response201 PostCreateorderV7(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateV7Request orderCreateV7Request, string? iMSenderID = default(string?));
+        OrderCreateV7Response201 PostCreateorderV7(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateV7Request orderCreateV7Request, string? iMSenderID = default);
 
         /// <summary>
         /// Create your Order v7
@@ -217,7 +217,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="orderCreateV7Request"></param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>ApiResponse of OrderCreateV7Response201</returns>
-        ApiResponse<OrderCreateV7Response201> PostCreateorderV7WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateV7Request orderCreateV7Request, string? iMSenderID = default(string?));
+        ApiResponse<OrderCreateV7Response201> PostCreateorderV7WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateV7Request orderCreateV7Request, string? iMSenderID = default);
         /// <summary>
         /// Modify your Order
         /// </summary>
@@ -234,7 +234,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="regionCode">Region code paramter to be used only for order release functionality.Region code is only for sandbox not for production (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>OrderModifyResponse</returns>
-        OrderModifyResponse PutOrdermodify(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default(string?), string? regionCode = default(string?), string? iMSenderID = default(string?));
+        OrderModifyResponse PutOrdermodify(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default, string? regionCode = default, string? iMSenderID = default);
 
         /// <summary>
         /// Modify your Order
@@ -252,7 +252,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="regionCode">Region code paramter to be used only for order release functionality.Region code is only for sandbox not for production (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>ApiResponse of OrderModifyResponse</returns>
-        ApiResponse<OrderModifyResponse> PutOrdermodifyWithHttpInfo(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default(string?), string? regionCode = default(string?), string? iMSenderID = default(string?));
+        ApiResponse<OrderModifyResponse> PutOrdermodifyWithHttpInfo(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default, string? regionCode = default, string? iMSenderID = default);
         #endregion Synchronous Operations
     }
 
@@ -277,7 +277,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteOrdercancelAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? regionCode = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteOrdercancelAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? regionCode = default, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Cancel your Order
@@ -294,7 +294,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrdercancelWithHttpInfoAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? regionCode = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrdercancelWithHttpInfoAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? regionCode = default, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Get Order Details v6.1
         /// </summary>
@@ -314,7 +314,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="regionCode">Region code for sandbox testing - Not for use in production. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderDetailB2B</returns>
-        System.Threading.Tasks.Task<OrderDetailB2B> GetOrderdetailsV61Async(string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), DateOnly? ingramOrderDate = default(DateOnly?), string? vendorNumber = default(string?), string? simulateStatus = default(string?), bool? isIml = default(bool?), string? regionCode = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderDetailB2B> GetOrderdetailsV61Async(string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, DateOnly? ingramOrderDate = default, string? vendorNumber = default, string? simulateStatus = default, bool? isIml = default, string? regionCode = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Get Order Details v6.1
@@ -335,7 +335,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="regionCode">Region code for sandbox testing - Not for use in production. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderDetailB2B)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderDetailB2B>> GetOrderdetailsV61WithHttpInfoAsync(string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), DateOnly? ingramOrderDate = default(DateOnly?), string? vendorNumber = default(string?), string? simulateStatus = default(string?), bool? isIml = default(bool?), string? regionCode = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderDetailB2B>> GetOrderdetailsV61WithHttpInfoAsync(string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, DateOnly? ingramOrderDate = default, string? vendorNumber = default, string? simulateStatus = default, bool? isIml = default, string? regionCode = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Search your Orders
         /// </summary>
@@ -367,7 +367,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="specialBidNumber">The bid number provided to the reseller by the vendor for special pricing and discounts. Line-level bid numbers take precedence over header-level bid numbers.*Currently, this feature is not available in Australia (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderSearchResponse</returns>
-        System.Threading.Tasks.Task<OrderSearchResponse> GetResellersV6OrdersearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIn = default(List<string>?), string? ingramOrderDate = default(string?), List<string>? ingramOrderDateBt = default(List<string>?), string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? endCustomerOrderNumber = default(string?), List<string>? invoiceDateBt = default(List<string>?), List<string>? shipDateBt = default(List<string>?), List<string>? deliveryDateBt = default(List<string>?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? serialNumber = default(string?), string? trackingNumber = default(string?), string? vendorName = default(string?), string? specialBidNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderSearchResponse> GetResellersV6OrdersearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default, string? orderStatus = default, List<string>? orderStatusIn = default, string? ingramOrderDate = default, List<string>? ingramOrderDateBt = default, string? iMSenderID = default, string? customerOrderNumber = default, int? pageSize = default, int? pageNumber = default, string? endCustomerOrderNumber = default, List<string>? invoiceDateBt = default, List<string>? shipDateBt = default, List<string>? deliveryDateBt = default, string? ingramPartNumber = default, string? vendorPartNumber = default, string? serialNumber = default, string? trackingNumber = default, string? vendorName = default, string? specialBidNumber = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Search your Orders
@@ -400,7 +400,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="specialBidNumber">The bid number provided to the reseller by the vendor for special pricing and discounts. Line-level bid numbers take precedence over header-level bid numbers.*Currently, this feature is not available in Australia (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderSearchResponse>> GetResellersV6OrdersearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIn = default(List<string>?), string? ingramOrderDate = default(string?), List<string>? ingramOrderDateBt = default(List<string>?), string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? endCustomerOrderNumber = default(string?), List<string>? invoiceDateBt = default(List<string>?), List<string>? shipDateBt = default(List<string>?), List<string>? deliveryDateBt = default(List<string>?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? serialNumber = default(string?), string? trackingNumber = default(string?), string? vendorName = default(string?), string? specialBidNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderSearchResponse>> GetResellersV6OrdersearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default, string? orderStatus = default, List<string>? orderStatusIn = default, string? ingramOrderDate = default, List<string>? ingramOrderDateBt = default, string? iMSenderID = default, string? customerOrderNumber = default, int? pageSize = default, int? pageNumber = default, string? endCustomerOrderNumber = default, List<string>? invoiceDateBt = default, List<string>? shipDateBt = default, List<string>? deliveryDateBt = default, string? ingramPartNumber = default, string? vendorPartNumber = default, string? serialNumber = default, string? trackingNumber = default, string? vendorName = default, string? specialBidNumber = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create your Order
         /// </summary>
@@ -415,7 +415,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderCreateResponse</returns>
-        System.Threading.Tasks.Task<OrderCreateResponse> PostCreateorderV6Async(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderCreateResponse> PostCreateorderV6Async(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Create your Order
@@ -431,7 +431,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderCreateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderCreateResponse>> PostCreateorderV6WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderCreateResponse>> PostCreateorderV6WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create your Order v7
         /// </summary>
@@ -446,7 +446,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderCreateV7Response201</returns>
-        System.Threading.Tasks.Task<OrderCreateV7Response201> PostCreateorderV7Async(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateV7Request orderCreateV7Request, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderCreateV7Response201> PostCreateorderV7Async(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateV7Request orderCreateV7Request, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Create your Order v7
@@ -462,7 +462,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderCreateV7Response201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderCreateV7Response201>> PostCreateorderV7WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateV7Request orderCreateV7Request, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderCreateV7Response201>> PostCreateorderV7WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateV7Request orderCreateV7Request, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Modify your Order
         /// </summary>
@@ -480,7 +480,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderModifyResponse</returns>
-        System.Threading.Tasks.Task<OrderModifyResponse> PutOrdermodifyAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default(string?), string? regionCode = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderModifyResponse> PutOrdermodifyAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default, string? regionCode = default, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Modify your Order
@@ -499,7 +499,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderModifyResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderModifyResponse>> PutOrdermodifyWithHttpInfoAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default(string?), string? regionCode = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderModifyResponse>> PutOrdermodifyWithHttpInfoAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default, string? regionCode = default, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -724,7 +724,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="regionCode">Region code for sandbox testing - Not for use in production. (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns></returns>
-        public void DeleteOrdercancel(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? regionCode = default(string?), string? iMSenderID = default(string?))
+        public void DeleteOrdercancel(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? regionCode = default, string? iMSenderID = default)
         {
             DeleteOrdercancelWithHttpInfo(orderNumber, iMCustomerNumber, iMCountryCode, iMCorrelationID, regionCode, iMSenderID);
         }
@@ -740,7 +740,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="regionCode">Region code for sandbox testing - Not for use in production. (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public xi.sdk.resellers.Client.ApiResponse<Object> DeleteOrdercancelWithHttpInfo(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? regionCode = default(string?), string? iMSenderID = default(string?))
+        public xi.sdk.resellers.Client.ApiResponse<Object> DeleteOrdercancelWithHttpInfo(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? regionCode = default, string? iMSenderID = default)
         {
             // verify the required parameter 'orderNumber' is set
             if (orderNumber == null)
@@ -818,7 +818,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteOrdercancelAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? regionCode = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteOrdercancelAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? regionCode = default, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             await DeleteOrdercancelWithHttpInfoAsync(orderNumber, iMCustomerNumber, iMCountryCode, iMCorrelationID, regionCode, iMSenderID, cancellationToken).ConfigureAwait(false);
         }
@@ -835,7 +835,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<Object>> DeleteOrdercancelWithHttpInfoAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? regionCode = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<Object>> DeleteOrdercancelWithHttpInfoAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? regionCode = default, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'orderNumber' is set
             if (orderNumber == null)
@@ -919,7 +919,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="isIml">True/False only for IML customers. (optional)</param>
         /// <param name="regionCode">Region code for sandbox testing - Not for use in production. (optional)</param>
         /// <returns>OrderDetailB2B</returns>
-        public OrderDetailB2B GetOrderdetailsV61(string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), DateOnly? ingramOrderDate = default(DateOnly?), string? vendorNumber = default(string?), string? simulateStatus = default(string?), bool? isIml = default(bool?), string? regionCode = default(string?))
+        public OrderDetailB2B GetOrderdetailsV61(string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, DateOnly? ingramOrderDate = default, string? vendorNumber = default, string? simulateStatus = default, bool? isIml = default, string? regionCode = default)
         {
             xi.sdk.resellers.Client.ApiResponse<OrderDetailB2B> localVarResponse = GetOrderdetailsV61WithHttpInfo(ordernumber, iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, ingramOrderDate, vendorNumber, simulateStatus, isIml, regionCode);
             return localVarResponse.Data;
@@ -940,7 +940,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="isIml">True/False only for IML customers. (optional)</param>
         /// <param name="regionCode">Region code for sandbox testing - Not for use in production. (optional)</param>
         /// <returns>ApiResponse of OrderDetailB2B</returns>
-        public xi.sdk.resellers.Client.ApiResponse<OrderDetailB2B> GetOrderdetailsV61WithHttpInfo(string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), DateOnly? ingramOrderDate = default(DateOnly?), string? vendorNumber = default(string?), string? simulateStatus = default(string?), bool? isIml = default(bool?), string? regionCode = default(string?))
+        public xi.sdk.resellers.Client.ApiResponse<OrderDetailB2B> GetOrderdetailsV61WithHttpInfo(string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, DateOnly? ingramOrderDate = default, string? vendorNumber = default, string? simulateStatus = default, bool? isIml = default, string? regionCode = default)
         {
             // verify the required parameter 'ordernumber' is set
             if (ordernumber == null)
@@ -1038,7 +1038,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="regionCode">Region code for sandbox testing - Not for use in production. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderDetailB2B</returns>
-        public async System.Threading.Tasks.Task<OrderDetailB2B> GetOrderdetailsV61Async(string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), DateOnly? ingramOrderDate = default(DateOnly?), string? vendorNumber = default(string?), string? simulateStatus = default(string?), bool? isIml = default(bool?), string? regionCode = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderDetailB2B> GetOrderdetailsV61Async(string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, DateOnly? ingramOrderDate = default, string? vendorNumber = default, string? simulateStatus = default, bool? isIml = default, string? regionCode = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<OrderDetailB2B> localVarResponse = await GetOrderdetailsV61WithHttpInfoAsync(ordernumber, iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, ingramOrderDate, vendorNumber, simulateStatus, isIml, regionCode, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1060,7 +1060,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="regionCode">Region code for sandbox testing - Not for use in production. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderDetailB2B)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<OrderDetailB2B>> GetOrderdetailsV61WithHttpInfoAsync(string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), DateOnly? ingramOrderDate = default(DateOnly?), string? vendorNumber = default(string?), string? simulateStatus = default(string?), bool? isIml = default(bool?), string? regionCode = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<OrderDetailB2B>> GetOrderdetailsV61WithHttpInfoAsync(string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, DateOnly? ingramOrderDate = default, string? vendorNumber = default, string? simulateStatus = default, bool? isIml = default, string? regionCode = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'ordernumber' is set
             if (ordernumber == null)
@@ -1172,7 +1172,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="vendorName">Name of the vendor. (optional)</param>
         /// <param name="specialBidNumber">The bid number provided to the reseller by the vendor for special pricing and discounts. Line-level bid numbers take precedence over header-level bid numbers.*Currently, this feature is not available in Australia (optional)</param>
         /// <returns>OrderSearchResponse</returns>
-        public OrderSearchResponse GetResellersV6Ordersearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIn = default(List<string>?), string? ingramOrderDate = default(string?), List<string>? ingramOrderDateBt = default(List<string>?), string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? endCustomerOrderNumber = default(string?), List<string>? invoiceDateBt = default(List<string>?), List<string>? shipDateBt = default(List<string>?), List<string>? deliveryDateBt = default(List<string>?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? serialNumber = default(string?), string? trackingNumber = default(string?), string? vendorName = default(string?), string? specialBidNumber = default(string?))
+        public OrderSearchResponse GetResellersV6Ordersearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default, string? orderStatus = default, List<string>? orderStatusIn = default, string? ingramOrderDate = default, List<string>? ingramOrderDateBt = default, string? iMSenderID = default, string? customerOrderNumber = default, int? pageSize = default, int? pageNumber = default, string? endCustomerOrderNumber = default, List<string>? invoiceDateBt = default, List<string>? shipDateBt = default, List<string>? deliveryDateBt = default, string? ingramPartNumber = default, string? vendorPartNumber = default, string? serialNumber = default, string? trackingNumber = default, string? vendorName = default, string? specialBidNumber = default)
         {
             xi.sdk.resellers.Client.ApiResponse<OrderSearchResponse> localVarResponse = GetResellersV6OrdersearchWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, ingramOrderNumber, orderStatus, orderStatusIn, ingramOrderDate, ingramOrderDateBt, iMSenderID, customerOrderNumber, pageSize, pageNumber, endCustomerOrderNumber, invoiceDateBt, shipDateBt, deliveryDateBt, ingramPartNumber, vendorPartNumber, serialNumber, trackingNumber, vendorName, specialBidNumber);
             return localVarResponse.Data;
@@ -1205,7 +1205,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="vendorName">Name of the vendor. (optional)</param>
         /// <param name="specialBidNumber">The bid number provided to the reseller by the vendor for special pricing and discounts. Line-level bid numbers take precedence over header-level bid numbers.*Currently, this feature is not available in Australia (optional)</param>
         /// <returns>ApiResponse of OrderSearchResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<OrderSearchResponse> GetResellersV6OrdersearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIn = default(List<string>?), string? ingramOrderDate = default(string?), List<string>? ingramOrderDateBt = default(List<string>?), string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? endCustomerOrderNumber = default(string?), List<string>? invoiceDateBt = default(List<string>?), List<string>? shipDateBt = default(List<string>?), List<string>? deliveryDateBt = default(List<string>?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? serialNumber = default(string?), string? trackingNumber = default(string?), string? vendorName = default(string?), string? specialBidNumber = default(string?))
+        public xi.sdk.resellers.Client.ApiResponse<OrderSearchResponse> GetResellersV6OrdersearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default, string? orderStatus = default, List<string>? orderStatusIn = default, string? ingramOrderDate = default, List<string>? ingramOrderDateBt = default, string? iMSenderID = default, string? customerOrderNumber = default, int? pageSize = default, int? pageNumber = default, string? endCustomerOrderNumber = default, List<string>? invoiceDateBt = default, List<string>? shipDateBt = default, List<string>? deliveryDateBt = default, string? ingramPartNumber = default, string? vendorPartNumber = default, string? serialNumber = default, string? trackingNumber = default, string? vendorName = default, string? specialBidNumber = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -1362,7 +1362,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="specialBidNumber">The bid number provided to the reseller by the vendor for special pricing and discounts. Line-level bid numbers take precedence over header-level bid numbers.*Currently, this feature is not available in Australia (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderSearchResponse</returns>
-        public async System.Threading.Tasks.Task<OrderSearchResponse> GetResellersV6OrdersearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIn = default(List<string>?), string? ingramOrderDate = default(string?), List<string>? ingramOrderDateBt = default(List<string>?), string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? endCustomerOrderNumber = default(string?), List<string>? invoiceDateBt = default(List<string>?), List<string>? shipDateBt = default(List<string>?), List<string>? deliveryDateBt = default(List<string>?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? serialNumber = default(string?), string? trackingNumber = default(string?), string? vendorName = default(string?), string? specialBidNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderSearchResponse> GetResellersV6OrdersearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default, string? orderStatus = default, List<string>? orderStatusIn = default, string? ingramOrderDate = default, List<string>? ingramOrderDateBt = default, string? iMSenderID = default, string? customerOrderNumber = default, int? pageSize = default, int? pageNumber = default, string? endCustomerOrderNumber = default, List<string>? invoiceDateBt = default, List<string>? shipDateBt = default, List<string>? deliveryDateBt = default, string? ingramPartNumber = default, string? vendorPartNumber = default, string? serialNumber = default, string? trackingNumber = default, string? vendorName = default, string? specialBidNumber = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<OrderSearchResponse> localVarResponse = await GetResellersV6OrdersearchWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, ingramOrderNumber, orderStatus, orderStatusIn, ingramOrderDate, ingramOrderDateBt, iMSenderID, customerOrderNumber, pageSize, pageNumber, endCustomerOrderNumber, invoiceDateBt, shipDateBt, deliveryDateBt, ingramPartNumber, vendorPartNumber, serialNumber, trackingNumber, vendorName, specialBidNumber, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1396,7 +1396,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="specialBidNumber">The bid number provided to the reseller by the vendor for special pricing and discounts. Line-level bid numbers take precedence over header-level bid numbers.*Currently, this feature is not available in Australia (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<OrderSearchResponse>> GetResellersV6OrdersearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIn = default(List<string>?), string? ingramOrderDate = default(string?), List<string>? ingramOrderDateBt = default(List<string>?), string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? endCustomerOrderNumber = default(string?), List<string>? invoiceDateBt = default(List<string>?), List<string>? shipDateBt = default(List<string>?), List<string>? deliveryDateBt = default(List<string>?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? serialNumber = default(string?), string? trackingNumber = default(string?), string? vendorName = default(string?), string? specialBidNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<OrderSearchResponse>> GetResellersV6OrdersearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default, string? orderStatus = default, List<string>? orderStatusIn = default, string? ingramOrderDate = default, List<string>? ingramOrderDateBt = default, string? iMSenderID = default, string? customerOrderNumber = default, int? pageSize = default, int? pageNumber = default, string? endCustomerOrderNumber = default, List<string>? invoiceDateBt = default, List<string>? shipDateBt = default, List<string>? deliveryDateBt = default, string? ingramPartNumber = default, string? vendorPartNumber = default, string? serialNumber = default, string? trackingNumber = default, string? vendorName = default, string? specialBidNumber = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -1538,7 +1538,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="orderCreateRequest"></param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>OrderCreateResponse</returns>
-        public OrderCreateResponse PostCreateorderV6(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default(string?))
+        public OrderCreateResponse PostCreateorderV6(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default)
         {
             xi.sdk.resellers.Client.ApiResponse<OrderCreateResponse> localVarResponse = PostCreateorderV6WithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, orderCreateRequest, iMSenderID);
             return localVarResponse.Data;
@@ -1554,7 +1554,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="orderCreateRequest"></param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>ApiResponse of OrderCreateResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<OrderCreateResponse> PostCreateorderV6WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default(string?))
+        public xi.sdk.resellers.Client.ApiResponse<OrderCreateResponse> PostCreateorderV6WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -1628,7 +1628,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderCreateResponse</returns>
-        public async System.Threading.Tasks.Task<OrderCreateResponse> PostCreateorderV6Async(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderCreateResponse> PostCreateorderV6Async(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<OrderCreateResponse> localVarResponse = await PostCreateorderV6WithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, orderCreateRequest, iMSenderID, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1645,7 +1645,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderCreateResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<OrderCreateResponse>> PostCreateorderV6WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<OrderCreateResponse>> PostCreateorderV6WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -1721,7 +1721,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="orderCreateV7Request"></param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>OrderCreateV7Response201</returns>
-        public OrderCreateV7Response201 PostCreateorderV7(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateV7Request orderCreateV7Request, string? iMSenderID = default(string?))
+        public OrderCreateV7Response201 PostCreateorderV7(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateV7Request orderCreateV7Request, string? iMSenderID = default)
         {
             xi.sdk.resellers.Client.ApiResponse<OrderCreateV7Response201> localVarResponse = PostCreateorderV7WithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, orderCreateV7Request, iMSenderID);
             return localVarResponse.Data;
@@ -1737,7 +1737,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="orderCreateV7Request"></param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>ApiResponse of OrderCreateV7Response201</returns>
-        public xi.sdk.resellers.Client.ApiResponse<OrderCreateV7Response201> PostCreateorderV7WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateV7Request orderCreateV7Request, string? iMSenderID = default(string?))
+        public xi.sdk.resellers.Client.ApiResponse<OrderCreateV7Response201> PostCreateorderV7WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateV7Request orderCreateV7Request, string? iMSenderID = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -1811,7 +1811,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderCreateV7Response201</returns>
-        public async System.Threading.Tasks.Task<OrderCreateV7Response201> PostCreateorderV7Async(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateV7Request orderCreateV7Request, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderCreateV7Response201> PostCreateorderV7Async(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateV7Request orderCreateV7Request, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<OrderCreateV7Response201> localVarResponse = await PostCreateorderV7WithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, orderCreateV7Request, iMSenderID, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1828,7 +1828,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderCreateV7Response201)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<OrderCreateV7Response201>> PostCreateorderV7WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateV7Request orderCreateV7Request, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<OrderCreateV7Response201>> PostCreateorderV7WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateV7Request orderCreateV7Request, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -1907,7 +1907,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="regionCode">Region code paramter to be used only for order release functionality.Region code is only for sandbox not for production (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>OrderModifyResponse</returns>
-        public OrderModifyResponse PutOrdermodify(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default(string?), string? regionCode = default(string?), string? iMSenderID = default(string?))
+        public OrderModifyResponse PutOrdermodify(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default, string? regionCode = default, string? iMSenderID = default)
         {
             xi.sdk.resellers.Client.ApiResponse<OrderModifyResponse> localVarResponse = PutOrdermodifyWithHttpInfo(orderNumber, iMCustomerNumber, iMCountryCode, iMCorrelationID, orderModifyRequest, actionCode, regionCode, iMSenderID);
             return localVarResponse.Data;
@@ -1926,7 +1926,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="regionCode">Region code paramter to be used only for order release functionality.Region code is only for sandbox not for production (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>ApiResponse of OrderModifyResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<OrderModifyResponse> PutOrdermodifyWithHttpInfo(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default(string?), string? regionCode = default(string?), string? iMSenderID = default(string?))
+        public xi.sdk.resellers.Client.ApiResponse<OrderModifyResponse> PutOrdermodifyWithHttpInfo(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default, string? regionCode = default, string? iMSenderID = default)
         {
             // verify the required parameter 'orderNumber' is set
             if (orderNumber == null)
@@ -2016,7 +2016,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderModifyResponse</returns>
-        public async System.Threading.Tasks.Task<OrderModifyResponse> PutOrdermodifyAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default(string?), string? regionCode = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderModifyResponse> PutOrdermodifyAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default, string? regionCode = default, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<OrderModifyResponse> localVarResponse = await PutOrdermodifyWithHttpInfoAsync(orderNumber, iMCustomerNumber, iMCountryCode, iMCorrelationID, orderModifyRequest, actionCode, regionCode, iMSenderID, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2036,7 +2036,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderModifyResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<OrderModifyResponse>> PutOrdermodifyWithHttpInfoAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default(string?), string? regionCode = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<OrderModifyResponse>> PutOrdermodifyWithHttpInfoAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default, string? regionCode = default, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'orderNumber' is set
             if (orderNumber == null)

@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="numberOfPlans">The number of plans available for the group. (The info will shown if searched with showGroupInfo&#x3D;true).</param>
         /// <param name="link">URL to access more details about the group. (The info will shown if searched with showGroupInfo&#x3D;true).</param>
         /// <param name="plans">plans.</param>
-        public ProductSearchResponseSubscriptionCatalogInner(string groupName = default(string), string groupDescription = default(string), string numberOfPlans = default(string), string link = default(string), List<ProductSearchResponseSubscriptionCatalogInnerPlansInner> plans = default(List<ProductSearchResponseSubscriptionCatalogInnerPlansInner>))
+        public ProductSearchResponseSubscriptionCatalogInner(string groupName = default, string groupDescription = default, string numberOfPlans = default, string link = default, List<ProductSearchResponseSubscriptionCatalogInnerPlansInner> plans = default)
         {
             this.GroupName = groupName;
             this.GroupDescription = groupDescription;

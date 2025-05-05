@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="field">Contains the name of the field..</param>
         /// <param name="value">Value sent in the input for the specific field..</param>
         /// <param name="message">Gives the description of the field message..</param>
-        public ErrorResponseErrorsInnerFieldsInner(string field = default(string), string value = default(string), string message = default(string))
+        public ErrorResponseErrorsInnerFieldsInner(string field = default, string value = default, string message = default)
         {
             this.Field = field;
             this.Value = value;

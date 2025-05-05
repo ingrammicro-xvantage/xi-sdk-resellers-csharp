@@ -42,7 +42,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="purchaseOrderTotal">Total of all the orders including taxes and fees..</param>
         /// <param name="shipToInfo">shipToInfo.</param>
         /// <param name="orders">Order-level details..</param>
-        public OrderCreateV7ResponseResource(string customerOrderNumber = default(string), string billToAddressId = default(string), bool orderSplit = default(bool), bool processedPartially = default(bool), decimal purchaseOrderTotal = default(decimal), OrderCreateV7ResponseResourceShipToInfo shipToInfo = default(OrderCreateV7ResponseResourceShipToInfo), List<OrderCreateV7ResponseResourceOrdersInner> orders = default(List<OrderCreateV7ResponseResourceOrdersInner>))
+        public OrderCreateV7ResponseResource(string customerOrderNumber = default, string billToAddressId = default, bool orderSplit = default, bool processedPartially = default, decimal purchaseOrderTotal = default, OrderCreateV7ResponseResourceShipToInfo shipToInfo = default, List<OrderCreateV7ResponseResourceOrdersInner> orders = default)
         {
             this.CustomerOrderNumber = customerOrderNumber;
             this.BillToAddressId = billToAddressId;

@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="availabilityByWarehouseId">Plant/warehouse Id of a particular location in order to get just the inventory of that location..</param>
         /// <param name="availabilityForAllLocation">Pass boolean value as input, if true the response will contain warehouse location details, if false the response will not hold warehouse location details. By default value is true..</param>
-        public PriceAndAvailabilityRequestAvailabilityByWarehouseInner(string availabilityByWarehouseId = default(string), bool? availabilityForAllLocation = default(bool?))
+        public PriceAndAvailabilityRequestAvailabilityByWarehouseInner(string availabilityByWarehouseId = default, bool? availabilityForAllLocation = default)
         {
             this.AvailabilityByWarehouseId = availabilityByWarehouseId;
             this.AvailabilityForAllLocation = availabilityForAllLocation;

@@ -49,7 +49,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="credit">The amount of credit..</param>
         /// <param name="status">The status of the request..</param>
         /// <param name="links">links.</param>
-        public ReturnsCreateResponseReturnsClaimsInner(string rmaClaimId = default(string), string caseRequestNumber = default(string), string referenceNumber = default(string), DateOnly createdOn = default(DateOnly), string type = default(string), string returnReason = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), int quantity = default(int), string notes = default(string), decimal estimatedTotalValue = default(decimal), decimal credit = default(decimal), string status = default(string), List<ReturnsSearchResponseReturnsClaimsInnerLinksInner> links = default(List<ReturnsSearchResponseReturnsClaimsInnerLinksInner>))
+        public ReturnsCreateResponseReturnsClaimsInner(string rmaClaimId = default, string caseRequestNumber = default, string referenceNumber = default, DateOnly createdOn = default, string type = default, string returnReason = default, string ingramPartNumber = default, string vendorPartNumber = default, int quantity = default, string notes = default, decimal estimatedTotalValue = default, decimal credit = default, string status = default, List<ReturnsSearchResponseReturnsClaimsInnerLinksInner> links = default)
         {
             this.RmaClaimId = rmaClaimId;
             this.CaseRequestNumber = caseRequestNumber;

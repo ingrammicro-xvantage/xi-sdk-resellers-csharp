@@ -73,7 +73,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="clientSecret"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccesstokenResponse</returns>
-        System.Threading.Tasks.Task<AccesstokenResponse> GetAccesstokenAsync(string grantType, string clientId, string clientSecret, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccesstokenResponse> GetAccesstokenAsync(string grantType, string clientId, string clientSecret, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Accesstoken
@@ -87,7 +87,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="clientSecret"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccesstokenResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccesstokenResponse>> GetAccesstokenWithHttpInfoAsync(string grantType, string clientId, string clientSecret, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccesstokenResponse>> GetAccesstokenWithHttpInfoAsync(string grantType, string clientId, string clientSecret, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -379,7 +379,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="clientSecret"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccesstokenResponse</returns>
-        public async System.Threading.Tasks.Task<AccesstokenResponse> GetAccesstokenAsync(string grantType, string clientId, string clientSecret, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccesstokenResponse> GetAccesstokenAsync(string grantType, string clientId, string clientSecret, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<AccesstokenResponse> localVarResponse = await GetAccesstokenWithHttpInfoAsync(grantType, clientId, clientSecret, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -394,7 +394,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="clientSecret"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccesstokenResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<AccesstokenResponse>> GetAccesstokenWithHttpInfoAsync(string grantType, string clientId, string clientSecret, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<AccesstokenResponse>> GetAccesstokenWithHttpInfoAsync(string grantType, string clientId, string clientSecret, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'grantType' is set
             if (grantType == null)

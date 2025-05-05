@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="carrierName">The name of the shipping carrier for the line item..</param>
         /// <param name="shipFromWarehouseId">The ID of the warehouse the line item will ship from..</param>
         /// <param name="shipFromLocation">Location from which order is shipped..</param>
-        public OrderCreateV7ResponseResourceOrdersInnerLinesInnerShipmentDetailsInner(string carrierCode = default(string), string carrierName = default(string), string shipFromWarehouseId = default(string), string shipFromLocation = default(string))
+        public OrderCreateV7ResponseResourceOrdersInnerLinesInnerShipmentDetailsInner(string carrierCode = default, string carrierName = default, string shipFromWarehouseId = default, string shipFromLocation = default)
         {
             this.CarrierCode = carrierCode;
             this.CarrierName = carrierName;

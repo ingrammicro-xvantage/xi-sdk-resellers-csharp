@@ -45,7 +45,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="additionalAttributes">additionalAttributes.</param>
         /// <param name="warrantyInfo">Warranty details for the line. This is required in case of warranty orders..</param>
         /// <param name="endUserInfo">endUserInfo.</param>
-        public OrderCreateRequestLinesInner(string customerLineNumber = default(string), string ingramPartNumber = default(string), int quantity = default(int), string specialBidNumber = default(string), string notes = default(string), decimal unitPrice = default(decimal), decimal endUserPrice = default(decimal), List<OrderCreateRequestLinesInnerAdditionalAttributesInner> additionalAttributes = default(List<OrderCreateRequestLinesInnerAdditionalAttributesInner>), List<OrderCreateRequestLinesInnerWarrantyInfoInner> warrantyInfo = default(List<OrderCreateRequestLinesInnerWarrantyInfoInner>), List<OrderCreateRequestLinesInnerEndUserInfoInner> endUserInfo = default(List<OrderCreateRequestLinesInnerEndUserInfoInner>))
+        public OrderCreateRequestLinesInner(string customerLineNumber = default, string ingramPartNumber = default, int quantity = default, string specialBidNumber = default, string notes = default, decimal unitPrice = default, decimal endUserPrice = default, List<OrderCreateRequestLinesInnerAdditionalAttributesInner> additionalAttributes = default, List<OrderCreateRequestLinesInnerWarrantyInfoInner> warrantyInfo = default, List<OrderCreateRequestLinesInnerEndUserInfoInner> endUserInfo = default)
         {
             this.CustomerLineNumber = customerLineNumber;
             this.IngramPartNumber = ingramPartNumber;

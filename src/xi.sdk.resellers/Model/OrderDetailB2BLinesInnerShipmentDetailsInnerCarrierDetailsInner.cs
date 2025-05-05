@@ -43,7 +43,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="deliveredDate">The actual date of delivery of the line item..</param>
         /// <param name="carrierPickupDate">The actual date when carrier picked up line item..</param>
         /// <param name="trackingDetails">The tracking details for the shipment containing the line item..</param>
-        public OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInner(string carrierCode = default(string), string carrierName = default(string), int quantity = default(int), string shippedDate = default(string), string estimatedDeliveryDate = default(string), string deliveredDate = default(string), string carrierPickupDate = default(string), List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInnerTrackingDetailsInner> trackingDetails = default(List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInnerTrackingDetailsInner>))
+        public OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInner(string carrierCode = default, string carrierName = default, int quantity = default, string shippedDate = default, string estimatedDeliveryDate = default, string deliveredDate = default, string carrierPickupDate = default, List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInnerTrackingDetailsInner> trackingDetails = default)
         {
             this.CarrierCode = carrierCode;
             this.CarrierName = carrierName;

@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="attributeName">The name of the header level field..</param>
         /// <param name="attributeValue">The value of the header level field..</param>
-        public OrderCreateV7RequestVmfAdditionalAttributesInner(string attributeName = default(string), string attributeValue = default(string))
+        public OrderCreateV7RequestVmfAdditionalAttributesInner(string attributeName = default, string attributeValue = default)
         {
             this.AttributeName = attributeName;
             this.AttributeValue = attributeValue;

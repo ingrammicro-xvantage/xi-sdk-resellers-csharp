@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="attributeName">The name of the line level field..</param>
         /// <param name="attributeValue">The value of the line level field..</param>
         /// <param name="attributeDescription">The description of the line level field..</param>
-        public ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner(string attributeName = default(string), string attributeValue = default(string), string attributeDescription = default(string))
+        public ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner(string attributeName = default, string attributeValue = default, string attributeDescription = default)
         {
             this.AttributeName = attributeName;
             this.AttributeValue = attributeValue;

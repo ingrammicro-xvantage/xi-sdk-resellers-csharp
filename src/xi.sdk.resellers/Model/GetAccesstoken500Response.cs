@@ -36,7 +36,7 @@ namespace xi.sdk.resellers.Model
         /// Initializes a new instance of the <see cref="GetAccesstoken500Response" /> class.
         /// </summary>
         /// <param name="fault">fault.</param>
-        public GetAccesstoken500Response(GetAccesstoken500ResponseFault fault = default(GetAccesstoken500ResponseFault))
+        public GetAccesstoken500Response(GetAccesstoken500ResponseFault fault = default)
         {
             this.Fault = fault;
         }

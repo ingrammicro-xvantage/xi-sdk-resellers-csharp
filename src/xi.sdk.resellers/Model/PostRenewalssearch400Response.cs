@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="traceid">Unique Id to identify error..</param>
         /// <param name="type">Describes the type of the error..</param>
         /// <param name="fields">fields.</param>
-        public PostRenewalssearch400Response(string traceid = default(string), string type = default(string), List<GetResellerV6ValidateQuote400ResponseFieldsInner> fields = default(List<GetResellerV6ValidateQuote400ResponseFieldsInner>))
+        public PostRenewalssearch400Response(string traceid = default, string type = default, List<GetResellerV6ValidateQuote400ResponseFieldsInner> fields = default)
         {
             this.Traceid = traceid;
             this.Type = type;

@@ -46,7 +46,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="countryCode">The reseller&#39;s two-character ISO country code..</param>
         /// <param name="phoneNumber">The reseller&#39;s phone number..</param>
         /// <param name="email">The reseller&#39;s email address..</param>
-        public OrderCreateV7RequestResellerInfo(string resellerId = default(string), string companyName = default(string), string contact = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string), string phoneNumber = default(string), string email = default(string))
+        public OrderCreateV7RequestResellerInfo(string resellerId = default, string companyName = default, string contact = default, string addressLine1 = default, string addressLine2 = default, string city = default, string state = default, string postalCode = default, string countryCode = default, string phoneNumber = default, string email = default)
         {
             this.ResellerId = resellerId;
             this.CompanyName = companyName;

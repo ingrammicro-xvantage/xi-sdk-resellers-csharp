@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="billingPeriodUnit">Billing unit period of the subscription. Example, Years, Months.</param>
         /// <param name="billingPeriod">Billing period of the subscription. Example 1, 3.</param>
-        public ProductDetailResponseSubscriptionDetailsInnerBillingPeriod(string billingPeriodUnit = default(string), string billingPeriod = default(string))
+        public ProductDetailResponseSubscriptionDetailsInnerBillingPeriod(string billingPeriodUnit = default, string billingPeriod = default)
         {
             this.BillingPeriodUnit = billingPeriodUnit;
             this.BillingPeriod = billingPeriod;

@@ -36,7 +36,7 @@ namespace xi.sdk.resellers.Model
         /// Initializes a new instance of the <see cref="OrderCreateRequestVmf" /> class.
         /// </summary>
         /// <param name="vendAuthNumber">Authorization number provided by vendor to Ingram&#39;s reseller. Orders will be placed on hold without this value, vendor specific mandatory field - please reach out Ingram Sales team for list of vendor for whom this is mandatory..</param>
-        public OrderCreateRequestVmf(string vendAuthNumber = default(string))
+        public OrderCreateRequestVmf(string vendAuthNumber = default)
         {
             this.VendAuthNumber = vendAuthNumber;
         }

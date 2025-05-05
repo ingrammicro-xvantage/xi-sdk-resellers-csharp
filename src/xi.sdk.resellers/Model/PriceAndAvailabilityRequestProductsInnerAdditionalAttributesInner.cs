@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="attributeName">governmentprogramcode: Special Discount details will be provided based on the governmentprogramcode if available. shiptostatebrazil: Attribute Specific to Brazil. shipfrombranchnumber: If provided, displays only the availability of the specified branch number..</param>
         /// <param name="attributeValue">key value pair -key value..</param>
-        public PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner(string attributeName = default(string), string attributeValue = default(string))
+        public PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner(string attributeName = default, string attributeValue = default)
         {
             this.AttributeName = attributeName;
             this.AttributeValue = attributeValue;

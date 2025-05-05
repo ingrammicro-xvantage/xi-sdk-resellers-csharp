@@ -43,7 +43,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="vendorGroupName">vendorGroupName.</param>
         /// <param name="vendorQuoteNumber">vendorQuoteNumber.</param>
         /// <param name="vendorMasterNumber">vendorMasterNumber.</param>
-        public ValidateQuoteResponse(string quoteNumber = default(string), string vendorName = default(string), List<ValidateQuoteResponseVmfAdditionalAttributesInner> vmfAdditionalAttributes = default(List<ValidateQuoteResponseVmfAdditionalAttributesInner>), List<ValidateQuoteResponseLinesInner> lines = default(List<ValidateQuoteResponseLinesInner>), int quoteType = default(int), string vendorGroupName = default(string), string vendorQuoteNumber = default(string), string vendorMasterNumber = default(string))
+        public ValidateQuoteResponse(string quoteNumber = default, string vendorName = default, List<ValidateQuoteResponseVmfAdditionalAttributesInner> vmfAdditionalAttributes = default, List<ValidateQuoteResponseLinesInner> lines = default, int quoteType = default, string vendorGroupName = default, string vendorQuoteNumber = default, string vendorMasterNumber = default)
         {
             this.QuoteNumber = quoteNumber;
             this.VendorName = vendorName;

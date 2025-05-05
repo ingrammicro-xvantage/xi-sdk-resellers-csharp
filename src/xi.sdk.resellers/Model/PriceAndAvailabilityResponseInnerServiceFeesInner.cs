@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="amount">Amount of the service fees..</param>
         /// <param name="endDate">End Date of the service fees..</param>
         /// <param name="currencyCode">Currency Code of the service fees..</param>
-        public PriceAndAvailabilityResponseInnerServiceFeesInner(string conditionType = default(string), string description = default(string), decimal? amount = default(decimal?), string endDate = default(string), string currencyCode = default(string))
+        public PriceAndAvailabilityResponseInnerServiceFeesInner(string conditionType = default, string description = default, decimal? amount = default, string endDate = default, string currencyCode = default)
         {
             this.ConditionType = conditionType;
             this.Description = description;

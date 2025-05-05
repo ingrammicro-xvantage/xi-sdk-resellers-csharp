@@ -27,13 +27,13 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// FreightRequestShipToAddressInner
+    /// The shipping information.
     /// </summary>
-    [DataContract(Name = "freightRequest_shipToAddress_inner")]
-    public partial class FreightRequestShipToAddressInner : IValidatableObject
+    [DataContract(Name = "freightRequest_shipToAddress")]
+    public partial class FreightRequestShipToAddress : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FreightRequestShipToAddressInner" /> class.
+        /// Initializes a new instance of the <see cref="FreightRequestShipToAddress" /> class.
         /// </summary>
         /// <param name="companyName">The name of the company the order will be shipped to..</param>
         /// <param name="addressLine1">Line 1 of the address the order will be shipped to..</param>
@@ -43,7 +43,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="state">The state the order will be shipped to..</param>
         /// <param name="postalCode">The zip or postal code the order will be shipped to..</param>
         /// <param name="countryCode">The two-character ISO country code the order will be shipped to..</param>
-        public FreightRequestShipToAddressInner(string companyName = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string addressLine3 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string))
+        public FreightRequestShipToAddress(string companyName = default, string addressLine1 = default, string addressLine2 = default, string addressLine3 = default, string city = default, string state = default, string postalCode = default, string countryCode = default)
         {
             this.CompanyName = companyName;
             this.AddressLine1 = addressLine1;
@@ -118,7 +118,7 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class FreightRequestShipToAddressInner {\n");
+            sb.Append("class FreightRequestShipToAddress {\n");
             sb.Append("  CompanyName: ").Append(CompanyName).Append("\n");
             sb.Append("  AddressLine1: ").Append(AddressLine1).Append("\n");
             sb.Append("  AddressLine2: ").Append(AddressLine2).Append("\n");

@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="billingModel">The billing model of the billing..</param>
         /// <param name="subcriptionStartDate">Start date of the subcription..</param>
         /// <param name="subcriptionEndDate">End date of the subcription..</param>
-        public OrderDetailB2BLinesInnerServiceContractInfoSubscriptions(string subscriptionId = default(string), string subscriptionTerm = default(string), string renewalTerm = default(string), string billingModel = default(string), string subcriptionStartDate = default(string), string subcriptionEndDate = default(string))
+        public OrderDetailB2BLinesInnerServiceContractInfoSubscriptions(string subscriptionId = default, string subscriptionTerm = default, string renewalTerm = default, string billingModel = default, string subcriptionStartDate = default, string subcriptionEndDate = default)
         {
             this.SubscriptionId = subscriptionId;
             this.SubscriptionTerm = subscriptionTerm;

@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantity">The requested quantity of the line item..</param>
         /// <param name="warehouseId">The ID of the warehouse the line item will ship from..</param>
         /// <param name="carrierCode">The code for the shipping carrier for the line item..</param>
-        public FreightRequestLinesInner(string customerLineNumber = default(string), string ingramPartNumber = default(string), string quantity = default(string), string warehouseId = default(string), string carrierCode = default(string))
+        public FreightRequestLinesInner(string customerLineNumber = default, string ingramPartNumber = default, string quantity = default, string warehouseId = default, string carrierCode = default)
         {
             this.CustomerLineNumber = customerLineNumber;
             this.IngramPartNumber = ingramPartNumber;

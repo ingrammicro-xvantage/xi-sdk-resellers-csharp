@@ -45,7 +45,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="backorderedQuantity">The quantity of the line item that is backordered..</param>
         /// <param name="shipmentDetails">shipmentDetails.</param>
         /// <param name="serialNumberDetails">serialNumberDetails.</param>
-        public OrderStatusAsyncNotificationRequestResourceInnerLinesInner(string lineNumber = default(string), string subOrderNumber = default(string), string lineStatus = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string requestedQuantity = default(string), string shippedQuantity = default(string), string backorderedQuantity = default(string), List<OrderStatusAsyncNotificationRequestResourceInnerLinesInnerShipmentDetailsInner> shipmentDetails = default(List<OrderStatusAsyncNotificationRequestResourceInnerLinesInnerShipmentDetailsInner>), List<OrderStatusAsyncNotificationRequestResourceInnerLinesInnerSerialNumberDetailsInner> serialNumberDetails = default(List<OrderStatusAsyncNotificationRequestResourceInnerLinesInnerSerialNumberDetailsInner>))
+        public OrderStatusAsyncNotificationRequestResourceInnerLinesInner(string lineNumber = default, string subOrderNumber = default, string lineStatus = default, string ingramPartNumber = default, string vendorPartNumber = default, string requestedQuantity = default, string shippedQuantity = default, string backorderedQuantity = default, List<OrderStatusAsyncNotificationRequestResourceInnerLinesInnerShipmentDetailsInner> shipmentDetails = default, List<OrderStatusAsyncNotificationRequestResourceInnerLinesInnerSerialNumberDetailsInner> serialNumberDetails = default)
         {
             this.LineNumber = lineNumber;
             this.SubOrderNumber = subOrderNumber;

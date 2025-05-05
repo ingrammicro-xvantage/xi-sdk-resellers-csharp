@@ -45,7 +45,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="orderStatus">The header-level status of the order.(OPEN/CLOSED/CANCELLED).</param>
         /// <param name="subOrders">Individual Ingram Micro order numbers associated with a single reseller PO..</param>
         /// <param name="links">links.</param>
-        public OrderSearchResponseOrdersInner(string ingramOrderNumber = default(string), string ingramOrderDate = default(string), string customerOrderNumber = default(string), string vendorSalesOrderNumber = default(string), string vendorName = default(string), string endUserCompanyName = default(string), decimal orderTotal = default(decimal), string orderStatus = default(string), List<OrderSearchResponseOrdersInnerSubOrdersInner> subOrders = default(List<OrderSearchResponseOrdersInnerSubOrdersInner>), OrderSearchResponseOrdersInnerLinks links = default(OrderSearchResponseOrdersInnerLinks))
+        public OrderSearchResponseOrdersInner(string ingramOrderNumber = default, string ingramOrderDate = default, string customerOrderNumber = default, string vendorSalesOrderNumber = default, string vendorName = default, string endUserCompanyName = default, decimal orderTotal = default, string orderStatus = default, List<OrderSearchResponseOrdersInnerSubOrdersInner> subOrders = default, OrderSearchResponseOrdersInnerLinks links = default)
         {
             this.IngramOrderNumber = ingramOrderNumber;
             this.IngramOrderDate = ingramOrderDate;

@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="volumeDiscounts">volumeDiscounts.</param>
         /// <param name="specialPricing">specialPricing.</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInner(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerVolumeDiscountsInner> volumeDiscounts = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerVolumeDiscountsInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerSpecialPricingInner> specialPricing = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerSpecialPricingInner>))
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInner(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerVolumeDiscountsInner> volumeDiscounts = default, List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerSpecialPricingInner> specialPricing = default)
         {
             this.VolumeDiscounts = volumeDiscounts;
             this.SpecialPricing = specialPricing;

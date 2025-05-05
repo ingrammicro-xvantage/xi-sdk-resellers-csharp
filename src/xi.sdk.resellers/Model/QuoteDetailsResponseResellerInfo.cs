@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="email">Account Contact Email Address.</param>
         /// <param name="phoneNumber">Account Phone Number.</param>
         /// <param name="customerNumber">Reseller account number.</param>
-        public QuoteDetailsResponseResellerInfo(string contact = default(string), string companyName = default(string), string email = default(string), string phoneNumber = default(string), string customerNumber = default(string))
+        public QuoteDetailsResponseResellerInfo(string contact = default, string companyName = default, string email = default, string phoneNumber = default, string customerNumber = default)
         {
             this.Contact = contact;
             this.CompanyName = companyName;

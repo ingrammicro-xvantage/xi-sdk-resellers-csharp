@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="billingPeriodUnit">The unit of the billing period..</param>
         /// <param name="billingPeriod">The billing period value..</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod(string billingPeriodUnit = default(string), decimal? billingPeriod = default(decimal?))
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod(string billingPeriodUnit = default, decimal? billingPeriod = default)
         {
             this.BillingPeriodUnit = billingPeriodUnit;
             this.BillingPeriod = billingPeriod;

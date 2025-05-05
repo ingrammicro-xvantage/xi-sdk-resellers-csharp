@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="eventTimeStamp">The timestamp at which the event was sent..</param>
         /// <param name="eventId">A unique id used as identifier for the sepcific event and used for generating the x-hub signature..</param>
         /// <param name="resource">resource.</param>
-        public OrderStatusAsyncNotificationRequest(string topic = default(string), string varEvent = default(string), string eventTimeStamp = default(string), string eventId = default(string), List<OrderStatusAsyncNotificationRequestResourceInner> resource = default(List<OrderStatusAsyncNotificationRequestResourceInner>))
+        public OrderStatusAsyncNotificationRequest(string topic = default, string varEvent = default, string eventTimeStamp = default, string eventId = default, List<OrderStatusAsyncNotificationRequestResourceInner> resource = default)
         {
             this.Topic = topic;
             this.Event = varEvent;

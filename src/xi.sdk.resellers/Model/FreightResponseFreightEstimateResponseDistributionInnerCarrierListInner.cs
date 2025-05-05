@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="carrierMode">Mode of the carrier..</param>
         /// <param name="estimatedFreightCharge">Estimated freight charge..</param>
         /// <param name="daysInTransit">Number of transit days..</param>
-        public FreightResponseFreightEstimateResponseDistributionInnerCarrierListInner(string carrierCode = default(string), string shipVia = default(string), string carrierMode = default(string), string estimatedFreightCharge = default(string), string daysInTransit = default(string))
+        public FreightResponseFreightEstimateResponseDistributionInnerCarrierListInner(string carrierCode = default, string shipVia = default, string carrierMode = default, string estimatedFreightCharge = default, string daysInTransit = default)
         {
             this.CarrierCode = carrierCode;
             this.ShipVia = shipVia;

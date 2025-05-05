@@ -1,4 +1,5 @@
-# xi.sdk.resellers.Model.FreightRequestShipToAddressInner
+# xi.sdk.resellers.Model.FreightRequestShipToAddress
+The shipping information.
 
 ## Properties
 

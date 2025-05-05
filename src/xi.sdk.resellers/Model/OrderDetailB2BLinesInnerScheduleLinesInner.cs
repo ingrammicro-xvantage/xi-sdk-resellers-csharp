@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="requestedQuantity">Requested quantity..</param>
         /// <param name="confirmedQuantity">Confirmed quantity..</param>
         /// <param name="goodsIssueDate">Date when good issued..</param>
-        public OrderDetailB2BLinesInnerScheduleLinesInner(string lineNumber = default(string), string scheduleLineDate = default(string), string requestedQuantity = default(string), string confirmedQuantity = default(string), string goodsIssueDate = default(string))
+        public OrderDetailB2BLinesInnerScheduleLinesInner(string lineNumber = default, string scheduleLineDate = default, string requestedQuantity = default, string confirmedQuantity = default, string goodsIssueDate = default)
         {
             this.LineNumber = lineNumber;
             this.ScheduleLineDate = scheduleLineDate;

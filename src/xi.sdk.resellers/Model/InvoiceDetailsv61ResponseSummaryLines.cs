@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="productLineCount">Number of lines in the order..</param>
         /// <param name="productLineTotalQuantity">Total quantity of the order..</param>
-        public InvoiceDetailsv61ResponseSummaryLines(int productLineCount = default(int), int productLineTotalQuantity = default(int))
+        public InvoiceDetailsv61ResponseSummaryLines(int productLineCount = default, int productLineTotalQuantity = default)
         {
             this.ProductLineCount = productLineCount;
             this.ProductLineTotalQuantity = productLineTotalQuantity;

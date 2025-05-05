@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="attributeName">Header level custom field names..</param>
         /// <param name="attributeValue">Value of the custom fields..</param>
-        public OrderDetailB2BAdditionalAttributesInner(string attributeName = default(string), string attributeValue = default(string))
+        public OrderDetailB2BAdditionalAttributesInner(string attributeName = default, string attributeValue = default)
         {
             this.AttributeName = attributeName;
             this.AttributeValue = attributeValue;

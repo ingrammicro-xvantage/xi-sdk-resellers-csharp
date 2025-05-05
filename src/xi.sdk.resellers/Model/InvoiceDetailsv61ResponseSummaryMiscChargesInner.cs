@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="miscChargeLineTotal">Miscellaneous charge amount..</param>
         /// <param name="chargeLineReference">Reference of the chargeLine..</param>
         /// <param name="isNonMisc">Is charge non miscellaneous..</param>
-        public InvoiceDetailsv61ResponseSummaryMiscChargesInner(string chargeDescription = default(string), int miscChargeLineCount = default(int), double miscChargeLineTotal = default(double), string chargeLineReference = default(string), string isNonMisc = default(string))
+        public InvoiceDetailsv61ResponseSummaryMiscChargesInner(string chargeDescription = default, int miscChargeLineCount = default, double miscChargeLineTotal = default, string chargeLineReference = default, string isNonMisc = default)
         {
             this.ChargeDescription = chargeDescription;
             this.MiscChargeLineCount = miscChargeLineCount;

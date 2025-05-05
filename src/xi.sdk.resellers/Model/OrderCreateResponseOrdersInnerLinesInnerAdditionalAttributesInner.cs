@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="attributeName">attributeName.</param>
         /// <param name="attributeValue">attributeValue.</param>
-        public OrderCreateResponseOrdersInnerLinesInnerAdditionalAttributesInner(string attributeName = default(string), string attributeValue = default(string))
+        public OrderCreateResponseOrdersInnerLinesInnerAdditionalAttributesInner(string attributeName = default, string attributeValue = default)
         {
             this.AttributeName = attributeName;
             this.AttributeValue = attributeValue;

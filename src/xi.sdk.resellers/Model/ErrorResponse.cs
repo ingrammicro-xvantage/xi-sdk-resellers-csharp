@@ -36,7 +36,7 @@ namespace xi.sdk.resellers.Model
         /// Initializes a new instance of the <see cref="ErrorResponse" /> class.
         /// </summary>
         /// <param name="errors">errors.</param>
-        public ErrorResponse(List<ErrorResponseErrorsInner> errors = default(List<ErrorResponseErrorsInner>))
+        public ErrorResponse(List<ErrorResponseErrorsInner> errors = default)
         {
             this.Errors = errors;
         }

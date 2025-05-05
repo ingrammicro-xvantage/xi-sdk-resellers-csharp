@@ -50,7 +50,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="countryCode">The end user/customer&#39;s two-character ISO country code..</param>
         /// <param name="phoneNumber">The end user/customer&#39;s phone number..</param>
         /// <param name="email">The end user/customer&#39;s email..</param>
-        public OrderCreateResponseEndUserInfo(string endUserId = default(string), string contact = default(string), string companyName = default(string), string name1 = default(string), string name2 = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string addressLine3 = default(string), string addressLine4 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string), string phoneNumber = default(string), string email = default(string))
+        public OrderCreateResponseEndUserInfo(string endUserId = default, string contact = default, string companyName = default, string name1 = default, string name2 = default, string addressLine1 = default, string addressLine2 = default, string addressLine3 = default, string addressLine4 = default, string city = default, string state = default, string postalCode = default, string countryCode = default, string phoneNumber = default, string email = default)
         {
             this.EndUserId = endUserId;
             this.Contact = contact;

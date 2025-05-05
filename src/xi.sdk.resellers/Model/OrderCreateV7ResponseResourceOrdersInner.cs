@@ -48,7 +48,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="currencyCode">The country-specific three character ISO 4217 currency code used for the order..</param>
         /// <param name="lines">The line-level details for the order..</param>
         /// <param name="links">Link to Order Details for the order(s)..</param>
-        public OrderCreateV7ResponseResourceOrdersInner(int numberOfLinesWithSuccess = default(int), int numberOfLinesWithError = default(int), int numberOfLinesWithWarning = default(int), string ingramOrderNumber = default(string), string ingramOrderDate = default(string), string notes = default(string), string orderType = default(string), decimal orderTotal = default(decimal), decimal freightCharges = default(decimal), decimal totalTax = default(decimal), string currencyCode = default(string), List<OrderCreateV7ResponseResourceOrdersInnerLinesInner> lines = default(List<OrderCreateV7ResponseResourceOrdersInnerLinesInner>), List<OrderCreateResponseOrdersInnerLinksInner> links = default(List<OrderCreateResponseOrdersInnerLinksInner>))
+        public OrderCreateV7ResponseResourceOrdersInner(int numberOfLinesWithSuccess = default, int numberOfLinesWithError = default, int numberOfLinesWithWarning = default, string ingramOrderNumber = default, string ingramOrderDate = default, string notes = default, string orderType = default, decimal orderTotal = default, decimal freightCharges = default, decimal totalTax = default, string currencyCode = default, List<OrderCreateV7ResponseResourceOrdersInnerLinesInner> lines = default, List<OrderCreateResponseOrdersInnerLinksInner> links = default)
         {
             this.NumberOfLinesWithSuccess = numberOfLinesWithSuccess;
             this.NumberOfLinesWithError = numberOfLinesWithError;

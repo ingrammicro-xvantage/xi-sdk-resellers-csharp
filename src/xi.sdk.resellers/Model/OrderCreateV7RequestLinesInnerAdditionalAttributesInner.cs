@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="attributeName">SAP requested and country-specific line level details..</param>
         /// <param name="attributeValue">TLine-level additional attributes..</param>
-        public OrderCreateV7RequestLinesInnerAdditionalAttributesInner(string attributeName = default(string), string attributeValue = default(string))
+        public OrderCreateV7RequestLinesInnerAdditionalAttributesInner(string attributeName = default, string attributeValue = default)
         {
             this.AttributeName = attributeName;
             this.AttributeValue = attributeValue;

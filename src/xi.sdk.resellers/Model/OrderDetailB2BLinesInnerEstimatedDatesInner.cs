@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="ship">ship.</param>
         /// <param name="delivery">delivery.</param>
-        public OrderDetailB2BLinesInnerEstimatedDatesInner(OrderDetailB2BLinesInnerEstimatedDatesInnerShip ship = default(OrderDetailB2BLinesInnerEstimatedDatesInnerShip), OrderDetailB2BLinesInnerEstimatedDatesInnerDelivery delivery = default(OrderDetailB2BLinesInnerEstimatedDatesInnerDelivery))
+        public OrderDetailB2BLinesInnerEstimatedDatesInner(OrderDetailB2BLinesInnerEstimatedDatesInnerShip ship = default, OrderDetailB2BLinesInnerEstimatedDatesInnerDelivery delivery = default)
         {
             this.Ship = ship;
             this.Delivery = delivery;

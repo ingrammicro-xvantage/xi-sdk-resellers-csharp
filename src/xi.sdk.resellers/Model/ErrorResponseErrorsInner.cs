@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="type">Describes the type of the error..</param>
         /// <param name="message">Describes the error message..</param>
         /// <param name="fields">fields.</param>
-        public ErrorResponseErrorsInner(string id = default(string), string type = default(string), string message = default(string), List<ErrorResponseErrorsInnerFieldsInner> fields = default(List<ErrorResponseErrorsInnerFieldsInner>))
+        public ErrorResponseErrorsInner(string id = default, string type = default, string message = default, List<ErrorResponseErrorsInnerFieldsInner> fields = default)
         {
             this.Id = id;
             this.Type = type;

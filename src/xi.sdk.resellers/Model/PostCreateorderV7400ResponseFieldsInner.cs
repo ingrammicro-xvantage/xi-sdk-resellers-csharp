@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="field">Name of the field..</param>
         /// <param name="message">A filed level error message..</param>
         /// <param name="value">Value of the message..</param>
-        public PostCreateorderV7400ResponseFieldsInner(string field = default(string), string message = default(string), string value = default(string))
+        public PostCreateorderV7400ResponseFieldsInner(string field = default, string message = default, string value = default)
         {
             this.Field = field;
             this.Message = message;

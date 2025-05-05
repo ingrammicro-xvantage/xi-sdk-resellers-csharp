@@ -36,7 +36,7 @@ namespace xi.sdk.resellers.Model
         /// Initializes a new instance of the <see cref="ErrorResponseDTO" /> class.
         /// </summary>
         /// <param name="errors">errors.</param>
-        public ErrorResponseDTO(List<Error> errors = default(List<Error>))
+        public ErrorResponseDTO(List<Error> errors = default)
         {
             this.Errors = errors;
         }

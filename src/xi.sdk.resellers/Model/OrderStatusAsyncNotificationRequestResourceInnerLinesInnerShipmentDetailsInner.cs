@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="carrierCode">The carrier code for the shipment containing the  line item..</param>
         /// <param name="carrierName">The name of the carrier of the shipment containing   the line item..</param>
         /// <param name="packageDetails">packageDetails.</param>
-        public OrderStatusAsyncNotificationRequestResourceInnerLinesInnerShipmentDetailsInner(string shipmentDate = default(string), string shipFromWarehouseId = default(string), string warehouseName = default(string), string carrierCode = default(string), string carrierName = default(string), List<OrderStatusAsyncNotificationRequestResourceInnerLinesInnerShipmentDetailsInnerPackageDetailsInner> packageDetails = default(List<OrderStatusAsyncNotificationRequestResourceInnerLinesInnerShipmentDetailsInnerPackageDetailsInner>))
+        public OrderStatusAsyncNotificationRequestResourceInnerLinesInnerShipmentDetailsInner(string shipmentDate = default, string shipFromWarehouseId = default, string warehouseName = default, string carrierCode = default, string carrierName = default, List<OrderStatusAsyncNotificationRequestResourceInnerLinesInnerShipmentDetailsInnerPackageDetailsInner> packageDetails = default)
         {
             this.ShipmentDate = shipmentDate;
             this.ShipFromWarehouseId = shipFromWarehouseId;

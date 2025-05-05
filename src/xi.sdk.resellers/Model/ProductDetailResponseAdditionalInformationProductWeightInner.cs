@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="plantId">ID of the plant.  Example : &#39;US01&#39;.</param>
         /// <param name="weight">Weight of the product.   Example : 2.</param>
         /// <param name="weightUnit">Weight unit of the product.   Example : &#39;LB&#39;.</param>
-        public ProductDetailResponseAdditionalInformationProductWeightInner(string plantId = default(string), decimal weight = default(decimal), string weightUnit = default(string))
+        public ProductDetailResponseAdditionalInformationProductWeightInner(string plantId = default, decimal weight = default, string weightUnit = default)
         {
             this.PlantId = plantId;
             this.Weight = weight;

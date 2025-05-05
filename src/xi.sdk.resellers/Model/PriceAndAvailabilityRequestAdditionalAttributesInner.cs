@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="attributeName">key value pair -key Name..</param>
         /// <param name="attributeValue">key value pair -key value..</param>
-        public PriceAndAvailabilityRequestAdditionalAttributesInner(string attributeName = default(string), string attributeValue = default(string))
+        public PriceAndAvailabilityRequestAdditionalAttributesInner(string attributeName = default, string attributeValue = default)
         {
             this.AttributeName = attributeName;
             this.AttributeValue = attributeValue;

@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="type">The type of the fees..</param>
         /// <param name="msrp">msrp.</param>
         /// <param name="code">code.</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner(decimal? price = default(decimal?), string type = default(string), decimal? msrp = default(decimal?), string code = default(string))
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner(decimal? price = default, string type = default, decimal? msrp = default, string code = default)
         {
             this.Price = price;
             this.Type = type;

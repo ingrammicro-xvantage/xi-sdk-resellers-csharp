@@ -51,7 +51,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="shipFromBranch">The code of the ship from branch..</param>
         /// <param name="requestDetails">Request details..</param>
         /// <param name="additionalDetails">additionalDetails.</param>
-        public ReturnsDetailsResponseProductsInner(int ingramLineNumber = default(int), string description = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string upc = default(string), string invoiceDate = default(string), string invoiceNumber = default(string), string customerOrderNumber = default(string), decimal quantity = default(decimal), decimal unitPrice = default(decimal), decimal extendedPrice = default(decimal), string status = default(string), string returnBranch = default(string), string shipFromBranch = default(string), string requestDetails = default(string), string additionalDetails = default(string))
+        public ReturnsDetailsResponseProductsInner(int ingramLineNumber = default, string description = default, string ingramPartNumber = default, string vendorPartNumber = default, string upc = default, string invoiceDate = default, string invoiceNumber = default, string customerOrderNumber = default, decimal quantity = default, decimal unitPrice = default, decimal extendedPrice = default, string status = default, string returnBranch = default, string shipFromBranch = default, string requestDetails = default, string additionalDetails = default)
         {
             this.IngramLineNumber = ingramLineNumber;
             this.Description = description;

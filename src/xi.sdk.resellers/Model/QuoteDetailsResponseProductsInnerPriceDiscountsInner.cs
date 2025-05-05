@@ -46,7 +46,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="validFrom">validFrom.</param>
         /// <param name="validTo">validTo.</param>
         /// <param name="discountOffList">discountOffList.</param>
-        public QuoteDetailsResponseProductsInnerPriceDiscountsInner(string type = default(string), decimal amount = default(decimal), string expirationDate = default(string), string description = default(string), int avaliableQunatity = default(int), int minimumQuantity = default(int), string bidNumber = default(string), string bidVersion = default(string), string validFrom = default(string), string validTo = default(string), decimal discountOffList = default(decimal))
+        public QuoteDetailsResponseProductsInnerPriceDiscountsInner(string type = default, decimal amount = default, string expirationDate = default, string description = default, int avaliableQunatity = default, int minimumQuantity = default, string bidNumber = default, string bidVersion = default, string validFrom = default, string validTo = default, decimal discountOffList = default)
         {
             this.Type = type;
             this.Amount = amount;

@@ -36,7 +36,7 @@ namespace xi.sdk.resellers.Model
         /// Initializes a new instance of the <see cref="InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner" /> class.
         /// </summary>
         /// <param name="serialNumber">Serial number of the product..</param>
-        public InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner(string serialNumber = default(string))
+        public InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner(string serialNumber = default)
         {
             this.SerialNumber = serialNumber;
         }

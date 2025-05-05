@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="deliverySource">Source of the delivery..</param>
         /// <param name="deliveryDescription">Delivery description..</param>
         /// <param name="deliveryDate">Delivery date..</param>
-        public OrderDetailB2BLinesInnerEstimatedDatesInnerDelivery(string deliveryDateType = default(string), OrderDetailB2BLinesInnerEstimatedDatesInnerDeliveryDeliveryDateRange deliveryDateRange = default(OrderDetailB2BLinesInnerEstimatedDatesInnerDeliveryDeliveryDateRange), string deliverySource = default(string), string deliveryDescription = default(string), string deliveryDate = default(string))
+        public OrderDetailB2BLinesInnerEstimatedDatesInnerDelivery(string deliveryDateType = default, OrderDetailB2BLinesInnerEstimatedDatesInnerDeliveryDeliveryDateRange deliveryDateRange = default, string deliverySource = default, string deliveryDescription = default, string deliveryDate = default)
         {
             this.DeliveryDateType = deliveryDateType;
             this.DeliveryDateRange = deliveryDateRange;

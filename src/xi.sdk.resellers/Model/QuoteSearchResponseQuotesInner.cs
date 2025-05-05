@@ -52,7 +52,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="createdBy">Name of the end user/customer who created a quote..</param>
         /// <param name="quoteType">Type of quote.</param>
         /// <param name="links">links.</param>
-        public QuoteSearchResponseQuotesInner(string quoteGuid = default(string), string quoteName = default(string), string quoteNumber = default(string), string revision = default(string), string currencyCode = default(string), string endUserContact = default(string), string specialBidNumber = default(string), decimal quoteTotal = default(decimal), string quoteStatus = default(string), string ingramQuoteDate = default(string), string lastModifiedDate = default(string), string ingramQuoteExpiryDate = default(string), string endUserName = default(string), string vendor = default(string), string createdBy = default(string), string quoteType = default(string), QuoteSearchResponseQuotesInnerLinks links = default(QuoteSearchResponseQuotesInnerLinks))
+        public QuoteSearchResponseQuotesInner(string quoteGuid = default, string quoteName = default, string quoteNumber = default, string revision = default, string currencyCode = default, string endUserContact = default, string specialBidNumber = default, decimal quoteTotal = default, string quoteStatus = default, string ingramQuoteDate = default, string lastModifiedDate = default, string ingramQuoteExpiryDate = default, string endUserName = default, string vendor = default, string createdBy = default, string quoteType = default, QuoteSearchResponseQuotesInnerLinks links = default)
         {
             this.QuoteGuid = quoteGuid;
             this.QuoteName = quoteName;

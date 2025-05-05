@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="miscCharges">Miscellaneous charges..</param>
         /// <param name="totals">totals.</param>
         /// <param name="foreignFxTotals">foreignFxTotals.</param>
-        public InvoiceDetailsv61ResponseSummary(InvoiceDetailsv61ResponseSummaryLines lines = default(InvoiceDetailsv61ResponseSummaryLines), List<InvoiceDetailsv61ResponseSummaryMiscChargesInner> miscCharges = default(List<InvoiceDetailsv61ResponseSummaryMiscChargesInner>), InvoiceDetailsv61ResponseSummaryTotals totals = default(InvoiceDetailsv61ResponseSummaryTotals), InvoiceDetailsv61ResponseSummaryForeignFxTotals foreignFxTotals = default(InvoiceDetailsv61ResponseSummaryForeignFxTotals))
+        public InvoiceDetailsv61ResponseSummary(InvoiceDetailsv61ResponseSummaryLines lines = default, List<InvoiceDetailsv61ResponseSummaryMiscChargesInner> miscCharges = default, InvoiceDetailsv61ResponseSummaryTotals totals = default, InvoiceDetailsv61ResponseSummaryForeignFxTotals foreignFxTotals = default)
         {
             this.Lines = lines;
             this.MiscCharges = miscCharges;

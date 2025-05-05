@@ -46,7 +46,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="shipmentDetails">shipmentDetails.</param>
         /// <param name="additionalAttributes">SAP requested and country-specific line level details..</param>
         /// <param name="notes">Line-level notes for the order..</param>
-        public OrderModifyResponseLinesInner(string subOrderNumber = default(string), string ingramLineNumber = default(string), string customerLineNumber = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), int quantityOrdered = default(int), int quantityConfirmed = default(int), int quantityBackOrdered = default(int), OrderModifyResponseLinesInnerShipmentDetails shipmentDetails = default(OrderModifyResponseLinesInnerShipmentDetails), List<OrderModifyResponseLinesInnerAdditionalAttributesInner> additionalAttributes = default(List<OrderModifyResponseLinesInnerAdditionalAttributesInner>), string notes = default(string))
+        public OrderModifyResponseLinesInner(string subOrderNumber = default, string ingramLineNumber = default, string customerLineNumber = default, string ingramPartNumber = default, string vendorPartNumber = default, int quantityOrdered = default, int quantityConfirmed = default, int quantityBackOrdered = default, OrderModifyResponseLinesInnerShipmentDetails shipmentDetails = default, List<OrderModifyResponseLinesInnerAdditionalAttributesInner> additionalAttributes = default, string notes = default)
         {
             this.SubOrderNumber = subOrderNumber;
             this.IngramLineNumber = ingramLineNumber;

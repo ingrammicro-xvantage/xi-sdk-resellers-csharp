@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="customerPrice">The price customer pays after all special pricing and discounts have been applied..</param>
         /// <param name="specialBidPricingAvailable">Boolean values specifies whether special Bid discounts are available for the product..</param>
         /// <param name="webDiscountsAvailable">Boolean values specifies whether web Discounts are available for the product..</param>
-        public PriceAndAvailabilityResponseInnerPricing(string currencyCode = default(string), decimal? retailPrice = default(decimal?), decimal? mapPrice = default(decimal?), decimal? customerPrice = default(decimal?), bool? specialBidPricingAvailable = default(bool?), bool? webDiscountsAvailable = default(bool?))
+        public PriceAndAvailabilityResponseInnerPricing(string currencyCode = default, decimal? retailPrice = default, decimal? mapPrice = default, decimal? customerPrice = default, bool? specialBidPricingAvailable = default, bool? webDiscountsAvailable = default)
         {
             this.CurrencyCode = currencyCode;
             this.RetailPrice = retailPrice;

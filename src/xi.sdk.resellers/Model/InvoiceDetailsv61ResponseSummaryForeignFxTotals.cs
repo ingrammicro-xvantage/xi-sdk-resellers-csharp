@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="foreignTotalTaxableAmount">Foreign amount..</param>
         /// <param name="foreignTotalTaxAmount">Foreign amount..</param>
         /// <param name="foreignInvoiceAmountDue">Foreign due..</param>
-        public InvoiceDetailsv61ResponseSummaryForeignFxTotals(string foreignCurrencyCode = default(string), double foreignCurrencyFxRate = default(double), string foreignTotalTaxableAmount = default(string), double foreignTotalTaxAmount = default(double), string foreignInvoiceAmountDue = default(string))
+        public InvoiceDetailsv61ResponseSummaryForeignFxTotals(string foreignCurrencyCode = default, double foreignCurrencyFxRate = default, string foreignTotalTaxableAmount = default, double foreignTotalTaxAmount = default, string foreignInvoiceAmountDue = default)
         {
             this.ForeignCurrencyCode = foreignCurrencyCode;
             this.ForeignCurrencyFxRate = foreignCurrencyFxRate;

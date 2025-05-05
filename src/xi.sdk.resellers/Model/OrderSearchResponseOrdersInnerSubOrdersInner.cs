@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="subOrderTotal">The total for the suborder..</param>
         /// <param name="subOrderStatus">The status of the suborder. One of:- Shipped, Canceled, Backordered, Processing, On Hold, Delivered.</param>
         /// <param name="links">Link to Order Details for the sub order(s)..</param>
-        public OrderSearchResponseOrdersInnerSubOrdersInner(string subOrderNumber = default(string), decimal subOrderTotal = default(decimal), string subOrderStatus = default(string), List<OrderSearchResponseOrdersInnerSubOrdersInnerLinksInner> links = default(List<OrderSearchResponseOrdersInnerSubOrdersInnerLinksInner>))
+        public OrderSearchResponseOrdersInnerSubOrdersInner(string subOrderNumber = default, decimal subOrderTotal = default, string subOrderStatus = default, List<OrderSearchResponseOrdersInnerSubOrdersInnerLinksInner> links = default)
         {
             this.SubOrderNumber = subOrderNumber;
             this.SubOrderTotal = subOrderTotal;

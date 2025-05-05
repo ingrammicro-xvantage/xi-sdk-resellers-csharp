@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="currencyType">Type of currency..</param>
         /// <param name="quantity">The total discounted quantity of the product..</param>
         /// <param name="amount">The total price of all the discounts applied..</param>
-        public PriceAndAvailabilityResponseInnerDiscountsInnerQuantityDiscountsInner(string conditionType = default(string), string currencyCode = default(string), string currencyType = default(string), int? quantity = default(int?), decimal? amount = default(decimal?))
+        public PriceAndAvailabilityResponseInnerDiscountsInnerQuantityDiscountsInner(string conditionType = default, string currencyCode = default, string currencyType = default, int? quantity = default, decimal? amount = default)
         {
             this.ConditionType = conditionType;
             this.CurrencyCode = currencyCode;

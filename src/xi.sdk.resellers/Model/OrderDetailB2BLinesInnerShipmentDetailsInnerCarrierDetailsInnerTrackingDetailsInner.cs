@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="cartonNumber">The shipment carton number that contains the line item..</param>
         /// <param name="quantityInBox">The quantity of line items in the box..</param>
         /// <param name="serialNumbers">A list of serial numbers of the line items contained in the shipment..</param>
-        public OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInnerTrackingDetailsInner(string trackingNumber = default(string), string trackingUrl = default(string), string packageWeight = default(string), string cartonNumber = default(string), string quantityInBox = default(string), List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInnerTrackingDetailsInnerSerialNumbersInner> serialNumbers = default(List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInnerTrackingDetailsInnerSerialNumbersInner>))
+        public OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInnerTrackingDetailsInner(string trackingNumber = default, string trackingUrl = default, string packageWeight = default, string cartonNumber = default, string quantityInBox = default, List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInnerTrackingDetailsInnerSerialNumbersInner> serialNumbers = default)
         {
             this.TrackingNumber = trackingNumber;
             this.TrackingUrl = trackingUrl;

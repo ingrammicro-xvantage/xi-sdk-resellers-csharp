@@ -52,7 +52,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="quoteCreateDateBt">Search with start and end date(only 2 entries allowed). (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>QuoteSearchResponse</returns>
-        QuoteSearchResponse GetQuotessearchV6(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default(List<string>?), string? quoteNumber = default(string?), string? specialBidNumber = default(string?), string? endUserContact = default(string?), string? sortingOrder = default(string?), string? sortBy = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? vendorName = default(string?), string? quoteName = default(string?), string? status = default(string?), string? quoteCreateDateBt = default(string?), string? iMSenderID = default(string?));
+        QuoteSearchResponse GetQuotessearchV6(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default, string? quoteNumber = default, string? specialBidNumber = default, string? endUserContact = default, string? sortingOrder = default, string? sortBy = default, int? pageSize = default, int? pageNumber = default, string? vendorName = default, string? quoteName = default, string? status = default, string? quoteCreateDateBt = default, string? iMSenderID = default);
 
         /// <summary>
         /// Quote Search
@@ -79,7 +79,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="quoteCreateDateBt">Search with start and end date(only 2 entries allowed). (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>ApiResponse of QuoteSearchResponse</returns>
-        ApiResponse<QuoteSearchResponse> GetQuotessearchV6WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default(List<string>?), string? quoteNumber = default(string?), string? specialBidNumber = default(string?), string? endUserContact = default(string?), string? sortingOrder = default(string?), string? sortBy = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? vendorName = default(string?), string? quoteName = default(string?), string? status = default(string?), string? quoteCreateDateBt = default(string?), string? iMSenderID = default(string?));
+        ApiResponse<QuoteSearchResponse> GetQuotessearchV6WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default, string? quoteNumber = default, string? specialBidNumber = default, string? endUserContact = default, string? sortingOrder = default, string? sortBy = default, int? pageSize = default, int? pageNumber = default, string? vendorName = default, string? quoteName = default, string? status = default, string? quoteCreateDateBt = default, string? iMSenderID = default);
         /// <summary>
         /// Validate Quote
         /// </summary>
@@ -93,7 +93,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <returns>ValidateQuoteResponse</returns>
-        ValidateQuoteResponse GetResellerV6ValidateQuote(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?));
+        ValidateQuoteResponse GetResellerV6ValidateQuote(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default);
 
         /// <summary>
         /// Validate Quote
@@ -108,7 +108,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <returns>ApiResponse of ValidateQuoteResponse</returns>
-        ApiResponse<ValidateQuoteResponse> GetResellerV6ValidateQuoteWithHttpInfo(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?));
+        ApiResponse<ValidateQuoteResponse> GetResellerV6ValidateQuoteWithHttpInfo(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default);
         /// <summary>
         /// Get Quote Details
         /// </summary>
@@ -122,7 +122,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="quoteNumber">Unique identifier generated by Ingram Micro&#39;s CRM specific to each quote.  When applying a filter to the quoteNumber and including a partial quote number in the filter, all quotes containing any information included in the filter can be retrieved as a subset of all available customer quotes.</param>
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <returns>QuoteDetailsResponse</returns>
-        QuoteDetailsResponse GetResellersV6Quotes(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?));
+        QuoteDetailsResponse GetResellersV6Quotes(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default);
 
         /// <summary>
         /// Get Quote Details
@@ -137,36 +137,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="quoteNumber">Unique identifier generated by Ingram Micro&#39;s CRM specific to each quote.  When applying a filter to the quoteNumber and including a partial quote number in the filter, all quotes containing any information included in the filter can be retrieved as a subset of all available customer quotes.</param>
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <returns>ApiResponse of QuoteDetailsResponse</returns>
-        ApiResponse<QuoteDetailsResponse> GetResellersV6QuotesWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?));
-        /// <summary>
-        /// Quote Create
-        /// </summary>
-        /// <remarks>
-        /// The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a &#39;Ready To Order&#39; status.&lt;ul&gt;&lt;li&gt;For CTO quote creation, we only support Cisco as a vendor at the moment.&lt;/li&gt;&lt;/ul&gt;   Once the quote is created and activated, you will receive an immediate &#39;confirmation&#39;.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
-        /// </remarks>
-        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
-        /// <param name="iMCountryCode">Two-character ISO country code.</param>
-        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="quoteCreateRequest"></param>
-        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
-        /// <returns>QuoteCreateResponse</returns>
-        QuoteCreateResponse QuoteCreate(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = default(string?));
-
-        /// <summary>
-        /// Quote Create
-        /// </summary>
-        /// <remarks>
-        /// The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a &#39;Ready To Order&#39; status.&lt;ul&gt;&lt;li&gt;For CTO quote creation, we only support Cisco as a vendor at the moment.&lt;/li&gt;&lt;/ul&gt;   Once the quote is created and activated, you will receive an immediate &#39;confirmation&#39;.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
-        /// </remarks>
-        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
-        /// <param name="iMCountryCode">Two-character ISO country code.</param>
-        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="quoteCreateRequest"></param>
-        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
-        /// <returns>ApiResponse of QuoteCreateResponse</returns>
-        ApiResponse<QuoteCreateResponse> QuoteCreateWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = default(string?));
+        ApiResponse<QuoteDetailsResponse> GetResellersV6QuotesWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default);
         #endregion Synchronous Operations
     }
 
@@ -202,7 +173,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of QuoteSearchResponse</returns>
-        System.Threading.Tasks.Task<QuoteSearchResponse> GetQuotessearchV6Async(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default(List<string>?), string? quoteNumber = default(string?), string? specialBidNumber = default(string?), string? endUserContact = default(string?), string? sortingOrder = default(string?), string? sortBy = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? vendorName = default(string?), string? quoteName = default(string?), string? status = default(string?), string? quoteCreateDateBt = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<QuoteSearchResponse> GetQuotessearchV6Async(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default, string? quoteNumber = default, string? specialBidNumber = default, string? endUserContact = default, string? sortingOrder = default, string? sortBy = default, int? pageSize = default, int? pageNumber = default, string? vendorName = default, string? quoteName = default, string? status = default, string? quoteCreateDateBt = default, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Quote Search
@@ -230,7 +201,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (QuoteSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QuoteSearchResponse>> GetQuotessearchV6WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default(List<string>?), string? quoteNumber = default(string?), string? specialBidNumber = default(string?), string? endUserContact = default(string?), string? sortingOrder = default(string?), string? sortBy = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? vendorName = default(string?), string? quoteName = default(string?), string? status = default(string?), string? quoteCreateDateBt = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<QuoteSearchResponse>> GetQuotessearchV6WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default, string? quoteNumber = default, string? specialBidNumber = default, string? endUserContact = default, string? sortingOrder = default, string? sortBy = default, int? pageSize = default, int? pageNumber = default, string? vendorName = default, string? quoteName = default, string? status = default, string? quoteCreateDateBt = default, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Validate Quote
         /// </summary>
@@ -245,7 +216,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ValidateQuoteResponse</returns>
-        System.Threading.Tasks.Task<ValidateQuoteResponse> GetResellerV6ValidateQuoteAsync(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ValidateQuoteResponse> GetResellerV6ValidateQuoteAsync(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Validate Quote
@@ -261,7 +232,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ValidateQuoteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidateQuoteResponse>> GetResellerV6ValidateQuoteWithHttpInfoAsync(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ValidateQuoteResponse>> GetResellerV6ValidateQuoteWithHttpInfoAsync(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Get Quote Details
         /// </summary>
@@ -276,7 +247,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of QuoteDetailsResponse</returns>
-        System.Threading.Tasks.Task<QuoteDetailsResponse> GetResellersV6QuotesAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<QuoteDetailsResponse> GetResellersV6QuotesAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Get Quote Details
@@ -292,38 +263,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (QuoteDetailsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QuoteDetailsResponse>> GetResellersV6QuotesWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
-        /// <summary>
-        /// Quote Create
-        /// </summary>
-        /// <remarks>
-        /// The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a &#39;Ready To Order&#39; status.&lt;ul&gt;&lt;li&gt;For CTO quote creation, we only support Cisco as a vendor at the moment.&lt;/li&gt;&lt;/ul&gt;   Once the quote is created and activated, you will receive an immediate &#39;confirmation&#39;.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
-        /// </remarks>
-        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
-        /// <param name="iMCountryCode">Two-character ISO country code.</param>
-        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="quoteCreateRequest"></param>
-        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of QuoteCreateResponse</returns>
-        System.Threading.Tasks.Task<QuoteCreateResponse> QuoteCreateAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Quote Create
-        /// </summary>
-        /// <remarks>
-        /// The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a &#39;Ready To Order&#39; status.&lt;ul&gt;&lt;li&gt;For CTO quote creation, we only support Cisco as a vendor at the moment.&lt;/li&gt;&lt;/ul&gt;   Once the quote is created and activated, you will receive an immediate &#39;confirmation&#39;.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
-        /// </remarks>
-        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
-        /// <param name="iMCountryCode">Two-character ISO country code.</param>
-        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="quoteCreateRequest"></param>
-        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (QuoteCreateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QuoteCreateResponse>> QuoteCreateWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<QuoteDetailsResponse>> GetResellersV6QuotesWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -559,7 +499,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="quoteCreateDateBt">Search with start and end date(only 2 entries allowed). (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>QuoteSearchResponse</returns>
-        public QuoteSearchResponse GetQuotessearchV6(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default(List<string>?), string? quoteNumber = default(string?), string? specialBidNumber = default(string?), string? endUserContact = default(string?), string? sortingOrder = default(string?), string? sortBy = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? vendorName = default(string?), string? quoteName = default(string?), string? status = default(string?), string? quoteCreateDateBt = default(string?), string? iMSenderID = default(string?))
+        public QuoteSearchResponse GetQuotessearchV6(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default, string? quoteNumber = default, string? specialBidNumber = default, string? endUserContact = default, string? sortingOrder = default, string? sortBy = default, int? pageSize = default, int? pageNumber = default, string? vendorName = default, string? quoteName = default, string? status = default, string? quoteCreateDateBt = default, string? iMSenderID = default)
         {
             xi.sdk.resellers.Client.ApiResponse<QuoteSearchResponse> localVarResponse = GetQuotessearchV6WithHttpInfo(iMCustomerNumber, iMCountryCode, iMCustomerContact, iMCorrelationID, ingramOrderDateBt, quoteNumber, specialBidNumber, endUserContact, sortingOrder, sortBy, pageSize, pageNumber, vendorName, quoteName, status, quoteCreateDateBt, iMSenderID);
             return localVarResponse.Data;
@@ -587,7 +527,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="quoteCreateDateBt">Search with start and end date(only 2 entries allowed). (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>ApiResponse of QuoteSearchResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<QuoteSearchResponse> GetQuotessearchV6WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default(List<string>?), string? quoteNumber = default(string?), string? specialBidNumber = default(string?), string? endUserContact = default(string?), string? sortingOrder = default(string?), string? sortBy = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? vendorName = default(string?), string? quoteName = default(string?), string? status = default(string?), string? quoteCreateDateBt = default(string?), string? iMSenderID = default(string?))
+        public xi.sdk.resellers.Client.ApiResponse<QuoteSearchResponse> GetQuotessearchV6WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default, string? quoteNumber = default, string? specialBidNumber = default, string? endUserContact = default, string? sortingOrder = default, string? sortBy = default, int? pageSize = default, int? pageNumber = default, string? vendorName = default, string? quoteName = default, string? status = default, string? quoteCreateDateBt = default, string? iMSenderID = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -720,7 +660,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of QuoteSearchResponse</returns>
-        public async System.Threading.Tasks.Task<QuoteSearchResponse> GetQuotessearchV6Async(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default(List<string>?), string? quoteNumber = default(string?), string? specialBidNumber = default(string?), string? endUserContact = default(string?), string? sortingOrder = default(string?), string? sortBy = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? vendorName = default(string?), string? quoteName = default(string?), string? status = default(string?), string? quoteCreateDateBt = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<QuoteSearchResponse> GetQuotessearchV6Async(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default, string? quoteNumber = default, string? specialBidNumber = default, string? endUserContact = default, string? sortingOrder = default, string? sortBy = default, int? pageSize = default, int? pageNumber = default, string? vendorName = default, string? quoteName = default, string? status = default, string? quoteCreateDateBt = default, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<QuoteSearchResponse> localVarResponse = await GetQuotessearchV6WithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCustomerContact, iMCorrelationID, ingramOrderDateBt, quoteNumber, specialBidNumber, endUserContact, sortingOrder, sortBy, pageSize, pageNumber, vendorName, quoteName, status, quoteCreateDateBt, iMSenderID, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -749,7 +689,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (QuoteSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<QuoteSearchResponse>> GetQuotessearchV6WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default(List<string>?), string? quoteNumber = default(string?), string? specialBidNumber = default(string?), string? endUserContact = default(string?), string? sortingOrder = default(string?), string? sortBy = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? vendorName = default(string?), string? quoteName = default(string?), string? status = default(string?), string? quoteCreateDateBt = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<QuoteSearchResponse>> GetQuotessearchV6WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default, string? quoteNumber = default, string? specialBidNumber = default, string? endUserContact = default, string? sortingOrder = default, string? sortBy = default, int? pageSize = default, int? pageNumber = default, string? vendorName = default, string? quoteName = default, string? status = default, string? quoteCreateDateBt = default, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -872,7 +812,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <returns>ValidateQuoteResponse</returns>
-        public ValidateQuoteResponse GetResellerV6ValidateQuote(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?))
+        public ValidateQuoteResponse GetResellerV6ValidateQuote(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default)
         {
             xi.sdk.resellers.Client.ApiResponse<ValidateQuoteResponse> localVarResponse = GetResellerV6ValidateQuoteWithHttpInfo(quoteNumber, iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID);
             return localVarResponse.Data;
@@ -888,7 +828,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <returns>ApiResponse of ValidateQuoteResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<ValidateQuoteResponse> GetResellerV6ValidateQuoteWithHttpInfo(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?))
+        public xi.sdk.resellers.Client.ApiResponse<ValidateQuoteResponse> GetResellerV6ValidateQuoteWithHttpInfo(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default)
         {
             // verify the required parameter 'quoteNumber' is set
             if (quoteNumber == null)
@@ -961,7 +901,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ValidateQuoteResponse</returns>
-        public async System.Threading.Tasks.Task<ValidateQuoteResponse> GetResellerV6ValidateQuoteAsync(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ValidateQuoteResponse> GetResellerV6ValidateQuoteAsync(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<ValidateQuoteResponse> localVarResponse = await GetResellerV6ValidateQuoteWithHttpInfoAsync(quoteNumber, iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -978,7 +918,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ValidateQuoteResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ValidateQuoteResponse>> GetResellerV6ValidateQuoteWithHttpInfoAsync(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ValidateQuoteResponse>> GetResellerV6ValidateQuoteWithHttpInfoAsync(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'quoteNumber' is set
             if (quoteNumber == null)
@@ -1053,7 +993,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="quoteNumber">Unique identifier generated by Ingram Micro&#39;s CRM specific to each quote.  When applying a filter to the quoteNumber and including a partial quote number in the filter, all quotes containing any information included in the filter can be retrieved as a subset of all available customer quotes.</param>
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <returns>QuoteDetailsResponse</returns>
-        public QuoteDetailsResponse GetResellersV6Quotes(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?))
+        public QuoteDetailsResponse GetResellersV6Quotes(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default)
         {
             xi.sdk.resellers.Client.ApiResponse<QuoteDetailsResponse> localVarResponse = GetResellersV6QuotesWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, quoteNumber, iMSenderID);
             return localVarResponse.Data;
@@ -1069,7 +1009,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="quoteNumber">Unique identifier generated by Ingram Micro&#39;s CRM specific to each quote.  When applying a filter to the quoteNumber and including a partial quote number in the filter, all quotes containing any information included in the filter can be retrieved as a subset of all available customer quotes.</param>
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <returns>ApiResponse of QuoteDetailsResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<QuoteDetailsResponse> GetResellersV6QuotesWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?))
+        public xi.sdk.resellers.Client.ApiResponse<QuoteDetailsResponse> GetResellersV6QuotesWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -1142,7 +1082,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of QuoteDetailsResponse</returns>
-        public async System.Threading.Tasks.Task<QuoteDetailsResponse> GetResellersV6QuotesAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<QuoteDetailsResponse> GetResellersV6QuotesAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<QuoteDetailsResponse> localVarResponse = await GetResellersV6QuotesWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, quoteNumber, iMSenderID, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1159,7 +1099,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (QuoteDetailsResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<QuoteDetailsResponse>> GetResellersV6QuotesWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<QuoteDetailsResponse>> GetResellersV6QuotesWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -1218,189 +1158,6 @@ namespace xi.sdk.resellers.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetResellersV6Quotes", localVarResponse);
-                if (_exception != null) throw _exception;
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Quote Create The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a &#39;Ready To Order&#39; status.&lt;ul&gt;&lt;li&gt;For CTO quote creation, we only support Cisco as a vendor at the moment.&lt;/li&gt;&lt;/ul&gt;   Once the quote is created and activated, you will receive an immediate &#39;confirmation&#39;.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
-        /// </summary>
-        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
-        /// <param name="iMCountryCode">Two-character ISO country code.</param>
-        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="quoteCreateRequest"></param>
-        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
-        /// <returns>QuoteCreateResponse</returns>
-        public QuoteCreateResponse QuoteCreate(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = default(string?))
-        {
-            xi.sdk.resellers.Client.ApiResponse<QuoteCreateResponse> localVarResponse = QuoteCreateWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, quoteCreateRequest, iMSenderID);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Quote Create The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a &#39;Ready To Order&#39; status.&lt;ul&gt;&lt;li&gt;For CTO quote creation, we only support Cisco as a vendor at the moment.&lt;/li&gt;&lt;/ul&gt;   Once the quote is created and activated, you will receive an immediate &#39;confirmation&#39;.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
-        /// </summary>
-        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
-        /// <param name="iMCountryCode">Two-character ISO country code.</param>
-        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="quoteCreateRequest"></param>
-        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
-        /// <returns>ApiResponse of QuoteCreateResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<QuoteCreateResponse> QuoteCreateWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = default(string?))
-        {
-            // verify the required parameter 'iMCustomerNumber' is set
-            if (iMCustomerNumber == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCustomerNumber' when calling QuotesApi->QuoteCreate");
-
-            // verify the required parameter 'iMCountryCode' is set
-            if (iMCountryCode == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCountryCode' when calling QuotesApi->QuoteCreate");
-
-            // verify the required parameter 'iMCorrelationID' is set
-            if (iMCorrelationID == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling QuotesApi->QuoteCreate");
-
-            // verify the required parameter 'quoteCreateRequest' is set
-            if (quoteCreateRequest == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'quoteCreateRequest' when calling QuotesApi->QuoteCreate");
-
-            xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = xi.sdk.resellers.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-
-            var localVarAccept = xi.sdk.resellers.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.HeaderParameters.Add("IM-CustomerNumber", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCustomerNumber)); // header parameter
-            localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
-            localVarRequestOptions.HeaderParameters.Add("IM-CorrelationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCorrelationID)); // header parameter
-            if (iMSenderID != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("IM-SenderID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMSenderID)); // header parameter
-            }
-            localVarRequestOptions.Data = quoteCreateRequest;
-
-            // authentication (application) required
-            // oauth required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<QuoteCreateResponse>("/resellers/v6/quotes/create", localVarRequestOptions, this.Configuration);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("QuoteCreate", localVarResponse);
-                if (_exception != null) throw _exception;
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Quote Create The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a &#39;Ready To Order&#39; status.&lt;ul&gt;&lt;li&gt;For CTO quote creation, we only support Cisco as a vendor at the moment.&lt;/li&gt;&lt;/ul&gt;   Once the quote is created and activated, you will receive an immediate &#39;confirmation&#39;.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
-        /// </summary>
-        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
-        /// <param name="iMCountryCode">Two-character ISO country code.</param>
-        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="quoteCreateRequest"></param>
-        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of QuoteCreateResponse</returns>
-        public async System.Threading.Tasks.Task<QuoteCreateResponse> QuoteCreateAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-        {
-            xi.sdk.resellers.Client.ApiResponse<QuoteCreateResponse> localVarResponse = await QuoteCreateWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, quoteCreateRequest, iMSenderID, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Quote Create The quote create endpoint will allow customers to create a quote using the Ingram Micro part number or Vendor Part number.  The customer can also create Configure to Order (CTO) quotes using the Special Bid number (Deal ID).  Upon successfully creating the quote with the product lines, the quote will be activated and placed in a &#39;Ready To Order&#39; status.&lt;ul&gt;&lt;li&gt;For CTO quote creation, we only support Cisco as a vendor at the moment.&lt;/li&gt;&lt;/ul&gt;   Once the quote is created and activated, you will receive an immediate &#39;confirmation&#39;.  A webhook will be sent with the details of the quote.  In the event, we have an error creating a quote, an error message will be notified via webhook as well. The quote create webhook will send the notifications for all the quotes created via the Xvantage platform, APIs, associates, etc.
-        /// </summary>
-        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
-        /// <param name="iMCountryCode">Two-character ISO country code.</param>
-        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="quoteCreateRequest"></param>
-        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (QuoteCreateResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<QuoteCreateResponse>> QuoteCreateWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, QuoteCreateRequest quoteCreateRequest, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'iMCustomerNumber' is set
-            if (iMCustomerNumber == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCustomerNumber' when calling QuotesApi->QuoteCreate");
-
-            // verify the required parameter 'iMCountryCode' is set
-            if (iMCountryCode == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCountryCode' when calling QuotesApi->QuoteCreate");
-
-            // verify the required parameter 'iMCorrelationID' is set
-            if (iMCorrelationID == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling QuotesApi->QuoteCreate");
-
-            // verify the required parameter 'quoteCreateRequest' is set
-            if (quoteCreateRequest == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'quoteCreateRequest' when calling QuotesApi->QuoteCreate");
-
-
-            xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-
-            var localVarContentType = xi.sdk.resellers.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-
-            var localVarAccept = xi.sdk.resellers.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.HeaderParameters.Add("IM-CustomerNumber", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCustomerNumber)); // header parameter
-            localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
-            localVarRequestOptions.HeaderParameters.Add("IM-CorrelationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCorrelationID)); // header parameter
-            if (iMSenderID != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("IM-SenderID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMSenderID)); // header parameter
-            }
-            localVarRequestOptions.Data = quoteCreateRequest;
-
-            // authentication (application) required
-            // oauth required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<QuoteCreateResponse>("/resellers/v6/quotes/create", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("QuoteCreate", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

@@ -36,7 +36,7 @@ namespace xi.sdk.resellers.Model
         /// Initializes a new instance of the <see cref="ReturnsCreateResponse" /> class.
         /// </summary>
         /// <param name="returnsClaims">returnsClaims.</param>
-        public ReturnsCreateResponse(List<ReturnsCreateResponseReturnsClaimsInner> returnsClaims = default(List<ReturnsCreateResponseReturnsClaimsInner>))
+        public ReturnsCreateResponse(List<ReturnsCreateResponseReturnsClaimsInner> returnsClaims = default)
         {
             this.ReturnsClaims = returnsClaims;
         }

@@ -37,9 +37,9 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="billToAddressId">Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit..</param>
         /// <param name="shipToAddressId">The ID references the reseller&#39;s address in Ingram Micro&#39;s system for shipping. Provided to resellers during the onboarding process..</param>
-        /// <param name="shipToAddress">The shipping information..</param>
+        /// <param name="shipToAddress">shipToAddress.</param>
         /// <param name="lines">lines.</param>
-        public FreightRequest(string billToAddressId = default(string), string shipToAddressId = default(string), List<FreightRequestShipToAddressInner> shipToAddress = default(List<FreightRequestShipToAddressInner>), List<FreightRequestLinesInner> lines = default(List<FreightRequestLinesInner>))
+        public FreightRequest(Object billToAddressId = default, string shipToAddressId = default, FreightRequestShipToAddress shipToAddress = default, List<FreightRequestLinesInner> lines = default)
         {
             this.BillToAddressId = billToAddressId;
             this.ShipToAddressId = shipToAddressId;
@@ -51,8 +51,8 @@ namespace xi.sdk.resellers.Model
         /// Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit.
         /// </summary>
         /// <value>Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit.</value>
-        [DataMember(Name = "billToAddressId", EmitDefaultValue = false)]
-        public string BillToAddressId { get; set; }
+        [DataMember(Name = "billToAddressId", EmitDefaultValue = true)]
+        public Object BillToAddressId { get; set; }
 
         /// <summary>
         /// The ID references the reseller&#39;s address in Ingram Micro&#39;s system for shipping. Provided to resellers during the onboarding process.
@@ -62,11 +62,10 @@ namespace xi.sdk.resellers.Model
         public string ShipToAddressId { get; set; }
 
         /// <summary>
-        /// The shipping information.
+        /// Gets or Sets ShipToAddress
         /// </summary>
-        /// <value>The shipping information.</value>
         [DataMember(Name = "shipToAddress", EmitDefaultValue = false)]
-        public List<FreightRequestShipToAddressInner> ShipToAddress { get; set; }
+        public FreightRequestShipToAddress ShipToAddress { get; set; }
 
         /// <summary>
         /// Gets or Sets Lines

@@ -42,7 +42,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="length">Example : &#39;20.4 inches&#39;.</param>
         /// <param name="netWeight">Example : &#39;10 lb&#39;.</param>
         /// <param name="dimensionUnit">Example : &#39;Unit value&#39;.</param>
-        public ProductDetailResponseAdditionalInformation(List<ProductDetailResponseAdditionalInformationProductWeightInner> productWeight = default(List<ProductDetailResponseAdditionalInformationProductWeightInner>), bool isBulkFreight = default(bool), string height = default(string), string width = default(string), string length = default(string), string netWeight = default(string), string dimensionUnit = default(string))
+        public ProductDetailResponseAdditionalInformation(List<ProductDetailResponseAdditionalInformationProductWeightInner> productWeight = default, bool isBulkFreight = default, string height = default, string width = default, string length = default, string netWeight = default, string dimensionUnit = default)
         {
             this.ProductWeight = productWeight;
             this.IsBulkFreight = isBulkFreight;

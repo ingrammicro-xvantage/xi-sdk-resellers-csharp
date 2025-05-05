@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="eventId">A unique id used as identifier for the sepcific event and used for generating the x-hub signature..</param>
         /// <param name="eventType">The event name sent in the event request..</param>
         /// <param name="resource">resource.</param>
-        public OrderCreateV7Response(string topic = default(string), string varEvent = default(string), string eventTimeStamp = default(string), string eventId = default(string), string eventType = default(string), OrderCreateV7ResponseResource resource = default(OrderCreateV7ResponseResource))
+        public OrderCreateV7Response(string topic = default, string varEvent = default, string eventTimeStamp = default, string eventId = default, string eventType = default, OrderCreateV7ResponseResource resource = default)
         {
             this.Topic = topic;
             this.Event = varEvent;

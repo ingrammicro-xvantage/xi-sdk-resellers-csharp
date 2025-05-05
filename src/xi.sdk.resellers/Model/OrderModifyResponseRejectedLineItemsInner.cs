@@ -42,7 +42,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantityOrdered">The quantity ordered of the failed line item..</param>
         /// <param name="rejectCode">The rejection code for the failed line item..</param>
         /// <param name="rejectReason">The rejection reason for the failed line item..</param>
-        public OrderModifyResponseRejectedLineItemsInner(string ingramLineNumber = default(string), string customerLineNumber = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), int quantityOrdered = default(int), string rejectCode = default(string), string rejectReason = default(string))
+        public OrderModifyResponseRejectedLineItemsInner(string ingramLineNumber = default, string customerLineNumber = default, string ingramPartNumber = default, string vendorPartNumber = default, int quantityOrdered = default, string rejectCode = default, string rejectReason = default)
         {
             this.IngramLineNumber = ingramLineNumber;
             this.CustomerLineNumber = customerLineNumber;

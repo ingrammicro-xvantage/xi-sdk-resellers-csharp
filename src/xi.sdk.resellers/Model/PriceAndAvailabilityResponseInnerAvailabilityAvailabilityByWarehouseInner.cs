@@ -42,7 +42,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantityBackorderedEta">The estimated time of arrival of a product that has been backordered in a given warehouse..</param>
         /// <param name="quantityOnOrder">The quantity of the product on order..</param>
         /// <param name="backOrderInfo">*Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara)..</param>
-        public PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner(string location = default(string), string warehouseId = default(string), int? quantityAvailable = default(int?), int? quantityBackordered = default(int?), string quantityBackorderedEta = default(string), int? quantityOnOrder = default(int?), List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner> backOrderInfo = default(List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner>))
+        public PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner(string location = default, string warehouseId = default, int? quantityAvailable = default, int? quantityBackordered = default, string quantityBackorderedEta = default, int? quantityOnOrder = default, List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner> backOrderInfo = default)
         {
             this.Location = location;
             this.WarehouseId = warehouseId;

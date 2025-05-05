@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="unit">unit.</param>
         /// <param name="frequency">frequency.</param>
         /// <param name="unitValue">unitValue.</param>
-        public QuoteDetailsResponseProductsInnerBillDetailsInner(string type = default(string), string unit = default(string), int frequency = default(int), string unitValue = default(string))
+        public QuoteDetailsResponseProductsInnerBillDetailsInner(string type = default, string unit = default, int frequency = default, string unitValue = default)
         {
             this.Type = type;
             this.Unit = unit;

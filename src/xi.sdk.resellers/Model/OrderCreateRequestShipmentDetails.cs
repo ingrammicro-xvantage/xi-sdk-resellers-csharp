@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="requestedDeliveryDate">The reseller-requested delivery date in UTC format. Delivery date is not guaranteed..</param>
         /// <param name="signatureRequired">Specifies whether a signature is required for delivery. Default is False..</param>
         /// <param name="shippingInstructions">shippingInstructions.</param>
-        public OrderCreateRequestShipmentDetails(string carrierCode = default(string), string freightAccountNumber = default(string), string shipComplete = default(string), DateOnly requestedDeliveryDate = default(DateOnly), bool signatureRequired = default(bool), string shippingInstructions = default(string))
+        public OrderCreateRequestShipmentDetails(string carrierCode = default, string freightAccountNumber = default, string shipComplete = default, DateOnly requestedDeliveryDate = default, bool signatureRequired = default, string shippingInstructions = default)
         {
             this.CarrierCode = carrierCode;
             this.FreightAccountNumber = freightAccountNumber;

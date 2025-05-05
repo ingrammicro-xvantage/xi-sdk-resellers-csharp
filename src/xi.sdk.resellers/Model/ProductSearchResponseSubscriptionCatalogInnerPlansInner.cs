@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="planDescription">The description of the Plan.</param>
         /// <param name="subscriptionPeriodSummary">subscriptionPeriodSummary.</param>
         /// <param name="links">links.</param>
-        public ProductSearchResponseSubscriptionCatalogInnerPlansInner(string planId = default(string), string planName = default(string), string planDescription = default(string), List<ProductSearchResponseSubscriptionCatalogInnerPlansInnerSubscriptionPeriodSummaryInner> subscriptionPeriodSummary = default(List<ProductSearchResponseSubscriptionCatalogInnerPlansInnerSubscriptionPeriodSummaryInner>), List<ProductSearchResponseSubscriptionCatalogInnerPlansInnerLinksInner> links = default(List<ProductSearchResponseSubscriptionCatalogInnerPlansInnerLinksInner>))
+        public ProductSearchResponseSubscriptionCatalogInnerPlansInner(string planId = default, string planName = default, string planDescription = default, List<ProductSearchResponseSubscriptionCatalogInnerPlansInnerSubscriptionPeriodSummaryInner> subscriptionPeriodSummary = default, List<ProductSearchResponseSubscriptionCatalogInnerPlansInnerLinksInner> links = default)
         {
             this.PlanId = planId;
             this.PlanName = planName;

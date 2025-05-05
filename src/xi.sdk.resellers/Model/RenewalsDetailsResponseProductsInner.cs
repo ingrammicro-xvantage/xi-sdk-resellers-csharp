@@ -43,7 +43,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantity">The quantity of the line item..</param>
         /// <param name="unitPrice">The unit price of the line item..</param>
         /// <param name="isConsolidated">Is the line item consolidated? Yes or No..</param>
-        public RenewalsDetailsResponseProductsInner(string ingramLineNumber = default(string), string productDescription = default(string), string vendorPartNumber = default(string), string ingramPartNumber = default(string), string manufacturerPartNumber = default(string), int quantity = default(int), decimal unitPrice = default(decimal), string isConsolidated = default(string))
+        public RenewalsDetailsResponseProductsInner(string ingramLineNumber = default, string productDescription = default, string vendorPartNumber = default, string ingramPartNumber = default, string manufacturerPartNumber = default, int quantity = default, decimal unitPrice = default, string isConsolidated = default)
         {
             this.IngramLineNumber = ingramLineNumber;
             this.ProductDescription = productDescription;

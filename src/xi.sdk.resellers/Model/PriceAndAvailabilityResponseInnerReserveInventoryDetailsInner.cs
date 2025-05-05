@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantityAvailable">The availability of the product reserved..</param>
         /// <param name="effectivedate">The reservation date for the product in UTC format..</param>
         /// <param name="expirydate">The expiration date for the reservation of the product in UTC format..</param>
-        public PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner(int? quantityReserved = default(int?), int? quantityAvailable = default(int?), string effectivedate = default(string), string expirydate = default(string))
+        public PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner(int? quantityReserved = default, int? quantityAvailable = default, string effectivedate = default, string expirydate = default)
         {
             this.QuantityReserved = quantityReserved;
             this.QuantityAvailable = quantityAvailable;

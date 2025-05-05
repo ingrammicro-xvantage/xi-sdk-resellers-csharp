@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="contractStartDate">Start date of the contract..</param>
         /// <param name="contractEndDate">End date of the contract..</param>
         /// <param name="contractDuration">The duration of the contract..</param>
-        public OrderDetailB2BLinesInnerServiceContractInfoContractInfo(string contractDescription = default(string), string contractNumber = default(string), string contractStatus = default(string), string contractStartDate = default(string), string contractEndDate = default(string), string contractDuration = default(string))
+        public OrderDetailB2BLinesInnerServiceContractInfoContractInfo(string contractDescription = default, string contractNumber = default, string contractStatus = default, string contractStartDate = default, string contractEndDate = default, string contractDuration = default)
         {
             this.ContractDescription = contractDescription;
             this.ContractNumber = contractNumber;

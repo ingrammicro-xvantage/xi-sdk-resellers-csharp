@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="renewals">renewals.</param>
         /// <param name="nextPage">URL for the next page..</param>
         /// <param name="previousPage">URL for the previous page..</param>
-        public RenewalsSearchResponse(int recordsFound = default(int), int pageSize = default(int), int pageNumber = default(int), List<RenewalsSearchResponseRenewalsInner> renewals = default(List<RenewalsSearchResponseRenewalsInner>), string nextPage = default(string), string previousPage = default(string))
+        public RenewalsSearchResponse(int recordsFound = default, int pageSize = default, int pageNumber = default, List<RenewalsSearchResponseRenewalsInner> renewals = default, string nextPage = default, string previousPage = default)
         {
             this.RecordsFound = recordsFound;
             this.PageSize = pageSize;

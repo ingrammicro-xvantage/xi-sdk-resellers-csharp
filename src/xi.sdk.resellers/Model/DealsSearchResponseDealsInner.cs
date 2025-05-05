@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="vendor">The vendor&#39;s name..</param>
         /// <param name="dealExpiryDate">Expiration date of the deal/Special bid..</param>
         /// <param name="links">links.</param>
-        public DealsSearchResponseDealsInner(string dealId = default(string), string varVersion = default(string), string endUser = default(string), string vendor = default(string), string dealExpiryDate = default(string), RenewalsSearchResponseRenewalsInnerLinksInner links = default(RenewalsSearchResponseRenewalsInnerLinksInner))
+        public DealsSearchResponseDealsInner(string dealId = default, string varVersion = default, string endUser = default, string vendor = default, string dealExpiryDate = default, RenewalsSearchResponseRenewalsInnerLinksInner links = default)
         {
             this.DealId = dealId;
             this.VarVersion = varVersion;

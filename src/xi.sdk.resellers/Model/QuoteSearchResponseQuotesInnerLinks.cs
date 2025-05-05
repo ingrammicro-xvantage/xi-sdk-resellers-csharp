@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="topic">topic.</param>
         /// <param name="href">href.</param>
         /// <param name="type">type.</param>
-        public QuoteSearchResponseQuotesInnerLinks(string topic = default(string), string href = default(string), string type = default(string))
+        public QuoteSearchResponseQuotesInnerLinks(string topic = default, string href = default, string type = default)
         {
             this.Topic = topic;
             this.Href = href;

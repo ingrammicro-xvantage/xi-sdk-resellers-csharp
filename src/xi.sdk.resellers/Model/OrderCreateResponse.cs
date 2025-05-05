@@ -45,7 +45,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="shipToInfo">shipToInfo.</param>
         /// <param name="endUserInfo">endUserInfo.</param>
         /// <param name="orders">Order-level details..</param>
-        public OrderCreateResponse(string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string billToAddressId = default(string), string specialBidNumber = default(string), bool orderSplit = default(bool), bool processedPartially = default(bool), decimal purchaseOrderTotal = default(decimal), OrderCreateResponseShipToInfo shipToInfo = default(OrderCreateResponseShipToInfo), OrderCreateResponseEndUserInfo endUserInfo = default(OrderCreateResponseEndUserInfo), List<OrderCreateResponseOrdersInner> orders = default(List<OrderCreateResponseOrdersInner>))
+        public OrderCreateResponse(string customerOrderNumber = default, string endCustomerOrderNumber = default, string billToAddressId = default, string specialBidNumber = default, bool orderSplit = default, bool processedPartially = default, decimal purchaseOrderTotal = default, OrderCreateResponseShipToInfo shipToInfo = default, OrderCreateResponseEndUserInfo endUserInfo = default, List<OrderCreateResponseOrdersInner> orders = default)
         {
             this.CustomerOrderNumber = customerOrderNumber;
             this.EndCustomerOrderNumber = endCustomerOrderNumber;

@@ -42,7 +42,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="internalBusinessEntity">Cisco internal business entity.</param>
         /// <param name="itemType">Cisco item type.</param>
         /// <param name="globalListPrice">Cisco global list price.</param>
-        public ProductDetailResponseCiscoFields(string productSubGroup = default(string), string serviceProgramName = default(string), string itemCatalogCategory = default(string), string configurationIndicator = default(string), string internalBusinessEntity = default(string), string itemType = default(string), string globalListPrice = default(string))
+        public ProductDetailResponseCiscoFields(string productSubGroup = default, string serviceProgramName = default, string itemCatalogCategory = default, string configurationIndicator = default, string internalBusinessEntity = default, string itemType = default, string globalListPrice = default)
         {
             this.ProductSubGroup = productSubGroup;
             this.ServiceProgramName = serviceProgramName;

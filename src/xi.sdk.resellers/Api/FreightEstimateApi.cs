@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
         /// <param name="freightRequest"> (optional)</param>
         /// <returns>FreightResponse</returns>
-        FreightResponse PostFreightestimate(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default(string?), FreightRequest? freightRequest = default(FreightRequest?));
+        FreightResponse PostFreightestimate(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default, FreightRequest? freightRequest = default);
 
         /// <summary>
         /// Freight Estimate
@@ -57,7 +57,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
         /// <param name="freightRequest"> (optional)</param>
         /// <returns>ApiResponse of FreightResponse</returns>
-        ApiResponse<FreightResponse> PostFreightestimateWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default(string?), FreightRequest? freightRequest = default(FreightRequest?));
+        ApiResponse<FreightResponse> PostFreightestimateWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default, FreightRequest? freightRequest = default);
         #endregion Synchronous Operations
     }
 
@@ -82,7 +82,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="freightRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FreightResponse</returns>
-        System.Threading.Tasks.Task<FreightResponse> PostFreightestimateAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default(string?), FreightRequest? freightRequest = default(FreightRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<FreightResponse> PostFreightestimateAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default, FreightRequest? freightRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Freight Estimate
@@ -99,7 +99,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="freightRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FreightResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FreightResponse>> PostFreightestimateWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default(string?), FreightRequest? freightRequest = default(FreightRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<FreightResponse>> PostFreightestimateWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default, FreightRequest? freightRequest = default, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -324,7 +324,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
         /// <param name="freightRequest"> (optional)</param>
         /// <returns>FreightResponse</returns>
-        public FreightResponse PostFreightestimate(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default(string?), FreightRequest? freightRequest = default(FreightRequest?))
+        public FreightResponse PostFreightestimate(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default, FreightRequest? freightRequest = default)
         {
             xi.sdk.resellers.Client.ApiResponse<FreightResponse> localVarResponse = PostFreightestimateWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMCustomerContact, iMSenderID, freightRequest);
             return localVarResponse.Data;
@@ -341,7 +341,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
         /// <param name="freightRequest"> (optional)</param>
         /// <returns>ApiResponse of FreightResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<FreightResponse> PostFreightestimateWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default(string?), FreightRequest? freightRequest = default(FreightRequest?))
+        public xi.sdk.resellers.Client.ApiResponse<FreightResponse> PostFreightestimateWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default, FreightRequest? freightRequest = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -417,7 +417,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="freightRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FreightResponse</returns>
-        public async System.Threading.Tasks.Task<FreightResponse> PostFreightestimateAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default(string?), FreightRequest? freightRequest = default(FreightRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<FreightResponse> PostFreightestimateAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default, FreightRequest? freightRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<FreightResponse> localVarResponse = await PostFreightestimateWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMCustomerContact, iMSenderID, freightRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -435,7 +435,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="freightRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FreightResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<FreightResponse>> PostFreightestimateWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default(string?), FreightRequest? freightRequest = default(FreightRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<FreightResponse>> PostFreightestimateWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default, FreightRequest? freightRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)

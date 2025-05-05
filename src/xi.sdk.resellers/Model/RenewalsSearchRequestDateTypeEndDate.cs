@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="customStartDate">Custom from date for Renewal end date..</param>
         /// <param name="customEndDate">Custom to date for Renewal end date..</param>
-        public RenewalsSearchRequestDateTypeEndDate(string customStartDate = default(string), string customEndDate = default(string))
+        public RenewalsSearchRequestDateTypeEndDate(string customStartDate = default, string customEndDate = default)
         {
             this.CustomStartDate = customStartDate;
             this.CustomEndDate = customEndDate;

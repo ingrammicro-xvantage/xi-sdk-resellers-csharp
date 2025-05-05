@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems</param>
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
         /// <returns>ProductDetailResponse</returns>
-        ProductDetailResponse GetResellerV6Productdetail(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?));
+        ProductDetailResponse GetResellerV6Productdetail(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default);
 
         /// <summary>
         /// Product Details
@@ -55,7 +55,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems</param>
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
         /// <returns>ApiResponse of ProductDetailResponse</returns>
-        ApiResponse<ProductDetailResponse> GetResellerV6ProductdetailWithHttpInfo(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?));
+        ApiResponse<ProductDetailResponse> GetResellerV6ProductdetailWithHttpInfo(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default);
         /// <summary>
         /// Product Details
         /// </summary>
@@ -71,7 +71,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="planId">Id of the subscription plan.   &lt;span style&#x3D;&#39;color:red&#39;&gt;To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.&lt;/span&gt; (optional)</param>
         /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <returns>ProductDetailResponse</returns>
-        ProductDetailResponse GetResellerV6Productdetailcmp(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? planName = default(string?), string? planId = default(string?), string? vendorPartNumber = default(string?));
+        ProductDetailResponse GetResellerV6Productdetailcmp(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? planName = default, string? planId = default, string? vendorPartNumber = default);
 
         /// <summary>
         /// Product Details
@@ -88,7 +88,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="planId">Id of the subscription plan.   &lt;span style&#x3D;&#39;color:red&#39;&gt;To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.&lt;/span&gt; (optional)</param>
         /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <returns>ApiResponse of ProductDetailResponse</returns>
-        ApiResponse<ProductDetailResponse> GetResellerV6ProductdetailcmpWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? planName = default(string?), string? planId = default(string?), string? vendorPartNumber = default(string?));
+        ApiResponse<ProductDetailResponse> GetResellerV6ProductdetailcmpWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? planName = default, string? planId = default, string? vendorPartNumber = default);
         /// <summary>
         /// Search Products
         /// </summary>
@@ -115,7 +115,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="planID">ID of the plan (optional)</param>
         /// <param name="showGroupInfo">In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group. (optional)</param>
         /// <returns>ProductSearchResponse</returns>
-        ProductSearchResponse GetResellerV6Productsearch(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default(int?), int? pageSize = default(int?), string? iMSenderID = default(string?), string? type = default(string?), string? hasDiscounts = default(string?), List<string>? vendor = default(List<string>?), List<string>? vendorPartNumber = default(List<string>?), string? acceptLanguage = default(string?), string? vendorNumber = default(string?), List<string>? keyword = default(List<string>?), string? category = default(string?), string? skipAuthorisation = default(string?), string? groupName = default(string?), string? planID = default(string?), bool? showGroupInfo = default(bool?));
+        ProductSearchResponse GetResellerV6Productsearch(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default, int? pageSize = default, string? iMSenderID = default, string? type = default, string? hasDiscounts = default, List<string>? vendor = default, List<string>? vendorPartNumber = default, string? acceptLanguage = default, string? vendorNumber = default, List<string>? keyword = default, string? category = default, string? skipAuthorisation = default, string? groupName = default, string? planID = default, bool? showGroupInfo = default);
 
         /// <summary>
         /// Search Products
@@ -143,7 +143,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="planID">ID of the plan (optional)</param>
         /// <param name="showGroupInfo">In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group. (optional)</param>
         /// <returns>ApiResponse of ProductSearchResponse</returns>
-        ApiResponse<ProductSearchResponse> GetResellerV6ProductsearchWithHttpInfo(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default(int?), int? pageSize = default(int?), string? iMSenderID = default(string?), string? type = default(string?), string? hasDiscounts = default(string?), List<string>? vendor = default(List<string>?), List<string>? vendorPartNumber = default(List<string>?), string? acceptLanguage = default(string?), string? vendorNumber = default(string?), List<string>? keyword = default(List<string>?), string? category = default(string?), string? skipAuthorisation = default(string?), string? groupName = default(string?), string? planID = default(string?), bool? showGroupInfo = default(bool?));
+        ApiResponse<ProductSearchResponse> GetResellerV6ProductsearchWithHttpInfo(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default, int? pageSize = default, string? iMSenderID = default, string? type = default, string? hasDiscounts = default, List<string>? vendor = default, List<string>? vendorPartNumber = default, string? acceptLanguage = default, string? vendorNumber = default, List<string>? keyword = default, string? category = default, string? skipAuthorisation = default, string? groupName = default, string? planID = default, bool? showGroupInfo = default);
         /// <summary>
         /// Price and Availability
         /// </summary>
@@ -160,7 +160,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="priceAndAvailabilityRequest"> (optional)</param>
         /// <returns>List&lt;PriceAndAvailabilityResponseInner&gt;</returns>
-        List<PriceAndAvailabilityResponseInner> PostPriceandavailability(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default(PriceAndAvailabilityRequest?));
+        List<PriceAndAvailabilityResponseInner> PostPriceandavailability(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default, string? iMSenderID = default, PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default);
 
         /// <summary>
         /// Price and Availability
@@ -178,7 +178,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="priceAndAvailabilityRequest"> (optional)</param>
         /// <returns>ApiResponse of List&lt;PriceAndAvailabilityResponseInner&gt;</returns>
-        ApiResponse<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityWithHttpInfo(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default(PriceAndAvailabilityRequest?));
+        ApiResponse<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityWithHttpInfo(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default, string? iMSenderID = default, PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default);
         #endregion Synchronous Operations
     }
 
@@ -202,7 +202,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductDetailResponse</returns>
-        System.Threading.Tasks.Task<ProductDetailResponse> GetResellerV6ProductdetailAsync(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductDetailResponse> GetResellerV6ProductdetailAsync(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Product Details
@@ -218,7 +218,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductDetailResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductDetailResponse>> GetResellerV6ProductdetailWithHttpInfoAsync(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductDetailResponse>> GetResellerV6ProductdetailWithHttpInfoAsync(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Product Details
         /// </summary>
@@ -235,7 +235,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductDetailResponse</returns>
-        System.Threading.Tasks.Task<ProductDetailResponse> GetResellerV6ProductdetailcmpAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? planName = default(string?), string? planId = default(string?), string? vendorPartNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductDetailResponse> GetResellerV6ProductdetailcmpAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? planName = default, string? planId = default, string? vendorPartNumber = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Product Details
@@ -253,7 +253,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductDetailResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductDetailResponse>> GetResellerV6ProductdetailcmpWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? planName = default(string?), string? planId = default(string?), string? vendorPartNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductDetailResponse>> GetResellerV6ProductdetailcmpWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? planName = default, string? planId = default, string? vendorPartNumber = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Search Products
         /// </summary>
@@ -281,7 +281,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="showGroupInfo">In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductSearchResponse</returns>
-        System.Threading.Tasks.Task<ProductSearchResponse> GetResellerV6ProductsearchAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default(int?), int? pageSize = default(int?), string? iMSenderID = default(string?), string? type = default(string?), string? hasDiscounts = default(string?), List<string>? vendor = default(List<string>?), List<string>? vendorPartNumber = default(List<string>?), string? acceptLanguage = default(string?), string? vendorNumber = default(string?), List<string>? keyword = default(List<string>?), string? category = default(string?), string? skipAuthorisation = default(string?), string? groupName = default(string?), string? planID = default(string?), bool? showGroupInfo = default(bool?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductSearchResponse> GetResellerV6ProductsearchAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default, int? pageSize = default, string? iMSenderID = default, string? type = default, string? hasDiscounts = default, List<string>? vendor = default, List<string>? vendorPartNumber = default, string? acceptLanguage = default, string? vendorNumber = default, List<string>? keyword = default, string? category = default, string? skipAuthorisation = default, string? groupName = default, string? planID = default, bool? showGroupInfo = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Search Products
@@ -310,7 +310,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="showGroupInfo">In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductSearchResponse>> GetResellerV6ProductsearchWithHttpInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default(int?), int? pageSize = default(int?), string? iMSenderID = default(string?), string? type = default(string?), string? hasDiscounts = default(string?), List<string>? vendor = default(List<string>?), List<string>? vendorPartNumber = default(List<string>?), string? acceptLanguage = default(string?), string? vendorNumber = default(string?), List<string>? keyword = default(List<string>?), string? category = default(string?), string? skipAuthorisation = default(string?), string? groupName = default(string?), string? planID = default(string?), bool? showGroupInfo = default(bool?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductSearchResponse>> GetResellerV6ProductsearchWithHttpInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default, int? pageSize = default, string? iMSenderID = default, string? type = default, string? hasDiscounts = default, List<string>? vendor = default, List<string>? vendorPartNumber = default, string? acceptLanguage = default, string? vendorNumber = default, List<string>? keyword = default, string? category = default, string? skipAuthorisation = default, string? groupName = default, string? planID = default, bool? showGroupInfo = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Price and Availability
         /// </summary>
@@ -328,7 +328,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="priceAndAvailabilityRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;PriceAndAvailabilityResponseInner&gt;</returns>
-        System.Threading.Tasks.Task<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default(PriceAndAvailabilityRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default, string? iMSenderID = default, PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Price and Availability
@@ -347,7 +347,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="priceAndAvailabilityRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;PriceAndAvailabilityResponseInner&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PriceAndAvailabilityResponseInner>>> PostPriceandavailabilityWithHttpInfoAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default(PriceAndAvailabilityRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<PriceAndAvailabilityResponseInner>>> PostPriceandavailabilityWithHttpInfoAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default, string? iMSenderID = default, PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -571,7 +571,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems</param>
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
         /// <returns>ProductDetailResponse</returns>
-        public ProductDetailResponse GetResellerV6Productdetail(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?))
+        public ProductDetailResponse GetResellerV6Productdetail(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default)
         {
             xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse> localVarResponse = GetResellerV6ProductdetailWithHttpInfo(ingramPartNumber, iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID);
             return localVarResponse.Data;
@@ -587,7 +587,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems</param>
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
         /// <returns>ApiResponse of ProductDetailResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse> GetResellerV6ProductdetailWithHttpInfo(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?))
+        public xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse> GetResellerV6ProductdetailWithHttpInfo(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default)
         {
             // verify the required parameter 'ingramPartNumber' is set
             if (ingramPartNumber == null)
@@ -660,7 +660,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductDetailResponse</returns>
-        public async System.Threading.Tasks.Task<ProductDetailResponse> GetResellerV6ProductdetailAsync(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductDetailResponse> GetResellerV6ProductdetailAsync(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse> localVarResponse = await GetResellerV6ProductdetailWithHttpInfoAsync(ingramPartNumber, iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -677,7 +677,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductDetailResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse>> GetResellerV6ProductdetailWithHttpInfoAsync(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse>> GetResellerV6ProductdetailWithHttpInfoAsync(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'ingramPartNumber' is set
             if (ingramPartNumber == null)
@@ -754,7 +754,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="planId">Id of the subscription plan.   &lt;span style&#x3D;&#39;color:red&#39;&gt;To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.&lt;/span&gt; (optional)</param>
         /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <returns>ProductDetailResponse</returns>
-        public ProductDetailResponse GetResellerV6Productdetailcmp(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? planName = default(string?), string? planId = default(string?), string? vendorPartNumber = default(string?))
+        public ProductDetailResponse GetResellerV6Productdetailcmp(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? planName = default, string? planId = default, string? vendorPartNumber = default)
         {
             xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse> localVarResponse = GetResellerV6ProductdetailcmpWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, planName, planId, vendorPartNumber);
             return localVarResponse.Data;
@@ -772,7 +772,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="planId">Id of the subscription plan.   &lt;span style&#x3D;&#39;color:red&#39;&gt;To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.&lt;/span&gt; (optional)</param>
         /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <returns>ApiResponse of ProductDetailResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse> GetResellerV6ProductdetailcmpWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? planName = default(string?), string? planId = default(string?), string? vendorPartNumber = default(string?))
+        public xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse> GetResellerV6ProductdetailcmpWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? planName = default, string? planId = default, string? vendorPartNumber = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -854,7 +854,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductDetailResponse</returns>
-        public async System.Threading.Tasks.Task<ProductDetailResponse> GetResellerV6ProductdetailcmpAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? planName = default(string?), string? planId = default(string?), string? vendorPartNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductDetailResponse> GetResellerV6ProductdetailcmpAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? planName = default, string? planId = default, string? vendorPartNumber = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse> localVarResponse = await GetResellerV6ProductdetailcmpWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, planName, planId, vendorPartNumber, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -873,7 +873,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductDetailResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse>> GetResellerV6ProductdetailcmpWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? planName = default(string?), string? planId = default(string?), string? vendorPartNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse>> GetResellerV6ProductdetailcmpWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? planName = default, string? planId = default, string? vendorPartNumber = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -968,7 +968,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="planID">ID of the plan (optional)</param>
         /// <param name="showGroupInfo">In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group. (optional)</param>
         /// <returns>ProductSearchResponse</returns>
-        public ProductSearchResponse GetResellerV6Productsearch(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default(int?), int? pageSize = default(int?), string? iMSenderID = default(string?), string? type = default(string?), string? hasDiscounts = default(string?), List<string>? vendor = default(List<string>?), List<string>? vendorPartNumber = default(List<string>?), string? acceptLanguage = default(string?), string? vendorNumber = default(string?), List<string>? keyword = default(List<string>?), string? category = default(string?), string? skipAuthorisation = default(string?), string? groupName = default(string?), string? planID = default(string?), bool? showGroupInfo = default(bool?))
+        public ProductSearchResponse GetResellerV6Productsearch(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default, int? pageSize = default, string? iMSenderID = default, string? type = default, string? hasDiscounts = default, List<string>? vendor = default, List<string>? vendorPartNumber = default, string? acceptLanguage = default, string? vendorNumber = default, List<string>? keyword = default, string? category = default, string? skipAuthorisation = default, string? groupName = default, string? planID = default, bool? showGroupInfo = default)
         {
             xi.sdk.resellers.Client.ApiResponse<ProductSearchResponse> localVarResponse = GetResellerV6ProductsearchWithHttpInfo(iMCustomerNumber, iMCorrelationID, iMCountryCode, pageNumber, pageSize, iMSenderID, type, hasDiscounts, vendor, vendorPartNumber, acceptLanguage, vendorNumber, keyword, category, skipAuthorisation, groupName, planID, showGroupInfo);
             return localVarResponse.Data;
@@ -997,7 +997,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="planID">ID of the plan (optional)</param>
         /// <param name="showGroupInfo">In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group. (optional)</param>
         /// <returns>ApiResponse of ProductSearchResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<ProductSearchResponse> GetResellerV6ProductsearchWithHttpInfo(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default(int?), int? pageSize = default(int?), string? iMSenderID = default(string?), string? type = default(string?), string? hasDiscounts = default(string?), List<string>? vendor = default(List<string>?), List<string>? vendorPartNumber = default(List<string>?), string? acceptLanguage = default(string?), string? vendorNumber = default(string?), List<string>? keyword = default(List<string>?), string? category = default(string?), string? skipAuthorisation = default(string?), string? groupName = default(string?), string? planID = default(string?), bool? showGroupInfo = default(bool?))
+        public xi.sdk.resellers.Client.ApiResponse<ProductSearchResponse> GetResellerV6ProductsearchWithHttpInfo(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default, int? pageSize = default, string? iMSenderID = default, string? type = default, string? hasDiscounts = default, List<string>? vendor = default, List<string>? vendorPartNumber = default, string? acceptLanguage = default, string? vendorNumber = default, List<string>? keyword = default, string? category = default, string? skipAuthorisation = default, string? groupName = default, string? planID = default, bool? showGroupInfo = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -1134,7 +1134,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="showGroupInfo">In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductSearchResponse</returns>
-        public async System.Threading.Tasks.Task<ProductSearchResponse> GetResellerV6ProductsearchAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default(int?), int? pageSize = default(int?), string? iMSenderID = default(string?), string? type = default(string?), string? hasDiscounts = default(string?), List<string>? vendor = default(List<string>?), List<string>? vendorPartNumber = default(List<string>?), string? acceptLanguage = default(string?), string? vendorNumber = default(string?), List<string>? keyword = default(List<string>?), string? category = default(string?), string? skipAuthorisation = default(string?), string? groupName = default(string?), string? planID = default(string?), bool? showGroupInfo = default(bool?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductSearchResponse> GetResellerV6ProductsearchAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default, int? pageSize = default, string? iMSenderID = default, string? type = default, string? hasDiscounts = default, List<string>? vendor = default, List<string>? vendorPartNumber = default, string? acceptLanguage = default, string? vendorNumber = default, List<string>? keyword = default, string? category = default, string? skipAuthorisation = default, string? groupName = default, string? planID = default, bool? showGroupInfo = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<ProductSearchResponse> localVarResponse = await GetResellerV6ProductsearchWithHttpInfoAsync(iMCustomerNumber, iMCorrelationID, iMCountryCode, pageNumber, pageSize, iMSenderID, type, hasDiscounts, vendor, vendorPartNumber, acceptLanguage, vendorNumber, keyword, category, skipAuthorisation, groupName, planID, showGroupInfo, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1164,7 +1164,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="showGroupInfo">In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ProductSearchResponse>> GetResellerV6ProductsearchWithHttpInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default(int?), int? pageSize = default(int?), string? iMSenderID = default(string?), string? type = default(string?), string? hasDiscounts = default(string?), List<string>? vendor = default(List<string>?), List<string>? vendorPartNumber = default(List<string>?), string? acceptLanguage = default(string?), string? vendorNumber = default(string?), List<string>? keyword = default(List<string>?), string? category = default(string?), string? skipAuthorisation = default(string?), string? groupName = default(string?), string? planID = default(string?), bool? showGroupInfo = default(bool?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ProductSearchResponse>> GetResellerV6ProductsearchWithHttpInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default, int? pageSize = default, string? iMSenderID = default, string? type = default, string? hasDiscounts = default, List<string>? vendor = default, List<string>? vendorPartNumber = default, string? acceptLanguage = default, string? vendorNumber = default, List<string>? keyword = default, string? category = default, string? skipAuthorisation = default, string? groupName = default, string? planID = default, bool? showGroupInfo = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -1293,7 +1293,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="priceAndAvailabilityRequest"> (optional)</param>
         /// <returns>List&lt;PriceAndAvailabilityResponseInner&gt;</returns>
-        public List<PriceAndAvailabilityResponseInner> PostPriceandavailability(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default(PriceAndAvailabilityRequest?))
+        public List<PriceAndAvailabilityResponseInner> PostPriceandavailability(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default, string? iMSenderID = default, PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default)
         {
             xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>> localVarResponse = PostPriceandavailabilityWithHttpInfo(includeAvailability, includePricing, iMCustomerNumber, iMCountryCode, iMCorrelationID, includeProductAttributes, iMSenderID, priceAndAvailabilityRequest);
             return localVarResponse.Data;
@@ -1312,7 +1312,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="priceAndAvailabilityRequest"> (optional)</param>
         /// <returns>ApiResponse of List&lt;PriceAndAvailabilityResponseInner&gt;</returns>
-        public xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityWithHttpInfo(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default(PriceAndAvailabilityRequest?))
+        public xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityWithHttpInfo(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default, string? iMSenderID = default, PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -1391,7 +1391,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="priceAndAvailabilityRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;PriceAndAvailabilityResponseInner&gt;</returns>
-        public async System.Threading.Tasks.Task<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default(PriceAndAvailabilityRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default, string? iMSenderID = default, PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>> localVarResponse = await PostPriceandavailabilityWithHttpInfoAsync(includeAvailability, includePricing, iMCustomerNumber, iMCountryCode, iMCorrelationID, includeProductAttributes, iMSenderID, priceAndAvailabilityRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1411,7 +1411,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="priceAndAvailabilityRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;PriceAndAvailabilityResponseInner&gt;)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>>> PostPriceandavailabilityWithHttpInfoAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default(PriceAndAvailabilityRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>>> PostPriceandavailabilityWithHttpInfoAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default, string? iMSenderID = default, PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)

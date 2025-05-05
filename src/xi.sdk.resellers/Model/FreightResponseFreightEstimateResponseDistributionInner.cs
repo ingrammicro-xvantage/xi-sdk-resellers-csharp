@@ -42,7 +42,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="totalWeight">Total weight..</param>
         /// <param name="transitDays">Number of transit days..</param>
         /// <param name="carrierList">carrierList.</param>
-        public FreightResponseFreightEstimateResponseDistributionInner(string shipFromBranchNumber = default(string), string carrierCode = default(string), string shipVia = default(string), decimal freightRate = default(decimal), decimal totalWeight = default(decimal), int transitDays = default(int), List<FreightResponseFreightEstimateResponseDistributionInnerCarrierListInner> carrierList = default(List<FreightResponseFreightEstimateResponseDistributionInnerCarrierListInner>))
+        public FreightResponseFreightEstimateResponseDistributionInner(string shipFromBranchNumber = default, string carrierCode = default, string shipVia = default, decimal freightRate = default, decimal totalWeight = default, int transitDays = default, List<FreightResponseFreightEstimateResponseDistributionInnerCarrierListInner> carrierList = default)
         {
             this.ShipFromBranchNumber = shipFromBranchNumber;
             this.CarrierCode = carrierCode;

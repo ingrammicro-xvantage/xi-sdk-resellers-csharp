@@ -46,7 +46,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="phoneNumber">Phone number of end user associated with the quote..</param>
         /// <param name="postalCode">Zip code of end user associated with the quote..</param>
         /// <param name="marketSegment">Market Segment of end user associated with the quote. End user market segment is included when end user is included in specific market segments like Educational, Government, Military, Medical - that may receive special pricing due to their segmentation..</param>
-        public QuoteDetailsResponseEndUserInfo(string contact = default(string), string companyName = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string addressLine3 = default(string), string city = default(string), string state = default(string), string email = default(string), string phoneNumber = default(string), string postalCode = default(string), string marketSegment = default(string))
+        public QuoteDetailsResponseEndUserInfo(string contact = default, string companyName = default, string addressLine1 = default, string addressLine2 = default, string addressLine3 = default, string city = default, string state = default, string email = default, string phoneNumber = default, string postalCode = default, string marketSegment = default)
         {
             this.Contact = contact;
             this.CompanyName = companyName;

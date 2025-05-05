@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="pageNumber">Page index or page number for the list of quotes being returned..</param>
         /// <param name="invoices">The Invoices details for the requested criteria..</param>
         /// <param name="nextPage">Next page of the pagination..</param>
-        public InvoiceSearchResponse(int recordsFound = default(int), int pageSize = default(int), int pageNumber = default(int), List<InvoiceSearchResponseInvoicesInner> invoices = default(List<InvoiceSearchResponseInvoicesInner>), string nextPage = default(string))
+        public InvoiceSearchResponse(int recordsFound = default, int pageSize = default, int pageNumber = default, List<InvoiceSearchResponseInvoicesInner> invoices = default, string nextPage = default)
         {
             this.RecordsFound = recordsFound;
             this.PageSize = pageSize;

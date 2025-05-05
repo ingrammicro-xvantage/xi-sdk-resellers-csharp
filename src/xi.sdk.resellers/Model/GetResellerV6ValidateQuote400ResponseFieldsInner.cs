@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="field">Contains the name of the field..</param>
         /// <param name="message">Gives the description of the field message..</param>
         /// <param name="value">Value sent in the input for the specific field..</param>
-        public GetResellerV6ValidateQuote400ResponseFieldsInner(string field = default(string), string message = default(string), string value = default(string))
+        public GetResellerV6ValidateQuote400ResponseFieldsInner(string field = default, string message = default, string value = default)
         {
             this.Field = field;
             this.Message = message;

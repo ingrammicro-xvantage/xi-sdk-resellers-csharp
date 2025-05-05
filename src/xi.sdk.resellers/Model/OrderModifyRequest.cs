@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="shipToInfo">shipToInfo.</param>
         /// <param name="lines">The order line items..</param>
         /// <param name="additionalAttributes">Header-level additional attributes..</param>
-        public OrderModifyRequest(string notes = default(string), OrderModifyRequestShipToInfo shipToInfo = default(OrderModifyRequestShipToInfo), List<OrderModifyRequestLinesInner> lines = default(List<OrderModifyRequestLinesInner>), List<OrderModifyRequestAdditionalAttributesInner> additionalAttributes = default(List<OrderModifyRequestAdditionalAttributesInner>))
+        public OrderModifyRequest(string notes = default, OrderModifyRequestShipToInfo shipToInfo = default, List<OrderModifyRequestLinesInner> lines = default, List<OrderModifyRequestAdditionalAttributesInner> additionalAttributes = default)
         {
             this.Notes = notes;
             this.ShipToInfo = shipToInfo;

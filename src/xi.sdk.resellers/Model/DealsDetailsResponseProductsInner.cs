@@ -49,7 +49,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="startDate">Start Date..</param>
         /// <param name="expirationDate">Expiration date..</param>
         /// <param name="daysRemaining">Number of days remaining before the deal expires..</param>
-        public DealsDetailsResponseProductsInner(string ingramPartNumber = default(string), string vendorPartNumber = default(string), string upc = default(string), string productDescription = default(string), decimal msrp = default(decimal), decimal extendedMSRP = default(decimal), decimal standardPrice = default(decimal), int approvedQuantity = default(int), int remainingQuantity = default(int), string comments = default(string), string specialConditions = default(string), string startDate = default(string), string expirationDate = default(string), int daysRemaining = default(int))
+        public DealsDetailsResponseProductsInner(string ingramPartNumber = default, string vendorPartNumber = default, string upc = default, string productDescription = default, decimal msrp = default, decimal extendedMSRP = default, decimal standardPrice = default, int approvedQuantity = default, int remainingQuantity = default, string comments = default, string specialConditions = default, string startDate = default, string expirationDate = default, int daysRemaining = default)
         {
             this.IngramPartNumber = ingramPartNumber;
             this.VendorPartNumber = vendorPartNumber;

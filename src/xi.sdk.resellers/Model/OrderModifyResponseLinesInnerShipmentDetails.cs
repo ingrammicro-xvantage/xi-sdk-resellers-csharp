@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="carrierCode">The carrier code for the shipment containing the line item..</param>
         /// <param name="carrierName">The name of the carrier of the shipment containing the line item..</param>
         /// <param name="freightAccountNumber">The reseller&#39;s shipping account number with carrier. Used to bill the shipping carrier directly from the reseller&#39;s account with the carrier..</param>
-        public OrderModifyResponseLinesInnerShipmentDetails(string carrierCode = default(string), string carrierName = default(string), string freightAccountNumber = default(string))
+        public OrderModifyResponseLinesInnerShipmentDetails(string carrierCode = default, string carrierName = default, string freightAccountNumber = default)
         {
             this.CarrierCode = carrierCode;
             this.CarrierName = carrierName;

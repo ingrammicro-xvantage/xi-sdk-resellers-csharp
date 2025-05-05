@@ -73,7 +73,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="size">The number of records required in the call - max records 100 per page. (optional)</param>
         /// <param name="page">The page number reference. (optional)</param>
         /// <returns>DealsSearchResponse</returns>
-        DealsSearchResponse GetResellersV6Dealssearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? endUser = default(string?), string? vendor = default(string?), string? dealId = default(string?), int? size = default(int?), int? page = default(int?));
+        DealsSearchResponse GetResellersV6Dealssearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? endUser = default, string? vendor = default, string? dealId = default, int? size = default, int? page = default);
 
         /// <summary>
         /// Deals Search
@@ -92,7 +92,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="size">The number of records required in the call - max records 100 per page. (optional)</param>
         /// <param name="page">The page number reference. (optional)</param>
         /// <returns>ApiResponse of DealsSearchResponse</returns>
-        ApiResponse<DealsSearchResponse> GetResellersV6DealssearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? endUser = default(string?), string? vendor = default(string?), string? dealId = default(string?), int? size = default(int?), int? page = default(int?));
+        ApiResponse<DealsSearchResponse> GetResellersV6DealssearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? endUser = default, string? vendor = default, string? dealId = default, int? size = default, int? page = default);
         #endregion Synchronous Operations
     }
 
@@ -116,7 +116,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="dealId">Unique deal ID.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DealsDetailsResponse</returns>
-        System.Threading.Tasks.Task<DealsDetailsResponse> GetResellersV6DealsdetailsAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DealsDetailsResponse> GetResellersV6DealsdetailsAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Deals Details
@@ -132,7 +132,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="dealId">Unique deal ID.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DealsDetailsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DealsDetailsResponse>> GetResellersV6DealsdetailsWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DealsDetailsResponse>> GetResellersV6DealsdetailsWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Deals Search
         /// </summary>
@@ -151,7 +151,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="page">The page number reference. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DealsSearchResponse</returns>
-        System.Threading.Tasks.Task<DealsSearchResponse> GetResellersV6DealssearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? endUser = default(string?), string? vendor = default(string?), string? dealId = default(string?), int? size = default(int?), int? page = default(int?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DealsSearchResponse> GetResellersV6DealssearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? endUser = default, string? vendor = default, string? dealId = default, int? size = default, int? page = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Deals Search
@@ -171,7 +171,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="page">The page number reference. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DealsSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DealsSearchResponse>> GetResellersV6DealssearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? endUser = default(string?), string? vendor = default(string?), string? dealId = default(string?), int? size = default(int?), int? page = default(int?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DealsSearchResponse>> GetResellersV6DealssearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? endUser = default, string? vendor = default, string? dealId = default, int? size = default, int? page = default, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -485,7 +485,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="dealId">Unique deal ID.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DealsDetailsResponse</returns>
-        public async System.Threading.Tasks.Task<DealsDetailsResponse> GetResellersV6DealsdetailsAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DealsDetailsResponse> GetResellersV6DealsdetailsAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<DealsDetailsResponse> localVarResponse = await GetResellersV6DealsdetailsWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationId, dealId, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -502,7 +502,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="dealId">Unique deal ID.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DealsDetailsResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<DealsDetailsResponse>> GetResellersV6DealsdetailsWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<DealsDetailsResponse>> GetResellersV6DealsdetailsWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -582,7 +582,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="size">The number of records required in the call - max records 100 per page. (optional)</param>
         /// <param name="page">The page number reference. (optional)</param>
         /// <returns>DealsSearchResponse</returns>
-        public DealsSearchResponse GetResellersV6Dealssearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? endUser = default(string?), string? vendor = default(string?), string? dealId = default(string?), int? size = default(int?), int? page = default(int?))
+        public DealsSearchResponse GetResellersV6Dealssearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? endUser = default, string? vendor = default, string? dealId = default, int? size = default, int? page = default)
         {
             xi.sdk.resellers.Client.ApiResponse<DealsSearchResponse> localVarResponse = GetResellersV6DealssearchWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, endUser, vendor, dealId, size, page);
             return localVarResponse.Data;
@@ -602,7 +602,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="size">The number of records required in the call - max records 100 per page. (optional)</param>
         /// <param name="page">The page number reference. (optional)</param>
         /// <returns>ApiResponse of DealsSearchResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<DealsSearchResponse> GetResellersV6DealssearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? endUser = default(string?), string? vendor = default(string?), string? dealId = default(string?), int? size = default(int?), int? page = default(int?))
+        public xi.sdk.resellers.Client.ApiResponse<DealsSearchResponse> GetResellersV6DealssearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? endUser = default, string? vendor = default, string? dealId = default, int? size = default, int? page = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -694,7 +694,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="page">The page number reference. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DealsSearchResponse</returns>
-        public async System.Threading.Tasks.Task<DealsSearchResponse> GetResellersV6DealssearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? endUser = default(string?), string? vendor = default(string?), string? dealId = default(string?), int? size = default(int?), int? page = default(int?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DealsSearchResponse> GetResellersV6DealssearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? endUser = default, string? vendor = default, string? dealId = default, int? size = default, int? page = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<DealsSearchResponse> localVarResponse = await GetResellersV6DealssearchWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, endUser, vendor, dealId, size, page, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -715,7 +715,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="page">The page number reference. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DealsSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<DealsSearchResponse>> GetResellersV6DealssearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? endUser = default(string?), string? vendor = default(string?), string? dealId = default(string?), int? size = default(int?), int? page = default(int?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<DealsSearchResponse>> GetResellersV6DealssearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? endUser = default, string? vendor = default, string? dealId = default, int? size = default, int? page = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)

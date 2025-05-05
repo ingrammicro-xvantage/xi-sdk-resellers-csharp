@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="type">Describes the type of the error..</param>
         /// <param name="message">A detailed error message..</param>
         /// <param name="fields">fields.</param>
-        public GetResellerV6ValidateQuote400Response(string traceid = default(string), string type = default(string), string message = default(string), List<GetResellerV6ValidateQuote400ResponseFieldsInner> fields = default(List<GetResellerV6ValidateQuote400ResponseFieldsInner>))
+        public GetResellerV6ValidateQuote400Response(string traceid = default, string type = default, string message = default, List<GetResellerV6ValidateQuote400ResponseFieldsInner> fields = default)
         {
             this.Traceid = traceid;
             this.Type = type;

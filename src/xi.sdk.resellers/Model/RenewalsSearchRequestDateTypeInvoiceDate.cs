@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="customStartDate">Custom start date for invoice date..</param>
         /// <param name="customEndDate">Custom end date for invoice date..</param>
-        public RenewalsSearchRequestDateTypeInvoiceDate(string customStartDate = default(string), string customEndDate = default(string))
+        public RenewalsSearchRequestDateTypeInvoiceDate(string customStartDate = default, string customEndDate = default)
         {
             this.CustomStartDate = customStartDate;
             this.CustomEndDate = customEndDate;

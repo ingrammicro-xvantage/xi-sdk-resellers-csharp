@@ -74,7 +74,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="addUpdateDeleteLine">The line number that was added, updated, or deleted..</param>
         /// <param name="quantity">The quantity of the line item..</param>
         /// <param name="notes">The line-level notes..</param>
-        public OrderModifyRequestLinesInner(string ingramPartNumber = default(string), string ingramLineNumber = default(string), string customerLineNumber = default(string), AddUpdateDeleteLineEnum? addUpdateDeleteLine = default(AddUpdateDeleteLineEnum?), int quantity = default(int), string notes = default(string))
+        public OrderModifyRequestLinesInner(string ingramPartNumber = default, string ingramLineNumber = default, string customerLineNumber = default, AddUpdateDeleteLineEnum? addUpdateDeleteLine = default, int quantity = default, string notes = default)
         {
             this.IngramPartNumber = ingramPartNumber;
             this.IngramLineNumber = ingramLineNumber;

@@ -42,7 +42,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantityRequested">Number of quantity of the Product..</param>
         /// <param name="planID">Id of the plan.</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        public PriceAndAvailabilityRequestProductsInner(string ingramPartNumber = default(string), string vendorPartNumber = default(string), string customerPartNumber = default(string), string upc = default(string), string quantityRequested = default(string), string planID = default(string), List<PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner> additionalAttributes = default(List<PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner>))
+        public PriceAndAvailabilityRequestProductsInner(string ingramPartNumber = default, string vendorPartNumber = default, string customerPartNumber = default, string upc = default, string quantityRequested = default, string planID = default, List<PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner> additionalAttributes = default)
         {
             this.IngramPartNumber = ingramPartNumber;
             this.VendorPartNumber = vendorPartNumber;

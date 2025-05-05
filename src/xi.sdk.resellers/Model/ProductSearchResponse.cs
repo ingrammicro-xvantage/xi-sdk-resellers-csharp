@@ -42,7 +42,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="subscriptionCatalog">subscriptionCatalog.</param>
         /// <param name="nextPage">link/URL for accessing next page..</param>
         /// <param name="previousPage">link/URL for accessing previous page..</param>
-        public ProductSearchResponse(int recordsFound = default(int), int pageSize = default(int), int pageNumber = default(int), List<ProductSearchResponseCatalogInner> catalog = default(List<ProductSearchResponseCatalogInner>), List<ProductSearchResponseSubscriptionCatalogInner> subscriptionCatalog = default(List<ProductSearchResponseSubscriptionCatalogInner>), string nextPage = default(string), string previousPage = default(string))
+        public ProductSearchResponse(int recordsFound = default, int pageSize = default, int pageNumber = default, List<ProductSearchResponseCatalogInner> catalog = default, List<ProductSearchResponseSubscriptionCatalogInner> subscriptionCatalog = default, string nextPage = default, string previousPage = default)
         {
             this.RecordsFound = recordsFound;
             this.PageSize = pageSize;

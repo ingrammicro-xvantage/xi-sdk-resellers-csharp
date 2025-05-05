@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="shipSource">Source of the shipment..</param>
         /// <param name="shipDescription">Shipment description..</param>
         /// <param name="shipDate">Ship date..</param>
-        public OrderDetailB2BLinesInnerEstimatedDatesInnerShip(string shipDateType = default(string), OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange shipDateRange = default(OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange), string shipSource = default(string), string shipDescription = default(string), string shipDate = default(string))
+        public OrderDetailB2BLinesInnerEstimatedDatesInnerShip(string shipDateType = default, OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange shipDateRange = default, string shipSource = default, string shipDescription = default, string shipDate = default)
         {
             this.ShipDateType = shipDateType;
             this.ShipDateRange = shipDateRange;

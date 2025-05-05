@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="availabilityByWarehouse">availabilityByWarehouse.</param>
         /// <param name="products">products.</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        public PriceAndAvailabilityRequest(bool? showAvailableDiscounts = default(bool?), bool? showReserveInventoryDetails = default(bool?), string specialBidNumber = default(string), List<PriceAndAvailabilityRequestAvailabilityByWarehouseInner> availabilityByWarehouse = default(List<PriceAndAvailabilityRequestAvailabilityByWarehouseInner>), List<PriceAndAvailabilityRequestProductsInner> products = default(List<PriceAndAvailabilityRequestProductsInner>), List<PriceAndAvailabilityRequestAdditionalAttributesInner> additionalAttributes = default(List<PriceAndAvailabilityRequestAdditionalAttributesInner>))
+        public PriceAndAvailabilityRequest(bool? showAvailableDiscounts = default, bool? showReserveInventoryDetails = default, string specialBidNumber = default, List<PriceAndAvailabilityRequestAvailabilityByWarehouseInner> availabilityByWarehouse = default, List<PriceAndAvailabilityRequestProductsInner> products = default, List<PriceAndAvailabilityRequestAdditionalAttributesInner> additionalAttributes = default)
         {
             this.ShowAvailableDiscounts = showAvailableDiscounts;
             this.ShowReserveInventoryDetails = showReserveInventoryDetails;

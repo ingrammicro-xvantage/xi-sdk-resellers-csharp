@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="type">type.</param>
         /// <param name="message">message.</param>
         /// <param name="fields">fields.</param>
-        public Error(string id = default(string), string type = default(string), string message = default(string), List<Fields> fields = default(List<Fields>))
+        public Error(string id = default, string type = default, string message = default, List<Fields> fields = default)
         {
             this.Id = id;
             this.Type = type;

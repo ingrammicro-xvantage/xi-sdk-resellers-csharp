@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="attributeName">Example values are &#39;entryMethod&#39;, &#39;enableCommentsAsLines&#39;, &#39;regionCode&#39;.</param>
         /// <param name="attributeValue">Attribute Value.</param>
-        public OrderModifyRequestAdditionalAttributesInner(string attributeName = default(string), string attributeValue = default(string))
+        public OrderModifyRequestAdditionalAttributesInner(string attributeName = default, string attributeValue = default)
         {
             this.AttributeName = attributeName;
             this.AttributeValue = attributeValue;

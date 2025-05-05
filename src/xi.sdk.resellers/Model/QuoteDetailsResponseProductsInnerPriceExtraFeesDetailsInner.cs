@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="extraFeesDescription">extraFeesDescription.</param>
         /// <param name="extraFeesAmount">extraFeesAmount.</param>
-        public QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner(string extraFeesDescription = default(string), decimal extraFeesAmount = default(decimal))
+        public QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner(string extraFeesDescription = default, decimal extraFeesAmount = default)
         {
             this.ExtraFeesDescription = extraFeesDescription;
             this.ExtraFeesAmount = extraFeesAmount;

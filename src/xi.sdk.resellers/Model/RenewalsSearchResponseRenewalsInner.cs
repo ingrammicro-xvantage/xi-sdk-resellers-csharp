@@ -44,7 +44,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="renewalValue">The value of the renewal..</param>
         /// <param name="status">The status of the renewal..</param>
         /// <param name="links">links.</param>
-        public RenewalsSearchResponseRenewalsInner(int renewalId = default(int), string customerOrderNumber = default(string), string referenceNumber = default(string), string endUser = default(string), string vendor = default(string), string expirationDate = default(string), double renewalValue = default(double), string status = default(string), List<RenewalsSearchResponseRenewalsInnerLinksInner> links = default(List<RenewalsSearchResponseRenewalsInnerLinksInner>))
+        public RenewalsSearchResponseRenewalsInner(int renewalId = default, string customerOrderNumber = default, string referenceNumber = default, string endUser = default, string vendor = default, string expirationDate = default, double renewalValue = default, string status = default, List<RenewalsSearchResponseRenewalsInnerLinksInner> links = default)
         {
             this.RenewalId = renewalId;
             this.CustomerOrderNumber = customerOrderNumber;

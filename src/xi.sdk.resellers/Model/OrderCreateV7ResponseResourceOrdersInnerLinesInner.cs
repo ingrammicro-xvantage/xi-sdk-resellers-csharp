@@ -47,7 +47,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantityBackOrdered">The quantity of the line item that is backordered..</param>
         /// <param name="notes">Line-level notes..</param>
         /// <param name="shipmentDetails">The shipment details for the line item..</param>
-        public OrderCreateV7ResponseResourceOrdersInnerLinesInner(string subOrderNumber = default(string), string ingramLineNumber = default(string), string customerLineNumber = default(string), string lineStatus = default(string), string ingramPartNumber = default(string), decimal unitPrice = default(decimal), decimal extendedUnitPrice = default(decimal), int quantityOrdered = default(int), int quantityConfirmed = default(int), int quantityBackOrdered = default(int), string notes = default(string), List<OrderCreateV7ResponseResourceOrdersInnerLinesInnerShipmentDetailsInner> shipmentDetails = default(List<OrderCreateV7ResponseResourceOrdersInnerLinesInnerShipmentDetailsInner>))
+        public OrderCreateV7ResponseResourceOrdersInnerLinesInner(string subOrderNumber = default, string ingramLineNumber = default, string customerLineNumber = default, string lineStatus = default, string ingramPartNumber = default, decimal unitPrice = default, decimal extendedUnitPrice = default, int quantityOrdered = default, int quantityConfirmed = default, int quantityBackOrdered = default, string notes = default, List<OrderCreateV7ResponseResourceOrdersInnerLinesInnerShipmentDetailsInner> shipmentDetails = default)
         {
             this.SubOrderNumber = subOrderNumber;
             this.IngramLineNumber = ingramLineNumber;

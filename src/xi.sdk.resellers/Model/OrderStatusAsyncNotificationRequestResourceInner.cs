@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="orderEntryTimeStamp">The timestamp at which the order was created..</param>
         /// <param name="lines">The line-level details for the order..</param>
         /// <param name="links">Link to Order Details for the order(s)..</param>
-        public OrderStatusAsyncNotificationRequestResourceInner(string eventType = default(string), string orderNumber = default(string), string customerOrderNumber = default(string), string orderEntryTimeStamp = default(string), List<OrderStatusAsyncNotificationRequestResourceInnerLinesInner> lines = default(List<OrderStatusAsyncNotificationRequestResourceInnerLinesInner>), List<OrderStatusAsyncNotificationRequestResourceInnerLinksInner> links = default(List<OrderStatusAsyncNotificationRequestResourceInnerLinksInner>))
+        public OrderStatusAsyncNotificationRequestResourceInner(string eventType = default, string orderNumber = default, string customerOrderNumber = default, string orderEntryTimeStamp = default, List<OrderStatusAsyncNotificationRequestResourceInnerLinesInner> lines = default, List<OrderStatusAsyncNotificationRequestResourceInnerLinksInner> links = default)
         {
             this.EventType = eventType;
             this.OrderNumber = orderNumber;

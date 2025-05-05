@@ -43,7 +43,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="state">The state the order will be shipped to..</param>
         /// <param name="postalCode">The zip or postal code the order will be shipped to..</param>
         /// <param name="countryCode">The two-character ISO country code the order will be shipped to..</param>
-        public OrderCreateV7ResponseResourceShipToInfo(string addressId = default(string), string companyName = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string))
+        public OrderCreateV7ResponseResourceShipToInfo(string addressId = default, string companyName = default, string addressLine1 = default, string addressLine2 = default, string city = default, string state = default, string postalCode = default, string countryCode = default)
         {
             this.AddressId = addressId;
             this.CompanyName = companyName;

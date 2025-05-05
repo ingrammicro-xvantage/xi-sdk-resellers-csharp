@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="shipDate">Vendor specific mandatory field, date of hardware/product shipment from vendor..</param>
         /// <param name="primarySerialNumber">Serial number of the hardware/product..</param>
         /// <param name="secondarySerialNumber">Serial number of accessory associated with the above hardware/product..</param>
-        public OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner(DateOnly dateofPurchase = default(DateOnly), DateOnly shipDate = default(DateOnly), string primarySerialNumber = default(string), string secondarySerialNumber = default(string))
+        public OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner(DateOnly dateofPurchase = default, DateOnly shipDate = default, string primarySerialNumber = default, string secondarySerialNumber = default)
         {
             this.DateofPurchase = dateofPurchase;
             this.ShipDate = shipDate;

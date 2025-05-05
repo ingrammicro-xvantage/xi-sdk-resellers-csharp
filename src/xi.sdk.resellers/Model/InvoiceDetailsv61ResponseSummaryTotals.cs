@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="totalTaxAmount">Total Tax amount..</param>
         /// <param name="invoicedAmountDue">Total amount due for the invoice..</param>
         /// <param name="freightAmount">Freight amount.</param>
-        public InvoiceDetailsv61ResponseSummaryTotals(double netInvoiceAmount = default(double), double discountAmount = default(double), string discountType = default(string), double totalTaxAmount = default(double), double invoicedAmountDue = default(double), double freightAmount = default(double))
+        public InvoiceDetailsv61ResponseSummaryTotals(double netInvoiceAmount = default, double discountAmount = default, string discountType = default, double totalTaxAmount = default, double invoicedAmountDue = default, double freightAmount = default)
         {
             this.NetInvoiceAmount = netInvoiceAmount;
             this.DiscountAmount = discountAmount;

@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="caseRequestNumber">A unique return request number.</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>ReturnsDetailsResponse</returns>
-        ReturnsDetailsResponse GetResellersV6Returnsdetails(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string caseRequestNumber, string? iMSenderID = default(string?));
+        ReturnsDetailsResponse GetResellersV6Returnsdetails(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string caseRequestNumber, string? iMSenderID = default);
 
         /// <summary>
         /// Returns Details
@@ -55,7 +55,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="caseRequestNumber">A unique return request number.</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>ApiResponse of ReturnsDetailsResponse</returns>
-        ApiResponse<ReturnsDetailsResponse> GetResellersV6ReturnsdetailsWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string caseRequestNumber, string? iMSenderID = default(string?));
+        ApiResponse<ReturnsDetailsResponse> GetResellersV6ReturnsdetailsWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string caseRequestNumber, string? iMSenderID = default);
         /// <summary>
         /// Returns Search
         /// </summary>
@@ -83,7 +83,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="sort">Refers to the column selected to apply the sorting criteria. (optional)</param>
         /// <param name="sortingColumnName">The column name which will be sorted on. (optional)</param>
         /// <returns>ReturnsSearchResponse</returns>
-        ReturnsSearchResponse GetResellersV6Returnssearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? caseRequestNumber = default(string?), string? invoiceNumber = default(string?), string? returnClaimId = default(string?), string? referenceNumber = default(string?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? returnStatusIn = default(string?), string? claimStatusIn = default(string?), string? createdOnBt = default(string?), string? modifiedOnBt = default(string?), string? returnReasonIn = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), string? sortingColumnName = default(string?));
+        ReturnsSearchResponse GetResellersV6Returnssearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? caseRequestNumber = default, string? invoiceNumber = default, string? returnClaimId = default, string? referenceNumber = default, string? ingramPartNumber = default, string? vendorPartNumber = default, string? returnStatusIn = default, string? claimStatusIn = default, string? createdOnBt = default, string? modifiedOnBt = default, string? returnReasonIn = default, string? page = default, string? size = default, string? sort = default, string? sortingColumnName = default);
 
         /// <summary>
         /// Returns Search
@@ -112,7 +112,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="sort">Refers to the column selected to apply the sorting criteria. (optional)</param>
         /// <param name="sortingColumnName">The column name which will be sorted on. (optional)</param>
         /// <returns>ApiResponse of ReturnsSearchResponse</returns>
-        ApiResponse<ReturnsSearchResponse> GetResellersV6ReturnssearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? caseRequestNumber = default(string?), string? invoiceNumber = default(string?), string? returnClaimId = default(string?), string? referenceNumber = default(string?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? returnStatusIn = default(string?), string? claimStatusIn = default(string?), string? createdOnBt = default(string?), string? modifiedOnBt = default(string?), string? returnReasonIn = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), string? sortingColumnName = default(string?));
+        ApiResponse<ReturnsSearchResponse> GetResellersV6ReturnssearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? caseRequestNumber = default, string? invoiceNumber = default, string? returnClaimId = default, string? referenceNumber = default, string? ingramPartNumber = default, string? vendorPartNumber = default, string? returnStatusIn = default, string? claimStatusIn = default, string? createdOnBt = default, string? modifiedOnBt = default, string? returnReasonIn = default, string? page = default, string? size = default, string? sort = default, string? sortingColumnName = default);
         /// <summary>
         /// Returns Create
         /// </summary>
@@ -126,7 +126,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="returnsCreateRequest"> (optional)</param>
         /// <returns>ReturnsCreateResponse</returns>
-        ReturnsCreateResponse PostReturnscreate(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), ReturnsCreateRequest? returnsCreateRequest = default(ReturnsCreateRequest?));
+        ReturnsCreateResponse PostReturnscreate(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, ReturnsCreateRequest? returnsCreateRequest = default);
 
         /// <summary>
         /// Returns Create
@@ -141,7 +141,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="returnsCreateRequest"> (optional)</param>
         /// <returns>ApiResponse of ReturnsCreateResponse</returns>
-        ApiResponse<ReturnsCreateResponse> PostReturnscreateWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), ReturnsCreateRequest? returnsCreateRequest = default(ReturnsCreateRequest?));
+        ApiResponse<ReturnsCreateResponse> PostReturnscreateWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, ReturnsCreateRequest? returnsCreateRequest = default);
         #endregion Synchronous Operations
     }
 
@@ -165,7 +165,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ReturnsDetailsResponse</returns>
-        System.Threading.Tasks.Task<ReturnsDetailsResponse> GetResellersV6ReturnsdetailsAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string caseRequestNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ReturnsDetailsResponse> GetResellersV6ReturnsdetailsAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string caseRequestNumber, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns Details
@@ -181,7 +181,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ReturnsDetailsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReturnsDetailsResponse>> GetResellersV6ReturnsdetailsWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string caseRequestNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ReturnsDetailsResponse>> GetResellersV6ReturnsdetailsWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string caseRequestNumber, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Returns Search
         /// </summary>
@@ -210,7 +210,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="sortingColumnName">The column name which will be sorted on. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ReturnsSearchResponse</returns>
-        System.Threading.Tasks.Task<ReturnsSearchResponse> GetResellersV6ReturnssearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? caseRequestNumber = default(string?), string? invoiceNumber = default(string?), string? returnClaimId = default(string?), string? referenceNumber = default(string?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? returnStatusIn = default(string?), string? claimStatusIn = default(string?), string? createdOnBt = default(string?), string? modifiedOnBt = default(string?), string? returnReasonIn = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), string? sortingColumnName = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ReturnsSearchResponse> GetResellersV6ReturnssearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? caseRequestNumber = default, string? invoiceNumber = default, string? returnClaimId = default, string? referenceNumber = default, string? ingramPartNumber = default, string? vendorPartNumber = default, string? returnStatusIn = default, string? claimStatusIn = default, string? createdOnBt = default, string? modifiedOnBt = default, string? returnReasonIn = default, string? page = default, string? size = default, string? sort = default, string? sortingColumnName = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns Search
@@ -240,7 +240,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="sortingColumnName">The column name which will be sorted on. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ReturnsSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReturnsSearchResponse>> GetResellersV6ReturnssearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? caseRequestNumber = default(string?), string? invoiceNumber = default(string?), string? returnClaimId = default(string?), string? referenceNumber = default(string?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? returnStatusIn = default(string?), string? claimStatusIn = default(string?), string? createdOnBt = default(string?), string? modifiedOnBt = default(string?), string? returnReasonIn = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), string? sortingColumnName = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ReturnsSearchResponse>> GetResellersV6ReturnssearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? caseRequestNumber = default, string? invoiceNumber = default, string? returnClaimId = default, string? referenceNumber = default, string? ingramPartNumber = default, string? vendorPartNumber = default, string? returnStatusIn = default, string? claimStatusIn = default, string? createdOnBt = default, string? modifiedOnBt = default, string? returnReasonIn = default, string? page = default, string? size = default, string? sort = default, string? sortingColumnName = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Returns Create
         /// </summary>
@@ -255,7 +255,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="returnsCreateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ReturnsCreateResponse</returns>
-        System.Threading.Tasks.Task<ReturnsCreateResponse> PostReturnscreateAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), ReturnsCreateRequest? returnsCreateRequest = default(ReturnsCreateRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ReturnsCreateResponse> PostReturnscreateAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, ReturnsCreateRequest? returnsCreateRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns Create
@@ -271,7 +271,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="returnsCreateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ReturnsCreateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReturnsCreateResponse>> PostReturnscreateWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), ReturnsCreateRequest? returnsCreateRequest = default(ReturnsCreateRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ReturnsCreateResponse>> PostReturnscreateWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, ReturnsCreateRequest? returnsCreateRequest = default, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -495,7 +495,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="caseRequestNumber">A unique return request number.</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>ReturnsDetailsResponse</returns>
-        public ReturnsDetailsResponse GetResellersV6Returnsdetails(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string caseRequestNumber, string? iMSenderID = default(string?))
+        public ReturnsDetailsResponse GetResellersV6Returnsdetails(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string caseRequestNumber, string? iMSenderID = default)
         {
             xi.sdk.resellers.Client.ApiResponse<ReturnsDetailsResponse> localVarResponse = GetResellersV6ReturnsdetailsWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, caseRequestNumber, iMSenderID);
             return localVarResponse.Data;
@@ -511,7 +511,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="caseRequestNumber">A unique return request number.</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>ApiResponse of ReturnsDetailsResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<ReturnsDetailsResponse> GetResellersV6ReturnsdetailsWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string caseRequestNumber, string? iMSenderID = default(string?))
+        public xi.sdk.resellers.Client.ApiResponse<ReturnsDetailsResponse> GetResellersV6ReturnsdetailsWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string caseRequestNumber, string? iMSenderID = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -584,7 +584,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ReturnsDetailsResponse</returns>
-        public async System.Threading.Tasks.Task<ReturnsDetailsResponse> GetResellersV6ReturnsdetailsAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string caseRequestNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ReturnsDetailsResponse> GetResellersV6ReturnsdetailsAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string caseRequestNumber, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<ReturnsDetailsResponse> localVarResponse = await GetResellersV6ReturnsdetailsWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, caseRequestNumber, iMSenderID, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -601,7 +601,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ReturnsDetailsResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ReturnsDetailsResponse>> GetResellersV6ReturnsdetailsWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string caseRequestNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ReturnsDetailsResponse>> GetResellersV6ReturnsdetailsWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string caseRequestNumber, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -690,7 +690,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="sort">Refers to the column selected to apply the sorting criteria. (optional)</param>
         /// <param name="sortingColumnName">The column name which will be sorted on. (optional)</param>
         /// <returns>ReturnsSearchResponse</returns>
-        public ReturnsSearchResponse GetResellersV6Returnssearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? caseRequestNumber = default(string?), string? invoiceNumber = default(string?), string? returnClaimId = default(string?), string? referenceNumber = default(string?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? returnStatusIn = default(string?), string? claimStatusIn = default(string?), string? createdOnBt = default(string?), string? modifiedOnBt = default(string?), string? returnReasonIn = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), string? sortingColumnName = default(string?))
+        public ReturnsSearchResponse GetResellersV6Returnssearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? caseRequestNumber = default, string? invoiceNumber = default, string? returnClaimId = default, string? referenceNumber = default, string? ingramPartNumber = default, string? vendorPartNumber = default, string? returnStatusIn = default, string? claimStatusIn = default, string? createdOnBt = default, string? modifiedOnBt = default, string? returnReasonIn = default, string? page = default, string? size = default, string? sort = default, string? sortingColumnName = default)
         {
             xi.sdk.resellers.Client.ApiResponse<ReturnsSearchResponse> localVarResponse = GetResellersV6ReturnssearchWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, caseRequestNumber, invoiceNumber, returnClaimId, referenceNumber, ingramPartNumber, vendorPartNumber, returnStatusIn, claimStatusIn, createdOnBt, modifiedOnBt, returnReasonIn, page, size, sort, sortingColumnName);
             return localVarResponse.Data;
@@ -720,7 +720,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="sort">Refers to the column selected to apply the sorting criteria. (optional)</param>
         /// <param name="sortingColumnName">The column name which will be sorted on. (optional)</param>
         /// <returns>ApiResponse of ReturnsSearchResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<ReturnsSearchResponse> GetResellersV6ReturnssearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? caseRequestNumber = default(string?), string? invoiceNumber = default(string?), string? returnClaimId = default(string?), string? referenceNumber = default(string?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? returnStatusIn = default(string?), string? claimStatusIn = default(string?), string? createdOnBt = default(string?), string? modifiedOnBt = default(string?), string? returnReasonIn = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), string? sortingColumnName = default(string?))
+        public xi.sdk.resellers.Client.ApiResponse<ReturnsSearchResponse> GetResellersV6ReturnssearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? caseRequestNumber = default, string? invoiceNumber = default, string? returnClaimId = default, string? referenceNumber = default, string? ingramPartNumber = default, string? vendorPartNumber = default, string? returnStatusIn = default, string? claimStatusIn = default, string? createdOnBt = default, string? modifiedOnBt = default, string? returnReasonIn = default, string? page = default, string? size = default, string? sort = default, string? sortingColumnName = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -862,7 +862,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="sortingColumnName">The column name which will be sorted on. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ReturnsSearchResponse</returns>
-        public async System.Threading.Tasks.Task<ReturnsSearchResponse> GetResellersV6ReturnssearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? caseRequestNumber = default(string?), string? invoiceNumber = default(string?), string? returnClaimId = default(string?), string? referenceNumber = default(string?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? returnStatusIn = default(string?), string? claimStatusIn = default(string?), string? createdOnBt = default(string?), string? modifiedOnBt = default(string?), string? returnReasonIn = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), string? sortingColumnName = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ReturnsSearchResponse> GetResellersV6ReturnssearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? caseRequestNumber = default, string? invoiceNumber = default, string? returnClaimId = default, string? referenceNumber = default, string? ingramPartNumber = default, string? vendorPartNumber = default, string? returnStatusIn = default, string? claimStatusIn = default, string? createdOnBt = default, string? modifiedOnBt = default, string? returnReasonIn = default, string? page = default, string? size = default, string? sort = default, string? sortingColumnName = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<ReturnsSearchResponse> localVarResponse = await GetResellersV6ReturnssearchWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, caseRequestNumber, invoiceNumber, returnClaimId, referenceNumber, ingramPartNumber, vendorPartNumber, returnStatusIn, claimStatusIn, createdOnBt, modifiedOnBt, returnReasonIn, page, size, sort, sortingColumnName, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -893,7 +893,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="sortingColumnName">The column name which will be sorted on. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ReturnsSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ReturnsSearchResponse>> GetResellersV6ReturnssearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? caseRequestNumber = default(string?), string? invoiceNumber = default(string?), string? returnClaimId = default(string?), string? referenceNumber = default(string?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? returnStatusIn = default(string?), string? claimStatusIn = default(string?), string? createdOnBt = default(string?), string? modifiedOnBt = default(string?), string? returnReasonIn = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), string? sortingColumnName = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ReturnsSearchResponse>> GetResellersV6ReturnssearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, string? caseRequestNumber = default, string? invoiceNumber = default, string? returnClaimId = default, string? referenceNumber = default, string? ingramPartNumber = default, string? vendorPartNumber = default, string? returnStatusIn = default, string? claimStatusIn = default, string? createdOnBt = default, string? modifiedOnBt = default, string? returnReasonIn = default, string? page = default, string? size = default, string? sort = default, string? sortingColumnName = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -1023,7 +1023,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="returnsCreateRequest"> (optional)</param>
         /// <returns>ReturnsCreateResponse</returns>
-        public ReturnsCreateResponse PostReturnscreate(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), ReturnsCreateRequest? returnsCreateRequest = default(ReturnsCreateRequest?))
+        public ReturnsCreateResponse PostReturnscreate(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, ReturnsCreateRequest? returnsCreateRequest = default)
         {
             xi.sdk.resellers.Client.ApiResponse<ReturnsCreateResponse> localVarResponse = PostReturnscreateWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, returnsCreateRequest);
             return localVarResponse.Data;
@@ -1039,7 +1039,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="returnsCreateRequest"> (optional)</param>
         /// <returns>ApiResponse of ReturnsCreateResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<ReturnsCreateResponse> PostReturnscreateWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), ReturnsCreateRequest? returnsCreateRequest = default(ReturnsCreateRequest?))
+        public xi.sdk.resellers.Client.ApiResponse<ReturnsCreateResponse> PostReturnscreateWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, ReturnsCreateRequest? returnsCreateRequest = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -1109,7 +1109,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="returnsCreateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ReturnsCreateResponse</returns>
-        public async System.Threading.Tasks.Task<ReturnsCreateResponse> PostReturnscreateAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), ReturnsCreateRequest? returnsCreateRequest = default(ReturnsCreateRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ReturnsCreateResponse> PostReturnscreateAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, ReturnsCreateRequest? returnsCreateRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
             xi.sdk.resellers.Client.ApiResponse<ReturnsCreateResponse> localVarResponse = await PostReturnscreateWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, returnsCreateRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1126,7 +1126,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="returnsCreateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ReturnsCreateResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ReturnsCreateResponse>> PostReturnscreateWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), ReturnsCreateRequest? returnsCreateRequest = default(ReturnsCreateRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ReturnsCreateResponse>> PostReturnscreateWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default, ReturnsCreateRequest? returnsCreateRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)

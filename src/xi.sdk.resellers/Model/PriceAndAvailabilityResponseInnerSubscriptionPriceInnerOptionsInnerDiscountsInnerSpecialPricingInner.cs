@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="discountQtyLimit">The quantity available at the discounted price.</param>
         /// <param name="discountExpiryDate">The date when discount expires..</param>
         /// <param name="vendorProgramName">The vendors discount program name..</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerSpecialPricingInner(string currencyCode = default(string), decimal? discount = default(decimal?), string discountType = default(string), int? discountQtyLimit = default(int?), string discountExpiryDate = default(string), string vendorProgramName = default(string))
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerSpecialPricingInner(string currencyCode = default, decimal? discount = default, string discountType = default, int? discountQtyLimit = default, string discountExpiryDate = default, string vendorProgramName = default)
         {
             this.CurrencyCode = currencyCode;
             this.Discount = discount;

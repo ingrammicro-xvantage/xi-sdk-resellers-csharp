@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="contractInfo">contractInfo.</param>
         /// <param name="subscriptions">subscriptions.</param>
         /// <param name="licenseInfo">licenseInfo.</param>
-        public OrderDetailB2BLinesInnerServiceContractInfo(OrderDetailB2BLinesInnerServiceContractInfoContractInfo contractInfo = default(OrderDetailB2BLinesInnerServiceContractInfoContractInfo), OrderDetailB2BLinesInnerServiceContractInfoSubscriptions subscriptions = default(OrderDetailB2BLinesInnerServiceContractInfoSubscriptions), OrderDetailB2BLinesInnerServiceContractInfoLicenseInfo licenseInfo = default(OrderDetailB2BLinesInnerServiceContractInfoLicenseInfo))
+        public OrderDetailB2BLinesInnerServiceContractInfo(OrderDetailB2BLinesInnerServiceContractInfoContractInfo contractInfo = default, OrderDetailB2BLinesInnerServiceContractInfoSubscriptions subscriptions = default, OrderDetailB2BLinesInnerServiceContractInfoLicenseInfo licenseInfo = default)
         {
             this.ContractInfo = contractInfo;
             this.Subscriptions = subscriptions;

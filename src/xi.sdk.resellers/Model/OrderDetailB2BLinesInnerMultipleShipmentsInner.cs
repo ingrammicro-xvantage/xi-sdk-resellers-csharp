@@ -44,7 +44,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="description">Description..</param>
         /// <param name="date">Date..</param>
         /// <param name="deliveryDate">Delivery date..</param>
-        public OrderDetailB2BLinesInnerMultipleShipmentsInner(string lineNumber = default(string), int requestedQuantity = default(int), int confirmedQuantity = default(int), string dateType = default(string), OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange dateRange = default(OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange), string source = default(string), string description = default(string), string date = default(string), string deliveryDate = default(string))
+        public OrderDetailB2BLinesInnerMultipleShipmentsInner(string lineNumber = default, int requestedQuantity = default, int confirmedQuantity = default, string dateType = default, OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange dateRange = default, string source = default, string description = default, string date = default, string deliveryDate = default)
         {
             this.LineNumber = lineNumber;
             this.RequestedQuantity = requestedQuantity;

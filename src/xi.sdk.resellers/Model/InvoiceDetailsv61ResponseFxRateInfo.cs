@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="companyCurrency">Company currency code..</param>
         /// <param name="invoiceCurrency">Invoice currency..</param>
         /// <param name="currencyFxRate">Currency FX rate..</param>
-        public InvoiceDetailsv61ResponseFxRateInfo(string currencyCode = default(string), string companyCurrency = default(string), string invoiceCurrency = default(string), double currencyFxRate = default(double))
+        public InvoiceDetailsv61ResponseFxRateInfo(string currencyCode = default, string companyCurrency = default, string invoiceCurrency = default, double currencyFxRate = default)
         {
             this.CurrencyCode = currencyCode;
             this.CompanyCurrency = companyCurrency;

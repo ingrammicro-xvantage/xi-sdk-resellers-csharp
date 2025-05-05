@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="paymentTermsCode">Code of the payment terms..</param>
         /// <param name="paymentTermsDescription">Description of the payment terms..</param>
         /// <param name="paymentTermsDueDate">Due date of the payment terms..</param>
-        public InvoiceDetailsv61ResponsePaymentTermsInfo(string paymentTermsCode = default(string), string paymentTermsDescription = default(string), string paymentTermsDueDate = default(string))
+        public InvoiceDetailsv61ResponsePaymentTermsInfo(string paymentTermsCode = default, string paymentTermsDescription = default, string paymentTermsDueDate = default)
         {
             this.PaymentTermsCode = paymentTermsCode;
             this.PaymentTermsDescription = paymentTermsDescription;

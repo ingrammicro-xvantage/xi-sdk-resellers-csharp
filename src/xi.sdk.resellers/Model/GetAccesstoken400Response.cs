@@ -36,7 +36,7 @@ namespace xi.sdk.resellers.Model
         /// Initializes a new instance of the <see cref="GetAccesstoken400Response" /> class.
         /// </summary>
         /// <param name="message">message.</param>
-        public GetAccesstoken400Response(string message = default(string))
+        public GetAccesstoken400Response(string message = default)
         {
             this.Message = message;
         }

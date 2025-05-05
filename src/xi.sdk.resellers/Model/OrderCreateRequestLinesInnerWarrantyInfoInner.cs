@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="warrantyLineLink">Customer line number of the hardware product in this request for linkage, either hardwareLineLink or warrantyLineLink can be used in a line..</param>
         /// <param name="hardwareLineLink">Customer line number of the warranty product in this request for linkage, either hardwareLineLink or warrantyLineLink can be used in a line .</param>
         /// <param name="serialInfo">Serial information of the hardware to be associated with the warranty, applicable on post sale orders..</param>
-        public OrderCreateRequestLinesInnerWarrantyInfoInner(string directLineLink = default(string), string warrantyLineLink = default(string), string hardwareLineLink = default(string), List<OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner> serialInfo = default(List<OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner>))
+        public OrderCreateRequestLinesInnerWarrantyInfoInner(string directLineLink = default, string warrantyLineLink = default, string hardwareLineLink = default, List<OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner> serialInfo = default)
         {
             this.DirectLineLink = directLineLink;
             this.WarrantyLineLink = warrantyLineLink;

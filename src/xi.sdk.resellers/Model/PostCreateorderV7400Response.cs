@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="type">Type of the error message..</param>
         /// <param name="message">A detailed error message..</param>
         /// <param name="fields">fields.</param>
-        public PostCreateorderV7400Response(string traceid = default(string), string type = default(string), string message = default(string), List<PostCreateorderV7400ResponseFieldsInner> fields = default(List<PostCreateorderV7400ResponseFieldsInner>))
+        public PostCreateorderV7400Response(string traceid = default, string type = default, string message = default, List<PostCreateorderV7400ResponseFieldsInner> fields = default)
         {
             this.Traceid = traceid;
             this.Type = type;

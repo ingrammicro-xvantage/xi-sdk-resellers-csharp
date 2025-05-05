@@ -46,7 +46,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="countryCode">Bill to Country code..</param>
         /// <param name="phoneNumber">Phone number of the bill to company..</param>
         /// <param name="email">Email address of the bill to company..</param>
-        public InvoiceDetailsv61ResponseBillToInfo(string contact = default(string), string companyName = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string addressLine3 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string), string phoneNumber = default(string), string email = default(string))
+        public InvoiceDetailsv61ResponseBillToInfo(string contact = default, string companyName = default, string addressLine1 = default, string addressLine2 = default, string addressLine3 = default, string city = default, string state = default, string postalCode = default, string countryCode = default, string phoneNumber = default, string email = default)
         {
             this.Contact = contact;
             this.CompanyName = companyName;

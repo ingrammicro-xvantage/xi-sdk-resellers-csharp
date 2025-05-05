@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="ingramPartNumber">Unique Ingram Micro part number..</param>
         /// <param name="quantity">The quantity of the line item..</param>
         /// <param name="vmfAdditionalAttributesLines">The object containing the list of fields required at a line level by the vendor..</param>
-        public ValidateQuoteResponseLinesInner(string customerLineNumber = default(string), string ingramPartNumber = default(string), int quantity = default(int), List<ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner> vmfAdditionalAttributesLines = default(List<ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner>))
+        public ValidateQuoteResponseLinesInner(string customerLineNumber = default, string ingramPartNumber = default, int quantity = default, List<ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner> vmfAdditionalAttributesLines = default)
         {
             this.CustomerLineNumber = customerLineNumber;
             this.IngramPartNumber = ingramPartNumber;

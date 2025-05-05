@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="minUnits">Minimum units must be purchased..</param>
         /// <param name="maxUnits">Maximum units are available for purchase..</param>
         /// <param name="dependsOn">The name of the product must be purchased to purchase this product..</param>
-        public ProductDetailResponseSubscriptionDetailsInnerOptionsInner(string resourceId = default(string), string resourceName = default(string), string vendorPartNumber = default(string), string minUnits = default(string), string maxUnits = default(string), string dependsOn = default(string))
+        public ProductDetailResponseSubscriptionDetailsInnerOptionsInner(string resourceId = default, string resourceName = default, string vendorPartNumber = default, string minUnits = default, string maxUnits = default, string dependsOn = default)
         {
             this.ResourceId = resourceId;
             this.ResourceName = resourceName;

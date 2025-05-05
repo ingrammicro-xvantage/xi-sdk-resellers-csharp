@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="notificationId">Notification id of the communication sent from Ingram..</param>
         /// <param name="quoteNumber">Quote number for the renewal..</param>
-        public RenewalsDetailsResponseReferenceNumber(string notificationId = default(string), string quoteNumber = default(string))
+        public RenewalsDetailsResponseReferenceNumber(string notificationId = default, string quoteNumber = default)
         {
             this.NotificationId = notificationId;
             this.QuoteNumber = quoteNumber;

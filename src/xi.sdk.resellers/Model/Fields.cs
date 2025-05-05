@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="field">field.</param>
         /// <param name="message">message.</param>
         /// <param name="value">value.</param>
-        public Fields(string field = default(string), string message = default(string), string value = default(string))
+        public Fields(string field = default, string message = default, string value = default)
         {
             this.Field = field;
             this.Message = message;
