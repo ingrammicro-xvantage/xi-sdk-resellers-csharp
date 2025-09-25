@@ -98,19 +98,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AccesstokenResponse'
+                $ref: "#/components/schemas/AccesstokenResponse"
           description: OK
         "400":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/get_accesstoken_400_response'
+                $ref: "#/components/schemas/get_accesstoken_400_response"
           description: Bad Request
         "500":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/get_accesstoken_500_response'
+                $ref: "#/components/schemas/get_accesstoken_500_response"
           description: Internal Server Error
       summary: Accesstoken
       tags:
@@ -225,7 +225,7 @@ paths:
                   availabilityByWarehouse:
                   - availabilityByWarehouseId: "40"
             schema:
-              $ref: '#/components/schemas/PriceAndAvailabilityRequest'
+              $ref: "#/components/schemas/PriceAndAvailabilityRequest"
       responses:
         "200":
           content:
@@ -309,7 +309,7 @@ paths:
                       endDate: 2023-01-27
                       currencyCode: string
               schema:
-                $ref: '#/components/schemas/PriceAndAvailabilityResponse'
+                $ref: "#/components/schemas/PriceAndAvailabilityResponse"
           description: OK
         "207":
           content:
@@ -367,7 +367,7 @@ paths:
                       \  12351211"
                     ingramPartNumber: "12351211"
               schema:
-                $ref: '#/components/schemas/PriceAndAvailabilityResponse'
+                $ref: "#/components/schemas/PriceAndAvailabilityResponse"
           description: Multi Status
         "400":
           content:
@@ -384,7 +384,7 @@ paths:
                         value: ""
                         message: IM-CorrelationID cannot be blank
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Bad Request
           headers:
             IM-CorrelationID:
@@ -416,7 +416,7 @@ paths:
                       message: "Some unexpected error occured, please contact support\
                         \ team for more details."
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Internal Server Error
       security:
       - application:
@@ -693,7 +693,7 @@ paths:
                     nextPage: /resellers/v6/catalog?pageSize=10&pageNumber=3&type=IM::subscription&showGroupInfo=True
                     previousPage: /resellers/v6/catalog?pageSize=10&pageNumber=1&type=IM::subscription&showGroupInfo=True
               schema:
-                $ref: '#/components/schemas/ProductSearch_Response'
+                $ref: "#/components/schemas/ProductSearch_Response"
           description: a ProductSearchv6ResponseElement to be returned
           headers:
             IM-CorrelationID:
@@ -727,7 +727,7 @@ paths:
                       - field: IM-CustomerNumber
                         message: Required field is missing
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Bad Request
           headers:
             IM-CorrelationID:
@@ -756,7 +756,7 @@ paths:
                       type: Validation error
                       message: No Records Found
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: No Content
         "500":
           content:
@@ -770,7 +770,7 @@ paths:
                       message: "Some unexpected error occurred, please contact support\
                         \ team for more details"
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Internal Server Error
           headers:
             IM-CorrelationID:
@@ -1030,7 +1030,7 @@ paths:
                       previousPage: ""
                       nextPage: ""
               schema:
-                $ref: '#/components/schemas/ProductDetailResponse'
+                $ref: "#/components/schemas/ProductDetailResponse"
           description: Success
         "400":
           content:
@@ -1049,7 +1049,7 @@ paths:
                         message: The customerNumber field is required.
                         value: ""
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Bad Request
         "404":
           content:
@@ -1062,7 +1062,7 @@ paths:
                       type: Validation error
                       message: No Records Found
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: No Content
         "500":
           content:
@@ -1077,7 +1077,7 @@ paths:
                       message: "Some unexpected error occurred, please contact support\
                         \ team for more details"
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Internal Server Error
       security:
       - application:
@@ -1670,7 +1670,7 @@ paths:
                       netWeight: null
                       dimensionUnit: CM
               schema:
-                $ref: '#/components/schemas/ProductDetailResponse'
+                $ref: "#/components/schemas/ProductDetailResponse"
           description: Success
         "400":
           content:
@@ -1689,7 +1689,7 @@ paths:
                         message: The customerNumber field is required.
                         value: ""
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Bad Request
         "404":
           content:
@@ -1702,7 +1702,7 @@ paths:
                       type: Validation error
                       message: No Records Found
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: No Content
         "500":
           content:
@@ -1717,7 +1717,7 @@ paths:
                       message: "Some unexpected error occured, please contact support\
                         \ team for more details"
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Internal Server Error
       security:
       - application:
@@ -1787,7 +1787,7 @@ paths:
                       href: /resellers/v5/catalog/5CT275
                       type: GET
             schema:
-              $ref: '#/components/schemas/AvailabilityAsyncNotificationRequest'
+              $ref: "#/components/schemas/AvailabilityAsyncNotificationRequest"
         required: true
       responses:
         "200":
@@ -1867,7 +1867,7 @@ paths:
                       href: /resellers/v5/orders/20-RD128
                       type: GET
             schema:
-              $ref: '#/components/schemas/OrderStatusAsyncNotificationRequest'
+              $ref: "#/components/schemas/OrderStatusAsyncNotificationRequest"
         required: true
       responses:
         "200":
@@ -1972,7 +1972,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/order_create_v7_request'
+              $ref: "#/components/schemas/order_create_v7_request"
         required: true
       responses:
         "200":
@@ -2086,7 +2086,7 @@ paths:
                           href: /resellers/v6/orders/29-02738
                           type: GET
               schema:
-                $ref: '#/components/schemas/OrderCreateV7Response201'
+                $ref: "#/components/schemas/OrderCreateV7Response201"
           description: Confirmation response
         "201":
           content:
@@ -2191,7 +2191,7 @@ paths:
                           href: /resellers/v6/orders/29-02738
                           type: GET
               schema:
-                $ref: '#/components/schemas/OrderCreateV7Response'
+                $ref: "#/components/schemas/OrderCreateV7Response"
           description: Webhook Response
         "400":
           content:
@@ -2209,7 +2209,7 @@ paths:
                         message: Required field is missing
                         value: null
               schema:
-                $ref: '#/components/schemas/post_createorder_v7_400_response'
+                $ref: "#/components/schemas/post_createorder_v7_400_response"
           description: Bad Request
         "500":
           content:
@@ -2224,7 +2224,7 @@ paths:
                       message: "Some unexpected error occured, please contact support\
                         \ team for more details"
               schema:
-                $ref: '#/components/schemas/post_createorder_v7_500_response'
+                $ref: "#/components/schemas/post_createorder_v7_500_response"
           description: Server Error
       security:
       - application:
@@ -2682,7 +2682,7 @@ paths:
                   - attributeName: govtPublicPrivateCode
                     attributeValue: P
             schema:
-              $ref: '#/components/schemas/OrderCreateRequest'
+              $ref: "#/components/schemas/OrderCreateRequest"
         required: true
       responses:
         "201":
@@ -3754,7 +3754,7 @@ paths:
                         href: /resellers/v6/orders/20-B31TK
                         type: GET
               schema:
-                $ref: '#/components/schemas/OrderCreateResponse'
+                $ref: "#/components/schemas/OrderCreateResponse"
           description: Created
           headers:
             IM-CorrelationID:
@@ -3889,7 +3889,7 @@ paths:
                         rejectCode: EN
                         rejectReason: SKU-NOTFOUND    XXXXXX
               schema:
-                $ref: '#/components/schemas/OrderCreateResponse'
+                $ref: "#/components/schemas/OrderCreateResponse"
           description: Multi-Status
           headers:
             IM-CorrelationID:
@@ -3922,7 +3922,7 @@ paths:
                         value: USA
                         message: IM-CountryCode is not valid
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Bad Request
           headers:
             IM-CorrelationID:
@@ -3952,7 +3952,7 @@ paths:
                       message: "Some unexpected error occured, please contact support\
                         \ team for more details"
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Internal Server Error
           headers:
             IM-CorrelationID:
@@ -4181,7 +4181,7 @@ paths:
                   - attributeName: enableCommentsAsLines
                     attributeValue: "true"
             schema:
-              $ref: '#/components/schemas/OrderModifyRequest'
+              $ref: "#/components/schemas/OrderModifyRequest"
         required: true
       responses:
         "200":
@@ -4333,7 +4333,7 @@ paths:
                     - ingramLineNumber: "010"
                       customerLineNumber: "000"
               schema:
-                $ref: '#/components/schemas/OrderModifyResponse'
+                $ref: "#/components/schemas/OrderModifyResponse"
           description: OK
           headers:
             IM-CorrelationID:
@@ -4591,7 +4591,7 @@ paths:
                         carrierCode: OT
                         carrierName: OTHER
               schema:
-                $ref: '#/components/schemas/OrderModifyResponse'
+                $ref: "#/components/schemas/OrderModifyResponse"
           description: Created
           headers:
             IM-CorrelationID:
@@ -4638,7 +4638,7 @@ paths:
                         carrierCode: OT
                         carrierName: OTHER
               schema:
-                $ref: '#/components/schemas/OrderModifyResponse'
+                $ref: "#/components/schemas/OrderModifyResponse"
           description: Multi-Status
           headers:
             IM-CorrelationID:
@@ -4703,7 +4703,7 @@ paths:
                       - message: Order can not be modified/released. Order is already
                           released or Order is not placed on Customer Hold
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Bad Request
           headers:
             IM-CorrelationID:
@@ -4737,7 +4737,7 @@ paths:
                       message: "Some unexpected error occured, please contact support\
                         \ team for more details. "
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Internal Server Error
           headers:
             IM-CorrelationID:
@@ -5061,13 +5061,13 @@ paths:
                     - attributeName: additional description
                       attributeValue: EXPORT RESTR SW
               schema:
-                $ref: '#/components/schemas/OrderDetailB2B'
+                $ref: "#/components/schemas/OrderDetailB2B"
           description: Success
         "500":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponseDTO'
+                $ref: "#/components/schemas/ErrorResponseDTO"
           description: Server Error
       security:
       - application:
@@ -5345,7 +5345,7 @@ paths:
                     nextPage: "/resellers/v6/orders/[original_parameters]&pageNumber=2"
                     previousPage: "/resellers/v6/orders/[original_parameters]&pageNumber=1"
               schema:
-                $ref: '#/components/schemas/OrderSearch_Response'
+                $ref: "#/components/schemas/OrderSearch_Response"
           description: OrderSearch_Response to be returned
         "204":
           description: No Content
@@ -5382,7 +5382,7 @@ paths:
                         message: input date format error expected format is - yyyy-MM-dd
                         value: 2020-10-21
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Bad Request
         "500":
           content:
@@ -5396,7 +5396,7 @@ paths:
                       message: 'ConnectivityIssue/ERP issue Contact Ingram Micro API
                         Support   '
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Internal Server Error
       security:
       - application:
@@ -5506,7 +5506,7 @@ paths:
                       - field: Country Code
                         message: Country Code is missing.
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Bad Request
           headers:
             IM-CorrelationID:
@@ -5535,7 +5535,7 @@ paths:
                       type: /errors/validation-error
                       message: Order not found.
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Not Found
           headers:
             IM-CorrelationID:
@@ -5564,7 +5564,7 @@ paths:
                       type: /errors/validation-error
                       message: Order can not be deleted as the order is not no hold.
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Method Not Allowed
           headers:
             IM-CorrelationID:
@@ -5594,7 +5594,7 @@ paths:
                       message: 'ConnectivityIssue/ERP issue Contact Ingram Micro API
                         Support. '
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Internal Server Error
           headers:
             IM-CorrelationID:
@@ -5872,7 +5872,7 @@ paths:
                       lastModifiedDate: 2019-09-27
                       ingramQuoteExpiryDate: 0001-01-01
               schema:
-                $ref: '#/components/schemas/QuoteSearchResponse'
+                $ref: "#/components/schemas/QuoteSearchResponse"
           description: OK
           headers:
             IM-CorrelationID:
@@ -5908,7 +5908,7 @@ paths:
                         value: ""
                         message: IM-CorrelationID cannot be blank
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Bad Request
           headers:
             IM-CorrelationID:
@@ -5939,7 +5939,7 @@ paths:
                       type: /errors/validation-failed
                       message: No records found for the provided criteria.
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Not Found
           headers:
             IM-CorrelationID:
@@ -5969,7 +5969,7 @@ paths:
                       message: "Some unexpected error occured, please contact support\
                         \ team for more details."
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Internal Server Error
           headers:
             IM-CorrelationID:
@@ -6141,7 +6141,7 @@ paths:
                     - attributeName: dealId
                       attributeValue: "123456"
               schema:
-                $ref: '#/components/schemas/QuoteDetailsResponse'
+                $ref: "#/components/schemas/QuoteDetailsResponse"
           description: OK
         "400":
           content:
@@ -6192,7 +6192,7 @@ paths:
                         value: ""
                         message: IM-CustomerNumber is blank
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Bad Request
         "500":
           content:
@@ -6206,7 +6206,7 @@ paths:
                       message: "Some unexpected error occured, please contact support\
                         \ team for more details "
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Internal Server Error
       security:
       - application:
@@ -6314,7 +6314,7 @@ paths:
                         attributeValue: ""
                         attributeDescription: ""
               schema:
-                $ref: '#/components/schemas/ValidateQuoteResponse'
+                $ref: "#/components/schemas/ValidateQuoteResponse"
           description: Success
         "400":
           content:
@@ -6332,7 +6332,7 @@ paths:
                         message: Required field is missing
                         value: null
               schema:
-                $ref: '#/components/schemas/get_reseller_v6_validateQuote_400_response'
+                $ref: "#/components/schemas/get_reseller_v6_validateQuote_400_response"
           description: Bad Request
         "500":
           content:
@@ -6347,7 +6347,7 @@ paths:
                       message: "Some unexpected error occured, please contact support\
                         \ team for more details"
               schema:
-                $ref: '#/components/schemas/post_createorder_v7_500_response'
+                $ref: "#/components/schemas/post_createorder_v7_500_response"
           description: Internal Server Error
       security:
       - application:
@@ -6637,7 +6637,7 @@ paths:
                     pageSize: 10
                     pageNumber: 1
               schema:
-                $ref: '#/components/schemas/InvoiceSearchResponse'
+                $ref: "#/components/schemas/InvoiceSearchResponse"
           description: InvoiceSearchResponse to be returned
         "400":
           content:
@@ -6655,7 +6655,7 @@ paths:
                         message: The countryCode field is required.
                         value: null
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Bad Request
         "500":
           content:
@@ -6671,7 +6671,7 @@ paths:
                         \ an error: (404) Not Found."
                       fields: []
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Internal Server Error
       security:
       - application:
@@ -6865,7 +6865,7 @@ paths:
                         foreignTotalTaxAmount: 0
                         foreignInvoiceAmountDue: "533.33"
               schema:
-                $ref: '#/components/schemas/InvoiceDetailsv6.1Response'
+                $ref: "#/components/schemas/InvoiceDetailsv6.1Response"
           description: OK
         "400":
           content:
@@ -6916,7 +6916,7 @@ paths:
                         value: ""
                         message: IM-CustomerNumber is blank
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Bad Request
         "500":
           content:
@@ -6929,7 +6929,7 @@ paths:
                       type: InternalServerError
                       message: "Un-handled Exception \n Please contact to administrator."
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: "#/components/schemas/ErrorResponse"
           description: Internal Server Error
       security:
       - application:
@@ -7063,7 +7063,7 @@ paths:
                   vendor: HP
                   endUser: STARK
             schema:
-              $ref: '#/components/schemas/renewalsSearchRequest'
+              $ref: "#/components/schemas/renewalsSearchRequest"
       responses:
         "200":
           content:
@@ -7092,7 +7092,7 @@ paths:
                         type: Get
                     nextPage: /resellers/v6/renewals/search?page=2
               schema:
-                $ref: '#/components/schemas/renewalsSearchResponse'
+                $ref: "#/components/schemas/renewalsSearchResponse"
           description: OK
         "400":
           content:
@@ -7111,7 +7111,7 @@ paths:
                         message: Invalid CountryCode
                         value: USA
               schema:
-                $ref: '#/components/schemas/post_renewalssearch_400_response'
+                $ref: "#/components/schemas/post_renewalssearch_400_response"
           description: "Error: Bad Request"
         "500":
           content:
@@ -7126,7 +7126,7 @@ paths:
                         Micro API support team
                       fields: []
               schema:
-                $ref: '#/components/schemas/post_createorder_v7_500_response'
+                $ref: "#/components/schemas/post_createorder_v7_500_response"
           description: Internal Server Error
       security:
       - application:
@@ -7258,7 +7258,7 @@ paths:
                       expirationDate: null
                       isConsolidated: ""
               schema:
-                $ref: '#/components/schemas/renewalsDetailsResponse'
+                $ref: "#/components/schemas/renewalsDetailsResponse"
           description: OK
         "400":
           content:
@@ -7278,7 +7278,7 @@ paths:
                         message: Invalid CountryCode
                         value: USA
               schema:
-                $ref: '#/components/schemas/post_renewalssearch_400_response'
+                $ref: "#/components/schemas/post_renewalssearch_400_response"
           description: Bad Request
         "500":
           content:
@@ -7293,7 +7293,7 @@ paths:
                         Micro API support team
                       fields: []
               schema:
-                $ref: '#/components/schemas/post_createorder_v7_500_response'
+                $ref: "#/components/schemas/post_createorder_v7_500_response"
           description: Internal Server Error
       security:
       - application:
@@ -7429,7 +7429,7 @@ paths:
                     nextPage: /bids/v1/special-bidsB2B?Size=25&Page=2
                     previousPage: null
               schema:
-                $ref: '#/components/schemas/dealsSearchResponse'
+                $ref: "#/components/schemas/dealsSearchResponse"
           description: OK
         "400":
           content:
@@ -7449,7 +7449,7 @@ paths:
                         message: Invalid CountryCode
                         value: USA
               schema:
-                $ref: '#/components/schemas/post_renewalssearch_400_response'
+                $ref: "#/components/schemas/post_renewalssearch_400_response"
           description: Bad Request
         "500":
           content:
@@ -7464,7 +7464,7 @@ paths:
                         Micro API support team
                       fields: []
               schema:
-                $ref: '#/components/schemas/post_createorder_v7_500_response'
+                $ref: "#/components/schemas/post_createorder_v7_500_response"
           description: Internal Server Error
       security:
       - application:
@@ -7530,6 +7530,15 @@ paths:
           example: "12345678"
           type: string
         style: simple
+      - description: Vendor for that bid
+        explode: true
+        in: query
+        name: vendorName
+        required: true
+        schema:
+          example: Cisco
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -7576,7 +7585,7 @@ paths:
                       expirationDate: 2023-07-11T00:00:00
                       daysRemaining: 181
               schema:
-                $ref: '#/components/schemas/dealsDetailsResponse'
+                $ref: "#/components/schemas/dealsDetailsResponse"
           description: OK
         "400":
           content:
@@ -7596,7 +7605,7 @@ paths:
                         message: Invalid CountryCode
                         value: USA
               schema:
-                $ref: '#/components/schemas/post_renewalssearch_400_response'
+                $ref: "#/components/schemas/post_renewalssearch_400_response"
           description: Bad Request
         "500":
           content:
@@ -7611,7 +7620,7 @@ paths:
                         Micro API support team
                       fields: []
               schema:
-                $ref: '#/components/schemas/post_createorder_v7_500_response'
+                $ref: "#/components/schemas/post_createorder_v7_500_response"
           description: Internal Server Error
       security:
       - application:
@@ -7836,7 +7845,7 @@ paths:
                     nextPage: null
                     previousPage: null
               schema:
-                $ref: '#/components/schemas/returnsSearchResponse'
+                $ref: "#/components/schemas/returnsSearchResponse"
           description: OK
         "400":
           content:
@@ -7856,7 +7865,7 @@ paths:
                         message: Invalid CountryCode
                         value: USA
               schema:
-                $ref: '#/components/schemas/post_renewalssearch_400_response'
+                $ref: "#/components/schemas/post_renewalssearch_400_response"
           description: Bad Request
         "500":
           content:
@@ -7871,7 +7880,7 @@ paths:
                         Micro API support team
                       fields: []
               schema:
-                $ref: '#/components/schemas/post_createorder_v7_500_response'
+                $ref: "#/components/schemas/post_createorder_v7_500_response"
           description: Internal Server Error
       security:
       - application:
@@ -7979,7 +7988,7 @@ paths:
                     additionalFees: 0
                     estimatedTotal: 213.75
               schema:
-                $ref: '#/components/schemas/returnsDetailsResponse'
+                $ref: "#/components/schemas/returnsDetailsResponse"
           description: OK
         "400":
           content:
@@ -7999,7 +8008,7 @@ paths:
                         message: Invalid CountryCode
                         value: USA
               schema:
-                $ref: '#/components/schemas/post_renewalssearch_400_response'
+                $ref: "#/components/schemas/post_renewalssearch_400_response"
           description: Bad Request
         "500":
           content:
@@ -8014,7 +8023,7 @@ paths:
                         Micro API support team
                       fields: []
               schema:
-                $ref: '#/components/schemas/post_createorder_v7_500_response'
+                $ref: "#/components/schemas/post_createorder_v7_500_response"
           description: Internal Server Error
       security:
       - application:
@@ -8106,7 +8115,7 @@ paths:
                       phoneNumber: ""
                     numberOfBoxes: "1"
             schema:
-              $ref: '#/components/schemas/returnsCreateRequest'
+              $ref: "#/components/schemas/returnsCreateRequest"
       responses:
         "200":
           content:
@@ -8133,7 +8142,7 @@ paths:
                         href: /resellers/v6/returns/CAS-08946-G1W3J3-1
                         type: get
               schema:
-                $ref: '#/components/schemas/returnsCreateResponse'
+                $ref: "#/components/schemas/returnsCreateResponse"
           description: OK
         "400":
           content:
@@ -8152,7 +8161,7 @@ paths:
                         message: Invalid CountryCode
                         value: USA
               schema:
-                $ref: '#/components/schemas/post_renewalssearch_400_response'
+                $ref: "#/components/schemas/post_renewalssearch_400_response"
           description: "Error: Bad Request"
         "500":
           content:
@@ -8167,7 +8176,7 @@ paths:
                         Micro API support team
                       fields: []
               schema:
-                $ref: '#/components/schemas/post_createorder_v7_500_response'
+                $ref: "#/components/schemas/post_createorder_v7_500_response"
           description: Internal Server Error
       security:
       - application:
@@ -8262,7 +8271,7 @@ paths:
                     warehouseId: "10"
                     carrierCode: ""
             schema:
-              $ref: '#/components/schemas/freightRequest'
+              $ref: "#/components/schemas/freightRequest"
       responses:
         "200":
           content:
@@ -8326,7 +8335,7 @@ paths:
                         unitPrice: 161.46
                         netAmount: 161.46
               schema:
-                $ref: '#/components/schemas/freightResponse'
+                $ref: "#/components/schemas/freightResponse"
           description: OK
         "400":
           content:
@@ -8345,7 +8354,7 @@ paths:
                         message: Invalid CountryCode
                         value: USA
               schema:
-                $ref: '#/components/schemas/post_renewalssearch_400_response'
+                $ref: "#/components/schemas/post_renewalssearch_400_response"
           description: "Error: Bad Request"
         "500":
           content:
@@ -8360,7 +8369,7 @@ paths:
                         Micro API support team
                       fields: []
               schema:
-                $ref: '#/components/schemas/post_createorder_v7_500_response'
+                $ref: "#/components/schemas/post_createorder_v7_500_response"
           description: Internal Server Error
       security:
       - application:
@@ -8620,24 +8629,24 @@ components:
             \ The value of this field is ignored when shipComplete field is present."
           type: boolean
         resellerInfo:
-          $ref: '#/components/schemas/OrderCreateRequest_resellerInfo'
+          $ref: "#/components/schemas/OrderCreateRequest_resellerInfo"
         vmf:
-          $ref: '#/components/schemas/OrderCreateRequest_vmf'
+          $ref: "#/components/schemas/OrderCreateRequest_vmf"
         shipToInfo:
-          $ref: '#/components/schemas/OrderCreateRequest_shipToInfo'
+          $ref: "#/components/schemas/OrderCreateRequest_shipToInfo"
         endUserInfo:
-          $ref: '#/components/schemas/OrderCreateRequest_endUserInfo'
+          $ref: "#/components/schemas/OrderCreateRequest_endUserInfo"
         lines:
           description: The line-level details of the order.
           items:
-            $ref: '#/components/schemas/OrderCreateRequest_lines_inner'
+            $ref: "#/components/schemas/OrderCreateRequest_lines_inner"
           type: array
         shipmentDetails:
-          $ref: '#/components/schemas/OrderCreateRequest_shipmentDetails'
+          $ref: "#/components/schemas/OrderCreateRequest_shipmentDetails"
         additionalAttributes:
           description: Shipment-level additional attributes.
           items:
-            $ref: '#/components/schemas/OrderCreateRequest_additionalAttributes_inner'
+            $ref: "#/components/schemas/OrderCreateRequest_additionalAttributes_inner"
           type: array
       required:
       - customerOrderNumber
@@ -8688,29 +8697,29 @@ components:
           nullable: true
           type: string
         resellerInfo:
-          $ref: '#/components/schemas/order_create_v7_request_resellerInfo'
+          $ref: "#/components/schemas/order_create_v7_request_resellerInfo"
         endUserInfo:
-          $ref: '#/components/schemas/order_create_v7_request_endUserInfo'
+          $ref: "#/components/schemas/order_create_v7_request_endUserInfo"
         shipToInfo:
-          $ref: '#/components/schemas/order_create_v7_request_shipToInfo'
+          $ref: "#/components/schemas/order_create_v7_request_shipToInfo"
         shipmentDetails:
-          $ref: '#/components/schemas/order_create_v7_request_shipmentDetails'
+          $ref: "#/components/schemas/order_create_v7_request_shipmentDetails"
         additionalAttributes:
           description: Shipment-level additional attributes.
           items:
-            $ref: '#/components/schemas/order_create_v7_request_additionalAttributes_inner'
+            $ref: "#/components/schemas/order_create_v7_request_additionalAttributes_inner"
           nullable: true
           type: array
         vmfAdditionalAttributes:
           description: The object containing the list of fields required at a header
             level by the vendor.
           items:
-            $ref: '#/components/schemas/order_create_v7_request_vmfAdditionalAttributes_inner'
+            $ref: "#/components/schemas/order_create_v7_request_vmfAdditionalAttributes_inner"
           nullable: true
           type: array
         lines:
           items:
-            $ref: '#/components/schemas/order_create_v7_request_lines_inner'
+            $ref: "#/components/schemas/order_create_v7_request_lines_inner"
           type: array
       type: object
     ValidateQuoteResponse:
@@ -8763,12 +8772,12 @@ components:
           description: The object containing the list of fields required at a header
             level by the vendor.
           items:
-            $ref: '#/components/schemas/ValidateQuoteResponse_vmfAdditionalAttributes_inner'
+            $ref: "#/components/schemas/ValidateQuoteResponse_vmfAdditionalAttributes_inner"
           type: array
         lines:
           description: The object containing the lines from the quote.
           items:
-            $ref: '#/components/schemas/ValidateQuoteResponse_lines_inner'
+            $ref: "#/components/schemas/ValidateQuoteResponse_lines_inner"
           type: array
         quoteType:
           type: integer
@@ -9074,13 +9083,13 @@ components:
           format: decimal
           type: number
         shipToInfo:
-          $ref: '#/components/schemas/OrderCreateResponse_shipToInfo'
+          $ref: "#/components/schemas/OrderCreateResponse_shipToInfo"
         endUserInfo:
-          $ref: '#/components/schemas/OrderCreateResponse_endUserInfo'
+          $ref: "#/components/schemas/OrderCreateResponse_endUserInfo"
         orders:
           description: Order-level details.
           items:
-            $ref: '#/components/schemas/OrderCreateResponse_orders_inner'
+            $ref: "#/components/schemas/OrderCreateResponse_orders_inner"
           type: array
       type: object
     OrderModifyRequest:
@@ -9125,16 +9134,16 @@ components:
           maxLength: 132
           type: string
         shipToInfo:
-          $ref: '#/components/schemas/OrderModifyRequest_shipToInfo'
+          $ref: "#/components/schemas/OrderModifyRequest_shipToInfo"
         lines:
           description: The order line items.
           items:
-            $ref: '#/components/schemas/OrderModifyRequest_lines_inner'
+            $ref: "#/components/schemas/OrderModifyRequest_lines_inner"
           type: array
         additionalAttributes:
           description: Header-level additional attributes.
           items:
-            $ref: '#/components/schemas/OrderModifyRequest_additionalAttributes_inner'
+            $ref: "#/components/schemas/OrderModifyRequest_additionalAttributes_inner"
           type: array
       type: object
     OrderModifyResponse:
@@ -9268,21 +9277,21 @@ components:
             for credit.
           type: string
         shipToInfo:
-          $ref: '#/components/schemas/OrderModifyResponse_shipToInfo'
+          $ref: "#/components/schemas/OrderModifyResponse_shipToInfo"
         lines:
           description: The line-level details for the order.
           items:
-            $ref: '#/components/schemas/OrderModifyResponse_lines_inner'
+            $ref: "#/components/schemas/OrderModifyResponse_lines_inner"
           type: array
         rejectedLineItems:
           description: Details for failed lines in the order.
           items:
-            $ref: '#/components/schemas/OrderModifyResponse_rejectedLineItems_inner'
+            $ref: "#/components/schemas/OrderModifyResponse_rejectedLineItems_inner"
           type: array
         additionalAttributes:
           description: Header-level additional attributes.
           items:
-            $ref: '#/components/schemas/OrderModifyResponse_lines_inner_additionalAttributes_inner'
+            $ref: "#/components/schemas/OrderModifyResponse_lines_inner_additionalAttributes_inner"
           type: array
       type: object
     OrderSearch_Response:
@@ -9372,7 +9381,7 @@ components:
         orders:
           description: The details for the order.
           items:
-            $ref: '#/components/schemas/OrderSearch_Response_orders_inner'
+            $ref: "#/components/schemas/OrderSearch_Response_orders_inner"
           type: array
         nextPage:
           description: link/URL for accessing next page.
@@ -9438,22 +9447,22 @@ components:
           type: string
         availabilityByWarehouse:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityRequest_availabilityByWarehouse_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityRequest_availabilityByWarehouse_inner"
           nullable: true
           type: array
         products:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityRequest_products_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityRequest_products_inner"
           type: array
         additionalAttributes:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityRequest_additionalAttributes_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityRequest_additionalAttributes_inner"
           nullable: true
           type: array
       type: object
     PriceAndAvailabilityResponse:
       items:
-        $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner'
+        $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner"
       type: array
     ProductSearch_Response:
       example:
@@ -9596,11 +9605,11 @@ components:
           type: integer
         catalog:
           items:
-            $ref: '#/components/schemas/ProductSearch_Response_catalog_inner'
+            $ref: "#/components/schemas/ProductSearch_Response_catalog_inner"
           type: array
         subscriptionCatalog:
           items:
-            $ref: '#/components/schemas/ProductSearch_Response_subscriptionCatalog_inner'
+            $ref: "#/components/schemas/ProductSearch_Response_subscriptionCatalog_inner"
           type: array
         nextPage:
           description: link/URL for accessing next page.
@@ -9821,28 +9830,28 @@ components:
           nullable: true
           type: string
         indicators:
-          $ref: '#/components/schemas/ProductDetailResponse_indicators'
+          $ref: "#/components/schemas/ProductDetailResponse_indicators"
         ciscoFields:
-          $ref: '#/components/schemas/ProductDetailResponse_ciscoFields'
+          $ref: "#/components/schemas/ProductDetailResponse_ciscoFields"
         warrantyInformation:
           description: Warranty information related to the product.
           items:
             type: object
           type: array
         additionalInformation:
-          $ref: '#/components/schemas/ProductDetailResponse_additionalInformation'
+          $ref: "#/components/schemas/ProductDetailResponse_additionalInformation"
         subscriptionDetails:
           description: Subscription product Details
           items:
-            $ref: '#/components/schemas/ProductDetailResponse_subscriptionDetails_inner'
+            $ref: "#/components/schemas/ProductDetailResponse_subscriptionDetails_inner"
           type: array
       type: object
     renewalsSearchRequest:
       properties:
         status:
-          $ref: '#/components/schemas/renewalsSearchRequest_status'
+          $ref: "#/components/schemas/renewalsSearchRequest_status"
         dateType:
-          $ref: '#/components/schemas/renewalsSearchRequest_dateType'
+          $ref: "#/components/schemas/renewalsSearchRequest_dateType"
         vendor:
           description: The name of the Vendor.
           type: string
@@ -9900,7 +9909,7 @@ components:
           type: integer
         renewals:
           items:
-            $ref: '#/components/schemas/renewalsSearchResponse_renewals_inner'
+            $ref: "#/components/schemas/renewalsSearchResponse_renewals_inner"
           type: array
         nextPage:
           description: URL for the next page.
@@ -10003,16 +10012,16 @@ components:
           description: The status of the renewal.
           type: string
         endUserInfo:
-          $ref: '#/components/schemas/renewalsDetailsResponse_endUserInfo'
+          $ref: "#/components/schemas/renewalsDetailsResponse_endUserInfo"
         referenceNumber:
-          $ref: '#/components/schemas/renewalsDetailsResponse_referenceNumber'
+          $ref: "#/components/schemas/renewalsDetailsResponse_referenceNumber"
         products:
           items:
-            $ref: '#/components/schemas/renewalsDetailsResponse_products_inner'
+            $ref: "#/components/schemas/renewalsDetailsResponse_products_inner"
           type: array
         additionalAttributes:
           items:
-            $ref: '#/components/schemas/renewalsDetailsResponse_additionalAttributes_inner'
+            $ref: "#/components/schemas/renewalsDetailsResponse_additionalAttributes_inner"
           type: array
       type: object
     dealsSearchResponse:
@@ -10053,7 +10062,7 @@ components:
           type: integer
         deals:
           items:
-            $ref: '#/components/schemas/dealsSearchResponse_deals_inner'
+            $ref: "#/components/schemas/dealsSearchResponse_deals_inner"
           type: array
         nextPage:
           description: URL for the next page.
@@ -10147,10 +10156,10 @@ components:
           description: Country specific currency code.
           type: string
         endUserInfo:
-          $ref: '#/components/schemas/renewalsDetailsResponse_endUserInfo'
+          $ref: "#/components/schemas/renewalsDetailsResponse_endUserInfo"
         products:
           items:
-            $ref: '#/components/schemas/dealsDetailsResponse_products_inner'
+            $ref: "#/components/schemas/dealsDetailsResponse_products_inner"
           type: array
       type: object
     returnsSearchResponse:
@@ -10207,7 +10216,7 @@ components:
           type: integer
         returnsClaims:
           items:
-            $ref: '#/components/schemas/returnsSearchResponse_returnsClaims_inner'
+            $ref: "#/components/schemas/returnsSearchResponse_returnsClaims_inner"
           type: array
         nextPage:
           description: URL for the next page.
@@ -10290,7 +10299,7 @@ components:
           type: string
         products:
           items:
-            $ref: '#/components/schemas/returnsDetailsResponse_products_inner'
+            $ref: "#/components/schemas/returnsDetailsResponse_products_inner"
           type: array
         subTotal:
           description: Sub total amount of the return request.
@@ -10313,7 +10322,7 @@ components:
       properties:
         list:
           items:
-            $ref: '#/components/schemas/returnsCreateRequest_list_inner'
+            $ref: "#/components/schemas/returnsCreateRequest_list_inner"
           type: array
       type: object
     returnsCreateResponse:
@@ -10362,7 +10371,7 @@ components:
       properties:
         returnsClaims:
           items:
-            $ref: '#/components/schemas/returnsCreateResponse_returnsClaims_inner'
+            $ref: "#/components/schemas/returnsCreateResponse_returnsClaims_inner"
           type: array
       type: object
     freightRequest:
@@ -10377,10 +10386,10 @@ components:
             system for shipping. Provided to resellers during the onboarding process.
           type: string
         shipToAddress:
-          $ref: '#/components/schemas/freightRequest_shipToAddress'
+          $ref: "#/components/schemas/freightRequest_shipToAddress"
         lines:
           items:
-            $ref: '#/components/schemas/freightRequest_lines_inner'
+            $ref: "#/components/schemas/freightRequest_lines_inner"
           type: array
       type: object
     freightResponse:
@@ -10442,7 +10451,7 @@ components:
           currencyCode: currencyCode
       properties:
         freightEstimateResponse:
-          $ref: '#/components/schemas/freightResponse_freightEstimateResponse'
+          $ref: "#/components/schemas/freightResponse_freightEstimateResponse"
       type: object
     QuoteSearchResponse:
       example:
@@ -10506,7 +10515,7 @@ components:
         quotes:
           description: The quote details for the requested criteria.
           items:
-            $ref: '#/components/schemas/QuoteSearchResponse_quotes_inner'
+            $ref: "#/components/schemas/QuoteSearchResponse_quotes_inner"
           type: array
         nextPage:
           type: string
@@ -10839,14 +10848,14 @@ components:
         paymentTermsName:
           type: string
         resellerInfo:
-          $ref: '#/components/schemas/QuoteDetailsResponse_resellerInfo'
+          $ref: "#/components/schemas/QuoteDetailsResponse_resellerInfo"
         endUserInfo:
-          $ref: '#/components/schemas/QuoteDetailsResponse_endUserInfo'
+          $ref: "#/components/schemas/QuoteDetailsResponse_endUserInfo"
         shippingInfo:
-          $ref: '#/components/schemas/QuoteDetailsResponse_shippingInfo'
+          $ref: "#/components/schemas/QuoteDetailsResponse_shippingInfo"
         products:
           items:
-            $ref: '#/components/schemas/QuoteDetailsResponse_products_inner'
+            $ref: "#/components/schemas/QuoteDetailsResponse_products_inner"
           type: array
         productsCount:
           description: Total number of products included in the quote
@@ -10864,7 +10873,7 @@ components:
           type: number
         extraFeesTotalDetails:
           items:
-            $ref: '#/components/schemas/QuoteDetailsResponse_products_inner_price_extraFeesDetails_inner'
+            $ref: "#/components/schemas/QuoteDetailsResponse_products_inner_price_extraFeesDetails_inner"
           type: array
         taxTotal:
           format: decimal
@@ -10883,7 +10892,7 @@ components:
           type: string
         additionalAttributes:
           items:
-            $ref: '#/components/schemas/QuoteDetailsResponse_additionalAttributes_inner'
+            $ref: "#/components/schemas/QuoteDetailsResponse_additionalAttributes_inner"
           type: array
       type: object
     AvailabilityAsyncNotificationRequest:
@@ -10940,7 +10949,7 @@ components:
           type: string
         resource:
           items:
-            $ref: '#/components/schemas/AvailabilityAsyncNotificationRequest_resource_inner'
+            $ref: "#/components/schemas/AvailabilityAsyncNotificationRequest_resource_inner"
           type: array
       required:
       - customerOrderNumber
@@ -11137,7 +11146,7 @@ components:
           type: string
         resource:
           items:
-            $ref: '#/components/schemas/OrderStatusAsyncNotificationRequest_resource_inner'
+            $ref: "#/components/schemas/OrderStatusAsyncNotificationRequest_resource_inner"
           type: array
       required:
       - customerOrderNumber
@@ -11197,7 +11206,7 @@ components:
         invoices:
           description: The Invoices details for the requested criteria.
           items:
-            $ref: '#/components/schemas/InvoiceSearchResponse_invoices_inner'
+            $ref: "#/components/schemas/InvoiceSearchResponse_invoices_inner"
           type: array
         nextPage:
           description: Next page of the pagination.
@@ -11369,19 +11378,19 @@ components:
           description: Notes for the invoice.
           type: string
         paymentTermsInfo:
-          $ref: '#/components/schemas/InvoiceDetailsv6_1Response_paymentTermsInfo'
+          $ref: "#/components/schemas/InvoiceDetailsv6_1Response_paymentTermsInfo"
         billToInfo:
-          $ref: '#/components/schemas/InvoiceDetailsv6_1Response_billToInfo'
+          $ref: "#/components/schemas/InvoiceDetailsv6_1Response_billToInfo"
         shipToInfo:
-          $ref: '#/components/schemas/InvoiceDetailsv6_1Response_shipToInfo'
+          $ref: "#/components/schemas/InvoiceDetailsv6_1Response_shipToInfo"
         lines:
           items:
-            $ref: '#/components/schemas/InvoiceDetailsv6_1Response_lines_inner'
+            $ref: "#/components/schemas/InvoiceDetailsv6_1Response_lines_inner"
           type: array
         fxRateInfo:
-          $ref: '#/components/schemas/InvoiceDetailsv6_1Response_fxRateInfo'
+          $ref: "#/components/schemas/InvoiceDetailsv6_1Response_fxRateInfo"
         summary:
-          $ref: '#/components/schemas/InvoiceDetailsv6_1Response_summary'
+          $ref: "#/components/schemas/InvoiceDetailsv6_1Response_summary"
       title: invoiceDetailsv6.1Response
       type: object
       x-tags:
@@ -11412,7 +11421,7 @@ components:
       properties:
         errors:
           items:
-            $ref: '#/components/schemas/ErrorResponse_errors_inner'
+            $ref: "#/components/schemas/ErrorResponse_errors_inner"
           type: array
       type: object
     OrderCreateV7Response201:
@@ -11594,7 +11603,7 @@ components:
           description: The event name sent in the event request.
           type: string
         resource:
-          $ref: '#/components/schemas/OrderCreateV7Response_resource'
+          $ref: "#/components/schemas/OrderCreateV7Response_resource"
       type: object
     Error:
       additionalProperties: false
@@ -11621,7 +11630,7 @@ components:
           type: string
         fields:
           items:
-            $ref: '#/components/schemas/Fields'
+            $ref: "#/components/schemas/Fields"
           nullable: true
           type: array
       type: object
@@ -11652,7 +11661,7 @@ components:
       properties:
         errors:
           items:
-            $ref: '#/components/schemas/Error'
+            $ref: "#/components/schemas/Error"
           nullable: true
           type: array
       type: object
@@ -12299,24 +12308,24 @@ components:
           description: The header-level notes for the order.
           type: string
         billToInfo:
-          $ref: '#/components/schemas/OrderDetailB2B_billToInfo'
+          $ref: "#/components/schemas/OrderDetailB2B_billToInfo"
         shipToInfo:
-          $ref: '#/components/schemas/OrderDetailB2B_shipToInfo'
+          $ref: "#/components/schemas/OrderDetailB2B_shipToInfo"
         endUserInfo:
-          $ref: '#/components/schemas/OrderDetailB2B_endUserInfo'
+          $ref: "#/components/schemas/OrderDetailB2B_endUserInfo"
         lines:
           items:
-            $ref: '#/components/schemas/OrderDetailB2B_lines_inner'
+            $ref: "#/components/schemas/OrderDetailB2B_lines_inner"
           nullable: true
           type: array
         miscellaneousCharges:
           items:
-            $ref: '#/components/schemas/OrderDetailB2B_miscellaneousCharges_inner'
+            $ref: "#/components/schemas/OrderDetailB2B_miscellaneousCharges_inner"
           nullable: true
           type: array
         additionalAttributes:
           items:
-            $ref: '#/components/schemas/OrderDetailB2B_additionalAttributes_inner'
+            $ref: "#/components/schemas/OrderDetailB2B_additionalAttributes_inner"
           nullable: true
           type: array
       type: object
@@ -12343,7 +12352,7 @@ components:
         faultstring:
           type: string
         detail:
-          $ref: '#/components/schemas/get_accesstoken_500_response_fault_detail'
+          $ref: "#/components/schemas/get_accesstoken_500_response_fault_detail"
       type: object
     get_accesstoken_500_response:
       example:
@@ -12353,7 +12362,7 @@ components:
             errorcode: errorcode
       properties:
         fault:
-          $ref: '#/components/schemas/get_accesstoken_500_response_fault'
+          $ref: "#/components/schemas/get_accesstoken_500_response_fault"
       type: object
     post_createorder_v7_400_response_fields_inner:
       example:
@@ -12395,7 +12404,7 @@ components:
           type: string
         fields:
           items:
-            $ref: '#/components/schemas/post_createorder_v7_400_response_fields_inner'
+            $ref: "#/components/schemas/post_createorder_v7_400_response_fields_inner"
           type: array
       type: object
     post_createorder_v7_500_response:
@@ -12461,7 +12470,7 @@ components:
           type: string
         fields:
           items:
-            $ref: '#/components/schemas/get_reseller_v6_validateQuote_400_response_fields_inner'
+            $ref: "#/components/schemas/get_reseller_v6_validateQuote_400_response_fields_inner"
           type: array
       type: object
     post_renewalssearch_400_response:
@@ -12484,7 +12493,7 @@ components:
           type: string
         fields:
           items:
-            $ref: '#/components/schemas/get_reseller_v6_validateQuote_400_response_fields_inner'
+            $ref: "#/components/schemas/get_reseller_v6_validateQuote_400_response_fields_inner"
           type: array
       type: object
     OrderCreateRequest_resellerInfo:
@@ -12786,7 +12795,7 @@ components:
           description: "Serial information of the hardware to be associated with the\
             \ warranty, applicable on post sale orders."
           items:
-            $ref: '#/components/schemas/OrderCreateRequest_lines_inner_warrantyInfo_inner_serialInfo_inner'
+            $ref: "#/components/schemas/OrderCreateRequest_lines_inner_warrantyInfo_inner_serialInfo_inner"
           type: array
       type: object
     OrderCreateRequest_lines_inner_endUserInfo_inner:
@@ -12973,17 +12982,17 @@ components:
           type: number
         additionalAttributes:
           items:
-            $ref: '#/components/schemas/OrderCreateRequest_lines_inner_additionalAttributes_inner'
+            $ref: "#/components/schemas/OrderCreateRequest_lines_inner_additionalAttributes_inner"
           type: array
         warrantyInfo:
           description: Warranty details for the line. This is required in case of
             warranty orders.
           items:
-            $ref: '#/components/schemas/OrderCreateRequest_lines_inner_warrantyInfo_inner'
+            $ref: "#/components/schemas/OrderCreateRequest_lines_inner_warrantyInfo_inner"
           type: array
         endUserInfo:
           items:
-            $ref: '#/components/schemas/OrderCreateRequest_lines_inner_endUserInfo_inner'
+            $ref: "#/components/schemas/OrderCreateRequest_lines_inner_endUserInfo_inner"
           type: array
       type: object
     OrderCreateRequest_shipmentDetails:
@@ -13446,16 +13455,16 @@ components:
           type: string
         endUserInfo:
           items:
-            $ref: '#/components/schemas/order_create_v7_request_lines_inner_endUserInfo_inner'
+            $ref: "#/components/schemas/order_create_v7_request_lines_inner_endUserInfo_inner"
           nullable: true
           type: array
         additionalAttributes:
           items:
-            $ref: '#/components/schemas/order_create_v7_request_lines_inner_additionalAttributes_inner'
+            $ref: "#/components/schemas/order_create_v7_request_lines_inner_additionalAttributes_inner"
           type: array
         vmfAdditionalAttributesLines:
           items:
-            $ref: '#/components/schemas/order_create_v7_request_lines_inner_vmfAdditionalAttributesLines_inner'
+            $ref: "#/components/schemas/order_create_v7_request_lines_inner_vmfAdditionalAttributesLines_inner"
           type: array
       type: object
     ValidateQuoteResponse_vmfAdditionalAttributes_inner:
@@ -13522,7 +13531,7 @@ components:
           description: The object containing the list of fields required at a line
             level by the vendor.
           items:
-            $ref: '#/components/schemas/ValidateQuoteResponse_lines_inner_vmfAdditionalAttributesLines_inner'
+            $ref: "#/components/schemas/ValidateQuoteResponse_lines_inner_vmfAdditionalAttributesLines_inner"
           type: array
       type: object
     OrderCreateResponse_shipToInfo:
@@ -13791,12 +13800,12 @@ components:
         shipmentDetails:
           description: The shipment details for the line item.
           items:
-            $ref: '#/components/schemas/OrderCreateResponse_orders_inner_lines_inner_shipmentDetails_inner'
+            $ref: "#/components/schemas/OrderCreateResponse_orders_inner_lines_inner_shipmentDetails_inner"
           type: array
         additionalAttributes:
           description: SAP requested and country-specific line level details.
           items:
-            $ref: '#/components/schemas/OrderCreateResponse_orders_inner_lines_inner_additionalAttributes_inner'
+            $ref: "#/components/schemas/OrderCreateResponse_orders_inner_lines_inner_additionalAttributes_inner"
           type: array
       type: object
     OrderCreateResponse_orders_inner_miscellaneousCharges_inner:
@@ -14049,25 +14058,25 @@ components:
         lines:
           description: The line-level details for the order.
           items:
-            $ref: '#/components/schemas/OrderCreateResponse_orders_inner_lines_inner'
+            $ref: "#/components/schemas/OrderCreateResponse_orders_inner_lines_inner"
           type: array
         miscellaneousCharges:
           items:
-            $ref: '#/components/schemas/OrderCreateResponse_orders_inner_miscellaneousCharges_inner'
+            $ref: "#/components/schemas/OrderCreateResponse_orders_inner_miscellaneousCharges_inner"
           type: array
         links:
           description: Link to Order Details for the order(s).
           items:
-            $ref: '#/components/schemas/OrderCreateResponse_orders_inner_links_inner'
+            $ref: "#/components/schemas/OrderCreateResponse_orders_inner_links_inner"
           type: array
         rejectedLineItems:
           description: A list of rejected line items.
           items:
-            $ref: '#/components/schemas/OrderCreateResponse_orders_inner_rejectedLineItems_inner'
+            $ref: "#/components/schemas/OrderCreateResponse_orders_inner_rejectedLineItems_inner"
           type: array
         additionalAttributes:
           items:
-            $ref: '#/components/schemas/OrderCreateResponse_orders_inner_additionalAttributes_inner'
+            $ref: "#/components/schemas/OrderCreateResponse_orders_inner_additionalAttributes_inner"
           type: array
       type: object
     OrderModifyRequest_shipToInfo:
@@ -14337,11 +14346,11 @@ components:
           description: The quantity backordered of the line item.
           type: integer
         shipmentDetails:
-          $ref: '#/components/schemas/OrderModifyResponse_lines_inner_shipmentDetails'
+          $ref: "#/components/schemas/OrderModifyResponse_lines_inner_shipmentDetails"
         additionalAttributes:
           description: SAP requested and country-specific line level details.
           items:
-            $ref: '#/components/schemas/OrderModifyResponse_lines_inner_additionalAttributes_inner'
+            $ref: "#/components/schemas/OrderModifyResponse_lines_inner_additionalAttributes_inner"
           type: array
         notes:
           description: Line-level notes for the order.
@@ -14425,7 +14434,7 @@ components:
         links:
           description: Link to Order Details for the sub order(s).
           items:
-            $ref: '#/components/schemas/OrderSearch_Response_orders_inner_subOrders_inner_links_inner'
+            $ref: "#/components/schemas/OrderSearch_Response_orders_inner_subOrders_inner_links_inner"
           type: array
       type: object
     OrderSearch_Response_orders_inner_links:
@@ -14511,10 +14520,10 @@ components:
           description: Individual Ingram Micro order numbers associated with a single
             reseller PO.
           items:
-            $ref: '#/components/schemas/OrderSearch_Response_orders_inner_subOrders_inner'
+            $ref: "#/components/schemas/OrderSearch_Response_orders_inner_subOrders_inner"
           type: array
         links:
-          $ref: '#/components/schemas/OrderSearch_Response_orders_inner_links'
+          $ref: "#/components/schemas/OrderSearch_Response_orders_inner_links"
       type: object
     PriceAndAvailabilityRequest_availabilityByWarehouse_inner:
       example:
@@ -14592,7 +14601,7 @@ components:
           type: string
         additionalAttributes:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityRequest_products_inner_additionalAttributes_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityRequest_products_inner_additionalAttributes_inner"
           nullable: true
           type: array
       type: object
@@ -14670,7 +14679,7 @@ components:
             \ (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western\
             \ Sahara)."
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner_backOrderInfo_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner_backOrderInfo_inner"
           type: array
       type: object
     PriceAndAvailabilityResponse_inner_availability:
@@ -14711,7 +14720,7 @@ components:
           type: integer
         availabilityByWarehouse:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner"
           nullable: true
           type: array
       type: object
@@ -14912,11 +14921,11 @@ components:
       properties:
         specialPricing:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_discounts_inner_specialPricing_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_discounts_inner_specialPricing_inner"
           type: array
         quantityDiscounts:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_discounts_inner_quantityDiscounts_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_discounts_inner_quantityDiscounts_inner"
           nullable: true
           type: array
       type: object
@@ -15130,11 +15139,11 @@ components:
       properties:
         volumeDiscounts:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner_volumeDiscounts_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner_volumeDiscounts_inner"
           type: array
         specialPricing:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner_specialPricing_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner_specialPricing_inner"
           type: array
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_fees_inner:
@@ -15280,15 +15289,15 @@ components:
           type: string
         resourcePricing:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_resourcePricing_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_resourcePricing_inner"
           type: array
         discounts:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner"
           type: array
         fees:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_fees_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_fees_inner"
           type: array
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner:
@@ -15495,17 +15504,17 @@ components:
           type: string
         groups:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_groups_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_groups_inner"
           type: array
         billingPeriod:
-          $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_billingPeriod'
+          $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_billingPeriod"
         subscriptionPeriod:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_subscriptionPeriod_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_subscriptionPeriod_inner"
           type: array
         options:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner"
           type: array
       type: object
     PriceAndAvailabilityResponse_inner:
@@ -16116,16 +16125,16 @@ components:
           nullable: true
           type: string
         availability:
-          $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_availability'
+          $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_availability"
         reserveInventoryDetails:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_reserveInventoryDetails_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_reserveInventoryDetails_inner"
           type: array
         pricing:
-          $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_pricing'
+          $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_pricing"
         discounts:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_discounts_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_discounts_inner"
           nullable: true
           type: array
         bundlePartIndicator:
@@ -16139,12 +16148,12 @@ components:
             \ (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western\
             \ Sahara)."
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_serviceFees_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_serviceFees_inner"
           nullable: true
           type: array
         subscriptionPrice:
           items:
-            $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner'
+            $ref: "#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner"
           type: array
       type: object
     ProductSearch_Response_catalog_inner_links_inner:
@@ -16243,7 +16252,7 @@ components:
           type: string
         links:
           items:
-            $ref: '#/components/schemas/ProductSearch_Response_catalog_inner_links_inner'
+            $ref: "#/components/schemas/ProductSearch_Response_catalog_inner_links_inner"
           type: array
         extraDescription:
           description: The extended description of the product.
@@ -16314,11 +16323,11 @@ components:
           type: string
         subscriptionPeriodSummary:
           items:
-            $ref: '#/components/schemas/ProductSearch_Response_subscriptionCatalog_inner_plans_inner_subscriptionPeriodSummary_inner'
+            $ref: "#/components/schemas/ProductSearch_Response_subscriptionCatalog_inner_plans_inner_subscriptionPeriodSummary_inner"
           type: array
         links:
           items:
-            $ref: '#/components/schemas/ProductSearch_Response_subscriptionCatalog_inner_plans_inner_links_inner'
+            $ref: "#/components/schemas/ProductSearch_Response_subscriptionCatalog_inner_plans_inner_links_inner"
           type: array
       type: object
     ProductSearch_Response_subscriptionCatalog_inner:
@@ -16377,7 +16386,7 @@ components:
           type: string
         plans:
           items:
-            $ref: '#/components/schemas/ProductSearch_Response_subscriptionCatalog_inner_plans_inner'
+            $ref: "#/components/schemas/ProductSearch_Response_subscriptionCatalog_inner_plans_inner"
           type: array
       type: object
     ProductDetailResponse_indicators:
@@ -16584,7 +16593,7 @@ components:
         productWeight:
           description: Weight information related to the product.
           items:
-            $ref: '#/components/schemas/ProductDetailResponse_additionalInformation_productWeight_inner'
+            $ref: "#/components/schemas/ProductDetailResponse_additionalInformation_productWeight_inner"
           type: array
         isBulkFreight:
           description: "Example : true or false"
@@ -16724,23 +16733,23 @@ components:
         groups:
           description: Details of the groups subscription product part of.
           items:
-            $ref: '#/components/schemas/ProductDetailResponse_subscriptionDetails_inner_groups_inner'
+            $ref: "#/components/schemas/ProductDetailResponse_subscriptionDetails_inner_groups_inner"
           type: array
         subscriptionPeriod:
           description: Details of the subscription period.
           items:
-            $ref: '#/components/schemas/ProductDetailResponse_subscriptionDetails_inner_subscriptionPeriod_inner'
+            $ref: "#/components/schemas/ProductDetailResponse_subscriptionDetails_inner_subscriptionPeriod_inner"
           type: array
         billingPeriod:
-          $ref: '#/components/schemas/ProductDetailResponse_subscriptionDetails_inner_billingPeriod'
+          $ref: "#/components/schemas/ProductDetailResponse_subscriptionDetails_inner_billingPeriod"
         options:
           description: Details of the resources available.
           items:
-            $ref: '#/components/schemas/ProductDetailResponse_subscriptionDetails_inner_options_inner'
+            $ref: "#/components/schemas/ProductDetailResponse_subscriptionDetails_inner_options_inner"
           type: array
         links:
           items:
-            $ref: '#/components/schemas/ProductSearch_Response_subscriptionCatalog_inner_plans_inner_links_inner'
+            $ref: "#/components/schemas/ProductSearch_Response_subscriptionCatalog_inner_plans_inner_links_inner"
           type: array
         nextPage:
           description: link/URL for accessing next page.
@@ -16768,7 +16777,7 @@ components:
     renewalsSearchRequest_status:
       properties:
         OpporutinyStatus:
-          $ref: '#/components/schemas/renewalsSearchRequest_status_OpporutinyStatus'
+          $ref: "#/components/schemas/renewalsSearchRequest_status_OpporutinyStatus"
       type: object
     renewalsSearchRequest_dateType_startDate:
       properties:
@@ -16809,13 +16818,13 @@ components:
     renewalsSearchRequest_dateType:
       properties:
         startDate:
-          $ref: '#/components/schemas/renewalsSearchRequest_dateType_startDate'
+          $ref: "#/components/schemas/renewalsSearchRequest_dateType_startDate"
         endDate:
-          $ref: '#/components/schemas/renewalsSearchRequest_dateType_endDate'
+          $ref: "#/components/schemas/renewalsSearchRequest_dateType_endDate"
         invoiceDate:
-          $ref: '#/components/schemas/renewalsSearchRequest_dateType_invoiceDate'
+          $ref: "#/components/schemas/renewalsSearchRequest_dateType_invoiceDate"
         expirationDate:
-          $ref: '#/components/schemas/renewalsSearchRequest_dateType_expirationDate'
+          $ref: "#/components/schemas/renewalsSearchRequest_dateType_expirationDate"
       type: object
     renewalsSearchResponse_renewals_inner_links_inner:
       example:
@@ -16879,7 +16888,7 @@ components:
           type: string
         links:
           items:
-            $ref: '#/components/schemas/renewalsSearchResponse_renewals_inner_links_inner'
+            $ref: "#/components/schemas/renewalsSearchResponse_renewals_inner_links_inner"
           type: array
       type: object
     renewalsDetailsResponse_endUserInfo:
@@ -17043,7 +17052,7 @@ components:
           description: Expiration date of the deal/Special bid.
           type: string
         links:
-          $ref: '#/components/schemas/renewalsSearchResponse_renewals_inner_links_inner'
+          $ref: "#/components/schemas/renewalsSearchResponse_renewals_inner_links_inner"
       type: object
     dealsDetailsResponse_products_inner:
       example:
@@ -17181,7 +17190,7 @@ components:
           type: string
         links:
           items:
-            $ref: '#/components/schemas/returnsSearchResponse_returnsClaims_inner_links_inner'
+            $ref: "#/components/schemas/returnsSearchResponse_returnsClaims_inner_links_inner"
           type: array
       type: object
     returnsDetailsResponse_products_inner:
@@ -17339,7 +17348,7 @@ components:
           type: string
         shipFromInfo:
           items:
-            $ref: '#/components/schemas/returnsCreateRequest_list_inner_shipFromInfo_inner'
+            $ref: "#/components/schemas/returnsCreateRequest_list_inner_shipFromInfo_inner"
           type: array
         numberOfBoxes:
           description: Number of boxes to return.
@@ -17419,7 +17428,7 @@ components:
           type: string
         links:
           items:
-            $ref: '#/components/schemas/returnsSearchResponse_returnsClaims_inner_links_inner'
+            $ref: "#/components/schemas/returnsSearchResponse_returnsClaims_inner_links_inner"
           type: array
       type: object
     freightRequest_shipToAddress:
@@ -17536,7 +17545,7 @@ components:
           type: integer
         carrierList:
           items:
-            $ref: '#/components/schemas/freightResponse_freightEstimateResponse_distribution_inner_carrierList_inner'
+            $ref: "#/components/schemas/freightResponse_freightEstimateResponse_distribution_inner_carrierList_inner"
           type: array
       type: object
     freightResponse_freightEstimateResponse_lines_inner:
@@ -17652,11 +17661,11 @@ components:
           type: number
         distribution:
           items:
-            $ref: '#/components/schemas/freightResponse_freightEstimateResponse_distribution_inner'
+            $ref: "#/components/schemas/freightResponse_freightEstimateResponse_distribution_inner"
           type: array
         lines:
           items:
-            $ref: '#/components/schemas/freightResponse_freightEstimateResponse_lines_inner'
+            $ref: "#/components/schemas/freightResponse_freightEstimateResponse_lines_inner"
           type: array
       type: object
     QuoteSearchResponse_quotes_inner_links:
@@ -17755,7 +17764,7 @@ components:
           description: Type of quote
           type: string
         links:
-          $ref: '#/components/schemas/QuoteSearchResponse_quotes_inner_links'
+          $ref: "#/components/schemas/QuoteSearchResponse_quotes_inner_links"
       type: object
     QuoteDetailsResponse_resellerInfo:
       example:
@@ -18018,11 +18027,11 @@ components:
           type: number
         extraFeesDetails:
           items:
-            $ref: '#/components/schemas/QuoteDetailsResponse_products_inner_price_extraFeesDetails_inner'
+            $ref: "#/components/schemas/QuoteDetailsResponse_products_inner_price_extraFeesDetails_inner"
           type: array
         discounts:
           items:
-            $ref: '#/components/schemas/QuoteDetailsResponse_products_inner_price_discounts_inner'
+            $ref: "#/components/schemas/QuoteDetailsResponse_products_inner_price_discounts_inner"
           type: array
       type: object
     QuoteDetailsResponse_products_inner_billDetails_inner:
@@ -18203,10 +18212,10 @@ components:
         serialNumber:
           type: string
         price:
-          $ref: '#/components/schemas/QuoteDetailsResponse_products_inner_price'
+          $ref: "#/components/schemas/QuoteDetailsResponse_products_inner_price"
         billDetails:
           items:
-            $ref: '#/components/schemas/QuoteDetailsResponse_products_inner_billDetails_inner'
+            $ref: "#/components/schemas/QuoteDetailsResponse_products_inner_billDetails_inner"
           type: array
       type: object
     QuoteDetailsResponse_additionalAttributes_inner:
@@ -18291,7 +18300,7 @@ components:
         links:
           description: Link to Order Details for the order(s).
           items:
-            $ref: '#/components/schemas/AvailabilityAsyncNotificationRequest_resource_inner_links_inner'
+            $ref: "#/components/schemas/AvailabilityAsyncNotificationRequest_resource_inner_links_inner"
           type: array
       type: object
     OrderStatusAsyncNotificationRequest_resource_inner_lines_inner_shipmentDetails_inner_packageDetails_inner:
@@ -18346,7 +18355,7 @@ components:
           type: string
         packageDetails:
           items:
-            $ref: '#/components/schemas/OrderStatusAsyncNotificationRequest_resource_inner_lines_inner_shipmentDetails_inner_packageDetails_inner'
+            $ref: "#/components/schemas/OrderStatusAsyncNotificationRequest_resource_inner_lines_inner_shipmentDetails_inner_packageDetails_inner"
           type: array
       type: object
     OrderStatusAsyncNotificationRequest_resource_inner_lines_inner_serialNumberDetails_inner:
@@ -18425,11 +18434,11 @@ components:
           type: string
         shipmentDetails:
           items:
-            $ref: '#/components/schemas/OrderStatusAsyncNotificationRequest_resource_inner_lines_inner_shipmentDetails_inner'
+            $ref: "#/components/schemas/OrderStatusAsyncNotificationRequest_resource_inner_lines_inner_shipmentDetails_inner"
           type: array
         serialNumberDetails:
           items:
-            $ref: '#/components/schemas/OrderStatusAsyncNotificationRequest_resource_inner_lines_inner_serialNumberDetails_inner'
+            $ref: "#/components/schemas/OrderStatusAsyncNotificationRequest_resource_inner_lines_inner_serialNumberDetails_inner"
           type: array
       type: object
     OrderStatusAsyncNotificationRequest_resource_inner_links_inner:
@@ -18551,12 +18560,12 @@ components:
         lines:
           description: The line-level details for the order.
           items:
-            $ref: '#/components/schemas/OrderStatusAsyncNotificationRequest_resource_inner_lines_inner'
+            $ref: "#/components/schemas/OrderStatusAsyncNotificationRequest_resource_inner_lines_inner"
           type: array
         links:
           description: Link to Order Details for the order(s).
           items:
-            $ref: '#/components/schemas/OrderStatusAsyncNotificationRequest_resource_inner_links_inner'
+            $ref: "#/components/schemas/OrderStatusAsyncNotificationRequest_resource_inner_links_inner"
           type: array
       type: object
     InvoiceSearchResponse_invoices_inner:
@@ -18841,7 +18850,7 @@ components:
           type: number
         serialNumbers:
           items:
-            $ref: '#/components/schemas/InvoiceDetailsv6_1Response_lines_inner_serialNumbers_inner'
+            $ref: "#/components/schemas/InvoiceDetailsv6_1Response_lines_inner_serialNumbers_inner"
           nullable: true
           type: array
         quantityOrdered:
@@ -19010,17 +19019,17 @@ components:
           productLineTotalQuantity: 7
       properties:
         lines:
-          $ref: '#/components/schemas/InvoiceDetailsv6_1Response_summary_lines'
+          $ref: "#/components/schemas/InvoiceDetailsv6_1Response_summary_lines"
         miscCharges:
           description: Miscellaneous charges.
           items:
-            $ref: '#/components/schemas/InvoiceDetailsv6_1Response_summary_miscCharges_inner'
+            $ref: "#/components/schemas/InvoiceDetailsv6_1Response_summary_miscCharges_inner"
           nullable: true
           type: array
         totals:
-          $ref: '#/components/schemas/InvoiceDetailsv6_1Response_summary_totals'
+          $ref: "#/components/schemas/InvoiceDetailsv6_1Response_summary_totals"
         foreignFxTotals:
-          $ref: '#/components/schemas/InvoiceDetailsv6_1Response_summary_foreignFxTotals'
+          $ref: "#/components/schemas/InvoiceDetailsv6_1Response_summary_foreignFxTotals"
       type: object
     ErrorResponse_errors_inner_fields_inner:
       example:
@@ -19062,7 +19071,7 @@ components:
           type: string
         fields:
           items:
-            $ref: '#/components/schemas/ErrorResponse_errors_inner_fields_inner'
+            $ref: "#/components/schemas/ErrorResponse_errors_inner_fields_inner"
           type: array
       type: object
     OrderCreateV7Response_resource_shipToInfo:
@@ -19191,7 +19200,7 @@ components:
         shipmentDetails:
           description: The shipment details for the line item.
           items:
-            $ref: '#/components/schemas/OrderCreateV7Response_resource_orders_inner_lines_inner_shipmentDetails_inner'
+            $ref: "#/components/schemas/OrderCreateV7Response_resource_orders_inner_lines_inner_shipmentDetails_inner"
           type: array
       type: object
     OrderCreateV7Response_resource_orders_inner:
@@ -19297,12 +19306,12 @@ components:
         lines:
           description: The line-level details for the order.
           items:
-            $ref: '#/components/schemas/OrderCreateV7Response_resource_orders_inner_lines_inner'
+            $ref: "#/components/schemas/OrderCreateV7Response_resource_orders_inner_lines_inner"
           type: array
         links:
           description: Link to Order Details for the order(s).
           items:
-            $ref: '#/components/schemas/OrderCreateResponse_orders_inner_links_inner'
+            $ref: "#/components/schemas/OrderCreateResponse_orders_inner_links_inner"
           type: array
       type: object
     OrderCreateV7Response_resource:
@@ -19461,11 +19470,11 @@ components:
           format: decimal
           type: number
         shipToInfo:
-          $ref: '#/components/schemas/OrderCreateV7Response_resource_shipToInfo'
+          $ref: "#/components/schemas/OrderCreateV7Response_resource_shipToInfo"
         orders:
           description: Order-level details.
           items:
-            $ref: '#/components/schemas/OrderCreateV7Response_resource_orders_inner'
+            $ref: "#/components/schemas/OrderCreateV7Response_resource_orders_inner"
           type: array
       type: object
     OrderDetailB2B_billToInfo:
@@ -19661,7 +19670,7 @@ components:
           description: A list of serial numbers of the line items contained in the
             shipment.
           items:
-            $ref: '#/components/schemas/OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner_trackingDetails_inner_serialNumbers_inner'
+            $ref: "#/components/schemas/OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner_trackingDetails_inner_serialNumbers_inner"
           nullable: true
           type: array
       type: object
@@ -19719,7 +19728,7 @@ components:
         trackingDetails:
           description: The tracking details for the shipment containing the line item.
           items:
-            $ref: '#/components/schemas/OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner_trackingDetails_inner'
+            $ref: "#/components/schemas/OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner_trackingDetails_inner"
           nullable: true
           type: array
       type: object
@@ -19815,7 +19824,7 @@ components:
         carrierDetails:
           description: The shipment carrier details for the line item.
           items:
-            $ref: '#/components/schemas/OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner'
+            $ref: "#/components/schemas/OrderDetailB2B_lines_inner_shipmentDetails_inner_carrierDetails_inner"
           nullable: true
           type: array
       type: object
@@ -19934,11 +19943,11 @@ components:
           licenseEndDate: licenseEndDate
       properties:
         contractInfo:
-          $ref: '#/components/schemas/OrderDetailB2B_lines_inner_serviceContractInfo_contractInfo'
+          $ref: "#/components/schemas/OrderDetailB2B_lines_inner_serviceContractInfo_contractInfo"
         subscriptions:
-          $ref: '#/components/schemas/OrderDetailB2B_lines_inner_serviceContractInfo_subscriptions'
+          $ref: "#/components/schemas/OrderDetailB2B_lines_inner_serviceContractInfo_subscriptions"
         licenseInfo:
-          $ref: '#/components/schemas/OrderDetailB2B_lines_inner_serviceContractInfo_licenseInfo'
+          $ref: "#/components/schemas/OrderDetailB2B_lines_inner_serviceContractInfo_licenseInfo"
       type: object
     OrderDetailB2B_lines_inner_additionalAttributes_inner:
       additionalProperties: false
@@ -19998,7 +20007,7 @@ components:
           description: Date type. Example Single or multiple dates.
           type: string
         shipDateRange:
-          $ref: '#/components/schemas/OrderDetailB2B_lines_inner_estimatedDates_inner_ship_shipDateRange'
+          $ref: "#/components/schemas/OrderDetailB2B_lines_inner_estimatedDates_inner_ship_shipDateRange"
         shipSource:
           description: Source of the shipment.
           type: string
@@ -20035,7 +20044,7 @@ components:
           description: Date type. Example Single or multiple dates.
           type: string
         deliveryDateRange:
-          $ref: '#/components/schemas/OrderDetailB2B_lines_inner_estimatedDates_inner_delivery_deliveryDateRange'
+          $ref: "#/components/schemas/OrderDetailB2B_lines_inner_estimatedDates_inner_delivery_deliveryDateRange"
         deliverySource:
           description: Source of the delivery.
           type: string
@@ -20066,9 +20075,9 @@ components:
           shipDescription: shipDescription
       properties:
         ship:
-          $ref: '#/components/schemas/OrderDetailB2B_lines_inner_estimatedDates_inner_ship'
+          $ref: "#/components/schemas/OrderDetailB2B_lines_inner_estimatedDates_inner_ship"
         delivery:
-          $ref: '#/components/schemas/OrderDetailB2B_lines_inner_estimatedDates_inner_delivery'
+          $ref: "#/components/schemas/OrderDetailB2B_lines_inner_estimatedDates_inner_delivery"
       type: object
     OrderDetailB2B_lines_inner_scheduleLines_inner:
       example:
@@ -20121,7 +20130,7 @@ components:
           description: Date type. Example Single or multiple dates.
           type: string
         dateRange:
-          $ref: '#/components/schemas/OrderDetailB2B_lines_inner_estimatedDates_inner_ship_shipDateRange'
+          $ref: "#/components/schemas/OrderDetailB2B_lines_inner_estimatedDates_inner_ship_shipDateRange"
         source:
           description: Source.
           type: string
@@ -20473,32 +20482,32 @@ components:
         shipmentDetails:
           description: Shipping details for the line item.
           items:
-            $ref: '#/components/schemas/OrderDetailB2B_lines_inner_shipmentDetails_inner'
+            $ref: "#/components/schemas/OrderDetailB2B_lines_inner_shipmentDetails_inner"
           nullable: true
           type: array
         serviceContractInfo:
-          $ref: '#/components/schemas/OrderDetailB2B_lines_inner_serviceContractInfo'
+          $ref: "#/components/schemas/OrderDetailB2B_lines_inner_serviceContractInfo"
         additionalAttributes:
           items:
-            $ref: '#/components/schemas/OrderDetailB2B_lines_inner_additionalAttributes_inner'
+            $ref: "#/components/schemas/OrderDetailB2B_lines_inner_additionalAttributes_inner"
           nullable: true
           type: array
         links:
           items:
-            $ref: '#/components/schemas/OrderDetailB2B_lines_inner_links_inner'
+            $ref: "#/components/schemas/OrderDetailB2B_lines_inner_links_inner"
           nullable: true
           type: array
         estimatedDates:
           items:
-            $ref: '#/components/schemas/OrderDetailB2B_lines_inner_estimatedDates_inner'
+            $ref: "#/components/schemas/OrderDetailB2B_lines_inner_estimatedDates_inner"
           type: array
         scheduleLines:
           items:
-            $ref: '#/components/schemas/OrderDetailB2B_lines_inner_scheduleLines_inner'
+            $ref: "#/components/schemas/OrderDetailB2B_lines_inner_scheduleLines_inner"
           type: array
         multipleShipments:
           items:
-            $ref: '#/components/schemas/OrderDetailB2B_lines_inner_multipleShipments_inner'
+            $ref: "#/components/schemas/OrderDetailB2B_lines_inner_multipleShipments_inner"
           type: array
         defaultCarrierName:
           example: FEDEX GROUND

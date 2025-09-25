@@ -9,7 +9,7 @@ All URIs are relative to *https://api.ingrammicro.com:443*
 
 <a id="getresellersv6dealsdetails"></a>
 # **GetResellersV6Dealsdetails**
-> DealsDetailsResponse GetResellersV6Dealsdetails (string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId)
+> DealsDetailsResponse GetResellersV6Dealsdetails (string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId, string vendorName)
 
 Deals Details
 
@@ -44,11 +44,12 @@ namespace Example
             var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction across all the systems.
             var iMApplicationId = MyCompany;  // string | Unique value used to identify the sender of the transaction. Example: MyCompany
             var dealId = 12345678;  // string | Unique deal ID.
+            var vendorName = Cisco;  // string | Vendor for that bid
 
             try
             {
                 // Deals Details
-                DealsDetailsResponse result = apiInstance.GetResellersV6Dealsdetails(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationId, dealId);
+                DealsDetailsResponse result = apiInstance.GetResellersV6Dealsdetails(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationId, dealId, vendorName);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -69,7 +70,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Deals Details
-    ApiResponse<DealsDetailsResponse> response = apiInstance.GetResellersV6DealsdetailsWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationId, dealId);
+    ApiResponse<DealsDetailsResponse> response = apiInstance.GetResellersV6DealsdetailsWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationId, dealId, vendorName);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -91,6 +92,7 @@ catch (ApiException e)
 | **iMCorrelationID** | **string** | Unique transaction number to identify each transaction across all the systems. |  |
 | **iMApplicationId** | **string** | Unique value used to identify the sender of the transaction. Example: MyCompany |  |
 | **dealId** | **string** | Unique deal ID. |  |
+| **vendorName** | **string** | Vendor for that bid |  |
 
 ### Return type
 
