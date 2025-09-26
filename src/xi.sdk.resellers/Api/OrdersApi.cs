@@ -253,6 +253,35 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>ApiResponse of OrderModifyResponse</returns>
         ApiResponse<OrderModifyResponse> PutOrdermodifyWithHttpInfo(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default, string? regionCode = default, string? iMSenderID = default);
+        /// <summary>
+        /// Vendor Required Info
+        /// </summary>
+        /// <remarks>
+        /// &lt;p&gt;The vendor required info API allows customers to identify all the mandatory fields that will be required to create an order before placing an order. These fields are required by the vendor to process orders. The customers can identify Vendor Required Information, aka Vendor Mandatory Fields or VMFs, using any of the following.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Ingram Part Number&lt;/li&gt;&lt;li&gt;Vendor Part Number&lt;/li&gt;&lt;li&gt;Plan ID&lt;/li&gt;&lt;li&gt;Ingram Quote Number&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;For the non-cloud Technology Solutions products, such as Hardware, Software, or Warranty, the VMFs will be returned in the “vmfAdditionalAttributes” object in the response, whereas for the cloud subscriptions products, the VMFs will be returned in the “vriAdditionalAttributes” object in the response.&lt;/p&gt;&lt;p&gt;While creating an Order Create request for the non-cloud products, such as Hardware, Software, or Warranty, pass “vmfAdditionalAttributes” object with the necessary response in the “attributeValue” field.&lt;/p&gt;&lt;p&gt;While creating an Order Create request, for Subscription products, pass “vriAdditionalAttributes” object with the necessary response in the “attributeValue” field and any other applicable subcomponents to create an order. &lt;/p&gt;
+        /// </remarks>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. </param>
+        /// <param name="vendorRequiredInfoRequest"> (optional)</param>
+        /// <returns>VendorRequiredInforesponse</returns>
+        VendorRequiredInforesponse VendorRequiredInfo(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default);
+
+        /// <summary>
+        /// Vendor Required Info
+        /// </summary>
+        /// <remarks>
+        /// &lt;p&gt;The vendor required info API allows customers to identify all the mandatory fields that will be required to create an order before placing an order. These fields are required by the vendor to process orders. The customers can identify Vendor Required Information, aka Vendor Mandatory Fields or VMFs, using any of the following.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Ingram Part Number&lt;/li&gt;&lt;li&gt;Vendor Part Number&lt;/li&gt;&lt;li&gt;Plan ID&lt;/li&gt;&lt;li&gt;Ingram Quote Number&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;For the non-cloud Technology Solutions products, such as Hardware, Software, or Warranty, the VMFs will be returned in the “vmfAdditionalAttributes” object in the response, whereas for the cloud subscriptions products, the VMFs will be returned in the “vriAdditionalAttributes” object in the response.&lt;/p&gt;&lt;p&gt;While creating an Order Create request for the non-cloud products, such as Hardware, Software, or Warranty, pass “vmfAdditionalAttributes” object with the necessary response in the “attributeValue” field.&lt;/p&gt;&lt;p&gt;While creating an Order Create request, for Subscription products, pass “vriAdditionalAttributes” object with the necessary response in the “attributeValue” field and any other applicable subcomponents to create an order. &lt;/p&gt;
+        /// </remarks>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. </param>
+        /// <param name="vendorRequiredInfoRequest"> (optional)</param>
+        /// <returns>ApiResponse of VendorRequiredInforesponse</returns>
+        ApiResponse<VendorRequiredInforesponse> VendorRequiredInfoWithHttpInfo(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default);
         #endregion Synchronous Operations
     }
 
@@ -500,6 +529,37 @@ namespace xi.sdk.resellers.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderModifyResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrderModifyResponse>> PutOrdermodifyWithHttpInfoAsync(string orderNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderModifyRequest orderModifyRequest, string? actionCode = default, string? regionCode = default, string? iMSenderID = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Vendor Required Info
+        /// </summary>
+        /// <remarks>
+        /// &lt;p&gt;The vendor required info API allows customers to identify all the mandatory fields that will be required to create an order before placing an order. These fields are required by the vendor to process orders. The customers can identify Vendor Required Information, aka Vendor Mandatory Fields or VMFs, using any of the following.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Ingram Part Number&lt;/li&gt;&lt;li&gt;Vendor Part Number&lt;/li&gt;&lt;li&gt;Plan ID&lt;/li&gt;&lt;li&gt;Ingram Quote Number&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;For the non-cloud Technology Solutions products, such as Hardware, Software, or Warranty, the VMFs will be returned in the “vmfAdditionalAttributes” object in the response, whereas for the cloud subscriptions products, the VMFs will be returned in the “vriAdditionalAttributes” object in the response.&lt;/p&gt;&lt;p&gt;While creating an Order Create request for the non-cloud products, such as Hardware, Software, or Warranty, pass “vmfAdditionalAttributes” object with the necessary response in the “attributeValue” field.&lt;/p&gt;&lt;p&gt;While creating an Order Create request, for Subscription products, pass “vriAdditionalAttributes” object with the necessary response in the “attributeValue” field and any other applicable subcomponents to create an order. &lt;/p&gt;
+        /// </remarks>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. </param>
+        /// <param name="vendorRequiredInfoRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VendorRequiredInforesponse</returns>
+        System.Threading.Tasks.Task<VendorRequiredInforesponse> VendorRequiredInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Vendor Required Info
+        /// </summary>
+        /// <remarks>
+        /// &lt;p&gt;The vendor required info API allows customers to identify all the mandatory fields that will be required to create an order before placing an order. These fields are required by the vendor to process orders. The customers can identify Vendor Required Information, aka Vendor Mandatory Fields or VMFs, using any of the following.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Ingram Part Number&lt;/li&gt;&lt;li&gt;Vendor Part Number&lt;/li&gt;&lt;li&gt;Plan ID&lt;/li&gt;&lt;li&gt;Ingram Quote Number&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;For the non-cloud Technology Solutions products, such as Hardware, Software, or Warranty, the VMFs will be returned in the “vmfAdditionalAttributes” object in the response, whereas for the cloud subscriptions products, the VMFs will be returned in the “vriAdditionalAttributes” object in the response.&lt;/p&gt;&lt;p&gt;While creating an Order Create request for the non-cloud products, such as Hardware, Software, or Warranty, pass “vmfAdditionalAttributes” object with the necessary response in the “attributeValue” field.&lt;/p&gt;&lt;p&gt;While creating an Order Create request, for Subscription products, pass “vriAdditionalAttributes” object with the necessary response in the “attributeValue” field and any other applicable subcomponents to create an order. &lt;/p&gt;
+        /// </remarks>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. </param>
+        /// <param name="vendorRequiredInfoRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (VendorRequiredInforesponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VendorRequiredInforesponse>> VendorRequiredInfoWithHttpInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -2109,6 +2169,183 @@ namespace xi.sdk.resellers.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PutOrdermodify", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Vendor Required Info &lt;p&gt;The vendor required info API allows customers to identify all the mandatory fields that will be required to create an order before placing an order. These fields are required by the vendor to process orders. The customers can identify Vendor Required Information, aka Vendor Mandatory Fields or VMFs, using any of the following.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Ingram Part Number&lt;/li&gt;&lt;li&gt;Vendor Part Number&lt;/li&gt;&lt;li&gt;Plan ID&lt;/li&gt;&lt;li&gt;Ingram Quote Number&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;For the non-cloud Technology Solutions products, such as Hardware, Software, or Warranty, the VMFs will be returned in the “vmfAdditionalAttributes” object in the response, whereas for the cloud subscriptions products, the VMFs will be returned in the “vriAdditionalAttributes” object in the response.&lt;/p&gt;&lt;p&gt;While creating an Order Create request for the non-cloud products, such as Hardware, Software, or Warranty, pass “vmfAdditionalAttributes” object with the necessary response in the “attributeValue” field.&lt;/p&gt;&lt;p&gt;While creating an Order Create request, for Subscription products, pass “vriAdditionalAttributes” object with the necessary response in the “attributeValue” field and any other applicable subcomponents to create an order. &lt;/p&gt;
+        /// </summary>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. </param>
+        /// <param name="vendorRequiredInfoRequest"> (optional)</param>
+        /// <returns>VendorRequiredInforesponse</returns>
+        public VendorRequiredInforesponse VendorRequiredInfo(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default)
+        {
+            xi.sdk.resellers.Client.ApiResponse<VendorRequiredInforesponse> localVarResponse = VendorRequiredInfoWithHttpInfo(iMCustomerNumber, iMCorrelationID, iMCountryCode, iMSenderID, vendorRequiredInfoRequest);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Vendor Required Info &lt;p&gt;The vendor required info API allows customers to identify all the mandatory fields that will be required to create an order before placing an order. These fields are required by the vendor to process orders. The customers can identify Vendor Required Information, aka Vendor Mandatory Fields or VMFs, using any of the following.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Ingram Part Number&lt;/li&gt;&lt;li&gt;Vendor Part Number&lt;/li&gt;&lt;li&gt;Plan ID&lt;/li&gt;&lt;li&gt;Ingram Quote Number&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;For the non-cloud Technology Solutions products, such as Hardware, Software, or Warranty, the VMFs will be returned in the “vmfAdditionalAttributes” object in the response, whereas for the cloud subscriptions products, the VMFs will be returned in the “vriAdditionalAttributes” object in the response.&lt;/p&gt;&lt;p&gt;While creating an Order Create request for the non-cloud products, such as Hardware, Software, or Warranty, pass “vmfAdditionalAttributes” object with the necessary response in the “attributeValue” field.&lt;/p&gt;&lt;p&gt;While creating an Order Create request, for Subscription products, pass “vriAdditionalAttributes” object with the necessary response in the “attributeValue” field and any other applicable subcomponents to create an order. &lt;/p&gt;
+        /// </summary>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. </param>
+        /// <param name="vendorRequiredInfoRequest"> (optional)</param>
+        /// <returns>ApiResponse of VendorRequiredInforesponse</returns>
+        public xi.sdk.resellers.Client.ApiResponse<VendorRequiredInforesponse> VendorRequiredInfoWithHttpInfo(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default)
+        {
+            // verify the required parameter 'iMCustomerNumber' is set
+            if (iMCustomerNumber == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCustomerNumber' when calling OrdersApi->VendorRequiredInfo");
+
+            // verify the required parameter 'iMCorrelationID' is set
+            if (iMCorrelationID == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling OrdersApi->VendorRequiredInfo");
+
+            // verify the required parameter 'iMCountryCode' is set
+            if (iMCountryCode == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCountryCode' when calling OrdersApi->VendorRequiredInfo");
+
+            // verify the required parameter 'iMSenderID' is set
+            if (iMSenderID == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMSenderID' when calling OrdersApi->VendorRequiredInfo");
+
+            xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = xi.sdk.resellers.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = xi.sdk.resellers.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.HeaderParameters.Add("IM-CustomerNumber", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCustomerNumber)); // header parameter
+            localVarRequestOptions.HeaderParameters.Add("IM-CorrelationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCorrelationID)); // header parameter
+            localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
+            localVarRequestOptions.HeaderParameters.Add("IM-SenderID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMSenderID)); // header parameter
+            localVarRequestOptions.Data = vendorRequiredInfoRequest;
+
+            // authentication (application) required
+            // oauth required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<VendorRequiredInforesponse>("/resellers/v7/vendorrequiredinfo", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("VendorRequiredInfo", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Vendor Required Info &lt;p&gt;The vendor required info API allows customers to identify all the mandatory fields that will be required to create an order before placing an order. These fields are required by the vendor to process orders. The customers can identify Vendor Required Information, aka Vendor Mandatory Fields or VMFs, using any of the following.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Ingram Part Number&lt;/li&gt;&lt;li&gt;Vendor Part Number&lt;/li&gt;&lt;li&gt;Plan ID&lt;/li&gt;&lt;li&gt;Ingram Quote Number&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;For the non-cloud Technology Solutions products, such as Hardware, Software, or Warranty, the VMFs will be returned in the “vmfAdditionalAttributes” object in the response, whereas for the cloud subscriptions products, the VMFs will be returned in the “vriAdditionalAttributes” object in the response.&lt;/p&gt;&lt;p&gt;While creating an Order Create request for the non-cloud products, such as Hardware, Software, or Warranty, pass “vmfAdditionalAttributes” object with the necessary response in the “attributeValue” field.&lt;/p&gt;&lt;p&gt;While creating an Order Create request, for Subscription products, pass “vriAdditionalAttributes” object with the necessary response in the “attributeValue” field and any other applicable subcomponents to create an order. &lt;/p&gt;
+        /// </summary>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. </param>
+        /// <param name="vendorRequiredInfoRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VendorRequiredInforesponse</returns>
+        public async System.Threading.Tasks.Task<VendorRequiredInforesponse> VendorRequiredInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default, System.Threading.CancellationToken cancellationToken = default)
+        {
+            xi.sdk.resellers.Client.ApiResponse<VendorRequiredInforesponse> localVarResponse = await VendorRequiredInfoWithHttpInfoAsync(iMCustomerNumber, iMCorrelationID, iMCountryCode, iMSenderID, vendorRequiredInfoRequest, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Vendor Required Info &lt;p&gt;The vendor required info API allows customers to identify all the mandatory fields that will be required to create an order before placing an order. These fields are required by the vendor to process orders. The customers can identify Vendor Required Information, aka Vendor Mandatory Fields or VMFs, using any of the following.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Ingram Part Number&lt;/li&gt;&lt;li&gt;Vendor Part Number&lt;/li&gt;&lt;li&gt;Plan ID&lt;/li&gt;&lt;li&gt;Ingram Quote Number&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;For the non-cloud Technology Solutions products, such as Hardware, Software, or Warranty, the VMFs will be returned in the “vmfAdditionalAttributes” object in the response, whereas for the cloud subscriptions products, the VMFs will be returned in the “vriAdditionalAttributes” object in the response.&lt;/p&gt;&lt;p&gt;While creating an Order Create request for the non-cloud products, such as Hardware, Software, or Warranty, pass “vmfAdditionalAttributes” object with the necessary response in the “attributeValue” field.&lt;/p&gt;&lt;p&gt;While creating an Order Create request, for Subscription products, pass “vriAdditionalAttributes” object with the necessary response in the “attributeValue” field and any other applicable subcomponents to create an order. &lt;/p&gt;
+        /// </summary>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. </param>
+        /// <param name="vendorRequiredInfoRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (VendorRequiredInforesponse)</returns>
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<VendorRequiredInforesponse>> VendorRequiredInfoWithHttpInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'iMCustomerNumber' is set
+            if (iMCustomerNumber == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCustomerNumber' when calling OrdersApi->VendorRequiredInfo");
+
+            // verify the required parameter 'iMCorrelationID' is set
+            if (iMCorrelationID == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling OrdersApi->VendorRequiredInfo");
+
+            // verify the required parameter 'iMCountryCode' is set
+            if (iMCountryCode == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCountryCode' when calling OrdersApi->VendorRequiredInfo");
+
+            // verify the required parameter 'iMSenderID' is set
+            if (iMSenderID == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMSenderID' when calling OrdersApi->VendorRequiredInfo");
+
+
+            xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+
+            var localVarContentType = xi.sdk.resellers.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = xi.sdk.resellers.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.HeaderParameters.Add("IM-CustomerNumber", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCustomerNumber)); // header parameter
+            localVarRequestOptions.HeaderParameters.Add("IM-CorrelationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCorrelationID)); // header parameter
+            localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
+            localVarRequestOptions.HeaderParameters.Add("IM-SenderID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMSenderID)); // header parameter
+            localVarRequestOptions.Data = vendorRequiredInfoRequest;
+
+            // authentication (application) required
+            // oauth required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.PostAsync<VendorRequiredInforesponse>("/resellers/v7/vendorrequiredinfo", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("VendorRequiredInfo", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

@@ -10,6 +10,7 @@ All URIs are relative to *https://api.ingrammicro.com:443*
 | [**PostCreateorderV6**](OrdersApi.md#postcreateorderv6) | **POST** /resellers/v6/orders | Create your Order |
 | [**PostCreateorderV7**](OrdersApi.md#postcreateorderv7) | **POST** /resellers/v7/orders | Create your Order v7 |
 | [**PutOrdermodify**](OrdersApi.md#putordermodify) | **PUT** /resellers/v6/orders/{orderNumber} | Modify your Order |
+| [**VendorRequiredInfo**](OrdersApi.md#vendorrequiredinfo) | **POST** /resellers/v7/vendorrequiredinfo | Vendor Required Info |
 
 <a id="deleteordercancel"></a>
 # **DeleteOrdercancel**
@@ -712,6 +713,112 @@ catch (ApiException e)
 | **401** | Unauthorized |  -  |
 | **404** | Not Found |  -  |
 | **500** | Internal Server Error |  * IM-CorrelationID - Unique transaction number to identify each transaction across all the systems. <br>  * IM-SenderID - Unique value used to identify the sender of the transaction. Example: MyCompany <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="vendorrequiredinfo"></a>
+# **VendorRequiredInfo**
+> VendorRequiredInforesponse VendorRequiredInfo (string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = null)
+
+Vendor Required Info
+
+<p>The vendor required info API allows customers to identify all the mandatory fields that will be required to create an order before placing an order. These fields are required by the vendor to process orders. The customers can identify Vendor Required Information, aka Vendor Mandatory Fields or VMFs, using any of the following.</p><ul><li>Ingram Part Number</li><li>Vendor Part Number</li><li>Plan ID</li><li>Ingram Quote Number</li></ul><p>For the non-cloud Technology Solutions products, such as Hardware, Software, or Warranty, the VMFs will be returned in the “vmfAdditionalAttributes” object in the response, whereas for the cloud subscriptions products, the VMFs will be returned in the “vriAdditionalAttributes” object in the response.</p><p>While creating an Order Create request for the non-cloud products, such as Hardware, Software, or Warranty, pass “vmfAdditionalAttributes” object with the necessary response in the “attributeValue” field.</p><p>While creating an Order Create request, for Subscription products, pass “vriAdditionalAttributes” object with the necessary response in the “attributeValue” field and any other applicable subcomponents to create an order. </p>
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using xi.sdk.resellers.Api;
+using xi.sdk.resellers.Client;
+using xi.sdk.resellers.Model;
+
+namespace Example
+{
+    public class VendorRequiredInfoExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.ingrammicro.com:443";
+            // Configure OAuth2 access token for authorization: application
+            config.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new OrdersApi(httpClient, config, httpClientHandler);
+            var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
+            var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction across all the systems.
+            var iMCountryCode = US;  // string | Two-character ISO country code.
+            var iMSenderID = MyCompany;  // string | Unique value used to identify the sender of the transaction. 
+            var vendorRequiredInfoRequest = new VendorRequiredInfoRequest?(); // VendorRequiredInfoRequest? |  (optional) 
+
+            try
+            {
+                // Vendor Required Info
+                VendorRequiredInforesponse result = apiInstance.VendorRequiredInfo(iMCustomerNumber, iMCorrelationID, iMCountryCode, iMSenderID, vendorRequiredInfoRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling OrdersApi.VendorRequiredInfo: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the VendorRequiredInfoWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Vendor Required Info
+    ApiResponse<VendorRequiredInforesponse> response = apiInstance.VendorRequiredInfoWithHttpInfo(iMCustomerNumber, iMCorrelationID, iMCountryCode, iMSenderID, vendorRequiredInfoRequest);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling OrdersApi.VendorRequiredInfoWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **iMCustomerNumber** | **string** | Your unique Ingram Micro customer number. |  |
+| **iMCorrelationID** | **string** | Unique transaction number to identify each transaction across all the systems. |  |
+| **iMCountryCode** | **string** | Two-character ISO country code. |  |
+| **iMSenderID** | **string** | Unique value used to identify the sender of the transaction.  |  |
+| **vendorRequiredInfoRequest** | [**VendorRequiredInfoRequest?**](VendorRequiredInfoRequest?.md) |  | [optional]  |
+
+### Return type
+
+[**VendorRequiredInforesponse**](VendorRequiredInforesponse.md)
+
+### Authorization
+
+[application](../README.md#application)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Ok |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

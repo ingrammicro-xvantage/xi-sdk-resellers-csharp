@@ -173,5 +173,21 @@ namespace xi.sdk.resellers.Test.Api
             //var response = instance.PutOrdermodify(orderNumber, iMCustomerNumber, iMCountryCode, iMCorrelationID, orderModifyRequest, actionCode, regionCode, iMSenderID);
             //Assert.IsType<OrderModifyResponse>(response);
         }
+
+        /// <summary>
+        /// Test VendorRequiredInfo
+        /// </summary>
+        [Fact]
+        public void VendorRequiredInfoTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string iMCustomerNumber = null;
+            //string iMCorrelationID = null;
+            //string iMCountryCode = null;
+            //string iMSenderID = null;
+            //VendorRequiredInfoRequest? vendorRequiredInfoRequest = null;
+            //var response = instance.VendorRequiredInfo(iMCustomerNumber, iMCorrelationID, iMCountryCode, iMSenderID, vendorRequiredInfoRequest);
+            //Assert.IsType<VendorRequiredInforesponse>(response);
+        }
     }
 }
