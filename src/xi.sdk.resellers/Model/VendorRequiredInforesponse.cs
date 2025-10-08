@@ -43,7 +43,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="responseMessages">responseMessages.</param>
         /// <param name="vmfAdditionalAttributes">vmfAdditionalAttributes.</param>
         /// <param name="vriAdditionalAttributes">vriAdditionalAttributes.</param>
-        public VendorRequiredInforesponse(string quoteNumber = default, string ingramPartNumber = default, string vendorPartNumber = default, int planId = default, string planName = default, List<VendorRequiredInforesponseResponseMessagesInner> responseMessages = default, List<VendorRequiredInforesponseVmfAdditionalAttributesInner> vmfAdditionalAttributes = default, List<VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner> vriAdditionalAttributes = default)
+        public VendorRequiredInforesponse(string quoteNumber = default, string ingramPartNumber = default, string vendorPartNumber = default, string planId = default, string planName = default, List<VendorRequiredInforesponseResponseMessagesInner> responseMessages = default, List<VendorRequiredInforesponseVmfAdditionalAttributesInner> vmfAdditionalAttributes = default, List<VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner> vriAdditionalAttributes = default)
         {
             this.QuoteNumber = quoteNumber;
             this.IngramPartNumber = ingramPartNumber;
@@ -84,7 +84,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>ID of the subscription plan</value>
         [DataMember(Name = "planId", EmitDefaultValue = false)]
-        public int PlanId { get; set; }
+        public string PlanId { get; set; }
 
         /// <summary>
         /// Name of the subscription plan
@@ -147,12 +147,6 @@ namespace xi.sdk.resellers.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // IngramPartNumber (string) maxLength
-            if (this.IngramPartNumber != null && this.IngramPartNumber.Length > 18)
-            {
-                yield return new ValidationResult("Invalid value for IngramPartNumber, length must be less than 18.", new [] { "IngramPartNumber" });
-            }
-
             yield break;
         }
     }

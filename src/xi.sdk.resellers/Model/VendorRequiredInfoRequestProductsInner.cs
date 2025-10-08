@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="ingramPartNumber">Ingram Micro unique part number for the product..</param>
         /// <param name="vendorPartNumber">Vendor’s part number for the product. It can be either TS Product or Cloud Product vendorpartnumber..</param>
         /// <param name="planID">The ID of the subscription plan..</param>
-        public VendorRequiredInfoRequestProductsInner(string ingramPartNumber = default, string vendorPartNumber = default, int planID = default)
+        public VendorRequiredInfoRequestProductsInner(string ingramPartNumber = default, string vendorPartNumber = default, string planID = default)
         {
             this.IngramPartNumber = ingramPartNumber;
             this.VendorPartNumber = vendorPartNumber;
@@ -64,7 +64,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The ID of the subscription plan.</value>
         [DataMember(Name = "planID", EmitDefaultValue = false)]
-        public int PlanID { get; set; }
+        public string PlanID { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
