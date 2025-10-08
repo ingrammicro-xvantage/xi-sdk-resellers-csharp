@@ -27,20 +27,20 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner
+    /// VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner
     /// </summary>
-    [DataContract(Name = "VendorRequiredInforesponse_vmfAdditionalAttributes_inner_additionalAttributes_inner")]
-    public partial class VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner : IValidatableObject
+    [DataContract(Name = "VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner_additionalAttributes_inner")]
+    public partial class VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner" /> class.
+        /// Initializes a new instance of the <see cref="VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner" /> class.
         /// </summary>
         /// <param name="attributeName">The name of the vendor mandatory field..</param>
         /// <param name="attributeValue">The value of the vendor mandatory field..</param>
         /// <param name="attributeDescription">The description of the vendor mandatory field..</param>
         /// <param name="attributeHint">The hint of the vendor mandatory field..</param>
         /// <param name="choices">choices.</param>
-        public VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner(string attributeName = default, string attributeValue = default, string attributeDescription = default, string attributeHint = default, List<VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner> choices = default)
+        public VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner(string attributeName = default, string attributeValue = default, string attributeDescription = default, string attributeHint = default, List<VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner> choices = default)
         {
             this.AttributeName = attributeName;
             this.AttributeValue = attributeValue;
@@ -81,7 +81,7 @@ namespace xi.sdk.resellers.Model
         /// Gets or Sets Choices
         /// </summary>
         [DataMember(Name = "choices", EmitDefaultValue = false)]
-        public List<VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner> Choices { get; set; }
+        public List<VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner> Choices { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -90,7 +90,7 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner {\n");
+            sb.Append("class VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner {\n");
             sb.Append("  AttributeName: ").Append(AttributeName).Append("\n");
             sb.Append("  AttributeValue: ").Append(AttributeValue).Append("\n");
             sb.Append("  AttributeDescription: ").Append(AttributeDescription).Append("\n");

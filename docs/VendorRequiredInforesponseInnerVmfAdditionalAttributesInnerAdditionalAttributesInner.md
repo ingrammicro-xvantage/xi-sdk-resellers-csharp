@@ -1,4 +1,4 @@
-# xi.sdk.resellers.Model.VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner
+# xi.sdk.resellers.Model.VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner
 
 ## Properties
 
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **AttributeValue** | **string** | The value of the vendor mandatory field. | [optional] 
 **AttributeDescription** | **string** | The description of the vendor mandatory field. | [optional] 
 **AttributeHint** | **string** | The hint of the vendor mandatory field. | [optional] 
-**Choices** | [**List&lt;VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner&gt;**](VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner.md) |  | [optional] 
+**Choices** | [**List&lt;VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner&gt;**](VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

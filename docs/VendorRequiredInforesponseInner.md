@@ -1,4 +1,4 @@
-# xi.sdk.resellers.Model.VendorRequiredInforesponse
+# xi.sdk.resellers.Model.VendorRequiredInforesponseInner
 
 ## Properties
 
@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 **VendorPartNumber** | **string** | The vendor&#39;s part number for the line item. | [optional] 
 **PlanId** | **string** | ID of the subscription plan | [optional] 
 **PlanName** | **string** | Name of the subscription plan | [optional] 
-**ResponseMessages** | [**List&lt;VendorRequiredInforesponseResponseMessagesInner&gt;**](VendorRequiredInforesponseResponseMessagesInner.md) |  | [optional] 
-**VmfAdditionalAttributes** | [**List&lt;VendorRequiredInforesponseVmfAdditionalAttributesInner&gt;**](VendorRequiredInforesponseVmfAdditionalAttributesInner.md) |  | [optional] 
-**VriAdditionalAttributes** | [**List&lt;VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner&gt;**](VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner.md) |  | [optional] 
+**ResponseMessages** | [**List&lt;VendorRequiredInforesponseInnerResponseMessagesInner&gt;**](VendorRequiredInforesponseInnerResponseMessagesInner.md) |  | [optional] 
+**VmfAdditionalAttributes** | [**List&lt;VendorRequiredInforesponseInnerVmfAdditionalAttributesInner&gt;**](VendorRequiredInforesponseInnerVmfAdditionalAttributesInner.md) |  | [optional] 
+**VriAdditionalAttributes** | [**List&lt;VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner&gt;**](VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

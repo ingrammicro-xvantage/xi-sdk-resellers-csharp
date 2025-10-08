@@ -265,8 +265,8 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. </param>
         /// <param name="vendorRequiredInfoRequest"> (optional)</param>
-        /// <returns>VendorRequiredInforesponse</returns>
-        VendorRequiredInforesponse VendorRequiredInfo(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default);
+        /// <returns>List&lt;VendorRequiredInforesponseInner&gt;</returns>
+        List<VendorRequiredInforesponseInner> VendorRequiredInfo(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default);
 
         /// <summary>
         /// Vendor Required Info
@@ -280,8 +280,8 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. </param>
         /// <param name="vendorRequiredInfoRequest"> (optional)</param>
-        /// <returns>ApiResponse of VendorRequiredInforesponse</returns>
-        ApiResponse<VendorRequiredInforesponse> VendorRequiredInfoWithHttpInfo(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default);
+        /// <returns>ApiResponse of List&lt;VendorRequiredInforesponseInner&gt;</returns>
+        ApiResponse<List<VendorRequiredInforesponseInner>> VendorRequiredInfoWithHttpInfo(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default);
         #endregion Synchronous Operations
     }
 
@@ -542,8 +542,8 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. </param>
         /// <param name="vendorRequiredInfoRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VendorRequiredInforesponse</returns>
-        System.Threading.Tasks.Task<VendorRequiredInforesponse> VendorRequiredInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns>Task of List&lt;VendorRequiredInforesponseInner&gt;</returns>
+        System.Threading.Tasks.Task<List<VendorRequiredInforesponseInner>> VendorRequiredInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Vendor Required Info
@@ -558,8 +558,8 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. </param>
         /// <param name="vendorRequiredInfoRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (VendorRequiredInforesponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VendorRequiredInforesponse>> VendorRequiredInfoWithHttpInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns>Task of ApiResponse (List&lt;VendorRequiredInforesponseInner&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<VendorRequiredInforesponseInner>>> VendorRequiredInfoWithHttpInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -2184,10 +2184,10 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. </param>
         /// <param name="vendorRequiredInfoRequest"> (optional)</param>
-        /// <returns>VendorRequiredInforesponse</returns>
-        public VendorRequiredInforesponse VendorRequiredInfo(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default)
+        /// <returns>List&lt;VendorRequiredInforesponseInner&gt;</returns>
+        public List<VendorRequiredInforesponseInner> VendorRequiredInfo(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default)
         {
-            xi.sdk.resellers.Client.ApiResponse<VendorRequiredInforesponse> localVarResponse = VendorRequiredInfoWithHttpInfo(iMCustomerNumber, iMCorrelationID, iMCountryCode, iMSenderID, vendorRequiredInfoRequest);
+            xi.sdk.resellers.Client.ApiResponse<List<VendorRequiredInforesponseInner>> localVarResponse = VendorRequiredInfoWithHttpInfo(iMCustomerNumber, iMCorrelationID, iMCountryCode, iMSenderID, vendorRequiredInfoRequest);
             return localVarResponse.Data;
         }
 
@@ -2200,8 +2200,8 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. </param>
         /// <param name="vendorRequiredInfoRequest"> (optional)</param>
-        /// <returns>ApiResponse of VendorRequiredInforesponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<VendorRequiredInforesponse> VendorRequiredInfoWithHttpInfo(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default)
+        /// <returns>ApiResponse of List&lt;VendorRequiredInforesponseInner&gt;</returns>
+        public xi.sdk.resellers.Client.ApiResponse<List<VendorRequiredInforesponseInner>> VendorRequiredInfoWithHttpInfo(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -2250,7 +2250,7 @@ namespace xi.sdk.resellers.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<VendorRequiredInforesponse>("/resellers/v7/vendorrequiredinfo", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<List<VendorRequiredInforesponseInner>>("/resellers/v7/vendorrequiredinfo", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -2271,10 +2271,10 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. </param>
         /// <param name="vendorRequiredInfoRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VendorRequiredInforesponse</returns>
-        public async System.Threading.Tasks.Task<VendorRequiredInforesponse> VendorRequiredInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns>Task of List&lt;VendorRequiredInforesponseInner&gt;</returns>
+        public async System.Threading.Tasks.Task<List<VendorRequiredInforesponseInner>> VendorRequiredInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            xi.sdk.resellers.Client.ApiResponse<VendorRequiredInforesponse> localVarResponse = await VendorRequiredInfoWithHttpInfoAsync(iMCustomerNumber, iMCorrelationID, iMCountryCode, iMSenderID, vendorRequiredInfoRequest, cancellationToken).ConfigureAwait(false);
+            xi.sdk.resellers.Client.ApiResponse<List<VendorRequiredInforesponseInner>> localVarResponse = await VendorRequiredInfoWithHttpInfoAsync(iMCustomerNumber, iMCorrelationID, iMCountryCode, iMSenderID, vendorRequiredInfoRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2288,8 +2288,8 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. </param>
         /// <param name="vendorRequiredInfoRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (VendorRequiredInforesponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<VendorRequiredInforesponse>> VendorRequiredInfoWithHttpInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns>Task of ApiResponse (List&lt;VendorRequiredInforesponseInner&gt;)</returns>
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<List<VendorRequiredInforesponseInner>>> VendorRequiredInfoWithHttpInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -2341,7 +2341,7 @@ namespace xi.sdk.resellers.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<VendorRequiredInforesponse>("/resellers/v7/vendorrequiredinfo", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<List<VendorRequiredInforesponseInner>>("/resellers/v7/vendorrequiredinfo", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

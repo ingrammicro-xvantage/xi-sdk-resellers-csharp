@@ -27,16 +27,16 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner
+    /// VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner
     /// </summary>
-    [DataContract(Name = "VendorRequiredInforesponse_vmfAdditionalAttributes_inner_additionalAttributes_inner_choices_inner")]
-    public partial class VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner : IValidatableObject
+    [DataContract(Name = "VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner_additionalAttributes_inner_choices_inner")]
+    public partial class VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner" /> class.
+        /// Initializes a new instance of the <see cref="VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner" /> class.
         /// </summary>
         /// <param name="varString">The value of the vendor mandatory field choices..</param>
-        public VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner(string varString = default)
+        public VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner(string varString = default)
         {
             this.String = varString;
         }
@@ -55,7 +55,7 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner {\n");
+            sb.Append("class VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner {\n");
             sb.Append("  String: ").Append(String).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

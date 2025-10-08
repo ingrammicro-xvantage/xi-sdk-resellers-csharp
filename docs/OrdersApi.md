@@ -718,7 +718,7 @@ catch (ApiException e)
 
 <a id="vendorrequiredinfo"></a>
 # **VendorRequiredInfo**
-> VendorRequiredInforesponse VendorRequiredInfo (string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = null)
+> List&lt;VendorRequiredInforesponseInner&gt; VendorRequiredInfo (string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, string iMSenderID, VendorRequiredInfoRequest? vendorRequiredInfoRequest = null)
 
 Vendor Required Info
 
@@ -757,7 +757,7 @@ namespace Example
             try
             {
                 // Vendor Required Info
-                VendorRequiredInforesponse result = apiInstance.VendorRequiredInfo(iMCustomerNumber, iMCorrelationID, iMCountryCode, iMSenderID, vendorRequiredInfoRequest);
+                List<VendorRequiredInforesponseInner> result = apiInstance.VendorRequiredInfo(iMCustomerNumber, iMCorrelationID, iMCountryCode, iMSenderID, vendorRequiredInfoRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -778,7 +778,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Vendor Required Info
-    ApiResponse<VendorRequiredInforesponse> response = apiInstance.VendorRequiredInfoWithHttpInfo(iMCustomerNumber, iMCorrelationID, iMCountryCode, iMSenderID, vendorRequiredInfoRequest);
+    ApiResponse<List<VendorRequiredInforesponseInner>> response = apiInstance.VendorRequiredInfoWithHttpInfo(iMCustomerNumber, iMCorrelationID, iMCountryCode, iMSenderID, vendorRequiredInfoRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -803,7 +803,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**VendorRequiredInforesponse**](VendorRequiredInforesponse.md)
+[**List&lt;VendorRequiredInforesponseInner&gt;**](VendorRequiredInforesponseInner.md)
 
 ### Authorization
 

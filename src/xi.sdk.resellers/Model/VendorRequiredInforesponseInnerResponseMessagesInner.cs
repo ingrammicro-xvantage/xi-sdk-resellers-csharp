@@ -27,43 +27,53 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// VendorRequiredInforesponseVmfAdditionalAttributesInner
+    /// VendorRequiredInforesponseInnerResponseMessagesInner
     /// </summary>
-    [DataContract(Name = "VendorRequiredInforesponse_vmfAdditionalAttributes_inner")]
-    public partial class VendorRequiredInforesponseVmfAdditionalAttributesInner : IValidatableObject
+    [DataContract(Name = "VendorRequiredInforesponse_inner_responseMessages_inner")]
+    public partial class VendorRequiredInforesponseInnerResponseMessagesInner : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="VendorRequiredInforesponseVmfAdditionalAttributesInner" /> class.
+        /// Initializes a new instance of the <see cref="VendorRequiredInforesponseInnerResponseMessagesInner" /> class.
         /// </summary>
-        /// <param name="vendorName">The name of vendor..</param>
-        /// <param name="productId">The ID of product..</param>
-        /// <param name="additionalAttributes">additionalAttributes.</param>
-        public VendorRequiredInforesponseVmfAdditionalAttributesInner(string vendorName = default, string productId = default, List<VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner> additionalAttributes = default)
+        /// <param name="id">Unique ID to identify the error..</param>
+        /// <param name="traceId">A unique trace id to identify the issue..</param>
+        /// <param name="type">Type of the error message..</param>
+        /// <param name="message">A detailed error message..</param>
+        public VendorRequiredInforesponseInnerResponseMessagesInner(string id = default, string traceId = default, string type = default, string message = default)
         {
-            this.VendorName = vendorName;
-            this.ProductId = productId;
-            this.AdditionalAttributes = additionalAttributes;
+            this.Id = id;
+            this.TraceId = traceId;
+            this.Type = type;
+            this.Message = message;
         }
 
         /// <summary>
-        /// The name of vendor.
+        /// Unique ID to identify the error.
         /// </summary>
-        /// <value>The name of vendor.</value>
-        [DataMember(Name = "vendorName", EmitDefaultValue = false)]
-        public string VendorName { get; set; }
+        /// <value>Unique ID to identify the error.</value>
+        [DataMember(Name = "id", EmitDefaultValue = false)]
+        public string Id { get; set; }
 
         /// <summary>
-        /// The ID of product.
+        /// A unique trace id to identify the issue.
         /// </summary>
-        /// <value>The ID of product.</value>
-        [DataMember(Name = "productId", EmitDefaultValue = false)]
-        public string ProductId { get; set; }
+        /// <value>A unique trace id to identify the issue.</value>
+        [DataMember(Name = "traceId", EmitDefaultValue = false)]
+        public string TraceId { get; set; }
 
         /// <summary>
-        /// Gets or Sets AdditionalAttributes
+        /// Type of the error message.
         /// </summary>
-        [DataMember(Name = "additionalAttributes", EmitDefaultValue = false)]
-        public List<VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner> AdditionalAttributes { get; set; }
+        /// <value>Type of the error message.</value>
+        [DataMember(Name = "type", EmitDefaultValue = false)]
+        public string Type { get; set; }
+
+        /// <summary>
+        /// A detailed error message.
+        /// </summary>
+        /// <value>A detailed error message.</value>
+        [DataMember(Name = "message", EmitDefaultValue = false)]
+        public string Message { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -72,10 +82,11 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class VendorRequiredInforesponseVmfAdditionalAttributesInner {\n");
-            sb.Append("  VendorName: ").Append(VendorName).Append("\n");
-            sb.Append("  ProductId: ").Append(ProductId).Append("\n");
-            sb.Append("  AdditionalAttributes: ").Append(AdditionalAttributes).Append("\n");
+            sb.Append("class VendorRequiredInforesponseInnerResponseMessagesInner {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  TraceId: ").Append(TraceId).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

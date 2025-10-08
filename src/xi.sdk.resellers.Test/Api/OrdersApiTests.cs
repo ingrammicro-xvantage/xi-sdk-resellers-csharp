@@ -187,7 +187,7 @@ namespace xi.sdk.resellers.Test.Api
             //string iMSenderID = null;
             //VendorRequiredInfoRequest? vendorRequiredInfoRequest = null;
             //var response = instance.VendorRequiredInfo(iMCustomerNumber, iMCorrelationID, iMCountryCode, iMSenderID, vendorRequiredInfoRequest);
-            //Assert.IsType<VendorRequiredInforesponse>(response);
+            //Assert.IsType<List<VendorRequiredInforesponseInner>>(response);
         }
     }
 }

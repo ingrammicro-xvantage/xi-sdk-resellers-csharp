@@ -1,4 +1,4 @@
-# xi.sdk.resellers.Model.VendorRequiredInforesponseResponseMessagesInner
+# xi.sdk.resellers.Model.VendorRequiredInforesponseInnerResponseMessagesInner
 
 ## Properties
 

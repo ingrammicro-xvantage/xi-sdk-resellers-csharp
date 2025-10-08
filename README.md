@@ -393,11 +393,11 @@ Class | Method | HTTP request | Description
  - [Model.ValidateQuoteResponseVmfAdditionalAttributesInner](docs/ValidateQuoteResponseVmfAdditionalAttributesInner.md)
  - [Model.VendorRequiredInfoRequest](docs/VendorRequiredInfoRequest.md)
  - [Model.VendorRequiredInfoRequestProductsInner](docs/VendorRequiredInfoRequestProductsInner.md)
- - [Model.VendorRequiredInforesponse](docs/VendorRequiredInforesponse.md)
- - [Model.VendorRequiredInforesponseResponseMessagesInner](docs/VendorRequiredInforesponseResponseMessagesInner.md)
- - [Model.VendorRequiredInforesponseVmfAdditionalAttributesInner](docs/VendorRequiredInforesponseVmfAdditionalAttributesInner.md)
- - [Model.VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner](docs/VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInner.md)
- - [Model.VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner](docs/VendorRequiredInforesponseVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner.md)
+ - [Model.VendorRequiredInforesponseInner](docs/VendorRequiredInforesponseInner.md)
+ - [Model.VendorRequiredInforesponseInnerResponseMessagesInner](docs/VendorRequiredInforesponseInnerResponseMessagesInner.md)
+ - [Model.VendorRequiredInforesponseInnerVmfAdditionalAttributesInner](docs/VendorRequiredInforesponseInnerVmfAdditionalAttributesInner.md)
+ - [Model.VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner](docs/VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner.md)
+ - [Model.VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner](docs/VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner.md)
 
 
 <a id="documentation-for-authorization"></a>
