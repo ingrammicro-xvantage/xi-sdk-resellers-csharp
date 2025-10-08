@@ -9861,8 +9861,9 @@ components:
         description: description
         upc: upc
         warrantyInformation:
-        - "{}"
-        - "{}"
+        - 01XL55
+        - 07ZL02
+        - 08UC41
         productAuthorized: productAuthorized
         vendorName: vendorName
         indicators:
@@ -10055,9 +10056,13 @@ components:
         ciscoFields:
           $ref: "#/components/schemas/ProductDetailResponse_ciscoFields"
         warrantyInformation:
-          description: Warranty information related to the product.
+          description: Warranty codes related to the product.
+          example:
+          - 01XL55
+          - 07ZL02
+          - 08UC41
           items:
-            type: object
+            type: string
           type: array
         additionalInformation:
           $ref: "#/components/schemas/ProductDetailResponse_additionalInformation"

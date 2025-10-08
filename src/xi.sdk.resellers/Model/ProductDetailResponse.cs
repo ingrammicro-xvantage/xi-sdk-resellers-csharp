@@ -49,10 +49,10 @@ namespace xi.sdk.resellers.Model
         /// <param name="customerPartNumber">Reseller / end-user’s part number for the product..</param>
         /// <param name="indicators">indicators.</param>
         /// <param name="ciscoFields">ciscoFields.</param>
-        /// <param name="warrantyInformation">Warranty information related to the product..</param>
+        /// <param name="warrantyInformation">Warranty codes related to the product..</param>
         /// <param name="additionalInformation">additionalInformation.</param>
         /// <param name="subscriptionDetails">Subscription product Details.</param>
-        public ProductDetailResponse(string ingramPartNumber = default, string vendorPartNumber = default, string productAuthorized = default, string description = default, string upc = default, string productCategory = default, string productSubcategory = default, string vendorName = default, string vendorNumber = default, string productStatusCode = default, string productClass = default, string customerPartNumber = default, ProductDetailResponseIndicators indicators = default, ProductDetailResponseCiscoFields ciscoFields = default, List<Object> warrantyInformation = default, ProductDetailResponseAdditionalInformation additionalInformation = default, List<ProductDetailResponseSubscriptionDetailsInner> subscriptionDetails = default)
+        public ProductDetailResponse(string ingramPartNumber = default, string vendorPartNumber = default, string productAuthorized = default, string description = default, string upc = default, string productCategory = default, string productSubcategory = default, string vendorName = default, string vendorNumber = default, string productStatusCode = default, string productClass = default, string customerPartNumber = default, ProductDetailResponseIndicators indicators = default, ProductDetailResponseCiscoFields ciscoFields = default, List<string> warrantyInformation = default, ProductDetailResponseAdditionalInformation additionalInformation = default, List<ProductDetailResponseSubscriptionDetailsInner> subscriptionDetails = default)
         {
             this.IngramPartNumber = ingramPartNumber;
             this.VendorPartNumber = vendorPartNumber;
@@ -170,11 +170,14 @@ namespace xi.sdk.resellers.Model
         public ProductDetailResponseCiscoFields CiscoFields { get; set; }
 
         /// <summary>
-        /// Warranty information related to the product.
+        /// Warranty codes related to the product.
         /// </summary>
-        /// <value>Warranty information related to the product.</value>
+        /// <value>Warranty codes related to the product.</value>
+        /*
+        <example>[&quot;01XL55&quot;,&quot;07ZL02&quot;,&quot;08UC41&quot;]</example>
+        */
         [DataMember(Name = "warrantyInformation", EmitDefaultValue = false)]
-        public List<Object> WarrantyInformation { get; set; }
+        public List<string> WarrantyInformation { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalInformation
