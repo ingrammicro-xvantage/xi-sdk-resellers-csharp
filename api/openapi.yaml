@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  description: "For Resellers seeking to innovate with Ingram Micro API solutions,\
+  description: "For Resellers seeking to innovate with Ingram Micro APIs solutions,\
     \ automate your eCommerce experience with our array of API's and webhooks to craft\
     \ a seamless journey for your customers."
   title: XI Sdk Resellers
@@ -10,7 +10,7 @@ servers:
   url: https://api.ingrammicro.com:443/
 tags:
 - description: "\nThe Ingram Micro Product Catalog v6 API endpoints enable users to:\n\
-    \  - Search products by SKU or additional criteria.\n  - Find price and availability\
+    \  - Search products by SKU or additional criterias.\n  - Find price and availability\
     \ for up to 50 SKUs at one time.\n  - View inventory by location in the product\
     \ catalog.\n  \n *Host Production URL - https://api.ingrammicro.com:443/resellers/v6*\n\
     \ "
