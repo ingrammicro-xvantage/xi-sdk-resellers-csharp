@@ -17,7 +17,9 @@ Name | Type | Description | Notes
 **ShipToInfo** | [**OrderCreateV7RequestShipToInfo**](OrderCreateV7RequestShipToInfo.md) |  | [optional] 
 **ShipmentDetails** | [**OrderCreateV7RequestShipmentDetails**](OrderCreateV7RequestShipmentDetails.md) |  | [optional] 
 **AdditionalAttributes** | [**List&lt;OrderCreateV7RequestAdditionalAttributesInner&gt;**](OrderCreateV7RequestAdditionalAttributesInner.md) | Shipment-level additional attributes. | [optional] 
-**VmfAdditionalAttributes** | [**List&lt;OrderCreateV7RequestVmfAdditionalAttributesInner&gt;**](OrderCreateV7RequestVmfAdditionalAttributesInner.md) | The object containing the list of fields required at a header level by the vendor. | [optional] 
+**VmfAdditionalAttributes** | [**List&lt;OrderCreateV7RequestVmfAdditionalAttributesInner&gt;**](OrderCreateV7RequestVmfAdditionalAttributesInner.md) | The object containing the list of fields required at a header level by the vendor.&lt;br&gt; This a &lt;code&gt;Deprecated&lt;/code&gt; object. Kindly use &lt;b&gt;vmfVendorAdditionalAttributes&lt;/b&gt; object | [optional] 
+**VmfVendorAdditionalAttributes** | [**List&lt;OrderCreateV7RequestVmfVendorAdditionalAttributesInner&gt;**](OrderCreateV7RequestVmfVendorAdditionalAttributesInner.md) | The object containing the list of Vendor Mandatory Fields required by the vendor for the Hardware products. | [optional] 
+**VriAdditionalAttributes** | [**List&lt;OrderCreateV7RequestVmfVendorAdditionalAttributesInner&gt;**](OrderCreateV7RequestVmfVendorAdditionalAttributesInner.md) | The object containing the list of Vendor Mandatory Fields required by the vendor for the subscription products.&lt;br&gt; Use this object ONLY when using a full quote ordering for a subsciption product. For line-level ordering use &lt;b&gt;vriAdditionalAttributes&lt;/b&gt; object inside the line object.  | [optional] 
 **Lines** | [**List&lt;OrderCreateV7RequestLinesInner&gt;**](OrderCreateV7RequestLinesInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

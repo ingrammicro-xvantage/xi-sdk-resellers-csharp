@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
-  description: "For Resellers seeking to innovate with Ingram Micro's API solutions,\
-    \ automate your eCommerce experience with our array of API's and webhooks to craft\
+  description: "For Resellers seeking to innovate with Ingram Micro API solutions,\
+    \ automate your eCommerce experience with our array of APIs and webhooks to craft\
     \ a seamless journey for your customers."
   title: XI Sdk Resellers
   version: 1.0.0
@@ -7645,7 +7645,7 @@ paths:
                       dealExpiryDate: 2023-07-31T00:00:00
                       links:
                         topic: Deals
-                        href: /resellers/v6/deals/TEST-RESEU DISC2
+                        href: /resellers/v6/deals/TEST-RESEU DISC2?vendorName=TestVendor
                         type: GET
                     nextPage: /bids/v1/special-bidsB2B?Size=25&Page=2
                     previousPage: null
@@ -8933,10 +8933,24 @@ components:
           type: array
         vmfAdditionalAttributes:
           description: The object containing the list of fields required at a header
-            level by the vendor.
+            level by the vendor.<br> This a <code>Deprecated</code> object. Kindly
+            use <b>vmfVendorAdditionalAttributes</b> object
           items:
             $ref: "#/components/schemas/order_create_v7_request_vmfAdditionalAttributes_inner"
-          nullable: true
+          type: array
+        vmfVendorAdditionalAttributes:
+          description: The object containing the list of Vendor Mandatory Fields required
+            by the vendor for the Hardware products.
+          items:
+            $ref: "#/components/schemas/order_create_v7_request_vmfVendorAdditionalAttributes_inner"
+          type: array
+        vriAdditionalAttributes:
+          description: 'The object containing the list of Vendor Mandatory Fields
+            required by the vendor for the subscription products.<br> Use this object
+            ONLY when using a full quote ordering for a subsciption product. For line-level
+            ordering use <b>vriAdditionalAttributes</b> object inside the line object. '
+          items:
+            $ref: "#/components/schemas/order_create_v7_request_vmfVendorAdditionalAttributes_inner"
           type: array
         lines:
           items:
@@ -13583,16 +13597,98 @@ components:
           type: string
       type: object
     order_create_v7_request_vmfAdditionalAttributes_inner:
-      nullable: true
       properties:
         attributeName:
           description: The name of the header level field.
-          nullable: true
           type: string
         attributeValue:
           description: The value of the header level field.
-          nullable: true
           type: string
+      type: object
+    order_create_v7_request_vmfVendorAdditionalAttributes_inner_additionalAttributes_inner_choices_inner_choices_inner:
+      properties:
+        attributename:
+          description: The name of the vendor mandatory field
+          type: string
+        attributeValue:
+          description: The value of the vendor mandatory field
+          type: string
+      type: object
+    order_create_v7_request_vmfVendorAdditionalAttributes_inner_additionalAttributes_inner_choices_inner:
+      properties:
+        attributeValue:
+          description: 'The description of the vendor mandatory '
+          type: string
+        attributeDescription:
+          description: The description of the vendor mandatory
+          type: string
+        choices:
+          description: ""
+          items:
+            $ref: "#/components/schemas/order_create_v7_request_vmfVendorAdditionalAttributes_inner_additionalAttributes_inner_choices_inner_choices_inner"
+          type: array
+      type: object
+    order_create_v7_request_vmfVendorAdditionalAttributes_inner_additionalAttributes_inner:
+      properties:
+        attributeName:
+          description: The name of the vendor mandatory field
+          type: string
+        attributeValue:
+          description: The value of the vendor mandatory field
+          type: string
+        attributeDescription:
+          description: The description of the vendor mandatory field
+          type: string
+        attributeHint:
+          description: The hint of the vendor mandatory field.
+          type: string
+        choices:
+          description: ""
+          items:
+            $ref: "#/components/schemas/order_create_v7_request_vmfVendorAdditionalAttributes_inner_additionalAttributes_inner_choices_inner"
+          type: array
+      type: object
+    order_create_v7_request_vmfVendorAdditionalAttributes_inner:
+      properties:
+        vendorName:
+          description: The name of the vendor
+          type: string
+        productId:
+          description: The Product ID from the vendor
+          type: string
+        additionalAttributes:
+          description: ""
+          items:
+            $ref: "#/components/schemas/order_create_v7_request_vmfVendorAdditionalAttributes_inner_additionalAttributes_inner"
+          type: array
+      type: object
+    order_create_v7_request_lines_inner_subscriptionPeriod_inner:
+      properties:
+        type:
+          description: "Unit period of the subscription. Example, Years, Months"
+          type: string
+        duration:
+          description: "Length of the subscription. Example 1, 3"
+          type: integer
+        startDate:
+          description: The date on which subscription will start.
+          type: string
+        endDateAlignmentType:
+          description: "Subscription period end date alignment. ENUM -- 'MATCH_END_OF_CALENDAR_MONTH',\
+            \ 'CO_TERM_ON_SUBSCRIPTION'"
+          type: string
+        subscriptionId:
+          description: The ID of an existing active subscription.
+          type: string
+      type: object
+    order_create_v7_request_lines_inner_billingPeriod_inner:
+      properties:
+        type:
+          description: "Billing period of the subscription. Example, Years, Months"
+          type: string
+        duration:
+          description: "Length of the billing period. Example 1, 3"
+          type: integer
       type: object
     order_create_v7_request_lines_inner_endUserInfo_inner:
       properties:
@@ -13647,9 +13743,50 @@ components:
           description: TLine-level additional attributes.
           type: string
       type: object
+    order_create_v7_request_lines_inner_warrantyInfo_serialInfo_inner:
+      description: "Serial information of the hardware to be associated with the warranty,\
+        \ applicable on post sale orders."
+      properties:
+        dateOfPurchase:
+          description: Date of purchase of the hardware.
+          maxLength: 8
+          type: string
+        shipDate:
+          description: "Vendor specific mandatory field, date of hardware/product\
+            \ shipment from vendor."
+          maxLength: 8
+          type: string
+        primarySerialNumber:
+          description: Serial number of the hardware/product.
+          type: string
+        secondarySerialNumber:
+          description: Serial number of accessory associated with the above hardware/product.
+          type: string
+      type: object
+    order_create_v7_request_lines_inner_warrantyInfo:
+      properties:
+        hardwareLineLink:
+          description: "Customer line number of the warranty product in this request\
+            \ for linkage, either hardwareLineLink or warrantyLineLink can be used\
+            \ in a line"
+          type: string
+        warrantyLineLink:
+          description: "Customer line number of the hardware product in this request\
+            \ for linkage, either hardwareLineLink or warrantyLineLink can be used\
+            \ in a line."
+          type: string
+        directLineLink:
+          description: Unique value to link hardware and warranty lines. Should be
+            used only when products are purchased from both Ingram and/or vendor but
+            the warranty is purchased through Ingram for them.
+          maxLength: 25
+          type: string
+        serialInfo:
+          items:
+            $ref: "#/components/schemas/order_create_v7_request_lines_inner_warrantyInfo_serialInfo_inner"
+          type: array
+      type: object
     order_create_v7_request_lines_inner_vmfAdditionalAttributesLines_inner:
-      description: The object containing the list of fields required at a line level
-        by the vendor.
       properties:
         attributeName:
           description: The name of the line level field.
@@ -13672,11 +13809,9 @@ components:
         ingramPartNumber:
           description: The unique IngramMicro part number.
           maxLength: 18
-          nullable: true
           type: string
         vendorPartNumber:
           description: The vendor's part number for the line item.
-          nullable: true
           type: string
         quantity:
           description: The requested quantity of the line item.
@@ -13685,7 +13820,6 @@ components:
           description: The reseller-requested unit price for the line item. The unit
             price is not guaranteed.
           format: decimal
-          nullable: true
           type: number
         specialBidNumber:
           description: The line-level bid number provided to the reseller by the vendor
@@ -13693,27 +13827,60 @@ components:
             case of split orders or where different line items have different bid
             numbers. Line-level bid number take precedence over header-level bid numbers.
           maxLength: 36
-          nullable: true
           type: string
         endUserPrice:
           description: The end-user price. Required for Export Orders.
           format: decimal
-          nullable: true
           type: number
         notes:
           description: The attribute field data.
-          nullable: true
           type: string
+        resourceId:
+          description: The resource id of the subscription
+          type: string
+        planid:
+          description: ID of the subscription plan
+          type: string
+        subscriptionPeriod:
+          description: The object containing the list of options related to the subscription
+            period.
+          items:
+            $ref: "#/components/schemas/order_create_v7_request_lines_inner_subscriptionPeriod_inner"
+          type: array
+        billingPeriod:
+          description: The object containing the list of options related to the billing
+            period.
+          items:
+            $ref: "#/components/schemas/order_create_v7_request_lines_inner_billingPeriod_inner"
+          type: array
+        margin:
+          description: Line-level margin requested by customer
+          format: decimal
+          type: number
+        endCustomerPrice:
+          description: Line-level end-customer price requsted by customer
+          format: decimal
+          type: number
+        vriAdditionalAttributes:
+          description: The object containing the list of Vendor Mandatory Fields required
+            by the vendor for the subscription products.
+          items:
+            $ref: "#/components/schemas/order_create_v7_request_vmfVendorAdditionalAttributes_inner"
+          type: array
         endUserInfo:
           items:
             $ref: "#/components/schemas/order_create_v7_request_lines_inner_endUserInfo_inner"
-          nullable: true
           type: array
         additionalAttributes:
           items:
             $ref: "#/components/schemas/order_create_v7_request_lines_inner_additionalAttributes_inner"
           type: array
+        warrantyInfo:
+          $ref: "#/components/schemas/order_create_v7_request_lines_inner_warrantyInfo"
         vmfAdditionalAttributesLines:
+          description: The object containing the list of fields required at a line
+            level by the vendor.<br> This a <code>Deprecated</code> object. Kindly
+            use <b>vmfVendorAdditionalAttributes</b> object
           items:
             $ref: "#/components/schemas/order_create_v7_request_lines_inner_vmfAdditionalAttributesLines_inner"
           type: array
