@@ -10,7 +10,7 @@ servers:
   url: https://api.ingrammicro.com:443/
 tags:
 - description: "\nThe Ingram Micro Product Catalog v6 API endpoints enable users to:\n\
-    \  - Search products by SKU or additional criterias.\n  - Find price and availability\
+    \  - Search products by SKU or additional criteria.\n  - Find price and availability\
     \ for up to 50 SKUs at one time.\n  - View inventory by location in the product\
     \ catalog.\n  \n *Host Production URL - https://api.ingrammicro.com:443/resellers/v6*\n\
     \ "
