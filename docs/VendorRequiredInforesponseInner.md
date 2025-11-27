@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **PlanId** | **string** | ID of the subscription plan | [optional] 
 **PlanName** | **string** | Name of the subscription plan | [optional] 
 **ResponseMessages** | [**List&lt;VendorRequiredInforesponseInnerResponseMessagesInner&gt;**](VendorRequiredInforesponseInnerResponseMessagesInner.md) |  | [optional] 
-**VmfAdditionalAttributes** | [**List&lt;VendorRequiredInforesponseInnerVmfAdditionalAttributesInner&gt;**](VendorRequiredInforesponseInnerVmfAdditionalAttributesInner.md) |  | [optional] 
-**VriAdditionalAttributes** | [**List&lt;VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner&gt;**](VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner.md) |  | [optional] 
+**VmfAdditionalAttributes** | [**List&lt;VmfVriAdditionalAttributeContainer&gt;**](VmfVriAdditionalAttributeContainer.md) |  | [optional] 
+**VriAdditionalAttributes** | [**List&lt;VmfVriAdditionalAttributeContainer&gt;**](VmfVriAdditionalAttributeContainer.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

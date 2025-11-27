@@ -27,25 +27,27 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner
+    /// AdditionalAttribute
     /// </summary>
-    [DataContract(Name = "VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner_additionalAttributes_inner")]
-    public partial class VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner : IValidatableObject
+    [DataContract(Name = "AdditionalAttribute")]
+    public partial class AdditionalAttribute : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner" /> class.
+        /// Initializes a new instance of the <see cref="AdditionalAttribute" /> class.
         /// </summary>
         /// <param name="attributeName">The name of the vendor mandatory field..</param>
         /// <param name="attributeValue">The value of the vendor mandatory field..</param>
         /// <param name="attributeDescription">The description of the vendor mandatory field..</param>
         /// <param name="attributeHint">The hint of the vendor mandatory field..</param>
-        /// <param name="choices">choices.</param>
-        public VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner(string attributeName = default, string attributeValue = default, string attributeDescription = default, string attributeHint = default, List<VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner> choices = default)
+        /// <param name="attributeRequired">Indicates if the attribute is mandatory (Added to align with C#)..</param>
+        /// <param name="choices">A list of possible choices for the attribute..</param>
+        public AdditionalAttribute(string attributeName = default, string attributeValue = default, string attributeDescription = default, string attributeHint = default, string attributeRequired = default, List<AdditionalAttribute> choices = default)
         {
             this.AttributeName = attributeName;
             this.AttributeValue = attributeValue;
             this.AttributeDescription = attributeDescription;
             this.AttributeHint = attributeHint;
+            this.AttributeRequired = attributeRequired;
             this.Choices = choices;
         }
 
@@ -78,10 +80,18 @@ namespace xi.sdk.resellers.Model
         public string AttributeHint { get; set; }
 
         /// <summary>
-        /// Gets or Sets Choices
+        /// Indicates if the attribute is mandatory (Added to align with C#).
         /// </summary>
+        /// <value>Indicates if the attribute is mandatory (Added to align with C#).</value>
+        [DataMember(Name = "attributeRequired", EmitDefaultValue = false)]
+        public string AttributeRequired { get; set; }
+
+        /// <summary>
+        /// A list of possible choices for the attribute.
+        /// </summary>
+        /// <value>A list of possible choices for the attribute.</value>
         [DataMember(Name = "choices", EmitDefaultValue = false)]
-        public List<VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner> Choices { get; set; }
+        public List<AdditionalAttribute> Choices { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -90,11 +100,12 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner {\n");
+            sb.Append("class AdditionalAttribute {\n");
             sb.Append("  AttributeName: ").Append(AttributeName).Append("\n");
             sb.Append("  AttributeValue: ").Append(AttributeValue).Append("\n");
             sb.Append("  AttributeDescription: ").Append(AttributeDescription).Append("\n");
             sb.Append("  AttributeHint: ").Append(AttributeHint).Append("\n");
+            sb.Append("  AttributeRequired: ").Append(AttributeRequired).Append("\n");
             sb.Append("  Choices: ").Append(Choices).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

@@ -11685,6 +11685,73 @@ components:
             $ref: "#/components/schemas/VendorRequiredInfoRequest_products_inner"
           type: array
       type: object
+    AdditionalAttribute:
+      example:
+        attributeValue: attributeValue
+        attributeRequired: attributeRequired
+        attributeHint: attributeHint
+        attributeName: attributeName
+        attributeDescription: attributeDescription
+        choices:
+        - null
+        - null
+      properties:
+        attributeName:
+          description: The name of the vendor mandatory field.
+          type: string
+        attributeValue:
+          description: The value of the vendor mandatory field.
+          type: string
+        attributeDescription:
+          description: The description of the vendor mandatory field.
+          type: string
+        attributeHint:
+          description: The hint of the vendor mandatory field.
+          type: string
+        attributeRequired:
+          description: Indicates if the attribute is mandatory (Added to align with
+            C#).
+          type: string
+        choices:
+          description: A list of possible choices for the attribute.
+          items:
+            $ref: "#/components/schemas/AdditionalAttribute"
+          type: array
+      type: object
+    VmfVriAdditionalAttributeContainer:
+      example:
+        productId: productId
+        vendorName: vendorName
+        additionalAttributes:
+        - attributeValue: attributeValue
+          attributeRequired: attributeRequired
+          attributeHint: attributeHint
+          attributeName: attributeName
+          attributeDescription: attributeDescription
+          choices:
+          - null
+          - null
+        - attributeValue: attributeValue
+          attributeRequired: attributeRequired
+          attributeHint: attributeHint
+          attributeName: attributeName
+          attributeDescription: attributeDescription
+          choices:
+          - null
+          - null
+      properties:
+        vendorName:
+          description: The name of vendor.
+          type: string
+        productId:
+          description: The ID of product.
+          type: string
+        additionalAttributes:
+          description: List of required attributes for the specific product.
+          items:
+            $ref: "#/components/schemas/AdditionalAttribute"
+          type: array
+      type: object
     VendorRequiredInforesponse:
       items:
         $ref: "#/components/schemas/VendorRequiredInforesponse_inner"
@@ -19529,129 +19596,91 @@ components:
           description: A detailed error message.
           type: string
       type: object
-    VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner_additionalAttributes_inner_choices_inner:
-      example:
-        string: string
-      properties:
-        string:
-          description: The value of the vendor mandatory field choices.
-          type: string
-      type: object
-    VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner_additionalAttributes_inner:
-      example:
-        attributeValue: attributeValue
-        attributeHint: attributeHint
-        attributeName: attributeName
-        attributeDescription: attributeDescription
-        choices:
-        - string: string
-        - string: string
-      properties:
-        attributeName:
-          description: The name of the vendor mandatory field.
-          type: string
-        attributeValue:
-          description: The value of the vendor mandatory field.
-          type: string
-        attributeDescription:
-          description: The description of the vendor mandatory field.
-          type: string
-        attributeHint:
-          description: The hint of the vendor mandatory field.
-          type: string
-        choices:
-          items:
-            $ref: "#/components/schemas/VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner_additionalAttributes_inner_choices_inner"
-          type: array
-      type: object
-    VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner:
-      example:
-        productId: productId
-        vendorName: vendorName
-        additionalAttributes:
-        - attributeValue: attributeValue
-          attributeHint: attributeHint
-          attributeName: attributeName
-          attributeDescription: attributeDescription
-          choices:
-          - string: string
-          - string: string
-        - attributeValue: attributeValue
-          attributeHint: attributeHint
-          attributeName: attributeName
-          attributeDescription: attributeDescription
-          choices:
-          - string: string
-          - string: string
-      properties:
-        vendorName:
-          description: The name of vendor.
-          type: string
-        productId:
-          description: The ID of product.
-          type: string
-        additionalAttributes:
-          items:
-            $ref: "#/components/schemas/VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner_additionalAttributes_inner"
-          type: array
-      type: object
     VendorRequiredInforesponse_inner:
       example:
         ingramPartNumber: ingramPartNumber
         vriAdditionalAttributes:
-        - attributeValue: attributeValue
-          attributeHint: attributeHint
-          attributeName: attributeName
-          attributeDescription: attributeDescription
-          choices:
-          - string: string
-          - string: string
-        - attributeValue: attributeValue
-          attributeHint: attributeHint
-          attributeName: attributeName
-          attributeDescription: attributeDescription
-          choices:
-          - string: string
-          - string: string
+        - productId: productId
+          vendorName: vendorName
+          additionalAttributes:
+          - attributeValue: attributeValue
+            attributeRequired: attributeRequired
+            attributeHint: attributeHint
+            attributeName: attributeName
+            attributeDescription: attributeDescription
+            choices:
+            - null
+            - null
+          - attributeValue: attributeValue
+            attributeRequired: attributeRequired
+            attributeHint: attributeHint
+            attributeName: attributeName
+            attributeDescription: attributeDescription
+            choices:
+            - null
+            - null
+        - productId: productId
+          vendorName: vendorName
+          additionalAttributes:
+          - attributeValue: attributeValue
+            attributeRequired: attributeRequired
+            attributeHint: attributeHint
+            attributeName: attributeName
+            attributeDescription: attributeDescription
+            choices:
+            - null
+            - null
+          - attributeValue: attributeValue
+            attributeRequired: attributeRequired
+            attributeHint: attributeHint
+            attributeName: attributeName
+            attributeDescription: attributeDescription
+            choices:
+            - null
+            - null
         vmfAdditionalAttributes:
         - productId: productId
           vendorName: vendorName
           additionalAttributes:
           - attributeValue: attributeValue
+            attributeRequired: attributeRequired
             attributeHint: attributeHint
             attributeName: attributeName
             attributeDescription: attributeDescription
             choices:
-            - string: string
-            - string: string
+            - null
+            - null
           - attributeValue: attributeValue
+            attributeRequired: attributeRequired
             attributeHint: attributeHint
             attributeName: attributeName
             attributeDescription: attributeDescription
             choices:
-            - string: string
-            - string: string
+            - null
+            - null
         - productId: productId
           vendorName: vendorName
           additionalAttributes:
           - attributeValue: attributeValue
+            attributeRequired: attributeRequired
             attributeHint: attributeHint
             attributeName: attributeName
             attributeDescription: attributeDescription
             choices:
-            - string: string
-            - string: string
+            - null
+            - null
           - attributeValue: attributeValue
+            attributeRequired: attributeRequired
             attributeHint: attributeHint
             attributeName: attributeName
             attributeDescription: attributeDescription
             choices:
-            - string: string
-            - string: string
+            - null
+            - null
         planName: planName
         vendorPartNumber: vendorPartNumber
         planId: planId
-        quoteNumber: quoteNumber=QUO-14551943-D2Y9L9
+        quoteNumber: QUO-14551943-D2Y9L9
         responseMessages:
         - traceId: traceId
           id: id
@@ -19665,7 +19694,7 @@ components:
         quoteNumber:
           description: A unique identifier generated by Ingram Micro's CRM specific
             to each quote.
-          example: quoteNumber=QUO-14551943-D2Y9L9
+          example: QUO-14551943-D2Y9L9
           type: string
         ingramPartNumber:
           description: The unique IngramMicro part number.
@@ -19685,11 +19714,11 @@ components:
           type: array
         vmfAdditionalAttributes:
           items:
-            $ref: "#/components/schemas/VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner"
+            $ref: "#/components/schemas/VmfVriAdditionalAttributeContainer"
           type: array
         vriAdditionalAttributes:
           items:
-            $ref: "#/components/schemas/VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner_additionalAttributes_inner"
+            $ref: "#/components/schemas/VmfVriAdditionalAttributeContainer"
           type: array
       type: object
     OrderCreateV7Response_resource_shipToInfo:

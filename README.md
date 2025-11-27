@@ -174,6 +174,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Model.AccesstokenResponse](docs/AccesstokenResponse.md)
+ - [Model.AdditionalAttribute](docs/AdditionalAttribute.md)
  - [Model.AvailabilityAsyncNotificationRequest](docs/AvailabilityAsyncNotificationRequest.md)
  - [Model.AvailabilityAsyncNotificationRequestResourceInner](docs/AvailabilityAsyncNotificationRequestResourceInner.md)
  - [Model.AvailabilityAsyncNotificationRequestResourceInnerLinksInner](docs/AvailabilityAsyncNotificationRequestResourceInnerLinksInner.md)
@@ -403,9 +404,7 @@ Class | Method | HTTP request | Description
  - [Model.VendorRequiredInfoRequestProductsInner](docs/VendorRequiredInfoRequestProductsInner.md)
  - [Model.VendorRequiredInforesponseInner](docs/VendorRequiredInforesponseInner.md)
  - [Model.VendorRequiredInforesponseInnerResponseMessagesInner](docs/VendorRequiredInforesponseInnerResponseMessagesInner.md)
- - [Model.VendorRequiredInforesponseInnerVmfAdditionalAttributesInner](docs/VendorRequiredInforesponseInnerVmfAdditionalAttributesInner.md)
- - [Model.VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner](docs/VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner.md)
- - [Model.VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner](docs/VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInnerChoicesInner.md)
+ - [Model.VmfVriAdditionalAttributeContainer](docs/VmfVriAdditionalAttributeContainer.md)
 
 
 <a id="documentation-for-authorization"></a>

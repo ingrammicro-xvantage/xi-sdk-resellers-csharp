@@ -27,18 +27,18 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// VendorRequiredInforesponseInnerVmfAdditionalAttributesInner
+    /// VmfVriAdditionalAttributeContainer
     /// </summary>
-    [DataContract(Name = "VendorRequiredInforesponse_inner_vmfAdditionalAttributes_inner")]
-    public partial class VendorRequiredInforesponseInnerVmfAdditionalAttributesInner : IValidatableObject
+    [DataContract(Name = "VmfVriAdditionalAttributeContainer")]
+    public partial class VmfVriAdditionalAttributeContainer : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="VendorRequiredInforesponseInnerVmfAdditionalAttributesInner" /> class.
+        /// Initializes a new instance of the <see cref="VmfVriAdditionalAttributeContainer" /> class.
         /// </summary>
         /// <param name="vendorName">The name of vendor..</param>
         /// <param name="productId">The ID of product..</param>
-        /// <param name="additionalAttributes">additionalAttributes.</param>
-        public VendorRequiredInforesponseInnerVmfAdditionalAttributesInner(string vendorName = default, string productId = default, List<VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner> additionalAttributes = default)
+        /// <param name="additionalAttributes">List of required attributes for the specific product..</param>
+        public VmfVriAdditionalAttributeContainer(string vendorName = default, string productId = default, List<AdditionalAttribute> additionalAttributes = default)
         {
             this.VendorName = vendorName;
             this.ProductId = productId;
@@ -60,10 +60,11 @@ namespace xi.sdk.resellers.Model
         public string ProductId { get; set; }
 
         /// <summary>
-        /// Gets or Sets AdditionalAttributes
+        /// List of required attributes for the specific product.
         /// </summary>
+        /// <value>List of required attributes for the specific product.</value>
         [DataMember(Name = "additionalAttributes", EmitDefaultValue = false)]
-        public List<VendorRequiredInforesponseInnerVmfAdditionalAttributesInnerAdditionalAttributesInner> AdditionalAttributes { get; set; }
+        public List<AdditionalAttribute> AdditionalAttributes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -72,7 +73,7 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class VendorRequiredInforesponseInnerVmfAdditionalAttributesInner {\n");
+            sb.Append("class VmfVriAdditionalAttributeContainer {\n");
             sb.Append("  VendorName: ").Append(VendorName).Append("\n");
             sb.Append("  ProductId: ").Append(ProductId).Append("\n");
             sb.Append("  AdditionalAttributes: ").Append(AdditionalAttributes).Append("\n");
