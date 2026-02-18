@@ -45,8 +45,8 @@ namespace xi.sdk.resellers.Model
         /// <param name="notes">The attribute field data..</param>
         /// <param name="resourceId">The resource id of the subscription.</param>
         /// <param name="planid">ID of the subscription plan.</param>
-        /// <param name="subscriptionPeriod">The object containing the list of options related to the subscription period..</param>
-        /// <param name="billingPeriod">The object containing the list of options related to the billing period..</param>
+        /// <param name="subscriptionPeriod">subscriptionPeriod.</param>
+        /// <param name="billingPeriod">billingPeriod.</param>
         /// <param name="margin">Line-level margin requested by customer.</param>
         /// <param name="endCustomerPrice">Line-level end-customer price requsted by customer.</param>
         /// <param name="vriAdditionalAttributes">The object containing the list of Vendor Mandatory Fields required by the vendor for the subscription products..</param>
@@ -54,7 +54,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="additionalAttributes">additionalAttributes.</param>
         /// <param name="warrantyInfo">warrantyInfo.</param>
         /// <param name="vmfAdditionalAttributesLines">The object containing the list of fields required at a line level by the vendor.&lt;br&gt; This a &lt;code&gt;Deprecated&lt;/code&gt; object. Kindly use &lt;b&gt;vmfVendorAdditionalAttributes&lt;/b&gt; object.</param>
-        public OrderCreateV7RequestLinesInner(string customerLineNumber = default, string ingramPartNumber = default, string vendorPartNumber = default, int quantity = default, decimal unitPrice = default, string specialBidNumber = default, decimal endUserPrice = default, string notes = default, string resourceId = default, string planid = default, List<OrderCreateV7RequestLinesInnerSubscriptionPeriodInner> subscriptionPeriod = default, List<OrderCreateV7RequestLinesInnerBillingPeriodInner> billingPeriod = default, decimal margin = default, decimal endCustomerPrice = default, List<OrderCreateV7RequestVmfVendorAdditionalAttributesInner> vriAdditionalAttributes = default, List<OrderCreateV7RequestLinesInnerEndUserInfoInner> endUserInfo = default, List<OrderCreateV7RequestLinesInnerAdditionalAttributesInner> additionalAttributes = default, OrderCreateV7RequestLinesInnerWarrantyInfo warrantyInfo = default, List<OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner> vmfAdditionalAttributesLines = default)
+        public OrderCreateV7RequestLinesInner(string customerLineNumber = default, string ingramPartNumber = default, string vendorPartNumber = default, int quantity = default, decimal unitPrice = default, string specialBidNumber = default, decimal endUserPrice = default, string notes = default, string resourceId = default, string planid = default, OrderCreateV7RequestLinesInnerSubscriptionPeriod subscriptionPeriod = default, OrderCreateV7RequestLinesInnerBillingPeriod billingPeriod = default, decimal margin = default, decimal endCustomerPrice = default, List<OrderCreateV7RequestVmfVendorAdditionalAttributesInner> vriAdditionalAttributes = default, List<OrderCreateV7RequestLinesInnerEndUserInfoInner> endUserInfo = default, List<OrderCreateV7RequestLinesInnerAdditionalAttributesInner> additionalAttributes = default, OrderCreateV7RequestLinesInnerWarrantyInfo warrantyInfo = default, List<OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner> vmfAdditionalAttributesLines = default)
         {
             this.CustomerLineNumber = customerLineNumber;
             this.IngramPartNumber = ingramPartNumber;
@@ -148,18 +148,16 @@ namespace xi.sdk.resellers.Model
         public string Planid { get; set; }
 
         /// <summary>
-        /// The object containing the list of options related to the subscription period.
+        /// Gets or Sets SubscriptionPeriod
         /// </summary>
-        /// <value>The object containing the list of options related to the subscription period.</value>
         [DataMember(Name = "subscriptionPeriod", EmitDefaultValue = false)]
-        public List<OrderCreateV7RequestLinesInnerSubscriptionPeriodInner> SubscriptionPeriod { get; set; }
+        public OrderCreateV7RequestLinesInnerSubscriptionPeriod SubscriptionPeriod { get; set; }
 
         /// <summary>
-        /// The object containing the list of options related to the billing period.
+        /// Gets or Sets BillingPeriod
         /// </summary>
-        /// <value>The object containing the list of options related to the billing period.</value>
         [DataMember(Name = "billingPeriod", EmitDefaultValue = false)]
-        public List<OrderCreateV7RequestLinesInnerBillingPeriodInner> BillingPeriod { get; set; }
+        public OrderCreateV7RequestLinesInnerBillingPeriod BillingPeriod { get; set; }
 
         /// <summary>
         /// Line-level margin requested by customer

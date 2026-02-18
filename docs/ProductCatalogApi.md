@@ -233,7 +233,7 @@ catch (ApiException e)
 
 <a id="getresellerv6productsearch"></a>
 # **GetResellerV6Productsearch**
-> ProductSearchResponse GetResellerV6Productsearch (string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = null, int? pageSize = null, string? iMSenderID = null, string? type = null, string? hasDiscounts = null, List<string>? vendor = null, List<string>? vendorPartNumber = null, string? acceptLanguage = null, string? vendorNumber = null, List<string>? keyword = null, string? category = null, string? skipAuthorisation = null, string? groupName = null, string? planID = null, bool? showGroupInfo = null)
+> ProductSearchResponse GetResellerV6Productsearch (string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = null, int? pageSize = null, string? iMSenderID = null, string? type = null, string? hasDiscounts = null, List<string>? vendor = null, List<string>? vendorPartNumber = null, string? acceptLanguage = null, string? vendorNumber = null, string? keyword = null, string? category = null, string? skipAuthorisation = null, string? groupName = null, string? planID = null, bool? showGroupInfo = null)
 
 Search Products
 
@@ -275,7 +275,7 @@ namespace Example
             var vendorPartNumber = new List<string>?(); // List<string>? | The vendors part number for the product. (optional) 
             var acceptLanguage = "\"en\"";  // string? | Header to the API calls, the content will help us identify the response language. (optional)  (default to "en")
             var vendorNumber = "vendorNumber_example";  // string? | Vendor number of the product (optional) 
-            var keyword = new List<string>?(); // List<string>? | Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name. (optional) 
+            var keyword = "keyword_example";  // string? | Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name. (optional) 
             var category = Accessories;  // string? | The category of the product. Example: Displays. (optional) 
             var skipAuthorisation = true;  // string? | This parameter is True when you want Skip the authorization, so template will work like current B2b template. (optional) 
             var groupName = Microsoft Defender for Endpoint P2 (NCE COM MTH);  // string? | Name of the Product Group (optional) 
@@ -335,7 +335,7 @@ catch (ApiException e)
 | **vendorPartNumber** | [**List&lt;string&gt;?**](string.md) | The vendors part number for the product. | [optional]  |
 | **acceptLanguage** | **string?** | Header to the API calls, the content will help us identify the response language. | [optional] [default to &quot;en&quot;] |
 | **vendorNumber** | **string?** | Vendor number of the product | [optional]  |
-| **keyword** | [**List&lt;string&gt;?**](string.md) | Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name. | [optional]  |
+| **keyword** | **string?** | Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name. | [optional]  |
 | **category** | **string?** | The category of the product. Example: Displays. | [optional]  |
 | **skipAuthorisation** | **string?** | This parameter is True when you want Skip the authorization, so template will work like current B2b template. | [optional]  |
 | **groupName** | **string?** | Name of the Product Group | [optional]  |

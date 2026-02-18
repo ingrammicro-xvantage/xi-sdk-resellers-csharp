@@ -27,17 +27,17 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// OrderCreateV7RequestLinesInnerBillingPeriodInner
+    /// The object containing the list of options related to the billing period.
     /// </summary>
-    [DataContract(Name = "order_create_v7_request_lines_inner_billingPeriod_inner")]
-    public partial class OrderCreateV7RequestLinesInnerBillingPeriodInner : IValidatableObject
+    [DataContract(Name = "order_create_v7_request_lines_inner_billingPeriod")]
+    public partial class OrderCreateV7RequestLinesInnerBillingPeriod : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrderCreateV7RequestLinesInnerBillingPeriodInner" /> class.
+        /// Initializes a new instance of the <see cref="OrderCreateV7RequestLinesInnerBillingPeriod" /> class.
         /// </summary>
         /// <param name="type">Billing period of the subscription. Example, Years, Months.</param>
         /// <param name="duration">Length of the billing period. Example 1, 3.</param>
-        public OrderCreateV7RequestLinesInnerBillingPeriodInner(string type = default, int duration = default)
+        public OrderCreateV7RequestLinesInnerBillingPeriod(string type = default, int duration = default)
         {
             this.Type = type;
             this.Duration = duration;
@@ -64,7 +64,7 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class OrderCreateV7RequestLinesInnerBillingPeriodInner {\n");
+            sb.Append("class OrderCreateV7RequestLinesInnerBillingPeriod {\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Duration: ").Append(Duration).Append("\n");
             sb.Append("}\n");

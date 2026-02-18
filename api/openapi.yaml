@@ -561,10 +561,7 @@ paths:
         name: keyword
         required: false
         schema:
-          items:
-            type: string
-            uniqueItems: false
-          type: array
+          type: string
         style: form
       - description: "The category of the product. Example: Displays."
         explode: true
@@ -9775,20 +9772,18 @@ components:
         pageNumber: 1
         previousPage: previousPage
         catalog:
-        - ingramPartNumber: ingramPartNumber
-          extraDescription: extraDescription
-          subCategory: subCategory
+        - subCategory: subCategory
           replacementSku: replacementSku
-          endUserRequired: endUserRequired
+          msrpvisibleorg: msrpvisibleorg
           authorizedToPurchase: authorizedToPurchase
           description: description
-          discontinued: discontinued
-          vendorName: vendorName
           type: type
-          newProduct: newProduct
           hasWarranty: hasWarranty
           hasDiscounts: hasDiscounts
+          skuAvailableInFeed: true
           directShip: directShip
+          isPriceVisible: true
+          customerAuthorization: true
           vendorPartNumber: vendorPartNumber
           links:
           - topic: topic
@@ -9797,23 +9792,32 @@ components:
           - topic: topic
             href: href
             type: type
-          category: category
           productType: productType
           upcCode: upcCode
-        - ingramPartNumber: ingramPartNumber
+          ingramPartNumber: ingramPartNumber
           extraDescription: extraDescription
-          subCategory: subCategory
-          replacementSku: replacementSku
+          nonintorderableorg: nonintorderableorg
           endUserRequired: endUserRequired
-          authorizedToPurchase: authorizedToPurchase
-          description: description
           discontinued: discontinued
           vendorName: vendorName
-          type: type
+          webvisibleorg: webvisibleorg
           newProduct: newProduct
+          pricevisibleorg: pricevisibleorg
+          category: category
+          intorderableorg: intorderableorg
+          isMsrpVisible: true
+        - subCategory: subCategory
+          replacementSku: replacementSku
+          msrpvisibleorg: msrpvisibleorg
+          authorizedToPurchase: authorizedToPurchase
+          description: description
+          type: type
           hasWarranty: hasWarranty
           hasDiscounts: hasDiscounts
+          skuAvailableInFeed: true
           directShip: directShip
+          isPriceVisible: true
+          customerAuthorization: true
           vendorPartNumber: vendorPartNumber
           links:
           - topic: topic
@@ -9822,9 +9826,20 @@ components:
           - topic: topic
             href: href
             type: type
-          category: category
           productType: productType
           upcCode: upcCode
+          ingramPartNumber: ingramPartNumber
+          extraDescription: extraDescription
+          nonintorderableorg: nonintorderableorg
+          endUserRequired: endUserRequired
+          discontinued: discontinued
+          vendorName: vendorName
+          webvisibleorg: webvisibleorg
+          newProduct: newProduct
+          pricevisibleorg: pricevisibleorg
+          category: category
+          intorderableorg: intorderableorg
+          isMsrpVisible: true
         nextPage: nextPage
         pageSize: 6
         recordsFound: 0
@@ -13729,7 +13744,9 @@ components:
             $ref: "#/components/schemas/order_create_v7_request_vmfVendorAdditionalAttributes_inner_additionalAttributes_inner"
           type: array
       type: object
-    order_create_v7_request_lines_inner_subscriptionPeriod_inner:
+    order_create_v7_request_lines_inner_subscriptionPeriod:
+      description: The object containing the list of options related to the subscription
+        period.
       properties:
         type:
           description: "Unit period of the subscription. Example, Years, Months"
@@ -13748,7 +13765,9 @@ components:
           description: The ID of an existing active subscription.
           type: string
       type: object
-    order_create_v7_request_lines_inner_billingPeriod_inner:
+    order_create_v7_request_lines_inner_billingPeriod:
+      description: The object containing the list of options related to the billing
+        period.
       properties:
         type:
           description: "Billing period of the subscription. Example, Years, Months"
@@ -13909,17 +13928,9 @@ components:
           description: ID of the subscription plan
           type: string
         subscriptionPeriod:
-          description: The object containing the list of options related to the subscription
-            period.
-          items:
-            $ref: "#/components/schemas/order_create_v7_request_lines_inner_subscriptionPeriod_inner"
-          type: array
+          $ref: "#/components/schemas/order_create_v7_request_lines_inner_subscriptionPeriod"
         billingPeriod:
-          description: The object containing the list of options related to the billing
-            period.
-          items:
-            $ref: "#/components/schemas/order_create_v7_request_lines_inner_billingPeriod_inner"
-          type: array
+          $ref: "#/components/schemas/order_create_v7_request_lines_inner_billingPeriod"
         margin:
           description: Line-level margin requested by customer
           format: decimal
@@ -16660,20 +16671,18 @@ components:
       type: object
     ProductSearch_Response_catalog_inner:
       example:
-        ingramPartNumber: ingramPartNumber
-        extraDescription: extraDescription
         subCategory: subCategory
         replacementSku: replacementSku
-        endUserRequired: endUserRequired
+        msrpvisibleorg: msrpvisibleorg
         authorizedToPurchase: authorizedToPurchase
         description: description
-        discontinued: discontinued
-        vendorName: vendorName
         type: type
-        newProduct: newProduct
         hasWarranty: hasWarranty
         hasDiscounts: hasDiscounts
+        skuAvailableInFeed: true
         directShip: directShip
+        isPriceVisible: true
+        customerAuthorization: true
         vendorPartNumber: vendorPartNumber
         links:
         - topic: topic
@@ -16682,9 +16691,20 @@ components:
         - topic: topic
           href: href
           type: type
-        category: category
         productType: productType
         upcCode: upcCode
+        ingramPartNumber: ingramPartNumber
+        extraDescription: extraDescription
+        nonintorderableorg: nonintorderableorg
+        endUserRequired: endUserRequired
+        discontinued: discontinued
+        vendorName: vendorName
+        webvisibleorg: webvisibleorg
+        newProduct: newProduct
+        pricevisibleorg: pricevisibleorg
+        category: category
+        intorderableorg: intorderableorg
+        isMsrpVisible: true
       properties:
         description:
           description: The description of the product.
@@ -16735,10 +16755,6 @@ components:
         hasWarranty:
           description: Indicates if the product has a warranty.
           type: string
-        links:
-          items:
-            $ref: "#/components/schemas/ProductSearch_Response_catalog_inner_links_inner"
-          type: array
         extraDescription:
           description: The extended description of the product.
           type: string
@@ -16750,6 +16766,28 @@ components:
           description: It is true when it exists in matched queries field of ealstic
             search API.
           type: string
+        isMsrpVisible:
+          type: boolean
+        isPriceVisible:
+          type: boolean
+        customerAuthorization:
+          type: boolean
+        skuAvailableInFeed:
+          type: boolean
+        msrpvisibleorg:
+          type: string
+        pricevisibleorg:
+          type: string
+        intorderableorg:
+          type: string
+        nonintorderableorg:
+          type: string
+        webvisibleorg:
+          type: string
+        links:
+          items:
+            $ref: "#/components/schemas/ProductSearch_Response_catalog_inner_links_inner"
+          type: array
       type: object
     ProductSearch_Response_subscriptionCatalog_inner_plans_inner_subscriptionPeriodSummary_inner:
       example:

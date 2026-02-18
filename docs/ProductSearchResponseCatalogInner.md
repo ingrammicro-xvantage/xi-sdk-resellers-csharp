@@ -19,10 +19,19 @@ Name | Type | Description | Notes
 **NewProduct** | **string** | Indicates if the product is new. For digital products, newer than 10 days. For physical products, newer than 150 days. | [optional] 
 **DirectShip** | **string** | Indicates if the product will be shipped directly to the reseller or end user from the vendor/manufacturer. | [optional] 
 **HasWarranty** | **string** | Indicates if the product has a warranty. | [optional] 
-**Links** | [**List&lt;ProductSearchResponseCatalogInnerLinksInner&gt;**](ProductSearchResponseCatalogInnerLinksInner.md) |  | [optional] 
 **ExtraDescription** | **string** | The extended description of the product. | [optional] 
 **ReplacementSku** | **string** | Identifies a SKU that is a comparable subsititution of the current SKU if available. | [optional] 
 **AuthorizedToPurchase** | **string** | It is true when it exists in matched queries field of ealstic search API. | [optional] 
+**IsMsrpVisible** | **bool** |  | [optional] 
+**IsPriceVisible** | **bool** |  | [optional] 
+**CustomerAuthorization** | **bool** |  | [optional] 
+**SkuAvailableInFeed** | **bool** |  | [optional] 
+**Msrpvisibleorg** | **string** |  | [optional] 
+**Pricevisibleorg** | **string** |  | [optional] 
+**Intorderableorg** | **string** |  | [optional] 
+**Nonintorderableorg** | **string** |  | [optional] 
+**Webvisibleorg** | **string** |  | [optional] 
+**Links** | [**List&lt;ProductSearchResponseCatalogInnerLinksInner&gt;**](ProductSearchResponseCatalogInnerLinksInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

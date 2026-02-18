@@ -1,4 +1,5 @@
-# xi.sdk.resellers.Model.OrderCreateV7RequestLinesInnerBillingPeriodInner
+# xi.sdk.resellers.Model.OrderCreateV7RequestLinesInnerBillingPeriod
+The object containing the list of options related to the billing period.
 
 ## Properties
 

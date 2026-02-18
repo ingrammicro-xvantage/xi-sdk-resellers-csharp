@@ -78,9 +78,9 @@ docs/OrderCreateV7RequestAdditionalAttributesInner.md
 docs/OrderCreateV7RequestEndUserInfo.md
 docs/OrderCreateV7RequestLinesInner.md
 docs/OrderCreateV7RequestLinesInnerAdditionalAttributesInner.md
-docs/OrderCreateV7RequestLinesInnerBillingPeriodInner.md
+docs/OrderCreateV7RequestLinesInnerBillingPeriod.md
 docs/OrderCreateV7RequestLinesInnerEndUserInfoInner.md
-docs/OrderCreateV7RequestLinesInnerSubscriptionPeriodInner.md
+docs/OrderCreateV7RequestLinesInnerSubscriptionPeriod.md
 docs/OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner.md
 docs/OrderCreateV7RequestLinesInnerWarrantyInfo.md
 docs/OrderCreateV7RequestLinesInnerWarrantyInfoSerialInfoInner.md
@@ -327,9 +327,9 @@ src/xi.sdk.resellers.Test/Model/OrderCreateResponseTests.cs
 src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestAdditionalAttributesInnerTests.cs
 src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestEndUserInfoTests.cs
 src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestLinesInnerAdditionalAttributesInnerTests.cs
-src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestLinesInnerBillingPeriodInnerTests.cs
+src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestLinesInnerBillingPeriodTests.cs
 src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestLinesInnerEndUserInfoInnerTests.cs
-src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestLinesInnerSubscriptionPeriodInnerTests.cs
+src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestLinesInnerSubscriptionPeriodTests.cs
 src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestLinesInnerTests.cs
 src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInnerTests.cs
 src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestLinesInnerWarrantyInfoSerialInfoInnerTests.cs
@@ -591,9 +591,9 @@ src/xi.sdk.resellers/Model/OrderCreateV7RequestAdditionalAttributesInner.cs
 src/xi.sdk.resellers/Model/OrderCreateV7RequestEndUserInfo.cs
 src/xi.sdk.resellers/Model/OrderCreateV7RequestLinesInner.cs
 src/xi.sdk.resellers/Model/OrderCreateV7RequestLinesInnerAdditionalAttributesInner.cs
-src/xi.sdk.resellers/Model/OrderCreateV7RequestLinesInnerBillingPeriodInner.cs
+src/xi.sdk.resellers/Model/OrderCreateV7RequestLinesInnerBillingPeriod.cs
 src/xi.sdk.resellers/Model/OrderCreateV7RequestLinesInnerEndUserInfoInner.cs
-src/xi.sdk.resellers/Model/OrderCreateV7RequestLinesInnerSubscriptionPeriodInner.cs
+src/xi.sdk.resellers/Model/OrderCreateV7RequestLinesInnerSubscriptionPeriod.cs
 src/xi.sdk.resellers/Model/OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner.cs
 src/xi.sdk.resellers/Model/OrderCreateV7RequestLinesInnerWarrantyInfo.cs
 src/xi.sdk.resellers/Model/OrderCreateV7RequestLinesInnerWarrantyInfoSerialInfoInner.cs

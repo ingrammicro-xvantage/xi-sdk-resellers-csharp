@@ -106,7 +106,7 @@ namespace xi.sdk.resellers.Test.Api
             //List<string>? vendorPartNumber = null;
             //string? acceptLanguage = null;
             //string? vendorNumber = null;
-            //List<string>? keyword = null;
+            //string? keyword = null;
             //string? category = null;
             //string? skipAuthorisation = null;
             //string? groupName = null;

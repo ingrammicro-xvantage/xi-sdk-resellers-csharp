@@ -27,20 +27,20 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// OrderCreateV7RequestLinesInnerSubscriptionPeriodInner
+    /// The object containing the list of options related to the subscription period.
     /// </summary>
-    [DataContract(Name = "order_create_v7_request_lines_inner_subscriptionPeriod_inner")]
-    public partial class OrderCreateV7RequestLinesInnerSubscriptionPeriodInner : IValidatableObject
+    [DataContract(Name = "order_create_v7_request_lines_inner_subscriptionPeriod")]
+    public partial class OrderCreateV7RequestLinesInnerSubscriptionPeriod : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrderCreateV7RequestLinesInnerSubscriptionPeriodInner" /> class.
+        /// Initializes a new instance of the <see cref="OrderCreateV7RequestLinesInnerSubscriptionPeriod" /> class.
         /// </summary>
         /// <param name="type">Unit period of the subscription. Example, Years, Months.</param>
         /// <param name="duration">Length of the subscription. Example 1, 3.</param>
         /// <param name="startDate">The date on which subscription will start..</param>
         /// <param name="endDateAlignmentType">Subscription period end date alignment. ENUM - - &#39;MATCH_END_OF_CALENDAR_MONTH&#39;, &#39;CO_TERM_ON_SUBSCRIPTION&#39;.</param>
         /// <param name="subscriptionId">The ID of an existing active subscription..</param>
-        public OrderCreateV7RequestLinesInnerSubscriptionPeriodInner(string type = default, int duration = default, string startDate = default, string endDateAlignmentType = default, string subscriptionId = default)
+        public OrderCreateV7RequestLinesInnerSubscriptionPeriod(string type = default, int duration = default, string startDate = default, string endDateAlignmentType = default, string subscriptionId = default)
         {
             this.Type = type;
             this.Duration = duration;
@@ -91,7 +91,7 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class OrderCreateV7RequestLinesInnerSubscriptionPeriodInner {\n");
+            sb.Append("class OrderCreateV7RequestLinesInnerSubscriptionPeriod {\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Duration: ").Append(Duration).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");

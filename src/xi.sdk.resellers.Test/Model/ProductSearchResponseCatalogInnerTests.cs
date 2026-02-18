@@ -190,15 +190,6 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Links'
-        /// </summary>
-        [Fact]
-        public void LinksTest()
-        {
-            // TODO unit test for the property 'Links'
-        }
-
-        /// <summary>
         /// Test the property 'ExtraDescription'
         /// </summary>
         [Fact]
@@ -223,6 +214,96 @@ namespace xi.sdk.resellers.Test.Model
         public void AuthorizedToPurchaseTest()
         {
             // TODO unit test for the property 'AuthorizedToPurchase'
+        }
+
+        /// <summary>
+        /// Test the property 'IsMsrpVisible'
+        /// </summary>
+        [Fact]
+        public void IsMsrpVisibleTest()
+        {
+            // TODO unit test for the property 'IsMsrpVisible'
+        }
+
+        /// <summary>
+        /// Test the property 'IsPriceVisible'
+        /// </summary>
+        [Fact]
+        public void IsPriceVisibleTest()
+        {
+            // TODO unit test for the property 'IsPriceVisible'
+        }
+
+        /// <summary>
+        /// Test the property 'CustomerAuthorization'
+        /// </summary>
+        [Fact]
+        public void CustomerAuthorizationTest()
+        {
+            // TODO unit test for the property 'CustomerAuthorization'
+        }
+
+        /// <summary>
+        /// Test the property 'SkuAvailableInFeed'
+        /// </summary>
+        [Fact]
+        public void SkuAvailableInFeedTest()
+        {
+            // TODO unit test for the property 'SkuAvailableInFeed'
+        }
+
+        /// <summary>
+        /// Test the property 'Msrpvisibleorg'
+        /// </summary>
+        [Fact]
+        public void MsrpvisibleorgTest()
+        {
+            // TODO unit test for the property 'Msrpvisibleorg'
+        }
+
+        /// <summary>
+        /// Test the property 'Pricevisibleorg'
+        /// </summary>
+        [Fact]
+        public void PricevisibleorgTest()
+        {
+            // TODO unit test for the property 'Pricevisibleorg'
+        }
+
+        /// <summary>
+        /// Test the property 'Intorderableorg'
+        /// </summary>
+        [Fact]
+        public void IntorderableorgTest()
+        {
+            // TODO unit test for the property 'Intorderableorg'
+        }
+
+        /// <summary>
+        /// Test the property 'Nonintorderableorg'
+        /// </summary>
+        [Fact]
+        public void NonintorderableorgTest()
+        {
+            // TODO unit test for the property 'Nonintorderableorg'
+        }
+
+        /// <summary>
+        /// Test the property 'Webvisibleorg'
+        /// </summary>
+        [Fact]
+        public void WebvisibleorgTest()
+        {
+            // TODO unit test for the property 'Webvisibleorg'
+        }
+
+        /// <summary>
+        /// Test the property 'Links'
+        /// </summary>
+        [Fact]
+        public void LinksTest()
+        {
+            // TODO unit test for the property 'Links'
         }
     }
 }

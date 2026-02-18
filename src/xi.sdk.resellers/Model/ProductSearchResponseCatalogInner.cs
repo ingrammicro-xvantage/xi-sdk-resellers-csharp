@@ -50,11 +50,20 @@ namespace xi.sdk.resellers.Model
         /// <param name="newProduct">Indicates if the product is new. For digital products, newer than 10 days. For physical products, newer than 150 days..</param>
         /// <param name="directShip">Indicates if the product will be shipped directly to the reseller or end user from the vendor/manufacturer..</param>
         /// <param name="hasWarranty">Indicates if the product has a warranty..</param>
-        /// <param name="links">links.</param>
         /// <param name="extraDescription">The extended description of the product..</param>
         /// <param name="replacementSku">Identifies a SKU that is a comparable subsititution of the current SKU if available..</param>
         /// <param name="authorizedToPurchase">It is true when it exists in matched queries field of ealstic search API..</param>
-        public ProductSearchResponseCatalogInner(string description = default, string category = default, string subCategory = default, string productType = default, string ingramPartNumber = default, string vendorPartNumber = default, string upcCode = default, string vendorName = default, string endUserRequired = default, string hasDiscounts = default, string type = default, string discontinued = default, string newProduct = default, string directShip = default, string hasWarranty = default, List<ProductSearchResponseCatalogInnerLinksInner> links = default, string extraDescription = default, string replacementSku = default, string authorizedToPurchase = default)
+        /// <param name="isMsrpVisible">isMsrpVisible.</param>
+        /// <param name="isPriceVisible">isPriceVisible.</param>
+        /// <param name="customerAuthorization">customerAuthorization.</param>
+        /// <param name="skuAvailableInFeed">skuAvailableInFeed.</param>
+        /// <param name="msrpvisibleorg">msrpvisibleorg.</param>
+        /// <param name="pricevisibleorg">pricevisibleorg.</param>
+        /// <param name="intorderableorg">intorderableorg.</param>
+        /// <param name="nonintorderableorg">nonintorderableorg.</param>
+        /// <param name="webvisibleorg">webvisibleorg.</param>
+        /// <param name="links">links.</param>
+        public ProductSearchResponseCatalogInner(string description = default, string category = default, string subCategory = default, string productType = default, string ingramPartNumber = default, string vendorPartNumber = default, string upcCode = default, string vendorName = default, string endUserRequired = default, string hasDiscounts = default, string type = default, string discontinued = default, string newProduct = default, string directShip = default, string hasWarranty = default, string extraDescription = default, string replacementSku = default, string authorizedToPurchase = default, bool isMsrpVisible = default, bool isPriceVisible = default, bool customerAuthorization = default, bool skuAvailableInFeed = default, string msrpvisibleorg = default, string pricevisibleorg = default, string intorderableorg = default, string nonintorderableorg = default, string webvisibleorg = default, List<ProductSearchResponseCatalogInnerLinksInner> links = default)
         {
             this.Description = description;
             this.Category = category;
@@ -71,10 +80,19 @@ namespace xi.sdk.resellers.Model
             this.NewProduct = newProduct;
             this.DirectShip = directShip;
             this.HasWarranty = hasWarranty;
-            this.Links = links;
             this.ExtraDescription = extraDescription;
             this.ReplacementSku = replacementSku;
             this.AuthorizedToPurchase = authorizedToPurchase;
+            this.IsMsrpVisible = isMsrpVisible;
+            this.IsPriceVisible = isPriceVisible;
+            this.CustomerAuthorization = customerAuthorization;
+            this.SkuAvailableInFeed = skuAvailableInFeed;
+            this.Msrpvisibleorg = msrpvisibleorg;
+            this.Pricevisibleorg = pricevisibleorg;
+            this.Intorderableorg = intorderableorg;
+            this.Nonintorderableorg = nonintorderableorg;
+            this.Webvisibleorg = webvisibleorg;
+            this.Links = links;
         }
 
         /// <summary>
@@ -183,12 +201,6 @@ namespace xi.sdk.resellers.Model
         public string HasWarranty { get; set; }
 
         /// <summary>
-        /// Gets or Sets Links
-        /// </summary>
-        [DataMember(Name = "links", EmitDefaultValue = false)]
-        public List<ProductSearchResponseCatalogInnerLinksInner> Links { get; set; }
-
-        /// <summary>
         /// The extended description of the product.
         /// </summary>
         /// <value>The extended description of the product.</value>
@@ -208,6 +220,66 @@ namespace xi.sdk.resellers.Model
         /// <value>It is true when it exists in matched queries field of ealstic search API.</value>
         [DataMember(Name = "authorizedToPurchase", EmitDefaultValue = false)]
         public string AuthorizedToPurchase { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsMsrpVisible
+        /// </summary>
+        [DataMember(Name = "isMsrpVisible", EmitDefaultValue = true)]
+        public bool IsMsrpVisible { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsPriceVisible
+        /// </summary>
+        [DataMember(Name = "isPriceVisible", EmitDefaultValue = true)]
+        public bool IsPriceVisible { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CustomerAuthorization
+        /// </summary>
+        [DataMember(Name = "customerAuthorization", EmitDefaultValue = true)]
+        public bool CustomerAuthorization { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SkuAvailableInFeed
+        /// </summary>
+        [DataMember(Name = "skuAvailableInFeed", EmitDefaultValue = true)]
+        public bool SkuAvailableInFeed { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Msrpvisibleorg
+        /// </summary>
+        [DataMember(Name = "msrpvisibleorg", EmitDefaultValue = false)]
+        public string Msrpvisibleorg { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Pricevisibleorg
+        /// </summary>
+        [DataMember(Name = "pricevisibleorg", EmitDefaultValue = false)]
+        public string Pricevisibleorg { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Intorderableorg
+        /// </summary>
+        [DataMember(Name = "intorderableorg", EmitDefaultValue = false)]
+        public string Intorderableorg { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Nonintorderableorg
+        /// </summary>
+        [DataMember(Name = "nonintorderableorg", EmitDefaultValue = false)]
+        public string Nonintorderableorg { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Webvisibleorg
+        /// </summary>
+        [DataMember(Name = "webvisibleorg", EmitDefaultValue = false)]
+        public string Webvisibleorg { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Links
+        /// </summary>
+        [DataMember(Name = "links", EmitDefaultValue = false)]
+        public List<ProductSearchResponseCatalogInnerLinksInner> Links { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -232,10 +304,19 @@ namespace xi.sdk.resellers.Model
             sb.Append("  NewProduct: ").Append(NewProduct).Append("\n");
             sb.Append("  DirectShip: ").Append(DirectShip).Append("\n");
             sb.Append("  HasWarranty: ").Append(HasWarranty).Append("\n");
-            sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("  ExtraDescription: ").Append(ExtraDescription).Append("\n");
             sb.Append("  ReplacementSku: ").Append(ReplacementSku).Append("\n");
             sb.Append("  AuthorizedToPurchase: ").Append(AuthorizedToPurchase).Append("\n");
+            sb.Append("  IsMsrpVisible: ").Append(IsMsrpVisible).Append("\n");
+            sb.Append("  IsPriceVisible: ").Append(IsPriceVisible).Append("\n");
+            sb.Append("  CustomerAuthorization: ").Append(CustomerAuthorization).Append("\n");
+            sb.Append("  SkuAvailableInFeed: ").Append(SkuAvailableInFeed).Append("\n");
+            sb.Append("  Msrpvisibleorg: ").Append(Msrpvisibleorg).Append("\n");
+            sb.Append("  Pricevisibleorg: ").Append(Pricevisibleorg).Append("\n");
+            sb.Append("  Intorderableorg: ").Append(Intorderableorg).Append("\n");
+            sb.Append("  Nonintorderableorg: ").Append(Nonintorderableorg).Append("\n");
+            sb.Append("  Webvisibleorg: ").Append(Webvisibleorg).Append("\n");
+            sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
